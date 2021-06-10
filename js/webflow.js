@@ -20148,6 +20148,20 @@ Webflow.define('tabs', module.exports = function ($) {
   return api;
 });
 
+document.addEventListener("DOMContentLoaded", function(event) {
+  var themeSwitcher = document.getElementById("theme-switcher");
+  themeSwitcher.innerHTML += localStorage.getItem('darkMode') == "true"? " Light Mode":" Dark Mode";
+  if(localStorage.getItem("darkMode") == "true"){
+    document.getElementById("darkThemeIcon").setAttribute("src", "images/lightmode.png");
+  }
+  themeSwitcher.onclick = function() {
+    var currentTheme = localStorage.getItem('darkMode');
+    var switchToTheme = currentTheme === "true" ? "false" : "true"
+    localStorage.setItem('darkMode', switchToTheme);
+    document.location.reload();
+  }
+});
+
 /***/ })
 /******/ ]);/**
  * ----------------------------------------------------------------------
