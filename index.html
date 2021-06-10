@@ -27,18 +27,18 @@
   <link href="images/webclip.png" rel="apple-touch-icon">
   <script type="text/javascript">
     if(!localStorage.getItem('darkMode')){
-      localStorage.setItem('darkMode', "false");
-    }
-    if(localStorage.getItem('darkMode') == "true"){
-      var file = location.pathname.split( "/" ).pop();
+    localStorage.setItem('darkMode', "false");
+  }
+  if(localStorage.getItem('darkMode') == "true"){
+    var file = location.pathname.split( "/" ).pop();
 
-      var link = document.createElement( "link" );
-      link.href = "css/darkmode_supplements.css";
-      link.type = "text/css";
-      link.rel = "stylesheet";
-      link.media = "screen,print";
-      document.getElementsByTagName( "head" )[0].appendChild( link );
-    }
+    var link = document.createElement( "link" );
+    link.href = "css/darkmode_supplements.css";
+    link.type = "text/css";
+    link.rel = "stylesheet";
+    link.id = "darkThemeLink"
+    document.getElementsByTagName( "head" )[0].appendChild( link );
+  }
   </script>
 </head>
 <body class="body-2">
