@@ -96,7 +96,7 @@ legend {
     border-color: initial;
 }
 body {
-    background-color: rgb(24, 26, 27);
+    background-color: rgb(24, 26, 255);
     color: rgb(200, 195, 188);
 }
 .w-button {
@@ -220,51 +220,6 @@ fieldset[disabled] .w-select {
 .w-background-video {
     color: rgb(232, 230, 227);
 }
-.w-slider {
-    background-image: initial;
-    background-color: rgb(43, 47, 49);
-    -webkit-tap-highlight-color: rgba(232, 230, 227, 0);
-}
-.w-slider-nav {
-    -webkit-tap-highlight-color: rgba(232, 230, 227, 0);
-}
-.w-slider-nav.w-shadow > div {
-    box-shadow: rgba(38, 42, 43, 0.4) 0px 0px 3px;
-}
-.w-slider-nav-invert {
-    color: rgb(232, 230, 227);
-}
-.w-slider-nav-invert > div {
-    background-color: rgba(26, 28, 29, 0.4);
-}
-.w-slider-nav-invert > div.w-active {
-    background-color: rgb(26, 28, 29);
-}
-.w-slider-dot {
-    background-color: rgba(24, 26, 27, 0.4);
-}
-.w-slider-dot.w-active {
-    background-color: rgb(24, 26, 27);
-}
-.w-slider-dot:focus {
-    outline-color: initial;
-    box-shadow: rgb(24, 26, 27) 0px 0px 0px 2px;
-}
-.w-slider-dot:focus.w-active {
-    box-shadow: none;
-}
-.w-slider-arrow-left,
-.w-slider-arrow-right {
-    color: rgb(232, 230, 227);
-    -webkit-tap-highlight-color: rgba(232, 230, 227, 0);
-}
-.w-slider-arrow-left:focus,
-.w-slider-arrow-right:focus {
-    outline-color: initial;
-}
-.w-slider-aria-label {
-    border-color: initial;
-}
 .w-dropdown-btn,
 .w-dropdown-toggle,
 .w-dropdown-link {
@@ -361,6 +316,7 @@ fieldset[disabled] .w-select {
     text-decoration-color: initial;
     color: rgb(211, 207, 201);
     background-color: rgb(43, 47, 49);
+    border: 1px solid #131516;
 }
 .w-tab-link.w--current {
     background-color: rgb(55, 60, 62);
@@ -425,7 +381,7 @@ h5 {
     background-color: rgb(24, 26, 27);
 }
 .section.accent {
-    background-color: rgb(20, 26, 29);
+    background-color: rgb(20, 26, 50);
 }
 .white-box {
     border-color: rgb(21, 61, 94);
@@ -449,7 +405,6 @@ h5 {
     color: rgb(99, 187, 255);
 }
 .hollow-button {
-    border-color: rgb(48, 52, 54);
     color: rgb(232, 230, 227);
     text-decoration-color: initial;
 }
@@ -475,13 +430,13 @@ h5 {
 }
 .footer.center {
     border-top-color: rgb(58, 63, 65);
-    background-color: rgb(42, 46, 47);
+    background-color: rgb(33, 35, 37);
 }
 .footer-text {
     color: rgb(171, 163, 152);
 }
 .grid-image {
-    border-color: rgb(48, 52, 54);
+    border-color: rgb(24, 26, 27);
     background-color: rgb(0, 75, 141);
     box-shadow: rgb(0, 94, 176) 0px 0px 0px 1px;
 }
@@ -524,7 +479,6 @@ h5 {
     color: rgb(222, 219, 215);
 }
 .big-button {
-    border-color: rgb(52, 57, 59);
     background-color: rgb(0, 94, 176);
     color: rgb(232, 230, 227);
     text-decoration-color: initial;
@@ -711,4 +665,12 @@ a[href="https://coinmarketcap.com/"] > svg[width="94"][height="16"] > path {
 }
 #edge-translate-panel-body {
     color: var(--darkreader-neutral-text) !important;
+}
+
+.info-icon{
+    filter: grayscale(1) invert(1);
+}
+
+#w-tabs-0-data-w-tab-0, #w-tabs-0-data-w-tab-1{
+    border: none;
 }
