@@ -1,0 +1,676 @@
+[data-theme="dark"]
+/* User-Agent Style */
+html {
+    background-color: #181a1b !important;
+}
+html, body, input, textarea, select, button {
+    background-color: #181a1b;
+}
+html, body, input, textarea, select, button {
+    border-color: #736b5e;
+    color: #e8e6e3;
+}
+a {
+    color: #3391ff;
+}
+table {
+    border-color: #545b5e;
+}
+::placeholder {
+    color: #b2aba1;
+}
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+    background-color: #555b00 !important;
+    color: #e8e6e3 !important;
+}
+::-webkit-scrollbar {
+    background-color: #202324;
+    color: #aba499;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #454a4d;
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: #575e62;
+}
+::-webkit-scrollbar-thumb:active {
+    background-color: #484e51;
+}
+::-webkit-scrollbar-corner {
+    background-color: #181a1b;
+}
+::selection {
+    background-color: #004daa !important;
+    color: #e8e6e3 !important;
+}
+::-moz-selection {
+    background-color: #004daa !important;
+    color: #e8e6e3 !important;
+}
+
+/* Invert Style */
+.jfk-bubble.gtx-bubble, .captcheck_answer_label > input + img, span#closed_text > img[src^="https://www.gstatic.com/images/branding/googlelogo"], span[data-href^="https://www.hcaptcha.com/"] > #icon, #bit-notification-bar-iframe {
+    filter: invert(100%) hue-rotate(180deg) contrast(90%) !important;
+}
+
+/* Variables Style */
+:root {
+   --darkreader-neutral-background: #131516;
+   --darkreader-neutral-text: #d8d4cf;
+   --darkreader-selection-background: #004daa;
+   --darkreader-selection-text: #e8e6e3;
+}
+
+/* Modified CSS */
+a {
+    background-color: transparent;
+}
+a:active,
+a:hover {
+    outline-color: initial;
+}
+abbr[title] {
+    border-bottom-color: initial;
+}
+mark {
+    background-image: initial;
+    background-color: rgb(204, 204, 0);
+    color: rgb(232, 230, 227);
+}
+img {
+    border-color: initial;
+}
+button,
+input,
+optgroup,
+select,
+textarea {
+    color: inherit;
+}
+fieldset {
+    border-color: rgb(66, 71, 74);
+}
+legend {
+    border-color: initial;
+}
+body {
+    background-color: rgb(24, 26, 255);
+    color: rgb(200, 195, 188);
+}
+.w-button {
+    background-color: rgb(16, 96, 166);
+    color: rgb(232, 230, 227);
+    border-color: initial;
+    text-decoration-color: initial;
+}
+html[data-w-dynpage] [data-w-cloak] {
+    color: transparent !important;
+}
+.w-webflow-badge,
+.w-webflow-badge * {
+    border-color: transparent;
+    background-image: none;
+    background-color: transparent;
+    box-shadow: none;
+    color: inherit;
+    text-decoration-color: inherit;
+    text-shadow: none;
+}
+.w-webflow-badge {
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 0px 1px,
+    rgba(0, 0, 0, 0.1) 0px 1px 3px;
+    color: rgb(180, 174, 164) !important;
+    background-color: rgb(24, 26, 27) !important;
+    text-decoration-color: initial !important;
+}
+blockquote {
+    border-left-color: rgb(56, 61, 63); 
+}
+.w-list-unstyled {
+    list-style-image: initial; 
+}
+fieldset {
+    border-color: initial; 
+}
+button, html input[type="button"], input[type="reset"] {
+    border-color: initial;
+}
+.w-form-done {
+    background-color: rgb(43, 47, 49);
+}
+.w-form-fail {
+    background-color: rgb(71, 0, 0);
+}
+.w-input,
+.w-select {
+    color: rgb(200, 195, 188);
+    background-color: rgb(24, 26, 27);
+    border-color: rgb(62, 68, 70);
+}
+.w-input::-webkit-input-placeholder,
+.w-select::-webkit-input-placeholder {
+    color: rgb(168, 160, 149);
+}
+.w-input:focus,
+.w-select:focus {
+    border-color: rgb(15, 88, 153);
+    outline-color: initial;
+}
+.w-input[disabled],
+.w-select[disabled],
+.w-input[readonly],
+.w-select[readonly],
+fieldset[disabled] .w-input,
+fieldset[disabled] .w-select {
+    background-color: rgb(34, 36, 38);
+}
+.w-select {
+    background-color: rgb(31, 33, 35);
+}
+.w-file-upload-default,
+.w-file-upload-uploading,
+.w-file-upload-success {
+    color: rgb(200, 195, 188);
+}
+.w-file-upload-uploading-btn {
+    border-color: rgb(62, 68, 70);
+    background-color: rgb(27, 29, 30);
+}
+.w-file-upload-file {
+    border-color: rgb(62, 68, 70);
+    background-color: rgb(27, 29, 30);
+}
+.w-file-upload-error-msg {
+    color: rgb(235, 70, 88);
+}
+.w-file-upload-label {
+    border-color: rgb(62, 68, 70);
+    background-color: rgb(27, 29, 30);
+}
+.w-widget-twitter-count-shim {
+    background-image: initial;
+    background-color: rgb(24, 26, 27);
+    border-color: rgb(82, 89, 93);
+}
+.w-widget-twitter-count-shim .w-widget-twitter-count-inner {
+    color: rgb(168, 160, 149);
+}
+.w-widget-twitter-count-shim:not(.w--vertical)::before,
+.w-widget-twitter-count-shim:not(.w--vertical)::after {
+    border-color: transparent;
+}
+.w-widget-twitter-count-shim:not(.w--vertical)::before {
+    border-color: rgba(82, 89, 93, 0) rgb(104, 97, 86) rgba(82, 89, 93, 0) rgba(82, 89, 93, 0);
+}
+.w-widget-twitter-count-shim:not(.w--vertical)::after {
+    border-color: rgba(48, 52, 54, 0) rgb(48, 52, 54) rgba(48, 52, 54, 0) rgba(48, 52, 54, 0);
+}
+.w-widget-twitter-count-shim.w--vertical::before,
+.w-widget-twitter-count-shim.w--vertical::after {
+    border-color: transparent;
+}
+.w-widget-twitter-count-shim.w--vertical::before {
+    border-color: rgb(104, 97, 86) rgba(82, 89, 93, 0) rgba(82, 89, 93, 0);
+}
+.w-widget-twitter-count-shim.w--vertical::after {
+    border-color: rgb(48, 52, 54) rgba(48, 52, 54, 0) rgba(48, 52, 54, 0);
+}
+.w-background-video {
+    color: rgb(232, 230, 227);
+}
+.w-dropdown-btn,
+.w-dropdown-toggle,
+.w-dropdown-link {
+    text-decoration-color: initial;
+    color: rgb(211, 207, 201);
+}
+.w-dropdown-toggle:focus {
+    outline-color: initial;
+}
+.w-dropdown-list {
+    background-image: initial;
+    background-color: rgb(43, 47, 49);
+}
+.w-dropdown-link {
+    color: rgb(211, 207, 201);
+}
+.w-dropdown-link.w--current {
+    color: rgb(58, 169, 255);
+}
+.w-dropdown-link:focus {
+    outline-color: initial;
+}
+.w-lightbox-backdrop {
+    list-style-image: initial;
+    text-shadow: none;
+    color: rgb(232, 230, 227);
+    background-image: initial;
+    background-color: rgba(0, 0, 0, 0.9);
+    outline-color: initial;
+    -webkit-tap-highlight-color: transparent;
+}
+.w-lightbox-caption {
+    background-image: initial;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+.w-lightbox-left {
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9Ii0yMCAwIDI0IDQwIiB3aWR0aD0iMjQiIGhlaWdodD0iNDAiPjxnIHRyYW5zZm9ybT0icm90YXRlKDQ1KSI+PHBhdGggZD0ibTAgMGg1djIzaDIzdjVoLTI4eiIgb3BhY2l0eT0iLjQiLz48cGF0aCBkPSJtMSAxaDN2MjNoMjN2M2gtMjZ6IiBmaWxsPSIjZmZmIi8+PC9nPjwvc3ZnPg==");
+}
+.w-lightbox-right {
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9Ii00IDAgMjQgNDAiIHdpZHRoPSIyNCIgaGVpZ2h0PSI0MCI+PGcgdHJhbnNmb3JtPSJyb3RhdGUoNDUpIj48cGF0aCBkPSJtMC0waDI4djI4aC01di0yM2gtMjN6IiBvcGFjaXR5PSIuNCIvPjxwYXRoIGQ9Im0xIDFoMjZ2MjZoLTN2LTIzaC0yM3oiIGZpbGw9IiNmZmYiLz48L2c+PC9zdmc+");
+}
+.w-lightbox-close {
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9Ii00IDAgMTggMTciIHdpZHRoPSIxOCIgaGVpZ2h0PSIxNyI+PGcgdHJhbnNmb3JtPSJyb3RhdGUoNDUpIj48cGF0aCBkPSJtMCAwaDd2LTdoNXY3aDd2NWgtN3Y3aC01di03aC03eiIgb3BhY2l0eT0iLjQiLz48cGF0aCBkPSJtMSAxaDd2LTdoM3Y3aDd2M2gtN3Y3aC0zdi03aC03eiIgZmlsbD0iI2ZmZiIvPjwvZz48L3N2Zz4=");
+}
+.w-lightbox-thumbnail {
+    background-image: initial;
+    background-color: rgb(26, 28, 29);
+}
+.w-lightbox-spinner {
+    border-color: rgba(140, 130, 115, 0.4);
+}
+.w-lightbox-spinner::after {
+    border-color: transparent transparent rgb(48, 52, 54); 
+}
+.w-richtext .w-richtext-figure-selected.w-richtext-figure-type-video div::after, .w-richtext .w-richtext-figure-selected[data-rt-type="video"] div::after {
+    outline-color: rgb(6, 89, 163); 
+}
+.w-richtext .w-richtext-figure-selected.w-richtext-figure-type-image div, .w-richtext .w-richtext-figure-selected[data-rt-type="image"] div {
+    outline-color: rgb(6, 89, 163);
+}
+.w-richtext figure div {
+    color: transparent;
+}
+.w-nav {
+    background-image: initial;
+    background-color: rgb(43, 47, 49);
+}
+.w-nav-brand {
+    text-decoration-color: initial;
+    color: rgb(200, 195, 188);
+}
+.w-nav-link {
+    text-decoration-color: initial;
+    color: rgb(211, 207, 201);
+}
+.w-nav-link.w--current {
+    color: rgb(58, 169, 255);
+}
+[data-nav-menu-open] {
+    background-image: initial;
+    background-color: rgb(55, 60, 62);
+}
+.w-nav-button {
+    -webkit-tap-highlight-color: rgba(232, 230, 227, 0);
+}
+.w-nav-button:focus {
+    outline-color: initial;
+}
+.w-nav-button.w--open {
+    background-color: rgb(55, 60, 62);
+    color: rgb(232, 230, 227);
+}
+.w-tab-link {
+    text-decoration-color: initial;
+    color: rgb(211, 207, 201);
+    background-color: rgb(43, 47, 49);
+    border: 1px solid #131516;
+}
+.w-tab-link.w--current {
+    background-color: rgb(55, 60, 62);
+}
+.w-tab-link:focus {
+    outline-color: initial;
+}
+.w-dyn-empty {
+    background-color: rgb(43, 47, 49);
+}
+body {
+    background-color: rgb(33, 35, 37);
+    color: rgb(154, 145, 132);
+}
+h2 {
+    color: rgb(164, 156, 144);
+}
+h3 {
+    color: rgb(164, 156, 144);
+}
+h5 {
+    color: rgb(164, 156, 144);
+}
+.button {
+    border-color: rgb(52, 57, 59);
+    background-color: rgb(0, 94, 176);
+    color: rgb(232, 230, 227);
+    text-decoration-color: initial;
+}
+.button:hover {
+    background-color: rgb(0, 94, 176);
+}
+.button:active {
+    background-color: rgb(0, 75, 141);
+}
+.button.w--current {
+    background-color: rgb(37, 102, 146);
+}
+.button.tab {
+    background-color: rgb(71, 83, 95);
+}
+.button.tab:hover {
+    background-color: rgb(37, 102, 146);
+}
+.button.tab.w--current {
+    background-color: rgb(37, 102, 146);
+}
+.navigation-link {
+    color: rgb(164, 156, 144);
+}
+.navigation-link:hover {
+    color: rgb(58, 169, 255);
+}
+.navigation-bar {
+    background-color: rgb(24, 26, 27);
+    box-shadow: rgb(0, 0, 0) 1px 1px 12px 0px;
+}
+.brand-text {
+    color: rgb(99, 187, 255);
+}
+.section {
+    background-color: rgb(24, 26, 27);
+}
+.section.accent {
+    background-color: rgb(20, 26, 40);
+}
+.white-box {
+    border-color: rgb(21, 61, 94);
+    background-color: rgb(24, 26, 27);
+}
+.white-box.transparent {
+    background-color: transparent;
+}
+.hero-section {
+    background-image: url("https://irisshaders.github.io/images/SpacEagle17edit.png");
+}
+.hero-section.centered {
+    border-bottom-color: rgb(0, 78, 147);
+    background-image: url("https://irisshaders.github.io/images/iris-bkg.png");
+    box-shadow: rgb(0, 0, 0) 1px 1px 12px 0px inset;
+}
+.hero-heading {
+    color: rgb(232, 230, 227);
+}
+.hero-subheading {
+    color: rgb(99, 187, 255);
+}
+.hollow-button {
+    color: rgb(232, 230, 227);
+    text-decoration-color: initial;
+}
+.hollow-button:hover {
+    border-color: rgb(0, 87, 165);
+    color: rgb(58, 169, 255);
+}
+.section-heading.centered {
+    color: rgb(99, 187, 255);
+}
+.section-heading.centered.white {
+    color: rgb(99, 187, 255);
+}
+.section-subheading.center.off-white {
+    color: rgb(194, 188, 180);
+}
+.form-field {
+    border-color: rgb(140, 130, 115);
+    box-shadow: rgba(51, 55, 57, 0.3) 0px 0px 0px 1px;
+}
+.footer {
+    background-color: rgb(33, 35, 37);
+}
+.footer.center {
+    border-top-color: rgb(58, 63, 65);
+    background-color: rgb(33, 35, 37);
+}
+.footer-text {
+    color: rgb(171, 163, 152);
+}
+.grid-image {
+    border-color: rgb(24, 26, 27);
+    background-color: rgb(0, 75, 141);
+    box-shadow: rgb(0, 94, 176) 0px 0px 0px 1px;
+}
+.footer-link {
+    border-bottom-color: rgb(58, 63, 66);
+    color: rgb(115, 152, 180);
+    text-decoration-color: initial;
+}
+.footer-link:hover {
+    color: rgba(51, 167, 255, 0.84);
+}
+.fullwidth-image {
+    box-shadow: rgb(0, 0, 0) 4px 4px 4px 0px;
+}
+.fullwidth-image.slides {
+    box-shadow: none;
+}
+.white-text {
+    color: rgb(232, 230, 227);
+}
+.body {
+    background-color: rgb(33, 35, 37);
+}
+.body-2 {
+    background-color: rgb(42, 46, 47);
+}
+.navigation-link-button {
+    background-color: rgb(0, 94, 176);
+    color: rgb(222, 219, 215);
+}
+.navigation-link-button:hover {
+    color: rgb(159, 213, 255);
+}
+.navigation-link-button:active {
+    background-color: rgb(0, 75, 141);
+    color: rgb(222, 219, 215);
+}
+.navigation-link-button.w--current {
+    background-color: rgb(0, 94, 176);
+    color: rgb(222, 219, 215);
+}
+.big-button {
+    background-color: rgb(0, 94, 176);
+    color: rgb(232, 230, 227);
+    text-decoration-color: initial;
+}
+.big-button:hover {
+    background-color: rgb(0, 94, 176);
+}
+.big-button:active {
+    background-color: rgb(0, 75, 141);
+}
+.big-button.w--current {
+    background-color: rgb(37, 102, 146);
+}
+.big-button.tab {
+    background-color: rgb(71, 83, 95);
+}
+.big-button.tab:hover {
+    background-color: rgb(37, 102, 146);
+}
+.big-button.tab.w--current {
+    background-color: rgb(37, 102, 146);
+}
+.button-right {
+    border-color: rgb(52, 57, 59);
+    background-color: rgb(0, 94, 176);
+    color: rgb(232, 230, 227);
+    text-decoration-color: initial;
+}
+.button-right:hover {
+    background-color: rgb(0, 94, 176);
+}
+.button-right:active {
+    background-color: rgb(0, 75, 141);
+}
+.button-right.w--current {
+    background-color: rgb(37, 102, 146);
+}
+.button-right.tab {
+    background-color: rgb(71, 83, 95);
+}
+.button-right.tab:hover {
+    background-color: rgb(37, 102, 146);
+}
+.button-right.tab.w--current {
+    background-color: rgb(37, 102, 146);
+}
+.paragraph-7 {
+    color: rgb(194, 188, 180);
+}
+.heading-4 {
+    color: rgb(222, 219, 215);
+}
+.heading-5 {
+    color: rgb(222, 219, 215);
+}
+.paragraph-8 {
+    color: rgb(194, 188, 180);
+}
+.paragraph-9 {
+    color: rgb(194, 188, 180);
+}
+.heading-6 {
+    color: rgb(222, 219, 215);
+}
+.section-subheading-light.center {
+    color: rgb(194, 188, 180);
+}
+.section-subheading-light.center.off-white {
+    color: rgb(217, 214, 209);
+}
+.right-floatbutton {
+    border-color: rgb(52, 57, 59);
+    background-color: rgb(0, 94, 176);
+    color: rgb(232, 230, 227);
+    text-decoration-color: initial;
+}
+.right-floatbutton:hover {
+    background-color: rgb(0, 94, 176);
+}
+.right-floatbutton:active {
+    background-color: rgb(0, 75, 141);
+}
+.right-floatbutton.w--current {
+    background-color: rgb(37, 102, 146);
+}
+.right-floatbutton.tab {
+    background-color: rgb(71, 83, 95);
+}
+.right-floatbutton.tab:hover {
+    background-color: rgb(37, 102, 146);
+}
+.right-floatbutton.tab.w--current {
+    background-color: rgb(37, 102, 146);
+}
+.rich-text-block {
+    color: rgb(115, 152, 180);
+    text-decoration-color: initial;
+}
+.paragraph-11 {
+    color: rgb(194, 188, 180);
+}
+.paragraph-12 {
+    color: rgb(194, 188, 180);
+}
+.slider {
+    box-shadow: rgb(0, 0, 0) 5px 5px 7px 0px;
+}
+.text-block-slides-light {
+    background-color: transparent;
+    background-image: linear-gradient(rgb(0, 0, 0),
+    rgba(0, 0, 0, 0));
+    color: rgb(222, 219, 215);
+}
+.text-block-5 {
+    color: rgb(194, 188, 180);
+}
+.text-block-7 {
+    color: rgb(222, 219, 215);
+}
+.download-button {
+    border-color: rgb(52, 57, 59);
+    background-color: rgb(0, 94, 176);
+    color: rgb(232, 230, 227);
+    text-decoration-color: initial;
+}
+.download-button:hover {
+    background-color: rgb(0, 94, 176);
+}
+.download-button:active {
+    background-color: rgb(0, 75, 141);
+}
+.download-button.w--current {
+    background-color: rgb(37, 102, 146);
+}
+.download-button.tab {
+    background-color: rgb(71, 83, 95);
+}
+.download-button.tab:hover {
+    background-color: rgb(37, 102, 146);
+}
+.download-button.tab.w--current {
+    background-color: rgb(37, 102, 146);
+}
+@media screen and (max-width: 991px) {
+    .navigation-link {
+        color: rgba(232, 230, 227, 0.52);
+    }
+    .navigation-link.w--current {
+        color: rgb(232, 230, 227);
+    }
+    .hamburger-button.w--open {
+        background-color: rgb(31, 108, 160);
+    }
+    .navigation-menu {
+        background-color: rgb(31, 108, 160);
+    }
+    .navigation-link-button {
+        color: rgba(232, 230, 227, 0.52);
+    }
+    .navigation-link-button.w--current {
+        color: rgb(232, 230, 227);
+    }
+}
+@media screen and (max-width: 479px) {
+    .fullwidth-image {
+        border-color: rgb(140, 130, 115);
+    }
+    .fullwidth-image-tabs {
+        border-color: rgb(140, 130, 115);
+    }
+}
+
+/* Override Style */
+.vimvixen-hint {
+    background-color: #7b5300 !important;
+    border-color: #d8b013 !important;
+    color: #f3e8c8 !important;
+}
+::placeholder {
+    opacity: 0.5 !important;
+}
+a[href="https://coinmarketcap.com/"] > svg[width="94"][height="16"] > path {
+    fill: var(--darkreader-neutral-text) !important;
+}
+#edge-translate-panel-body {
+    color: var(--darkreader-neutral-text) !important;
+}
+
+.info-icon{
+    filter: grayscale(1) invert(1);
+}
+
+#w-tabs-0-data-w-tab-0, #w-tabs-0-data-w-tab-1{
+    border: none;
+}
