@@ -20148,15 +20148,29 @@ Webflow.define('tabs', module.exports = function ($) {
   return api;
 });
 
-function reloadTheme(){
+function reloadTheme(checkPreference){
   var themeSwitcher = document.getElementById("theme-switcher");
-  var themeSwitcherTrueText = themeSwitcher.innerHTML.slice(0, themeSwitcher.innerHTML.indexOf(">") + 1); 
+  var themeSwitcherTrueText = themeSwitcher.innerHTML.slice(0, themeSwitcher.innerHTML.indexOf(">") + 1);
+
+  	if (checkPreference) {
+  	  const userPrefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+	  console.log("userprefersdark: " + userPrefersDark)
+	  console.log(localStorage.getItem('darkMode'))
+  	  if (userPrefersDark && localStorage.getItem('darkMode') === 'false') {
+  		localStorage.setItem('darkMode', 'true')
+  	  }
+
+  	 }
+
+
   themeSwitcher.innerHTML = themeSwitcherTrueText + (localStorage.getItem('darkMode') == "true"? " Light Mode":" Dark Mode");
   themeSwitcher.onclick = function() {
     var currentTheme = localStorage.getItem('darkMode');
     var switchToTheme = currentTheme === "true" ? "false" : "true"
+    console.log("currently on theme: " + currentTheme)
+    console.log("switching to " + switchToTheme)
     localStorage.setItem('darkMode', switchToTheme);
-    reloadTheme();
+    reloadTheme(false);
   }
   if(localStorage.getItem('darkMode') == "true"){
     if(!document.getElementById('darkThemeLink')){
@@ -20175,7 +20189,7 @@ function reloadTheme(){
   }
 }
 document.addEventListener("DOMContentLoaded", function(event) {
-  reloadTheme();
+  reloadTheme(true);
 });
 
 function loadTheme(){
