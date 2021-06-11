@@ -20154,10 +20154,8 @@ function reloadTheme(checkPreference){
 
   	if (checkPreference) {
   	  const userPrefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-	  console.log("userprefersdark: " + userPrefersDark)
-	  console.log(localStorage.getItem('darkMode'))
   	  if (userPrefersDark && localStorage.getItem('darkMode') === 'false') {
-  		localStorage.setItem('darkMode', 'true')
+  		localStorage.setItem('darkMode', 'true');
   	  }
 
   	 }
@@ -20167,8 +20165,6 @@ function reloadTheme(checkPreference){
   themeSwitcher.onclick = function() {
     var currentTheme = localStorage.getItem('darkMode');
     var switchToTheme = currentTheme === "true" ? "false" : "true"
-    console.log("currently on theme: " + currentTheme)
-    console.log("switching to " + switchToTheme)
     localStorage.setItem('darkMode', switchToTheme);
     reloadTheme(false);
   }
