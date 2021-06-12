@@ -1,4 +1,3 @@
-[data-theme="dark"]
 /* User-Agent Style */
 html {
     background-color: #181a1b !important;
@@ -652,19 +651,8 @@ h5 {
 }
 
 /* Override Style */
-.vimvixen-hint {
-    background-color: #7b5300 !important;
-    border-color: #d8b013 !important;
-    color: #f3e8c8 !important;
-}
 ::placeholder {
     opacity: 0.5 !important;
-}
-a[href="https://coinmarketcap.com/"] > svg[width="94"][height="16"] > path {
-    fill: var(--darkreader-neutral-text) !important;
-}
-#edge-translate-panel-body {
-    color: var(--darkreader-neutral-text) !important;
 }
 
 .info-icon{
