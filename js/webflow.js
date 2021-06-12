@@ -20168,9 +20168,10 @@ function reloadTheme(){
       link.rel = "stylesheet";
       link.id = "darkThemeLink"
       document.getElementsByTagName( "head" )[0].appendChild( link );
-      document.getElementById("darkThemeIcon").setAttribute("src", "images/lightmode.png");
     }
+    document.getElementById("darkThemeIcon").setAttribute("src", "images/lightmode.png");
   }else{
+    document.getElementById("darkThemeIcon").setAttribute("src", "images/darkmode.png");
     document.getElementById('darkThemeLink').remove();
   }
 }
