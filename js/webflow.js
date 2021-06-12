@@ -20151,14 +20151,13 @@ Webflow.define('tabs', module.exports = function ($) {
 function reloadTheme(checkPreference){
   var themeSwitcher = document.getElementById("theme-switcher");
   var themeSwitcherTrueText = themeSwitcher.innerHTML.slice(0, themeSwitcher.innerHTML.indexOf(">") + 1);
-
+	console.log(localStorage.getItem('darkMode'))
   	if (checkPreference && localStorage.getItem('darkMode') != null) {
   	  const userPrefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
   	  if (userPrefersDark && localStorage.getItem('darkMode') === 'false') {
   		localStorage.setItem('darkMode', 'true');
   	  }
-
-  	 }
+  	}
 
 
   themeSwitcher.innerHTML = themeSwitcherTrueText + (localStorage.getItem('darkMode') == "true"? " Light Mode":" Dark Mode");
