@@ -27,5 +27,5 @@ function reloadTheme(file){
     document.getElementById("darkThemeIcon").setAttribute("src", "images/darkmode.png");
     document.getElementById("darkThemeIcon").setAttribute("srcset", "");
   }
-  initLang(file);
+  initLang(fileindex.indexOf(file));
 }
