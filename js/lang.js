@@ -88,6 +88,33 @@ var en_US = [
     patreon: "Patreon",
     copyright: "© Copyright 2021 IrisShaders. All Rights Reserved."
   },
+  {
+    downloadiris: "Download Now - IrisShaders",
+    iris: "Iris Shaders",
+    home: "Home",
+    about: "Learn More",
+    download: "Download Now",
+    dark: " Dark mode",
+    light: "Light mode",
+    heading: "The Iris Installer",
+    subheading:"designed to streamline your Iris experience",
+    description: "Iris&#x27;s installer will automatically download and install Iris and Sodium for great graphics at smooth framerates. Simply run the installer, choose your version, and hit install. Don&#x27;t believe us? Try it for yourself.",
+    downloadjar: "Download Universal JAR",
+    alternatedownloads: "Alternate Downloads",
+    alternatedownloadsubheading: "Our handy Installer&#x27;s not your style? Try the standalone version",
+    getmodrinth: "Download From Modrinth",
+    getcurseforge: "Download From CurseForge",
+    getgithub: "Get Source From GitHub",
+    footer1: "about the Iris project",
+    footerdesc1: "The Iris Project is a collaborative open-source project created by a team of passionate developers seeking to make the Minecraft shaders experience the best that it can be. Iris is developed by the community, for the community.",
+    footer2: "useful links",
+    curseforge: "Iris on CurseForge",
+    modrinth: "Iris on Modrinth",
+    github: "GitHub",
+    discord: "Discord",
+    patreon: "Patreon",
+    copyright: "© Copyright 2021 IrisShaders. All Rights Reserved."
+  }
 ];
 var lang = navigator.language.replace('-', "_");
 
