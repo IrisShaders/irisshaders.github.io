@@ -27,7 +27,9 @@ function reloadTheme(){
     document.getElementById("darkThemeIcon").setAttribute("src", "images/darkmode.png");
     document.getElementById("darkThemeIcon").setAttribute("srcset", "");
   }
-  var file = location.pathname.split( "/" ).pop();
-  if(!file) {file = "index.html"};
-  initLang(fileindex.indexOf(file));
+  var filepath = location.pathname.split( "/" );
+  filepath.splice(0, 3);
+  var filename = filepath.join("/")
+  if(!filename) {filename = "index.html"};
+  initLang(fileindex.indexOf(filename));
 }
