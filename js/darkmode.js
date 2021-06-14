@@ -28,5 +28,6 @@ function reloadTheme(){
     document.getElementById("darkThemeIcon").setAttribute("srcset", "");
   }
   var file = location.pathname.split( "/" ).pop();
-  initLang(fileindex.indexOf(file))
+  if(!file) {file = "index.html"};
+  initLang(fileindex.indexOf(file));
 }
