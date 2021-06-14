@@ -1,4 +1,4 @@
-var fileindex = ["index.html", "download.html", "about.html"];
+var fileindex = ["index.html", "about.html", "download.html"];
 var en_US = [
   {
     title: "This is Iris",
