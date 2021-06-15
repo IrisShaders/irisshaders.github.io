@@ -138,7 +138,6 @@ var fileindex = ["index.html", "about.html", "download.html"];
 
 var langData;
 var lang = navigator.language.replace("-", "_");
-lang = "fr_FR"
 
 //Loading the lang
 function initLang(page) {
