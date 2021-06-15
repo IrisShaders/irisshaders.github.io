@@ -15,8 +15,6 @@ function initLang(page) {
     .then((response) => response.json())
     .then((data) => {
       langData = data.data;
-      console.log(langData);
-      console.log("Loaded " + lang);
       for (const [key, value] of Object.entries(langData[page])) {
         var el = document.querySelector(`[langfield="${key}"]`);
         if (el) {
