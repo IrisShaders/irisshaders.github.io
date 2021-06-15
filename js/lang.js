@@ -1,9 +1,15 @@
 var fileindex = ["index.html", "about.html", "download.html"];
-var langData;
+var traductions = ["en", "en_US", "fr"]
 var lang = navigator.language.replace("-", "_");
-lang = "fr"
+if(!traductions.includes(lang)){
+  lang = lang.split("_")[0]
+  if(!traductions.includes(lang)){
+    lang = "en"
+  }
+}
 
 //Loading the lang
+var langData;
 function initLang(page) {
   fetch("./locales/" + lang + ".json")
     .then((response) => response.json())
