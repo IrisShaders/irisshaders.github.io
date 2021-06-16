@@ -22,12 +22,12 @@ function initLang(page) {
     .then((response) => response.json())
     .then((datafall) => {
       fallbacklang = datafall.data;
+      console.log(fallbacklang[page])
       fetch("./locales/" + lang + ".json")
         .then((response) => response.json())
         .then((data) => {
           langData = data.data;
           for (var [key, value] of Object.entries(fallbacklang[page])) {
-            console.log(langData[page])
             if (langData[page][key]) {
               value = langData[page][key];
             }
