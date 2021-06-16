@@ -30,7 +30,6 @@ function initLang(page) {
             if (key in langData[page]) {
               value = langData[page][key];
             }
-            console.log(key, value)
             var el = document.querySelector(`[langfield="${key}"]`);
             if (el) {
               document
