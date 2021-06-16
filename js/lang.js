@@ -10,6 +10,7 @@ function initLang(page) {
     localStorage.setItem("lang", navigator.language.replace("-", "_"));
   }
   lang = localStorage.getItem("lang");
+  console.log(lang)
   if (!traductions.includes(lang)) {
     lang = lang.split("_")[0];
     if (!traductions.includes(lang)) {
