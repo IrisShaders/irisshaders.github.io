@@ -22,13 +22,13 @@ function initLang(page) {
     .then((response) => response.json())
     .then((datafall) => {
       fallbacklang = datafall.data;
-      console.log(fallbacklang[page])
       fetch("./locales/" + lang + ".json")
         .then((response) => response.json())
         .then((data) => {
           langData = data.data;
           for (var [key, value] of Object.entries(fallbacklang[page])) {
-            if (langData[page][key]) {
+            console.log(key, value)
+            if (key in langData[page]) {
               value = langData[page][key];
             }
             var el = document.querySelector(`[langfield="${key}"]`);
