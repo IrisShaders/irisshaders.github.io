@@ -2,7 +2,6 @@
     "data":[
         {
           "title": "Voici Iris",
-          "heading": "Shaders Iris",
           "home": "Menu",
           "about": "À propos",
           "download": "Télécharger",
@@ -45,7 +44,6 @@
         },
         {
           "abouttitle": "À propos d'Iris",
-          "irisshaders": "Shaders Iris",
           "about": "À propos",
           "download": "Télécharger",
           "dark": " Mode sombre",

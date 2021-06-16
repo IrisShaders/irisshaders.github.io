@@ -8,14 +8,26 @@ if(!traductions.includes(lang)){
   }
 }
 
+var fallbacklang;
+fetch("./locales/en.json")
+.then((response) => response.json())
+.then((data) => {
+  fallbacklang = data.data;
+})
+.catch((err) => console.log(err));
+
 //Loading the lang
 var langData;
 function initLang(page) {
+  
   fetch("./locales/" + lang + ".json")
     .then((response) => response.json())
     .then((data) => {
       langData = data.data;
-      for (const [key, value] of Object.entries(langData[page])) {
+      for (var [key, value] of Object.entries(fallbacklang[page])) {
+        if(langData[window[key]]){
+          value = langData[window[key]];
+        }
         var el = document.querySelector(`[langfield="${key}"]`);
         if (el) {
           document
