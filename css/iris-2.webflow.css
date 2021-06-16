@@ -1180,6 +1180,21 @@ p {
   .style-nav-link.w--current {
     color: #fff;
   }
+
+  .image-8 {
+    margin-top: 52px;
+    margin-bottom: 0px;
+  }
+
+  .image-9 {
+    margin-top: 76px;
+    margin-bottom: 0px;
+  }
+
+  .image-10 {
+    margin-top: 72px;
+    margin-bottom: 0px;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -1299,6 +1314,18 @@ p {
     font-size: 12px;
   }
 
+  .paragraph-10.left {
+    padding-right: 60px;
+    padding-left: 60px;
+    text-align: center;
+  }
+
+  .paragraph-10.right {
+    padding-right: 61px;
+    padding-left: 60px;
+    text-align: center;
+  }
+
   .right-floatbutton.full-width {
     margin-right: auto;
     margin-left: auto;
@@ -1333,6 +1360,23 @@ p {
 
   .download-button.tab {
     font-size: 12px;
+  }
+
+  .image-8 {
+    margin-top: 0px;
+    margin-bottom: 16px;
+    float: none;
+  }
+
+  .image-9 {
+    margin-top: 16px;
+    float: none;
+  }
+
+  .image-10 {
+    margin-top: 1px;
+    margin-bottom: 16px;
+    float: none;
   }
 }
 
@@ -1444,6 +1488,16 @@ p {
     line-height: 30px;
   }
 
+  .paragraph-10.left {
+    padding-right: 25px;
+    padding-left: 25px;
+  }
+
+  .paragraph-10.right {
+    padding-right: 25px;
+    padding-left: 25px;
+  }
+
   .right-floatbutton {
     margin-right: 15px;
     margin-bottom: 15px;
@@ -1495,6 +1549,7 @@ p {
   }
 
   .image-7 {
+    margin-left: 0px;
     opacity: 0;
   }
 }
