@@ -20,8 +20,8 @@ function initLang(page) {
 
   fetch("./locales/en.json")
     .then((response) => response.json())
-    .then((data) => {
-      fallbacklang = data.data;
+    .then((datafall) => {
+      fallbacklang = datafall.data;
       fetch("./locales/" + lang + ".json")
         .then((response) => response.json())
         .then((data) => {
