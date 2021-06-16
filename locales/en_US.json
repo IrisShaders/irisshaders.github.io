@@ -2,6 +2,7 @@
     "data":[
         {
           "title": "This is Iris",
+          "heading": "Iris Shaders",
           "home": "Home",
           "about": "Learn More",
           "download": "Download Now",
@@ -36,10 +37,15 @@
           "footerdesc1": "The Iris Project is a collaborative open-source project created by a team of passionate developers seeking to make the Minecraft shaders experience the best that it can be. Iris is developed by the community, for the community.",
           "footer2": "Useful links",
           "curseforge": "Iris on CurseForge",
-          "modrinth": "Iris on Modrinth"
+          "modrinth": "Iris on Modrinth",
+          "github": "GitHub",
+          "discord": "Discord",
+          "patreon": "Patreon",
+          "copyright": "© Copyright 2021 IrisShaders. All Rights Reserved."
         },
         {
           "abouttitle": "About IrisShaders",
+          "irisshaders": "Iris Shaders",
           "about": "Learn More",
           "download": "Download Now",
           "dark": " Dark mode",
@@ -76,10 +82,15 @@
           "footerdesc1": "The Iris Project is a collaborative open-source project created by a team of passionate developers seeking to make the Minecraft shaders experience the best that it can be. Iris is developed by the community, for the community.",
           "footer2": "Useful links",
           "curseforge": "Iris on CurseForge",
-          "modrinth": "Iris on Modrinth"
+          "modrinth": "Iris on Modrinth",
+          "github": "GitHub",
+          "discord": "Discord",
+          "patreon": "Patreon",
+          "copyright": "© Copyright 2021 IrisShaders. All Rights Reserved."
         },
         {
           "downloadiris": "Download Now - IrisShaders",
+          "iris": "Iris Shaders",
           "home": "Home",
           "about": "Learn More",
           "download": "Download Now",
@@ -98,7 +109,11 @@
           "footerdesc1": "The Iris Project is a collaborative open-source project created by a team of passionate developers seeking to make the Minecraft shaders experience the best that it can be. Iris is developed by the community, for the community.",
           "footer2": "Useful links",
           "curseforge": "Iris on CurseForge",
-          "modrinth": "Iris on Modrinth"
+          "modrinth": "Iris on Modrinth",
+          "github": "GitHub",
+          "discord": "Discord",
+          "patreon": "Patreon",
+          "copyright": "© Copyright 2021 IrisShaders. All Rights Reserved."
         }
       ]
 }
