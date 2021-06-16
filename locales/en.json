@@ -2,7 +2,7 @@
     "data":[
         {
           "title": "This is Iris",
-          "heading": "Iris Shaders",
+          "irisshaders": "Iris Shaders",
           "home": "Home",
           "about": "Learn More",
           "download": "Download Now",
@@ -90,7 +90,7 @@
         },
         {
           "downloadiris": "Download Now - IrisShaders",
-          "iris": "Iris Shaders",
+          "irisshaders": "Iris Shaders",
           "home": "Home",
           "about": "Learn More",
           "download": "Download Now",
