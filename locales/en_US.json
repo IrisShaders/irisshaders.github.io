@@ -36,7 +36,8 @@
           "footerdesc1": "The Iris Project is a collaborative open-source project created by a team of passionate developers seeking to make the Minecraft shaders experience the best that it can be. Iris is developed by the community, for the community.",
           "footer2": "Useful links",
           "curseforge": "Iris on CurseForge",
-          "modrinth": "Iris on Modrinth"
+          "modrinth": "Iris on Modrinth",
+          "copyright": "© Copyright 2021 IrisShaders. All Rights Reserved."
         },
         {
           "abouttitle": "About IrisShaders",
@@ -76,7 +77,8 @@
           "footerdesc1": "The Iris Project is a collaborative open-source project created by a team of passionate developers seeking to make the Minecraft shaders experience the best that it can be. Iris is developed by the community, for the community.",
           "footer2": "Useful links",
           "curseforge": "Iris on CurseForge",
-          "modrinth": "Iris on Modrinth"
+          "modrinth": "Iris on Modrinth",
+          "copyright": "© Copyright 2021 IrisShaders. All Rights Reserved."
         },
         {
           "downloadiris": "Download Now - IrisShaders",
@@ -98,7 +100,8 @@
           "footerdesc1": "The Iris Project is a collaborative open-source project created by a team of passionate developers seeking to make the Minecraft shaders experience the best that it can be. Iris is developed by the community, for the community.",
           "footer2": "Useful links",
           "curseforge": "Iris on CurseForge",
-          "modrinth": "Iris on Modrinth"
+          "modrinth": "Iris on Modrinth",
+          "copyright": "© Copyright 2021 IrisShaders. All Rights Reserved."
         }
       ]
 }
