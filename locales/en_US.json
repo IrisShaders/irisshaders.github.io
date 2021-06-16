@@ -2,7 +2,6 @@
     "data":[
         {
           "title": "This is Iris",
-          "heading": "Iris Shaders",
           "home": "Home",
           "about": "Learn More",
           "download": "Download Now",
@@ -42,7 +41,6 @@
         },
         {
           "abouttitle": "About IrisShaders",
-          "irisshaders": "Iris Shaders",
           "about": "Learn More",
           "download": "Download Now",
           "dark": " Dark mode",
@@ -84,7 +82,6 @@
         },
         {
           "downloadiris": "Download Now - IrisShaders",
-          "iris": "Iris Shaders",
           "home": "Home",
           "about": "Learn More",
           "download": "Download Now",
