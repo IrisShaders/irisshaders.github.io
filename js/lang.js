@@ -1,5 +1,5 @@
 var fileindex = ["index.html", "about.html", "download.html"];
-var traductions = ["en", "en_US", "fr"];
+var traductions = ["en", "en_US", "fr", "de"];
 var fallbacklang;
 var lang;
 
