@@ -1,6 +1,9 @@
 var fileindex = ["index.html", "about.html", "download.html"];
 var traductions = ["en", "en_US", "fr"]
-var lang = navigator.language.replace("-", "_");
+if(!localStorage.getItem("lang")){
+  localStorage.setItem("lang", navigator.language.replace("-", "_"))
+}
+var lang = localStorage.getItem("lang")
 if(!traductions.includes(lang)){
   lang = lang.split("_")[0]
   if(!traductions.includes(lang)){
@@ -19,7 +22,6 @@ fetch("./locales/en.json")
 //Loading the lang
 var langData;
 function initLang(page) {
-  
   fetch("./locales/" + lang + ".json")
     .then((response) => response.json())
     .then((data) => {
