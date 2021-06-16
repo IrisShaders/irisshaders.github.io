@@ -27,7 +27,7 @@ function initLang(page) {
         .then((data) => {
           langData = data.data;
           for (var [key, value] of Object.entries(fallbacklang[page])) {
-            console.log(langData[key])
+            console.log(langData)
             if (langData[key]) {
               value = langData[key];
             }
