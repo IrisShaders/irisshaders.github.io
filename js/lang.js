@@ -27,9 +27,9 @@ function initLang(page) {
         .then((data) => {
           langData = data.data;
           for (var [key, value] of Object.entries(fallbacklang[page])) {
-            console.log(langData)
-            if (langData[key]) {
-              value = langData[key];
+            console.log(langData[page])
+            if (langData[page][key]) {
+              value = langData[page][key];
             }
             var el = document.querySelector(`[langfield="${key}"]`);
             if (el) {
