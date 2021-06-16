@@ -29,7 +29,7 @@ function initLang(page) {
           for (var [key, value] of Object.entries(fallbacklang[page])) {
             console.log(langData[key])
             if (langData[key]) {
-              value = langData[window[key]];
+              value = langData[key];
             }
             var el = document.querySelector(`[langfield="${key}"]`);
             if (el) {
