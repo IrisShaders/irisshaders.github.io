@@ -22,7 +22,7 @@
           "subheading2": "Lo que Iris tiene que ofrecer",
           "image1": "Paridad con OptiFine",
           "imagedesc1": "Iris apunta a tener soporte completo para todos los shaderpacks de OptiFine pasados y actuales, ¡y el número de packs soportados por Iris aumenta constantemente!<span class='text-span-2'><br>Captura por Niko</span>",
-          "image2": "Works with Sodium",
+          "image2": "Funciona con Sodium",
           "imagedesc2": "Iris es compatible con los mods de optimización de CaffeineMC, como Sodium y Phosphor, permitiendo gráficos impresionantes con FPS comparables o incluso mejores que en vanilla.<br><span class='text-span-2'>Captura por Guardian</span>",
           "heading3": "La ventaja de Iris",
           "subheading3": "Nuevas técnicas de renderizado que te ponen en la delantera del juego",
@@ -35,9 +35,10 @@
           "footer1": "Acerca del Proyecto Iris",
           "footerdesc1": "El Proyecto Iris Project es un proyecto colaborativo y de código abierto creado por un equipo de desarroladores apasionados intentando hacer la experiencia de shaders en Minecraft la mejor posible. Iris está desarrolado por la comunidad, para la comunidad.",
           "footer2": "Enlaces útiles",
+          "stillcurious": "¿Aun dudas? <a href='about.html'>Aprende más</a><link rel='prefetch' href='/about'>."
           "curseforge": "Iris en CurseForge",
           "modrinth": "Iris en Modrinth",
-          "copyright": "© Copyright 2021 IrisShaders. All Rights Reserved."
+          "copyright": "© Copyright 2021 IrisShaders. Todos los derechos reservados."
         },
         {
           "abouttitle": "Acerca de IrisShaders",
@@ -78,7 +79,7 @@
           "footer2": "Enlaces útiles",
           "curseforge": "Iris en CurseForge",
           "modrinth": "Iris en Modrinth",
-          "copyright": "© Copyright 2021 IrisShaders. All Rights Reserved."
+          "copyright": "© Copyright 2021 IrisShaders. Todos los derechos reservados."
         },
         {
           "downloadiris": "Descargar Ahora - IrisShaders",
@@ -101,7 +102,7 @@
           "footer2": "Enlaces útiles",
           "curseforge": "Iris en CurseForge",
           "modrinth": "Iris en Modrinth",
-          "copyright": "© Copyright 2021 IrisShaders. All Rights Reserved."
+          "copyright": "© Copyright 2021 IrisShaders. Todos los derechos reservados."
         }
       ]
 }
