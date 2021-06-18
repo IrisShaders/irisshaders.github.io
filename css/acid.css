@@ -718,7 +718,7 @@ h5 {
 }
 .hero-section.centered{
     -webkit-filter: brightness(2); /* Safari 6.0 - 9.0 */
-    filter: blur(2);
+    filter: brightness(2);
 }
 
 @media screen and (max-width: 991px) {
