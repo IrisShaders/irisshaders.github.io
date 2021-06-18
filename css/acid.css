@@ -717,8 +717,8 @@ h5 {
     content: url("../images/irisacid.png");
 }
 .hero-section.centered{
-    -webkit-filter: brightness(10); /* Safari 6.0 - 9.0 */
-    filter: brightness(10);
+    -webkit-filter: brightness(5); /* Safari 6.0 - 9.0 */
+    filter: brightness(5);
 }
 
 @media screen and (max-width: 991px) {
