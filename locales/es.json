@@ -30,6 +30,7 @@
         },
         {
           "abouttitle": "Acerca de IrisShaders",
+          "screenshotdesc2": "Iris mejora la forma en que Minecraft renderiza entidades y bloques con entidades como cofres, cerdos, o marcos para objetos. Este truco funciona hasta con los shaders desactivados, y en mundos con muchas entidades, puede hasta mejorar el rendimiento en vanilla por hasta un 60 por ciento. La renderización de sombras encuentra una mejora especialmente grande, ¡haciendo zonas que una vez fueron injugables con shaders sitios donde tus FPS són sorprendientemente estables!<br><span class='text-span-2'>Captura por kinzuu_music</span>",
           "heading": "El proyecto Iris",
           "subheading": "Aprende más sobre la sensación de shaders",
           "aboutproject": "Acerca del proyecto",
