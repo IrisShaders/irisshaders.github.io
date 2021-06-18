@@ -717,7 +717,7 @@ h5 {
     content: url("../images/irisacid.png");
 }
 .hero-section.centered{
-    background-color: url("../images/iris-bkg-acid.jpg");
+    background: url("../images/iris-bkg-acid.jpg");
 }
 
 @media screen and (max-width: 991px) {
