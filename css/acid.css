@@ -720,6 +720,9 @@ h5 {
     -webkit-filter: brightness(5); /* Safari 6.0 - 9.0 */
     filter: brightness(5);
 }
+.hero-section.centered{
+    background: url("../images/iris-bkg-acid.jpg") !important;
+}
 
 @media screen and (max-width: 991px) {
   .navigation-link {
