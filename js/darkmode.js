@@ -43,8 +43,8 @@ function reloadTheme(file){
     document.getElementById("darkThemeIcon").setAttribute("src", "images/lightmode.png");
     document.getElementById("darkThemeIcon").setAttribute("srcset", "");
   }else{
-    if(document.getElementById('darkThemeLink')){
-      document.getElementById('darkThemeLink').remove();
+    if(document.getElementById('acidThemeLink')){
+      document.getElementById('acidThemeLink').remove();
     }
     if(document.getElementById('darkThemeLink')){
       document.getElementById('darkThemeLink').remove();
