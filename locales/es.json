@@ -35,13 +35,14 @@
           "footer1": "Acerca del Proyecto Iris",
           "footerdesc1": "El Proyecto Iris Project es un proyecto colaborativo y de código abierto creado por un equipo de desarroladores apasionados intentando hacer la experiencia de shaders en Minecraft la mejor posible. Iris está desarrolado por la comunidad, para la comunidad.",
           "footer2": "Enlaces útiles",
-          "stillcurious": "¿Aun dudas? <a href='about.html'>Aprende más</a><link rel='prefetch' href='/about'>."
+          "stillcurious": "¿Aun dudas? <a href='about.html'>Aprende más</a><link rel='prefetch' href='/about'>.",
           "curseforge": "Iris en CurseForge",
           "modrinth": "Iris en Modrinth",
           "copyright": "© Copyright 2021 IrisShaders. Todos los derechos reservados."
         },
         {
           "abouttitle": "Acerca de IrisShaders",
+          "home": "Inicio",
           "about": "Aprende más",
           "download": "Descargar ahora",
           "dark": " Modo oscuro",
