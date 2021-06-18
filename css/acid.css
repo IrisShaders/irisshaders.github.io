@@ -714,13 +714,7 @@ h5 {
   box-shadow: rgb(0, 0, 0) -4px 4px 8px 0px;
 }
 #logo {
-  display: block;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  background: url(./images/irisacid.png) no-repeat;
-  width: 56px; 
-  height: 56px; 
-  padding-left: 56px; 
+    content: url("./images/irisacid.png");
 }
 
 @media screen and (max-width: 991px) {
