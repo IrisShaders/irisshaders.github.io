@@ -2,11 +2,6 @@
     "data":[
         {
           "title": "Esto es Iris",
-          "home": "Inicio",
-          "about": "Aprende más",
-          "download": "Descargar ahora",
-          "dark": " Modo oscuro",
-          "light": " Modo claro",
           "subheading": "La lente a una nueva era de gráficos en minecraft",
           "or": "o",
           "continue": "Seguir leyendo",
@@ -31,22 +26,11 @@
           "screenshottitle1": "Sombras Optimizadas para el Rendimiento",
           "screenshotdesc1": "Iris usa una técnica llamada Frustum Culling de Sombras para reducir los costes de uno de los mayores consumidores de rendimiento de un shader - las sombras. Usando el frustrum culling de Iris, serás capaz de obtener más altos FPS sin sacrificar la calidad de la iluminación volumétrica o las sombras.<br><span class='text-span-2'>Captura por FoundationGames</span>",
           "screenshottitle2": "Renderizado de Entidades Eficiente",
-          "screenshotdesc2": "Iris mejora la forma en que Minecraft renderiza entidades y bloques con entidades como cofres, cerdos, o marcos para objetos. Este truco funciona hasta con los shaders desactivados, y en mundos con muchas entidades, puede hasta mejorar el rendimiento en vanilla por hasta un 60 por ciento. La renderización de sombras encuentra una mejora especialmente grande, ¡haciendo zonas que una vez fueron injugables con shaders sitios donde tus FPS són sorprendientemente estables!<br><span class='text-span-2'>Captura por kinzuu_music</span>",
-          "footer1": "Acerca del Proyecto Iris",
-          "footerdesc1": "El Proyecto Iris Project es un proyecto colaborativo y de código abierto creado por un equipo de desarroladores apasionados intentando hacer la experiencia de shaders en Minecraft la mejor posible. Iris está desarrolado por la comunidad, para la comunidad.",
-          "footer2": "Enlaces útiles",
-          "stillcurious": "¿Aun dudas? <a href='about.html'>Aprende más</a><link rel='prefetch' href='/about'>.",
-          "curseforge": "Iris en CurseForge",
-          "modrinth": "Iris en Modrinth",
-          "copyright": "© Copyright 2021 IrisShaders. Todos los derechos reservados."
+          "screenshotdesc2": "Iris mejora la forma en que Minecraft renderiza entidades y bloques con entidades como cofres, cerdos, o marcos para objetos. Este truco funciona hasta con los shaders desactivados, y en mundos con muchas entidades, puede hasta mejorar el rendimiento en vanilla por hasta un 60 por ciento. La renderización de sombras encuentra una mejora especialmente grande, ¡haciendo zonas que una vez fueron injugables con shaders sitios donde tus FPS són sorprendientemente estables!<br><span class='text-span-2'>Captura por kinzuu_music</span>"
         },
         {
           "abouttitle": "Acerca de IrisShaders",
-          "home": "Inicio",
-          "about": "Aprende más",
-          "download": "Descargar ahora",
-          "dark": " Modo oscuro",
-          "light": " Modo claro",
+          "screenshotdesc2": "Iris mejora la forma en que Minecraft renderiza entidades y bloques con entidades como cofres, cerdos, o marcos para objetos. Este truco funciona hasta con los shaders desactivados, y en mundos con muchas entidades, puede hasta mejorar el rendimiento en vanilla por hasta un 60 por ciento. La renderización de sombras encuentra una mejora especialmente grande, ¡haciendo zonas que una vez fueron injugables con shaders sitios donde tus FPS són sorprendientemente estables!<br><span class='text-span-2'>Captura por kinzuu_music</span>",
           "heading": "El proyecto Iris",
           "subheading": "Aprende más sobre la sensación de shaders",
           "aboutproject": "Acerca del proyecto",
@@ -74,21 +58,10 @@
           "screenshot10": "Capturado por IMS usando Complementary v4.0",
           "screenshot11": "Capturado por kinzuu_music usando Complementary v4.0",
           "screenshot12": "Capturado por Justsnoopy30 usando Complementary v4.0 BE",
-          "note": "Nota - BE indica capturas con contenido del mod BetterEnd por paulevs",
-          "footer1": "Acerca del Proyecto Iris",
-          "footerdesc1": "El Proyecto Iris Project es un proyecto colaborativo y de código abierto creado por un equipo de desarroladores apasionados intentando hacer la experiencia de shaders en Minecraft la mejor posible. Iris está desarrolado por la comunidad, para la comunidad.",
-          "footer2": "Enlaces útiles",
-          "curseforge": "Iris en CurseForge",
-          "modrinth": "Iris en Modrinth",
-          "copyright": "© Copyright 2021 IrisShaders. Todos los derechos reservados."
+          "note": "Nota - BE indica capturas con contenido del mod BetterEnd por paulevs"
         },
         {
           "downloadiris": "Descargar Ahora - IrisShaders",
-          "home": "Inicio",
-          "about": "Aprende más",
-          "download": "Descargar ahora",
-          "dark": " Modo oscuro",
-          "light": " Modo claro",
           "heading": "El Instalador de Iris",
           "subheading":"diseñado para simplificar tu experiencia con Iris",
           "description": "El instalador de Iris descargará e instalará Iris y Sodium para increíbles gráficos a buenos FPS. Simplemente ejecuta el instalador, elige tu versión, y pulsa instalar. ¿No nos crees? Pruébalo tú mismo.",
@@ -97,13 +70,20 @@
           "alternatedownloadsubheading": "¿Nuestro práctico instalador no es tu estilo? Descarga el mod por sí mismo",
           "getmodrinth": "Descargar en Modrinth",
           "getcurseforge": "Descargar en CurseForge",
-          "getgithub": "Obtén el código en GitHub",
-          "footer1": "Acerca del Proyecto Iris",
-          "footerdesc1": "El Proyecto Iris Project es un proyecto colaborativo y de código abierto creado por un equipo de desarroladores apasionados intentando hacer la experiencia de shaders en Minecraft la mejor posible. Iris está desarrolado por la comunidad, para la comunidad.",
-          "footer2": "Enlaces útiles",
-          "curseforge": "Iris en CurseForge",
-          "modrinth": "Iris en Modrinth",
-          "copyright": "© Copyright 2021 IrisShaders. Todos los derechos reservados."
+          "getgithub": "Obtén el código en GitHub"
         }
-      ]
+      ],
+      "common":{
+        "home": "Inicio",
+        "about": "Aprende más",
+        "download": "Descargar ahora",
+        "dark": " Modo oscuro",
+        "light": " Modo claro",
+        "footer1": "Acerca del Proyecto Iris",
+        "footerdesc1": "El Proyecto Iris Project es un proyecto colaborativo y de código abierto creado por un equipo de desarroladores apasionados intentando hacer la experiencia de shaders en Minecraft la mejor posible. Iris está desarrolado por la comunidad, para la comunidad.",
+        "footer2": "Enlaces útiles",
+        "curseforge": "Iris en CurseForge",
+        "modrinth": "Iris en Modrinth",
+        "copyright": "© Copyright 2021 IrisShaders. Todos los derechos reservados."
+      }
 }
