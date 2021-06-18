@@ -1,17 +1,16 @@
 
 function reloadTheme(file){
-  var themeSwitcher = document.getElementById("theme-switcher");
+  let themeSwitcher = document.getElementById("theme-switcher");
   themeSwitcher.setAttribute("langfield", localStorage.getItem('darkMode') == "true"? "light":"dark");
   themeSwitcher.onclick = function() {
-    var currentTheme = localStorage.getItem('darkMode');
-    var switchToTheme = currentTheme === "true" ? "false" : "true"
+    let currentTheme = localStorage.getItem('darkMode');
+    let switchToTheme = currentTheme === "true" ? "false" : "true"
     localStorage.setItem('darkMode', switchToTheme);
     reloadTheme(file);
   }
   if(localStorage.getItem('darkMode') == "true"){
     if(!document.getElementById('darkThemeLink')){
-
-      var link = document.createElement( "link" );
+      let link = document.createElement( "link" );
       link.href = "css/darkmode_supplements.css";
       link.type = "text/css";
       link.rel = "stylesheet";

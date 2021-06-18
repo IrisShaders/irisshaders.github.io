@@ -1,10 +1,10 @@
-var fileindex = ["index.html", "about.html", "download.html"];
-var traductions = ["en", "en_US", "fr", "de", "ru", "es"];
-var fallbacklang;
-var lang;
+let fileindex = ["index.html", "about.html", "download.html"];
+let traductions = ["en", "en_US", "fr", "de", "ru", "es"];
+let fallbacklang;
+let lang;
 
 //Loading the lang
-var langData;
+let langData;
 function initLang(page) {
   if (!localStorage.getItem("lang")) {
     localStorage.setItem("lang", navigator.language.replace("-", "_"));
@@ -21,16 +21,18 @@ function initLang(page) {
   fetch("./locales/en.json")
     .then((response) => response.json())
     .then((datafall) => {
-      fallbacklang = datafall.data;
+      fallbacklang = datafall;
       fetch("./locales/" + lang + ".json")
         .then((response) => response.json())
         .then((data) => {
-          langData = data.data;
-          for (var [key, value] of Object.entries(fallbacklang[page])) {
-            if (key in langData[page]) {
-              value = langData[page][key];
+          langData = data;
+          let realfallbacklang = {...fallbacklang.data[page], ...fallbacklang.common};
+          let reallangdata = {...langData.data[page], ...langData.common};
+          for (let [key, value] of Object.entries(realfallbacklang)) {
+            if (key in reallangdata) {
+              value = reallangdata[key];
             }
-            var el = document.querySelector(`[langfield="${key}"]`);
+            let el = document.querySelector(`[langfield="${key}"]`);
             if (el) {
               document
                 .querySelectorAll(`[langfield="${key}"]`)
