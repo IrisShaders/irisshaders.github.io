@@ -714,7 +714,7 @@ h5 {
   box-shadow: rgb(0, 0, 0) -4px 4px 8px 0px;
 }
 #logo {
-    content: url("./images/irisacid.png");
+    content: url("../images/irisacid.png");
 }
 
 @media screen and (max-width: 991px) {
