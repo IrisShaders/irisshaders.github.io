@@ -390,11 +390,11 @@ h5 {
     background-color: transparent;
 }
 .hero-section {
-    background-image: url("../images/SpacEagle17edit.png");
+    background-image: url("https://irisshaders.github.io/images/SpacEagle17edit.png");
 }
 .hero-section.centered {
     border-bottom-color: rgb(0, 78, 147);
-    background-image: url("../images/iris-bkg.png");
+    background-image: url("https://irisshaders.github.io/images/iris-bkg.png");
     box-shadow: rgb(0, 0, 0) 1px 1px 12px 0px inset;
 }
 .hero-heading {
