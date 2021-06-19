@@ -179,7 +179,7 @@ p {
 
 .white-box {
   padding: 15px;
-  border: thin solid #dcebf7;
+  border: 2px solid #dcebf7;
   border-radius: 5px;
   background-color: #fff;
   text-align: center;
