@@ -28,15 +28,11 @@
         "screenshottitle2": "高效的實體渲染技術",
         "screenshotdesc2": "Iris改進了Minecraft渲染實體和方塊實體的方式，如儲物箱，豬，和物品展示框。這個技術甚至可以在關閉光影的情況下使用，在有很多實體的世界中，Iris可以提供高於原版60%的效能提升。陰影渲染有了很大的改進，你可以在原本無法使用光影的地方獲得很高的FPS！<br><span class='text-span-2'>截圖來自kinzuu_music</span>",
         "stillcurious": "還是很好奇嗎？<a href='about.html'>瞭解更多</a><link rel='prefetch' href='/about'>."
-      },
+      }, 
       {
         "abouttitle": "關於 Iris 光影",
         "subheading": "瞭解更多關於Iris的資訊",
         "aboutproject": "關於本專案",
-        "screenshotdesc2": "Iris改進了Minecraft渲染實體和方塊實體的方式，如箱子，豬，和物品展示框。這個技術甚至可以在禁用光影的情況下工作，在有很多實體的世界中，Iris可以提供高於原版60%的性能提升。陰影渲染有了很大的改進，你可以在原本無法使用光影的地方獲得很高的幀率！<br><span class='text-span-2'>截圖來自kinzuu_music</span>",
-        "stillcurious": "還是很好奇？<a href='about.html'>瞭解更多</a><link rel='prefetch' href='/about'>."
-      },
-      {
         "messageheading": "首席開發人員致辭",
         "message": "創立Iris是為了填補我在Minecraft中看到的空白：這個社群缺少一個能夠提供模組相容性高且高效能的開源光影模組。OptiFine是目前用於載入光影的主流模組。但是OptiFine不僅閉源，而且其許可極其的嚴格。這對任何對OptiFine的研究和修改都是極其不利的。不僅如此，OptiFine還因為其與我喜歡的模組存在相容性問題而惡名昭彰。不僅如此OptiFine也和Sodium（一個比OptiFine強大得多的開源效能提升模組）不相容。而另一個選擇，ShadersMod，在1.12以後就從未更新過，而且它缺乏對許多現代光影包的支持。所以我創建了 Iris，試圖解決這些問題，和解決許多其他的光影包的長期問題。<br/><br/>Iris一開始只是想要滿足我自己對光影模組的需求。Iris和Sodium在我的電腦上提供了出色的效能，最終讓我能夠在日常遊戲時使用光影，而不只是偶爾打開它們來拍攝漂亮的截圖。當然，事實證明，我自己遠不是受Iris之益的唯一之人，這就是為什麼我決定開源這個模組並分享給整個Minecraft社群。<br/><br/>Iris有一個用於1.16的穩定版本，可以和一個Iris專用版的Sodium一起使用。我們還有一個用於1.17的beta版本，目前還不能和Sodium一起使用（目前，還沒有針對1.17的Sodium官方版本）。Iris仍然在被快速的開發中，所以今天就嘗試一下這個全新版本的光影模組吧！",
         "performance": "效能提升",
@@ -93,5 +89,4 @@
       "patreon": "Patreon",
       "copyright": "© 版權所有 2021 IrisShaders. 保留全部權利"
     }
-}
 }
