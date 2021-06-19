@@ -2,12 +2,6 @@
   "data":[
       {
         "title": "這是Iris",
-        "irisshaders": "Iris光影",
-        "home": "首頁",
-        "about": "瞭解更多",
-        "download": "立即下載",
-        "dark": " 暗色模式",
-        "light": " 亮色模式",
         "subheading": "打開次世代Minecraft光影的大門",
         "or": "或者",
         "continue": "繼續閱讀",
@@ -33,25 +27,10 @@
         "screenshotdesc1": "Iris使用一種叫做陰影截錐剔除的技術來減少陰影對幀率的影響，陰影是光影最大的性能消耗。使用Iris的陰影截錐剔除，你將能夠達到更高的幀率，而不犧牲體積光照或陰影的質量。<br><span class='text-span-2'>Screenshot by FoundationGames</span>",
         "screenshottitle2": "高效的實體渲染技術",
         "screenshotdesc2": "Iris改進了Minecraft渲染實體和方塊實體的方式，如箱子，豬，和物品展示框。這個技術甚至可以在禁用光影的情況下工作，在有很多實體的世界中，Iris可以提供高於原版60%的性能提升。陰影渲染有了很大的改進，你可以在原本無法使用光影的地方獲得很高的幀率！<br><span class='text-span-2'>截圖來自kinzuu_music</span>",
-        "stillcurious": "還是很好奇？<a href='about.html'>瞭解更多</a><link rel='prefetch' href='/about'>.",
-        "footer1": "關於Iris光影",
-        "footerdesc1": "Iris Project是一個協作開源項目，由一個充滿激情的開發團隊創建，旨在提升Minecraft的光影體驗。Iris是由社區開發的，也是為社區服務的。",
-        "footer2": "相關鏈接",
-        "curseforge": "Iris在CurseForge",
-        "modrinth": "Iris在Modrinth",
-        "github": "GitHub",
-        "discord": "Discord",
-        "patreon": "Patreon",
-        "copyright": "© 版權所有 2021 IrisShaders. 保留全部權利"
+        "stillcurious": "還是很好奇？<a href='about.html'>瞭解更多</a><link rel='prefetch' href='/about'>."
       },
       {
         "abouttitle": "關於 Iris光影",
-        "irisshaders": "Iris光影",
-        "about": "瞭解更多",
-        "download": "立即下載",
-        "dark": " 暗色模式",
-        "light": " 亮色模式",
-        "heading": "Iris光影",
         "subheading": "瞭解更多關於Iris的信息",
         "aboutproject": "關於本項目",
         "messageheading": "首席開發人員致辭",
@@ -78,25 +57,10 @@
         "screenshot10": "截圖來自 IMS ，使用 Complementary v4.0",
         "screenshot11": "截圖來自 kinzuu_music ，使用 Complementary v4.0",
         "screenshot12": "截圖來自 Justsnoopy30 ，使用 Complementary v4.0 BE",
-        "note": "注意 - BE 代表了截圖中包含了paulevs的BetterEnd模組",
-        "footer1": "關於Iris光影",
-        "footerdesc1": "Iris Project是一個協作開源項目，由一個充滿激情的開發團隊創建，旨在提升Minecraft的光影體驗。Iris是由社區開發的，也是為社區服務的。",
-        "footer2": "相關鏈接",
-        "curseforge": "Iris在CurseForge",
-        "modrinth": "Iris在Modrinth",
-        "github": "GitHub",
-        "discord": "Discord",
-        "patreon": "Patreon",
-        "copyright": "© 版權所有 2021 IrisShaders. 保留全部權利"
+        "note": "注意 - BE 代表了截圖中包含了paulevs的BetterEnd模組"
       },
       {
         "downloadiris": "下載Iris - IrisShaders",
-        "irisshaders": "Iris光影",
-        "home": "首頁",
-        "about": "瞭解更多",
-        "download": "立即下載",
-        "dark": " 暗色模式",
-        "light": " 亮色模式",
         "heading": "Iris光影安裝程序",
         "subheading":"一鍵安裝，立即體驗",
         "description": "Iris安裝包會自動下載並安裝Iris和Sodium。只需要選擇版本和路徑，就可以一鍵安裝Iris和Sodium到你的遊戲中。",
@@ -105,16 +69,24 @@
         "alternatedownloadsubheading": "不喜歡我們的一鍵安裝程序？沒關係，你也可以手動安裝Iris。",
         "getmodrinth": "從Modrinth下載",
         "getcurseforge": "從CurseForge下載",
-        "getgithub": "從GitHub獲取源代碼",
-        "footer1": "關於Iris光影",
-        "footerdesc1": "Iris Project是一個協作開源項目，由一個充滿激情的開發團隊創建，旨在提升Minecraft的光影體驗。Iris是由社區開發的，也是為社區服務的。",
-        "footer2": "相關鏈接",
-        "curseforge": "Iris在CurseForge",
-        "modrinth": "Iris在Modrinth",
-        "github": "GitHub",
-        "discord": "Discord",
-        "patreon": "Patreon",
-        "copyright": "© 版權所有 2021 IrisShaders. 保留全部權利"
+        "getgithub": "從GitHub獲取源代碼"
       }
-    ]
+    ],
+    "common":{
+      "irisshaders": "Iris光影",
+      "home": "首頁",
+      "about": "瞭解更多",
+      "download": "立即下載",
+      "dark": " 暗色模式",
+      "light": " 亮色模式",
+      "footer1": "關於Iris光影",
+      "footerdesc1": "Iris Project是一個協作開源項目，由一個充滿激情的開發團隊創建，旨在提升Minecraft的光影體驗。Iris是由社區開發的，也是為社區服務的。",
+      "footer2": "相關鏈接",
+      "curseforge": "Iris在CurseForge",
+      "modrinth": "Iris在Modrinth",
+      "github": "GitHub",
+      "discord": "Discord",
+      "patreon": "Patreon",
+      "copyright": "© 版權所有 2021 IrisShaders. 保留全部權利"
+    }
 }

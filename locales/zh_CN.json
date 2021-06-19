@@ -2,12 +2,6 @@
     "data":[
         {
           "title": "这是Iris",
-          "irisshaders": "Iris光影",
-          "home": "首页",
-          "about": "了解更多",
-          "download": "立即下载",
-          "dark": " 暗色模式",
-          "light": " 亮色模式",
           "subheading": "打开次世代Minecraft光影的大门",
           "or": "或者",
           "continue": "继续阅读",
@@ -33,25 +27,10 @@
           "screenshotdesc1": "Iris使用一种叫做阴影截锥剔除的技术来减少阴影对帧率的影响，阴影是光影最大的性能消耗。使用Iris的阴影截锥剔除，你将能够达到更高的帧率，而不牺牲体积光照或阴影的质量。<br><span class='text-span-2'>Screenshot by FoundationGames</span>",
           "screenshottitle2": "高效的实体渲染技术",
           "screenshotdesc2": "Iris改进了Minecraft渲染实体和方块实体的方式，如箱子，猪，和物品展示框。这个技术甚至可以在禁用光影的情况下工作，在有很多实体的世界中，Iris可以提供高于原版60%的性能提升。阴影渲染有了很大的改进，你可以在原本无法使用光影的地方获得很高的帧率！<br><span class='text-span-2'>截图来自kinzuu_music</span>",
-          "stillcurious": "还是很好奇？<a href='about.html'>了解更多</a><link rel='prefetch' href='/about'>.",
-          "footer1": "关于Iris光影",
-          "footerdesc1": "Iris Project是一个协作开源项目，由一个充满激情的开发团队创建，旨在提升Minecraft的光影体验。Iris是由社区开发的，也是为社区服务的。",
-          "footer2": "相关链接",
-          "curseforge": "Iris在CurseForge",
-          "modrinth": "Iris在Modrinth",
-          "github": "GitHub",
-          "discord": "Discord",
-          "patreon": "Patreon",
-          "copyright": "© 版权所有 2021 IrisShaders. 保留全部权利"
+          "stillcurious": "还是很好奇？<a href='about.html'>了解更多</a><link rel='prefetch' href='/about'>."
         },
         {
           "abouttitle": "关于 Iris光影",
-          "irisshaders": "Iris光影",
-          "about": "了解更多",
-          "download": "立即下载",
-          "dark": " 暗色模式",
-          "light": " 亮色模式",
-          "heading": "Iris光影",
           "subheading": "了解更多关于Iris的信息",
           "aboutproject": "关于本项目",
           "messageheading": "首席开发人员致辞",
@@ -78,25 +57,10 @@
           "screenshot10": "截图来自 IMS ，使用 Complementary v4.0",
           "screenshot11": "截图来自 kinzuu_music ，使用 Complementary v4.0",
           "screenshot12": "截图来自 Justsnoopy30 ，使用 Complementary v4.0 BE",
-          "note": "注意 - BE 代表了截图中包含了paulevs的BetterEnd模组",
-          "footer1": "关于Iris光影",
-          "footerdesc1": "Iris Project是一个协作开源项目，由一个充满激情的开发团队创建，旨在提升Minecraft的光影体验。Iris是由社区开发的，也是为社区服务的。",
-          "footer2": "相关链接",
-          "curseforge": "Iris在CurseForge",
-          "modrinth": "Iris在Modrinth",
-          "github": "GitHub",
-          "discord": "Discord",
-          "patreon": "Patreon",
-          "copyright": "© 版权所有 2021 IrisShaders. 保留全部权利"
+          "note": "注意 - BE 代表了截图中包含了paulevs的BetterEnd模组"
         },
         {
           "downloadiris": "下载Iris - IrisShaders",
-          "irisshaders": "Iris光影",
-          "home": "首页",
-          "about": "了解更多",
-          "download": "立即下载",
-          "dark": " 暗色模式",
-          "light": " 亮色模式",
           "heading": "Iris光影安装程序",
           "subheading":"一键安装，立即体验",
           "description": "Iris安装包会自动下载并安装Iris和Sodium。只需要选择版本和路径，就可以一键安装Iris和Sodium到你的游戏中。",
@@ -105,16 +69,24 @@
           "alternatedownloadsubheading": "不喜欢我们的一键安装程序？没关系，你也可以手动安装Iris。",
           "getmodrinth": "从Modrinth下载",
           "getcurseforge": "从CurseForge下载",
-          "getgithub": "从GitHub获取源代码",
-          "footer1": "关于Iris光影",
-          "footerdesc1": "Iris Project是一个协作开源项目，由一个充满激情的开发团队创建，旨在提升Minecraft的光影体验。Iris是由社区开发的，也是为社区服务的。",
-          "footer2": "相关链接",
-          "curseforge": "Iris在CurseForge",
-          "modrinth": "Iris在Modrinth",
-          "github": "GitHub",
-          "discord": "Discord",
-          "patreon": "Patreon",
-          "copyright": "© 版权所有 2021 IrisShaders. 保留全部权利"
+          "getgithub": "从GitHub获取源代码"
         }
-      ]
+      ],
+      "common":{
+        "irisshaders": "Iris光影",
+        "home": "首页",
+        "about": "了解更多",
+        "download": "立即下载",
+        "dark": " 暗色模式",
+        "light": " 亮色模式",
+        "footer1": "关于Iris光影",
+        "footerdesc1": "Iris Project是一个协作开源项目，由一个充满激情的开发团队创建，旨在提升Minecraft的光影体验。Iris是由社区开发的，也是为社区服务的。",
+        "footer2": "相关链接",
+        "curseforge": "Iris在CurseForge",
+        "modrinth": "Iris在Modrinth",
+        "github": "GitHub",
+        "discord": "Discord",
+        "patreon": "Patreon",
+        "copyright": "© 版权所有 2021 IrisShaders. 保留全部权利"
+      }
 }

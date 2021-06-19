@@ -32,28 +32,10 @@
   if(!localStorage.getItem('darkMode')){
     const userPrefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
     localStorage.setItem('darkMode', userPrefersDark ? "true" : "false");
-    localStorage.setItem('acidMode', "false")
-  }
-  if(localStorage.getItem('darkMode') == "true"){
-    var file = location.pathname.split( "/" ).pop();
-    var link = document.createElement( "link" );
-    link.href = "css/darkmode_supplements.css";
-    link.type = "text/css";
-    link.rel = "stylesheet";
-    link.id = "darkThemeLink"
-    document.getElementsByTagName( "head" )[0].appendChild( link );
-  }
-  if(localStorage.getItem('acidMode') == "true"){
-    var file = location.pathname.split( "/" ).pop();
-    var link = document.createElement( "link" );
-    link.href = "css/acid.css";
-    link.type = "text/css";
-    link.rel = "stylesheet";
-    link.id = "acidThemeLink"
-    document.getElementsByTagName( "head" )[0].appendChild( link );
   }
   document.addEventListener("DOMContentLoaded", function(event) {
   	reloadTheme("download.html");
+    initLang(2);
   });
 </script>
 </head>
