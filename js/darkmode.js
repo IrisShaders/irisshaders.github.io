@@ -1,4 +1,3 @@
-
 function reloadTheme(file){
   let themeSwitcher = document.getElementById("theme-switcher");
   themeSwitcher.onclick = function() {
