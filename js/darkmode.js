@@ -20,9 +20,6 @@ function reloadTheme(file){
     document.getElementById("darkThemeIcon").setAttribute("src", "images/lightmode.png");
     document.getElementById("darkThemeIcon").setAttribute("srcset", "");
   }else{
-    if(document.getElementById('acidThemeLink')){
-      document.getElementById('acidThemeLink').remove();
-    }
     document.getElementById("darkThemeIcon").setAttribute("src", "images/darkmode.png");
     document.getElementById("darkThemeIcon").setAttribute("srcset", "");
   }
