@@ -20,6 +20,9 @@ function reloadTheme(file){
     document.getElementById("darkThemeIcon").setAttribute("src", "images/lightmode.png");
     document.getElementById("darkThemeIcon").setAttribute("srcset", "");
   }else{
+    if(document.getElementById('darkThemeLink')){
+      document.getElementById('darkThemeLink').remove();
+    }
     document.getElementById("darkThemeIcon").setAttribute("src", "images/darkmode.png");
     document.getElementById("darkThemeIcon").setAttribute("srcset", "");
   }
