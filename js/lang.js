@@ -1,10 +1,14 @@
 let fileindex = ["index.html", "about.html", "download.html"];
-let traductions = ["en", "en_US", "pt_BR", "fr", "de", "ru", "es"];
+let traductions = ["en", "en_US", "pt_BR", "fr", "de", "ru", "es","zh_CN","zh_TW","nl"];
 let fallbacklang;
 let lang;
 
 //Loading the lang
 let langData;
+function setLang(name, page){
+  localStorage.setItem("lang", name);
+  initLang(page);
+}
 function initLang(page) {
   if (!localStorage.getItem("lang")) {
     localStorage.setItem("lang", navigator.language.replace("-", "_"));
