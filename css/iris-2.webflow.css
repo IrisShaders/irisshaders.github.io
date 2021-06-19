@@ -179,7 +179,7 @@ p {
 
 .white-box {
   padding: 15px;
-  border: 1px solid #dcebf7;
+  border: 2px solid #dcebf7;
   border-radius: 5px;
   background-color: #fff;
   text-align: center;
@@ -1553,4 +1553,3 @@ p {
     opacity: 0;
   }
 }
-
