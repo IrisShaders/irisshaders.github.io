@@ -32,6 +32,15 @@
     const userPrefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
     localStorage.setItem('darkMode', userPrefersDark ? "true" : "false");
   }
+    if(localStorage.getItem('darkMode') == "true"){
+    var file = location.pathname.split( "/" ).pop();
+    var link = document.createElement( "link" );
+    link.href = "css/darkmode_supplements.css";
+    link.type = "text/css";
+    link.rel = "stylesheet";
+    link.id = "darkThemeLink"
+    document.getElementsByTagName( "head" )[0].appendChild( link );
+  }
   document.addEventListener("DOMContentLoaded", function(event) {
   	reloadTheme("about.html");
     initLang(1);
