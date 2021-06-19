@@ -5,6 +5,10 @@ let lang;
 
 //Loading the lang
 let langData;
+function setLang(name, page){
+  localStorage.setItem("lang", name);
+  initLang(page);
+}
 function initLang(page) {
   if (!localStorage.getItem("lang")) {
     localStorage.setItem("lang", navigator.language.replace("-", "_"));

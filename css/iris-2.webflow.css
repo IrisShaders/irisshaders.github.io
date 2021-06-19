@@ -1556,6 +1556,7 @@ p {
 
 .sl-nav {
   display: inline;
+  right: 10px;
 }
 .sl-nav ul {
   margin:0;
