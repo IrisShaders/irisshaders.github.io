@@ -3,7 +3,7 @@ function reloadTheme(file){
   let themeSwitcher = document.getElementById("theme-switcher");
   themeSwitcher.onclick = function() {
     let currentTheme = localStorage.getItem('darkMode');
-    let switchToTheme = !currentTheme;
+    let switchToTheme = currentTheme == "true"?"false":"true";
     localStorage.setItem('darkMode', switchToTheme.toString());
     reloadTheme(file);
   }
