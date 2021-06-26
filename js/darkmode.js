@@ -1,17 +1,15 @@
-
 function reloadTheme(file){
-  var themeSwitcher = document.getElementById("theme-switcher");
-  themeSwitcher.setAttribute("langfield", localStorage.getItem('darkMode') == "true"? "light":"dark");
+  let themeSwitcher = document.getElementById("theme-switcher");
   themeSwitcher.onclick = function() {
-    var currentTheme = localStorage.getItem('darkMode');
-    var switchToTheme = currentTheme === "true" ? "false" : "true"
-    localStorage.setItem('darkMode', switchToTheme);
+    let currentTheme = localStorage.getItem('darkMode');
+    let switchToTheme = currentTheme == "true"?"false":"true";
+    localStorage.setItem('darkMode', switchToTheme.toString());
     reloadTheme(file);
   }
+  themeSwitcher.setAttribute("langfield", localStorage.getItem('darkMode') == "true"? "light":"dark");
   if(localStorage.getItem('darkMode') == "true"){
     if(!document.getElementById('darkThemeLink')){
-
-      var link = document.createElement( "link" );
+      let link = document.createElement( "link" );
       link.href = "css/darkmode_supplements.css";
       link.type = "text/css";
       link.rel = "stylesheet";
@@ -27,5 +25,5 @@ function reloadTheme(file){
     document.getElementById("darkThemeIcon").setAttribute("src", "images/darkmode.png");
     document.getElementById("darkThemeIcon").setAttribute("srcset", "");
   }
-  initLang(fileindex.indexOf(file));
+  initLang(fileindex.indexOf(file))
 }
