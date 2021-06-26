@@ -1,7 +1,12 @@
 let fileindex = ["index.html", "about.html", "download.html"];
 let traductions = ["en", "en_US", "pt_BR", "fr", "de", "ru", "es","zh_CN","zh_TW","nl"];
+let traductionsNames = ["English", "American english", "Portugues do Brasil", "Français", "Deutsch", "Pусский", "Español","简体中文","繁体中文","Nederlands"];
 let fallbacklang;
 let lang;
+let currentpage;
+
+document.addEventListener("DOMContentLoaded", initLangSelect);
+
 
 //Loading the lang
 let langData;
@@ -9,6 +14,29 @@ function setLang(name, page){
   localStorage.setItem("lang", name);
   initLang(page);
 }
+
+function setSelectLang(page){
+  var select = document.getElementById("langselect");
+  console.log("changed")
+  setLang(select.value, page);
+}
+
+function initLangSelect(){
+  var select = document.getElementById("langselect");
+  select.innerHTML = '';
+  console.log(traductionsNames)
+  traductionsNames.forEach(addOption)
+  select.value = lang;
+}
+
+function addOption(item, index){
+  var select = document.getElementById("langselect");
+  var option = document.createElement("option")
+  option.value = traductions[index];
+  option.innerHTML = item;
+  select.appendChild(option)
+}
+
 function initLang(page) {
   if (!localStorage.getItem("lang")) {
     localStorage.setItem("lang", navigator.language.replace("-", "_"));
