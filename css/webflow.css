@@ -592,7 +592,7 @@ textarea.w-select {
 .w-hidden-main {
   display: none !important;
 }
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 1105px) {
   .w-container {
     max-width: 728px;
   }
@@ -1707,7 +1707,7 @@ textarea.w-select {
 .w--nav-dropdown-list-open {
   position: static;
 }
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 1105px) {
   .w-nav[data-collapse="medium"] .w-nav-menu {
     display: none;
   }

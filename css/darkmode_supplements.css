@@ -926,10 +926,19 @@ h5
 	background-color:#256692;
 }
 
-@media screen and (max-width: 991px) {
+#theme-switcher
+{
+	color: #a49c90;
+}
+
+@media screen and (max-width: 1105px) {
 	.navigation-link
 	{
 		color:rgba(232,230,227,0.52);
+	}
+
+	#theme-switcher{
+	  color: #e8e6e3;
 	}
 
 	.navigation-link.w--current
