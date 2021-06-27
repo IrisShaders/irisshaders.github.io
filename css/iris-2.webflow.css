@@ -194,7 +194,7 @@ p {
 .hero-section {
   padding-top: 128px;
   padding-bottom: 128px;
-  background-image: url('../images/SpacEagle17edit.png');
+  background-image: url('../images/screenshots/about-bkg17edit.webp');
   background-position: 50% 50%;
   background-size: cover;
   background-attachment: scroll;
@@ -204,7 +204,7 @@ p {
   padding-top: 195px;
   padding-bottom: 195px;
   border-bottom: 4px solid #69b9ff;
-  background-image: url('../images/iris-bkg.png');
+  background-image: url('../images/backgrounds/iris-bkg.webp');
   background-position: 50% 50%;
   background-size: cover;
   background-attachment: scroll;

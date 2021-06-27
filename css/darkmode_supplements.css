@@ -561,13 +561,13 @@ h5
 
 .hero-section
 {
-	background-image:url(https://irisshaders.github.io/images/SpacEagle17edit.png);
+	background-image:url(../images/screenshots/about-bkg17edit.webp);
 }
 
 .hero-section.centered
 {
 	border-bottom-color:#004e93;
-	background-image:url(https://irisshaders.github.io/images/iris-bkg.png);
+	background-image:url(../images/backgrounds/iris-bkg.webp);
 	box-shadow:#000 1px 1px 12px 0 inset;
 }
 
