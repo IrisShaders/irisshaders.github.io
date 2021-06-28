@@ -27,7 +27,7 @@
           "screenshotdesc1": "Iris usa uma técnica chamada 'Shadow Frustum Culling', que diminui um dos maiores vilões de desmpenho - as sombras. Usando o Shadow Frustum Culling do Iris, você conseguirá mais frames sem sacrificar a qualidade da iluminação volumétrica ou das sombras.<br><span class='text-span-2'>Capturada  por FoundationGames</span>",
           "screenshottitle2": "Renderização eficiente de entidades",
           "screenshotdesc2": "Iris melhora a forma que o Minecraft renderiza entidades e blocos com entidades como baús, porcos e molduras. Esse truque funciona até mesmo com shaders desativados, inclusive em mundos cheios de entidades, podendo melhorar a performance do Minecraft vanilla em até 60%! A renderização das sombras é a principal melhoria trazida pelo mod, fazendo com que áreas onde uma vez eram impossíveis de se jogar com shaders, agora ficam surpreendentemente estáveis!<br><span class='text-span-2'>Capturada por kinzuu_music</span>",
-          "stillcurious": "Ainda curioso? <a href='about.html'>Saiba Mais</a><link rel='prefetch' href='/about'>."
+          "stillcurious": "Ainda curioso? <a href='about.html'>Saiba Mais</a><link rel='prefetch' href='/about.html'>."
         },
         {
           "abouttitle": "Sobre IrisShaders",
