@@ -1,3 +1,11 @@
+@font-face {
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  src: local('Open Sans');
+  font-display: swap;
+}
+
 body {
   background-color: #edeff2;
   font-family: "Open Sans", sans-serif;
