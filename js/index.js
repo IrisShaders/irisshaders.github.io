@@ -1,5 +1,7 @@
 let slideIndex = 1;
 let currentTimeout;
+let currentInterval;
+let slides;
 
 function isInViewport(el) {
   let rect = el.getBoundingClientRect();
@@ -38,12 +40,15 @@ window.addEventListener("DOMContentLoaded", (e) => {
     for (let i = 0; i < children.length; i++) {
       let dot = document.createElement("span");
       dot.classList.add("dot");
-      if(i == 0){ dot.classList.add("dot-selected");}
+      if (i == 0) {
+        dot.classList.add("dot-selected");
+      }
       dot.onclick = function () {
         currentSlide(i + 1);
       };
       dots.appendChild(dot);
     }
+    showSlides(1);
   }
 });
 
@@ -78,18 +83,39 @@ function closeMiniNav() {
 }
 
 function plusSlides(n) {
-  showSlides((slideIndex += n));
+  document.querySelector(".dot-selected").classList.remove("dot-selected");
+  if (slideIndex + n > slides.length) {
+    slideIndex -= slides.length - n;
+  } else if (slideIndex + n < 1) {
+    slideIndex = slides.length - n - 1;
+  } else {
+    slideIndex += n;
+  }
+  document
+    .querySelectorAll(".dot")
+    [slideIndex - 1].classList.add("dot-selected");
+  showSlides(slideIndex);
 }
 
 function currentSlide(n) {
-  document.querySelector(".dot-selected").classList.remove("dot-selected")
+  document.querySelector(".dot-selected").classList.remove("dot-selected");
   document.querySelectorAll(".dot")[n - 1].classList.add("dot-selected");
-  showSlides((slideIndex = n));
+  if (n > slides.length) {
+    n -= slideIndex;
+    slideIndex = n;
+  } else {
+    slideIndex = n;
+  }
+  showSlides(slideIndex);
 }
 
 function showSlides(n) {
+  clearInterval(currentInterval);
+  currentInterval = setInterval(function () {
+    plusSlides(1);
+  }, 3000);
   let i;
-  let slides = document.querySelectorAll(".w-slide");
+  slides = document.querySelectorAll(".w-slide");
 
   if (n > slides.length) {
     slideIndex = 1;
