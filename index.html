@@ -37,48 +37,6 @@
     <link href="css/normalize.css" rel="stylesheet" type="text/css" />
     <link href="css/webflow.css" rel="stylesheet" type="text/css" />
     <link href="css/iris-2.webflow.css" rel="stylesheet" type="text/css" />
-    <style>
-      @media (min-width: 992px) {
-        html.w-mod-js:not(.w-mod-ix)
-          [data-w-id="8f4c0691-e692-c061-7fbc-f7242a5caacb"] {
-          opacity: 0;
-        }
-        html.w-mod-js:not(.w-mod-ix)
-          [data-w-id="0d4f37a3-010d-f73f-39d6-4d098dcad3c2"] {
-          opacity: 0;
-        }
-      }
-      @media (max-width: 1105px) and (min-width: 768px) {
-        html.w-mod-js:not(.w-mod-ix)
-          [data-w-id="8f4c0691-e692-c061-7fbc-f7242a5caacb"] {
-          opacity: 0;
-        }
-        html.w-mod-js:not(.w-mod-ix)
-          [data-w-id="0d4f37a3-010d-f73f-39d6-4d098dcad3c2"] {
-          opacity: 0;
-        }
-      }
-      @media (max-width: 767px) and (min-width: 480px) {
-        html.w-mod-js:not(.w-mod-ix)
-          [data-w-id="0d4f37a3-010d-f73f-39d6-4d098dcad3c2"] {
-          opacity: 0;
-        }
-        html.w-mod-js:not(.w-mod-ix)
-          [data-w-id="8f4c0691-e692-c061-7fbc-f7242a5caacb"] {
-          opacity: 0;
-        }
-      }
-      @media (max-width: 479px) {
-        html.w-mod-js:not(.w-mod-ix)
-          [data-w-id="0d4f37a3-010d-f73f-39d6-4d098dcad3c2"] {
-          opacity: 0;
-        }
-        html.w-mod-js:not(.w-mod-ix)
-          [data-w-id="8f4c0691-e692-c061-7fbc-f7242a5caacb"] {
-          opacity: 0;
-        }
-      }
-    </style>
     <script
       src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"
       type="text/javascript"
@@ -464,13 +422,13 @@
         >
           <div class="tab-menu w-tab-menu">
             <a data-w-tab="Tab 1" class="button tab w-inline-block w-tab-link">
-              <div langfield="shadows" class="text-block-9">Shadows</div>
+              <div langfield="shadows" class="text-block-9" onclick="document.querySelectorAll('.w-tab-pane')[0].classList.add('w--tab-active'); document.querySelectorAll('.w-tab-pane')[1].classList.remove('w--tab-active')">Shadows</div>
             </a>
             <a
               data-w-tab="Tab 2"
               class="button tab w-inline-block w-tab-link w--current"
             >
-              <div langfield="entities" class="text-block-10">entities</div>
+              <div langfield="entities" class="text-block-10" onclick="document.querySelectorAll('.w-tab-pane')[1].classList.add('w--tab-active'); document.querySelectorAll('.w-tab-pane')[0].classList.remove('w--tab-active');">entities</div>
             </a>
           </div>
           <div class="w-tab-content">
@@ -502,7 +460,7 @@
                 </p>
               </div>
             </div>
-            <div data-w-tab="Tab 2" class="w-tab-pane w--tab-active">
+            <div class="w-tab-pane w--tab-active">
               <div>
                 <img
                   src="images/screenshots/entities.webp"

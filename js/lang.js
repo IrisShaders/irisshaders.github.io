@@ -38,14 +38,12 @@ function setLang(name, page) {
 
 function setSelectLang(page) {
   let select = document.getElementById("langselect");
-  console.log("changed");
   setLang(select.value, page);
 }
 
 function initLangSelect() {
   let select = document.getElementById("langselect");
   select.innerHTML = "";
-  console.log(traductionsNames);
   traductionsNames.forEach(addOption);
   select.value = lang;
 }
@@ -63,7 +61,6 @@ function initLang(page) {
     localStorage.setItem("lang", navigator.language.replace("-", "_"));
   }
   lang = localStorage.getItem("lang");
-  console.log(lang);
   if (!traductions.includes(lang)) {
     lang = lang.split("_")[0];
     if (!traductions.includes(lang)) {
