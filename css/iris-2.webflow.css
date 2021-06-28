@@ -1,9 +1,80 @@
 body {
   background-color: #edeff2;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   color: #6a859c;
   font-size: 16px;
   line-height: 20px;
+}
+
+.fadein {
+  opacity: 0;
+}
+
+.faded {
+  -webkit-animation: fadein 2s;
+  -moz-animation: fadein 2s;
+  -ms-animation: fadein 2s;
+  -o-animation: fadein 2s;
+  animation: fadein 2s;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+    transform: translateY(50);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+  from {
+    opacity: 0;
+    transform: translateY(50);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0;
+    transform: translateY(50);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+  from {
+    opacity: 0;
+    transform: translateY(50);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes fadein {
+  from {
+    opacity: 0;
+    transform: translateY(50);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 h1 {
@@ -152,7 +223,7 @@ p {
 .brand-text {
   margin-top: 0px;
   margin-bottom: 0px;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   color: #69b9ff;
   font-size: 25px;
   line-height: 25px;
@@ -194,7 +265,7 @@ p {
 .hero-section {
   padding-top: 128px;
   padding-bottom: 128px;
-  background-image: url('../images/screenshots/about-bkg17edit.webp');
+  background-image: url("../images/backgrounds/about-bkg.webp");
   background-position: 50% 50%;
   background-size: cover;
   background-attachment: scroll;
@@ -204,7 +275,7 @@ p {
   padding-top: 195px;
   padding-bottom: 195px;
   border-bottom: 4px solid #69b9ff;
-  background-image: url('../images/backgrounds/iris-bkg.webp');
+  background-image: url("../images/backgrounds/iris-bkg.webp");
   background-position: 50% 50%;
   background-size: cover;
   background-attachment: scroll;
@@ -240,7 +311,8 @@ p {
   padding: 10px 30px;
   border: 1px solid #fff;
   border-radius: 4px;
-  -webkit-transition: background-color 300ms ease, border 300ms ease, color 300ms ease;
+  -webkit-transition: background-color 300ms ease, border 300ms ease,
+    color 300ms ease;
   transition: background-color 300ms ease, border 300ms ease, color 300ms ease;
   color: #fff;
   line-height: 21px;
@@ -831,7 +903,13 @@ p {
   z-index: 2;
   padding: 5px 20px 10px;
   background-color: transparent;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#000), to(transparent));
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(#000),
+    to(transparent)
+  );
   background-image: linear-gradient(180deg, #000, transparent);
   color: #edeff2;
   font-size: 12px;
@@ -1020,7 +1098,7 @@ p {
 
 .text-span-3 {
   opacity: 1;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   color: #2e9dff;
   font-size: 42px;
   letter-spacing: 5px;
@@ -1056,7 +1134,7 @@ p {
   margin-top: -30px;
   margin-bottom: -30px;
   float: left;
-  background-image: url('https://d3e54v103j8qbb.cloudfront.net/img/background-image.svg');
+  background-image: url("https://d3e54v103j8qbb.cloudfront.net/img/background-image.svg");
   background-position: 0px 0px;
   background-size: auto;
   box-shadow: 4px 4px 8px 0 #000;
@@ -1085,10 +1163,10 @@ p {
   text-align: right;
 }
 
-.langselect{
-  position: relative; 
-  right: 0; 
-  margin-left: 80%; 
+.langselect {
+  position: relative;
+  right: 0;
+  margin-left: 80%;
   appearance: none;
   border: none;
   padding: 10px;
@@ -1096,21 +1174,26 @@ p {
   margin-top: 20px;
 }
 
-#theme-switcher{
+#theme-switcher {
   color: #333;
 }
-
+#minimenu {
+  display: none;
+}
 
 @media screen and (max-width: 1105px) {
-  #theme-switcher{
+  #minimenu {
+    display: block;
+  }
+  #theme-switcher {
     color: white;
   }
-  #darkThemeIcon{
+  #darkThemeIcon {
     filter: invert(1);
   }
-  .langselect{
-    width: 80%; 
-    margin-left: 10%; 
+  .langselect {
+    width: 80%;
+    margin-left: 10%;
     margin-right: 10%;
   }
 
