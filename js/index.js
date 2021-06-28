@@ -42,7 +42,9 @@ function openMiniNav() {
   }, 10);
   navOverlay.onclick = closeMiniNav;
   menuButton.onclick = closeMiniNav;
-  if(currentTimeout){ clearTimeout(currentTimeout) }
+  if (currentTimeout) {
+    clearTimeout(currentTimeout);
+  }
 }
 
 let currentTimeout;
