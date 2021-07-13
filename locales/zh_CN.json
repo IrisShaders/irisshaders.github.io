@@ -27,7 +27,7 @@
           "screenshotdesc1": "Iris 使用一种叫做阴影截锥剔除的技术来减少阴影对帧率的影响，阴影是光影最大的性能消耗。使用 Iris 的阴影截锥剔除，你将能够达到更高的帧率，而不牺牲体积光照或阴影的质量。<br><span class='text-span-2'>截图来自 FoundationGames</span>",
           "screenshottitle2": "高效的实体渲染技术",
           "screenshotdesc2": "Iris 改进了 Minecraft 渲染实体和方块实体的方式，如箱子，猪，和物品展示框。这个技术甚至可以在禁用光影的情况下工作，在有很多实体的世界中，Iris 可以提供高于原版60%的性能提升。阴影渲染有了很大的改进，你可以在原本无法使用光影的地方获得很高的帧率！<br><span class='text-span-2'>截图来自 kinzuu_music</span>",
-          "stillcurious": "还是很好奇？<a href='about.html'>了解更多</a><link rel='prefetch' href='/about'>."
+          "stillcurious": "还是很好奇？<a href='about.html'>了解更多</a><link rel='prefetch' href='/about.html'>."
         },
         {
           "abouttitle": "关于 Iris 光影",
