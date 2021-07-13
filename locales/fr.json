@@ -27,7 +27,7 @@
           "screenshotdesc1": "Iris utilise une technique appelée Shadow Frustum Culling pour diminuer les frais généraux de l'un des plus gros accapareurs de performances d'un shader : les ombres. En utilisant le shadow frustum culling d&#x27;Iris, vous pourrez atteindre des fréquences d&#x27;image plus élevées sans sacrifier la qualité de l&#x27;7éclairage volumétrique ou des ombres.<br><span class='text-span-2'>Capture d'écran par FoundationGames</span>",
           "screenshottitle2": "Rendu d'entité efficace",
           "screenshotdesc2": "Iris améliore la façon dont Minecraft affiche les entités et blocks les entités comme les coffres, les cochons et les cadres d'objets. Cette astuce fonctionne même avec les shaders désactivés, et dans les mondes avec beaucoup d'entités, elle peut augmenter les performances de Vanilla jusqu'à 60%. Le rendu des ombres connaît une amélioration particulièrement importante, transformant des zones autrefois injouables avec les shaders en des endroits où votre FPS est étonnamment fluide !<br><span class='text-span-2'>Capture d'écran par kinzuu_music</span>",
-          "stillcurious": "Curieux ? <a href='about.html'>En savoir plus</a><link rel='prefetch' href='/about'>."
+          "stillcurious": "Curieux ? <a href='about.html'>En savoir plus</a><link rel='prefetch' href='/about.html'>."
         },
         {
           "abouttitle": "À propos d'Iris",

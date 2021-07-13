@@ -2,12 +2,12 @@
  * Webflow: Front-end site library
  * @license MIT
  * Inline scripts may access the api using an async handler:
- *   var Webflow = Webflow || [];
+ *   let Webflow = Webflow || [];
  *   Webflow.push(readyFunction);
  */
 /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
-/******/ 	var installedModules = {};
+/******/ 	let installedModules = {};
 /******/
 /******/ 	// The require function
 /******/ 	function __webpack_require__(moduleId) {
@@ -17,7 +17,7 @@
 /******/ 			return installedModules[moduleId].exports;
 /******/ 		}
 /******/ 		// Create a new module (and put it into the cache)
-/******/ 		var module = installedModules[moduleId] = {
+/******/ 		let module = installedModules[moduleId] = {
 /******/ 			i: moduleId,
 /******/ 			l: false,
 /******/ 			exports: {}
@@ -64,16 +64,16 @@
 /******/ 		if(mode & 1) value = __webpack_require__(value);
 /******/ 		if(mode & 8) return value;
 /******/ 		if((mode & 4) && typeof value === 'object' && value && value.__esModule) return value;
-/******/ 		var ns = Object.create(null);
+/******/ 		let ns = Object.create(null);
 /******/ 		__webpack_require__.r(ns);
 /******/ 		Object.defineProperty(ns, 'default', { enumerable: true, value: value });
-/******/ 		if(mode & 2 && typeof value != 'string') for(var key in value) __webpack_require__.d(ns, key, function(key) { return value[key]; }.bind(null, key));
+/******/ 		if(mode & 2 && typeof value != 'string') for(let key in value) __webpack_require__.d(ns, key, function(key) { return value[key]; }.bind(null, key));
 /******/ 		return ns;
 /******/ 	};
 /******/
 /******/ 	// getDefaultExport function for compatibility with non-harmony modules
 /******/ 	__webpack_require__.n = function(module) {
-/******/ 		var getter = module && module.__esModule ?
+/******/ 		let getter = module && module.__esModule ?
 /******/ 			function getDefault() { return module['default']; } :
 /******/ 			function getModuleExports() { return module; };
 /******/ 		__webpack_require__.d(getter, 'a', getter);
@@ -130,7 +130,7 @@ module.exports = _interopRequireDefault;
  * _.isArray(_.noop);
  * // => false
  */
-var isArray = Array.isArray;
+let isArray = Array.isArray;
 
 module.exports = isArray;
 
@@ -142,18 +142,18 @@ module.exports = isArray;
 "use strict";
 
 
-var _interopRequireWildcard = __webpack_require__(13);
+let _interopRequireWildcard = __webpack_require__(13);
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-var _exportNames = {
+let _exportNames = {
   IX2EngineActionTypes: true,
   IX2EngineConstants: true
 };
 exports.IX2EngineConstants = exports.IX2EngineActionTypes = void 0;
 
-var _triggerEvents = __webpack_require__(169);
+let _triggerEvents = __webpack_require__(169);
 
 Object.keys(_triggerEvents).forEach(function (key) {
   if (key === "default" || key === "__esModule") return;
@@ -166,7 +166,7 @@ Object.keys(_triggerEvents).forEach(function (key) {
   });
 });
 
-var _animationActions = __webpack_require__(170);
+let _animationActions = __webpack_require__(170);
 
 Object.keys(_animationActions).forEach(function (key) {
   if (key === "default" || key === "__esModule") return;
@@ -179,7 +179,7 @@ Object.keys(_animationActions).forEach(function (key) {
   });
 });
 
-var _triggerInteractions = __webpack_require__(171);
+let _triggerInteractions = __webpack_require__(171);
 
 Object.keys(_triggerInteractions).forEach(function (key) {
   if (key === "default" || key === "__esModule") return;
@@ -192,11 +192,11 @@ Object.keys(_triggerInteractions).forEach(function (key) {
   });
 });
 
-var IX2EngineActionTypes = _interopRequireWildcard(__webpack_require__(172));
+let IX2EngineActionTypes = _interopRequireWildcard(__webpack_require__(172));
 
 exports.IX2EngineActionTypes = IX2EngineActionTypes;
 
-var IX2EngineConstants = _interopRequireWildcard(__webpack_require__(173));
+let IX2EngineConstants = _interopRequireWildcard(__webpack_require__(173));
 
 exports.IX2EngineConstants = IX2EngineConstants;
 
@@ -204,8 +204,8 @@ exports.IX2EngineConstants = IX2EngineConstants;
 /* 3 */
 /***/ (function(module, exports, __webpack_require__) {
 
-/* WEBPACK VAR INJECTION */(function(global) {var O = 'object';
-var check = function (it) {
+/* WEBPACK let INJECTION */(function(global) {let O = 'object';
+let check = function (it) {
   return it && it.Math == Math && it;
 };
 
@@ -219,19 +219,19 @@ module.exports =
   // eslint-disable-next-line no-new-func
   Function('return this')();
 
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(23)))
+/* WEBPACK let INJECTION */}.call(this, __webpack_require__(23)))
 
 /***/ }),
 /* 4 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var freeGlobal = __webpack_require__(89);
+let freeGlobal = __webpack_require__(89);
 
 /** Detect free variable `self`. */
-var freeSelf = typeof self == 'object' && self && self.Object === Object && self;
+let freeSelf = typeof self == 'object' && self && self.Object === Object && self;
 
 /** Used as a reference to the global object. */
-var root = freeGlobal || freeSelf || Function('return this')();
+let root = freeGlobal || freeSelf || Function('return this')();
 
 module.exports = root;
 
@@ -245,26 +245,26 @@ module.exports = root;
 
 /* globals window, document, navigator, WEBFLOW_ENV_TEST */
 
-/* eslint-disable no-var */
+/* eslint-disable no-let */
 
 /**
  * Webflow: Core site library
  */
 
-var Webflow = {};
-var modules = {};
-var primary = [];
-var secondary = window.Webflow || [];
-var $ = window.jQuery;
-var $win = $(window);
-var $doc = $(document);
-var isFunction = $.isFunction;
+let Webflow = {};
+let modules = {};
+let primary = [];
+let secondary = window.Webflow || [];
+let $ = window.jQuery;
+let $win = $(window);
+let $doc = $(document);
+let isFunction = $.isFunction;
 
-var _ = Webflow._ = __webpack_require__(122);
+let _ = Webflow._ = __webpack_require__(122);
 
-var tram = Webflow.tram = __webpack_require__(65) && $.tram;
-var domready = false;
-var destroyed = false;
+let tram = Webflow.tram = __webpack_require__(65) && $.tram;
+let domready = false;
+let destroyed = false;
 tram.config.hideBackface = false;
 tram.config.keepInherited = true;
 /**
@@ -280,7 +280,7 @@ Webflow.define = function (name, factory, options) {
     unbindModule(modules[name]);
   }
 
-  var instance = modules[name] = factory($, _, options) || {};
+  let instance = modules[name] = factory($, _, options) || {};
   bindModule(instance);
   return instance;
 };
@@ -365,8 +365,8 @@ Webflow.push = function (ready) {
 
 
 Webflow.env = function (mode) {
-  var designFlag = window.__wf_design;
-  var inApp = typeof designFlag !== 'undefined';
+  let designFlag = window.__wf_design;
+  let inApp = typeof designFlag !== 'undefined';
 
   if (!mode) {
     return inApp;
@@ -398,13 +398,13 @@ Webflow.env = function (mode) {
 }; // Feature detects + browser sniffs  ಠ_ಠ
 
 
-var userAgent = navigator.userAgent.toLowerCase();
-var touch = Webflow.env.touch = 'ontouchstart' in window || window.DocumentTouch && document instanceof window.DocumentTouch;
-var chrome = Webflow.env.chrome = /chrome/.test(userAgent) && /Google/.test(navigator.vendor) && parseInt(userAgent.match(/chrome\/(\d+)\./)[1], 10);
-var ios = Webflow.env.ios = /(ipod|iphone|ipad)/.test(userAgent);
+let userAgent = navigator.userAgent.toLowerCase();
+let touch = Webflow.env.touch = 'ontouchstart' in window || window.DocumentTouch && document instanceof window.DocumentTouch;
+let chrome = Webflow.env.chrome = /chrome/.test(userAgent) && /Google/.test(navigator.vendor) && parseInt(userAgent.match(/chrome\/(\d+)\./)[1], 10);
+let ios = Webflow.env.ios = /(ipod|iphone|ipad)/.test(userAgent);
 Webflow.env.safari = /safari/.test(userAgent) && !chrome && !ios; // Maintain current touch target to prevent late clicks on touch devices
 
-var touchTarget; // Listen for both events to support touch/mouse hybrid devices
+let touchTarget; // Listen for both events to support touch/mouse hybrid devices
 
 touch && $doc.on('touchstart mousedown', function (evt) {
   touchTarget = evt.target;
@@ -424,16 +424,16 @@ Webflow.validClick = touch ? function (clickTarget) {
  * Webflow.resize, Webflow.scroll - throttled event proxies
  */
 
-var resizeEvents = 'resize.webflow orientationchange.webflow load.webflow';
-var scrollEvents = 'scroll.webflow ' + resizeEvents;
+let resizeEvents = 'resize.webflow orientationchange.webflow load.webflow';
+let scrollEvents = 'scroll.webflow ' + resizeEvents;
 Webflow.resize = eventProxy($win, resizeEvents);
 Webflow.scroll = eventProxy($win, scrollEvents);
 Webflow.redraw = eventProxy(); // Create a proxy instance for throttled events
 
 function eventProxy(target, types) {
   // Set up throttled method (using custom frame-based _.throttle)
-  var handlers = [];
-  var proxy = {};
+  let handlers = [];
+  let proxy = {};
   proxy.up = _.throttle(function (evt) {
     _.each(handlers, function (h) {
       h(evt);
@@ -524,7 +524,7 @@ function restoreModules() {
  */
 
 
-var deferLoad;
+let deferLoad;
 
 Webflow.load = function (handler) {
   deferLoad.then(handler);
@@ -605,7 +605,7 @@ module.exports = window.Webflow = Webflow;
  * // => false
  */
 function isObject(value) {
-  var type = typeof value;
+  let type = typeof value;
   return value != null && (type == 'object' || type == 'function');
 }
 
@@ -616,7 +616,7 @@ module.exports = isObject;
 /* 7 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseMatches = __webpack_require__(176),
+let baseMatches = __webpack_require__(176),
     baseMatchesProperty = __webpack_require__(230),
     identity = __webpack_require__(59),
     isArray = __webpack_require__(1),
@@ -653,7 +653,7 @@ module.exports = baseIteratee;
 /* 8 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseIsNative = __webpack_require__(188),
+let baseIsNative = __webpack_require__(188),
     getValue = __webpack_require__(193);
 
 /**
@@ -665,7 +665,7 @@ var baseIsNative = __webpack_require__(188),
  * @returns {*} Returns the function if it's native, else `undefined`.
  */
 function getNative(object, key) {
-  var value = getValue(object, key);
+  let value = getValue(object, key);
   return baseIsNative(value) ? value : undefined;
 }
 
@@ -714,34 +714,34 @@ module.exports = isObjectLike;
 "use strict";
 
 
-var _interopRequireWildcard = __webpack_require__(13);
+let _interopRequireWildcard = __webpack_require__(13);
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.IX2VanillaUtils = exports.IX2VanillaPlugins = exports.IX2ElementsReducer = exports.IX2EasingUtils = exports.IX2Easings = exports.IX2BrowserSupport = void 0;
 
-var IX2BrowserSupport = _interopRequireWildcard(__webpack_require__(44));
+let IX2BrowserSupport = _interopRequireWildcard(__webpack_require__(44));
 
 exports.IX2BrowserSupport = IX2BrowserSupport;
 
-var IX2Easings = _interopRequireWildcard(__webpack_require__(106));
+let IX2Easings = _interopRequireWildcard(__webpack_require__(106));
 
 exports.IX2Easings = IX2Easings;
 
-var IX2EasingUtils = _interopRequireWildcard(__webpack_require__(108));
+let IX2EasingUtils = _interopRequireWildcard(__webpack_require__(108));
 
 exports.IX2EasingUtils = IX2EasingUtils;
 
-var IX2ElementsReducer = _interopRequireWildcard(__webpack_require__(248));
+let IX2ElementsReducer = _interopRequireWildcard(__webpack_require__(248));
 
 exports.IX2ElementsReducer = IX2ElementsReducer;
 
-var IX2VanillaPlugins = _interopRequireWildcard(__webpack_require__(110));
+let IX2VanillaPlugins = _interopRequireWildcard(__webpack_require__(110));
 
 exports.IX2VanillaPlugins = IX2VanillaPlugins;
 
-var IX2VanillaUtils = _interopRequireWildcard(__webpack_require__(250));
+let IX2VanillaUtils = _interopRequireWildcard(__webpack_require__(250));
 
 exports.IX2VanillaUtils = IX2VanillaUtils;
 
@@ -749,16 +749,16 @@ exports.IX2VanillaUtils = IX2VanillaUtils;
 /* 11 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var Symbol = __webpack_require__(19),
+let Symbol = __webpack_require__(19),
     getRawTag = __webpack_require__(189),
     objectToString = __webpack_require__(190);
 
 /** `Object#toString` result references. */
-var nullTag = '[object Null]',
+let nullTag = '[object Null]',
     undefinedTag = '[object Undefined]';
 
 /** Built-in value references. */
-var symToStringTag = Symbol ? Symbol.toStringTag : undefined;
+let symToStringTag = Symbol ? Symbol.toStringTag : undefined;
 
 /**
  * The base implementation of `getTag` without fallbacks for buggy environments.
@@ -783,7 +783,7 @@ module.exports = baseGetTag;
 /* 12 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var isFunction = __webpack_require__(88),
+let isFunction = __webpack_require__(88),
     isLength = __webpack_require__(52);
 
 /**
@@ -826,12 +826,12 @@ function _interopRequireWildcard(obj) {
   if (obj && obj.__esModule) {
     return obj;
   } else {
-    var newObj = {};
+    let newObj = {};
 
     if (obj != null) {
-      for (var key in obj) {
+      for (let key in obj) {
         if (Object.prototype.hasOwnProperty.call(obj, key)) {
-          var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {};
+          let desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {};
 
           if (desc.get || desc.set) {
             Object.defineProperty(newObj, key, desc);
@@ -853,7 +853,7 @@ module.exports = _interopRequireWildcard;
 /* 14 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var fails = __webpack_require__(15);
+let fails = __webpack_require__(15);
 
 // Thank's IE8 for his funny defineProperty
 module.exports = !fails(function () {
@@ -878,7 +878,7 @@ module.exports = function (exec) {
 /* 16 */
 /***/ (function(module, exports) {
 
-var hasOwnProperty = {}.hasOwnProperty;
+let hasOwnProperty = {}.hasOwnProperty;
 
 module.exports = function (it, key) {
   return hasOwnProperty.call(it, key);
@@ -889,9 +889,9 @@ module.exports = function (it, key) {
 /* 17 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var DESCRIPTORS = __webpack_require__(14);
-var definePropertyModule = __webpack_require__(38);
-var createPropertyDescriptor = __webpack_require__(67);
+let DESCRIPTORS = __webpack_require__(14);
+let definePropertyModule = __webpack_require__(38);
+let createPropertyDescriptor = __webpack_require__(67);
 
 module.exports = DESCRIPTORS ? function (object, key, value) {
   return definePropertyModule.f(object, key, createPropertyDescriptor(1, value));
@@ -912,7 +912,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+let _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
 exports.clone = clone;
 exports.addLast = addLast;
@@ -943,7 +943,7 @@ exports.addDefaults = addDefaults;
  * @license MIT
  */
 
-var INVALID_ARGS = 'INVALID_ARGS';
+let INVALID_ARGS = 'INVALID_ARGS';
 
 // ===============================================
 // ### Helpers
@@ -955,44 +955,44 @@ function throwStr(msg) {
 }
 
 function getKeysAndSymbols(obj) {
-  var keys = Object.keys(obj);
+  let keys = Object.keys(obj);
   if (Object.getOwnPropertySymbols) {
     return keys.concat(Object.getOwnPropertySymbols(obj));
   }
   return keys;
 }
 
-var hasOwnProperty = {}.hasOwnProperty;
+let hasOwnProperty = {}.hasOwnProperty;
 
 function clone(obj) {
   if (Array.isArray(obj)) return obj.slice();
-  var keys = getKeysAndSymbols(obj);
-  var out = {};
-  for (var i = 0; i < keys.length; i++) {
-    var key = keys[i];
+  let keys = getKeysAndSymbols(obj);
+  let out = {};
+  for (let i = 0; i < keys.length; i++) {
+    let key = keys[i];
     out[key] = obj[key];
   }
   return out;
 }
 
 function doMerge(fAddDefaults, fDeep, first) {
-  var out = first;
+  let out = first;
   !(out != null) && throwStr( false ? undefined : INVALID_ARGS);
-  var fChanged = false;
+  let fChanged = false;
 
-  for (var _len = arguments.length, rest = Array(_len > 3 ? _len - 3 : 0), _key = 3; _key < _len; _key++) {
+  for (let _len = arguments.length, rest = Array(_len > 3 ? _len - 3 : 0), _key = 3; _key < _len; _key++) {
     rest[_key - 3] = arguments[_key];
   }
 
-  for (var idx = 0; idx < rest.length; idx++) {
-    var obj = rest[idx];
+  for (let idx = 0; idx < rest.length; idx++) {
+    let obj = rest[idx];
     if (obj == null) continue;
-    var keys = getKeysAndSymbols(obj);
+    let keys = getKeysAndSymbols(obj);
     if (!keys.length) continue;
-    for (var j = 0; j <= keys.length; j++) {
-      var key = keys[j];
+    for (let j = 0; j <= keys.length; j++) {
+      let key = keys[j];
       if (fAddDefaults && out[key] !== undefined) continue;
-      var nextVal = obj[key];
+      let nextVal = obj[key];
       if (fDeep && isObject(out[key]) && isObject(nextVal)) {
         nextVal = doMerge(fAddDefaults, fDeep, out[key], nextVal);
       }
@@ -1008,7 +1008,7 @@ function doMerge(fAddDefaults, fDeep, first) {
 }
 
 function isObject(o) {
-  var type = typeof o === 'undefined' ? 'undefined' : _typeof(o);
+  let type = typeof o === 'undefined' ? 'undefined' : _typeof(o);
   return o != null && (type === 'object' || type === 'function');
 }
 
@@ -1170,9 +1170,9 @@ function removeAt(array, idx) {
 // -- ```
 function replaceAt(array, idx, newItem) {
   if (array[idx] === newItem) return array;
-  var len = array.length;
-  var result = Array(len);
-  for (var i = 0; i < len; i++) {
+  let len = array.length;
+  let result = Array(len);
+  for (let i = 0; i < len; i++) {
     result[i] = array[i];
   }
   result[idx] = newItem;
@@ -1205,9 +1205,9 @@ function replaceAt(array, idx, newItem) {
 function getIn(obj, path) {
   !Array.isArray(path) && throwStr( false ? undefined : INVALID_ARGS);
   if (obj == null) return undefined;
-  var ptr = obj;
-  for (var i = 0; i < path.length; i++) {
-    var key = path[i];
+  let ptr = obj;
+  for (let i = 0; i < path.length; i++) {
+    let key = path[i];
     ptr = ptr != null ? ptr[key] : undefined;
     if (ptr === undefined) return ptr;
   }
@@ -1233,10 +1233,10 @@ function getIn(obj, path) {
 // -- // true
 // -- ```
 function set(obj, key, val) {
-  var fallback = typeof key === 'number' ? [] : {};
-  var finalObj = obj == null ? fallback : obj;
+  let fallback = typeof key === 'number' ? [] : {};
+  let finalObj = obj == null ? fallback : obj;
   if (finalObj[key] === val) return finalObj;
-  var obj2 = clone(finalObj);
+  let obj2 = clone(finalObj);
   obj2[key] = val;
   return obj2;
 }
@@ -1279,12 +1279,12 @@ function set(obj, key, val) {
 // -- // { a: 3, unknown: [{ path: 4 }] }
 // -- ```
 function doSetIn(obj, path, val, idx) {
-  var newValue = void 0;
-  var key = path[idx];
+  let newValue = void 0;
+  let key = path[idx];
   if (idx === path.length - 1) {
     newValue = val;
   } else {
-    var nestedObj = isObject(obj) && isObject(obj[key]) ? obj[key] : typeof path[idx + 1] === 'number' ? [] : {};
+    let nestedObj = isObject(obj) && isObject(obj[key]) ? obj[key] : typeof path[idx + 1] === 'number' ? [] : {};
     newValue = doSetIn(nestedObj, path, val, idx + 1);
   }
   return set(obj, key, newValue);
@@ -1316,8 +1316,8 @@ function setIn(obj, path, val) {
 // -- // true
 // -- ```
 function update(obj, key, fnUpdate) {
-  var prevVal = obj == null ? undefined : obj[key];
-  var nextVal = fnUpdate(prevVal);
+  let prevVal = obj == null ? undefined : obj[key];
+  let nextVal = fnUpdate(prevVal);
   return set(obj, key, nextVal);
 }
 
@@ -1344,8 +1344,8 @@ function update(obj, key, fnUpdate) {
 // -- // true
 // -- ```
 function updateIn(obj, path, fnUpdate) {
-  var prevVal = getIn(obj, path);
-  var nextVal = fnUpdate(prevVal);
+  let prevVal = getIn(obj, path);
+  let nextVal = fnUpdate(prevVal);
   return setIn(obj, path, nextVal);
 }
 
@@ -1385,7 +1385,7 @@ function updateIn(obj, path, fnUpdate) {
 // -- // true
 // -- ```
 function merge(a, b, c, d, e, f) {
-  for (var _len2 = arguments.length, rest = Array(_len2 > 6 ? _len2 - 6 : 0), _key2 = 6; _key2 < _len2; _key2++) {
+  for (let _len2 = arguments.length, rest = Array(_len2 > 6 ? _len2 - 6 : 0), _key2 = 6; _key2 < _len2; _key2++) {
     rest[_key2 - 6] = arguments[_key2];
   }
 
@@ -1429,7 +1429,7 @@ function merge(a, b, c, d, e, f) {
 // -- // true
 // -- ```
 function mergeDeep(a, b, c, d, e, f) {
-  for (var _len3 = arguments.length, rest = Array(_len3 > 6 ? _len3 - 6 : 0), _key3 = 6; _key3 < _len3; _key3++) {
+  for (let _len3 = arguments.length, rest = Array(_len3 > 6 ? _len3 - 6 : 0), _key3 = 6; _key3 < _len3; _key3++) {
     rest[_key3 - 6] = arguments[_key3];
   }
 
@@ -1459,11 +1459,11 @@ function mergeDeep(a, b, c, d, e, f) {
 // -- // true
 // -- ```
 function mergeIn(a, path, b, c, d, e, f) {
-  var prevVal = getIn(a, path);
+  let prevVal = getIn(a, path);
   if (prevVal == null) prevVal = {};
-  var nextVal = void 0;
+  let nextVal = void 0;
 
-  for (var _len4 = arguments.length, rest = Array(_len4 > 7 ? _len4 - 7 : 0), _key4 = 7; _key4 < _len4; _key4++) {
+  for (let _len4 = arguments.length, rest = Array(_len4 > 7 ? _len4 - 7 : 0), _key4 = 7; _key4 < _len4; _key4++) {
     rest[_key4 - 7] = arguments[_key4];
   }
 
@@ -1492,19 +1492,19 @@ function mergeIn(a, path, b, c, d, e, f) {
 // -- // true
 // -- ```
 function omit(obj, attrs) {
-  var omitList = Array.isArray(attrs) ? attrs : [attrs];
-  var fDoSomething = false;
-  for (var i = 0; i < omitList.length; i++) {
+  let omitList = Array.isArray(attrs) ? attrs : [attrs];
+  let fDoSomething = false;
+  for (let i = 0; i < omitList.length; i++) {
     if (hasOwnProperty.call(obj, omitList[i])) {
       fDoSomething = true;
       break;
     }
   }
   if (!fDoSomething) return obj;
-  var out = {};
-  var keys = getKeysAndSymbols(obj);
-  for (var _i = 0; _i < keys.length; _i++) {
-    var key = keys[_i];
+  let out = {};
+  let keys = getKeysAndSymbols(obj);
+  for (let _i = 0; _i < keys.length; _i++) {
+    let key = keys[_i];
     if (omitList.indexOf(key) >= 0) continue;
     out[key] = obj[key];
   }
@@ -1534,7 +1534,7 @@ function omit(obj, attrs) {
 // -- // true
 // -- ```
 function addDefaults(a, b, c, d, e, f) {
-  for (var _len5 = arguments.length, rest = Array(_len5 > 6 ? _len5 - 6 : 0), _key5 = 6; _key5 < _len5; _key5++) {
+  for (let _len5 = arguments.length, rest = Array(_len5 > 6 ? _len5 - 6 : 0), _key5 = 6; _key5 < _len5; _key5++) {
     rest[_key5 - 6] = arguments[_key5];
   }
 
@@ -1544,7 +1544,7 @@ function addDefaults(a, b, c, d, e, f) {
 // ===============================================
 // ### Public API
 // ===============================================
-var timm = {
+let timm = {
   clone: clone,
   addLast: addLast,
   addFirst: addFirst,
@@ -1574,10 +1574,10 @@ exports.default = timm;
 /* 19 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var root = __webpack_require__(4);
+let root = __webpack_require__(4);
 
 /** Built-in value references. */
-var Symbol = root.Symbol;
+let Symbol = root.Symbol;
 
 module.exports = Symbol;
 
@@ -1586,10 +1586,10 @@ module.exports = Symbol;
 /* 20 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var isSymbol = __webpack_require__(36);
+let isSymbol = __webpack_require__(36);
 
 /** Used as references for various `Number` constants. */
-var INFINITY = 1 / 0;
+let INFINITY = 1 / 0;
 
 /**
  * Converts `value` to a string key if it's not a string or symbol.
@@ -1602,7 +1602,7 @@ function toKey(value) {
   if (typeof value == 'string' || isSymbol(value)) {
     return value;
   }
-  var result = (value + '');
+  let result = (value + '');
   return (result == '0' && (1 / value) == -INFINITY) ? '-0' : result;
 }
 
@@ -1640,14 +1640,14 @@ module.exports = _typeof;
 
 /* globals window, document */
 
-/* eslint-disable no-var */
+/* eslint-disable no-let */
 // eslint-disable-next-line strict
 
 
-var IXEvents = __webpack_require__(123);
+let IXEvents = __webpack_require__(123);
 
 function dispatchCustomEvent(element, eventName) {
-  var event = document.createEvent('CustomEvent');
+  let event = document.createEvent('CustomEvent');
   event.initCustomEvent(eventName, true, true, null);
   element.dispatchEvent(event);
 }
@@ -1656,10 +1656,10 @@ function dispatchCustomEvent(element, eventName) {
  */
 
 
-var $ = window.jQuery;
-var api = {};
-var namespace = '.w-ix';
-var eventTriggers = {
+let $ = window.jQuery;
+let api = {};
+let namespace = '.w-ix';
+let eventTriggers = {
   reset: function reset(i, el) {
     IXEvents.triggers.reset(i, el);
   },
@@ -1684,7 +1684,7 @@ module.exports = api;
 /* 23 */
 /***/ (function(module, exports) {
 
-var g;
+let g;
 
 // This works in non-strict mode
 g = (function() {
@@ -1719,7 +1719,7 @@ module.exports = function (it) {
 /* 25 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var isObject = __webpack_require__(24);
+let isObject = __webpack_require__(24);
 
 module.exports = function (it) {
   if (!isObject(it)) {
@@ -1732,12 +1732,12 @@ module.exports = function (it) {
 /* 26 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var global = __webpack_require__(3);
-var setGlobal = __webpack_require__(39);
-var IS_PURE = __webpack_require__(135);
+let global = __webpack_require__(3);
+let setGlobal = __webpack_require__(39);
+let IS_PURE = __webpack_require__(135);
 
-var SHARED = '__core-js_shared__';
-var store = global[SHARED] || setGlobal(SHARED, {});
+let SHARED = '__core-js_shared__';
+let store = global[SHARED] || setGlobal(SHARED, {});
 
 (module.exports = function (key, value) {
   return store[key] || (store[key] = value !== undefined ? value : {});
@@ -1775,10 +1775,10 @@ module.exports = _defineProperty;
 
 function _extends() {
   module.exports = _extends = Object.assign || function (target) {
-    for (var i = 1; i < arguments.length; i++) {
-      var source = arguments[i];
+    for (let i = 1; i < arguments.length; i++) {
+      let source = arguments[i];
 
-      for (var key in source) {
+      for (let key in source) {
         if (Object.prototype.hasOwnProperty.call(source, key)) {
           target[key] = source[key];
         }
@@ -1797,7 +1797,7 @@ module.exports = _extends;
 /* 29 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var listCacheClear = __webpack_require__(178),
+let listCacheClear = __webpack_require__(178),
     listCacheDelete = __webpack_require__(179),
     listCacheGet = __webpack_require__(180),
     listCacheHas = __webpack_require__(181),
@@ -1811,12 +1811,12 @@ var listCacheClear = __webpack_require__(178),
  * @param {Array} [entries] The key-value pairs to cache.
  */
 function ListCache(entries) {
-  var index = -1,
+  let index = -1,
       length = entries == null ? 0 : entries.length;
 
   this.clear();
   while (++index < length) {
-    var entry = entries[index];
+    let entry = entries[index];
     this.set(entry[0], entry[1]);
   }
 }
@@ -1835,7 +1835,7 @@ module.exports = ListCache;
 /* 30 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var eq = __webpack_require__(45);
+let eq = __webpack_require__(45);
 
 /**
  * Gets the index at which the `key` is found in `array` of key-value pairs.
@@ -1846,7 +1846,7 @@ var eq = __webpack_require__(45);
  * @returns {number} Returns the index of the matched value, else `-1`.
  */
 function assocIndexOf(array, key) {
-  var length = array.length;
+  let length = array.length;
   while (length--) {
     if (eq(array[length][0], key)) {
       return length;
@@ -1862,10 +1862,10 @@ module.exports = assocIndexOf;
 /* 31 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var getNative = __webpack_require__(8);
+let getNative = __webpack_require__(8);
 
 /* Built-in method references that are verified to be native. */
-var nativeCreate = getNative(Object, 'create');
+let nativeCreate = getNative(Object, 'create');
 
 module.exports = nativeCreate;
 
@@ -1874,7 +1874,7 @@ module.exports = nativeCreate;
 /* 32 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var isKeyable = __webpack_require__(202);
+let isKeyable = __webpack_require__(202);
 
 /**
  * Gets the data for `map`.
@@ -1885,7 +1885,7 @@ var isKeyable = __webpack_require__(202);
  * @returns {*} Returns the map data.
  */
 function getMapData(map, key) {
-  var data = map.__data__;
+  let data = map.__data__;
   return isKeyable(key)
     ? data[typeof key == 'string' ? 'string' : 'hash']
     : data.map;
@@ -1898,7 +1898,7 @@ module.exports = getMapData;
 /* 33 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var arrayLikeKeys = __webpack_require__(96),
+let arrayLikeKeys = __webpack_require__(96),
     baseKeys = __webpack_require__(53),
     isArrayLike = __webpack_require__(12);
 
@@ -1941,17 +1941,17 @@ module.exports = keys;
 /* 34 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseIsArguments = __webpack_require__(220),
+let baseIsArguments = __webpack_require__(220),
     isObjectLike = __webpack_require__(9);
 
 /** Used for built-in method references. */
-var objectProto = Object.prototype;
+let objectProto = Object.prototype;
 
 /** Used to check objects for own properties. */
-var hasOwnProperty = objectProto.hasOwnProperty;
+let hasOwnProperty = objectProto.hasOwnProperty;
 
 /** Built-in value references. */
-var propertyIsEnumerable = objectProto.propertyIsEnumerable;
+let propertyIsEnumerable = objectProto.propertyIsEnumerable;
 
 /**
  * Checks if `value` is likely an `arguments` object.
@@ -1971,7 +1971,7 @@ var propertyIsEnumerable = objectProto.propertyIsEnumerable;
  * _.isArguments([1, 2, 3]);
  * // => false
  */
-var isArguments = baseIsArguments(function() { return arguments; }()) ? baseIsArguments : function(value) {
+let isArguments = baseIsArguments(function() { return arguments; }()) ? baseIsArguments : function(value) {
   return isObjectLike(value) && hasOwnProperty.call(value, 'callee') &&
     !propertyIsEnumerable.call(value, 'callee');
 };
@@ -1983,7 +1983,7 @@ module.exports = isArguments;
 /* 35 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var isArray = __webpack_require__(1),
+let isArray = __webpack_require__(1),
     isKey = __webpack_require__(58),
     stringToPath = __webpack_require__(231),
     toString = __webpack_require__(234);
@@ -2010,11 +2010,11 @@ module.exports = castPath;
 /* 36 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseGetTag = __webpack_require__(11),
+let baseGetTag = __webpack_require__(11),
     isObjectLike = __webpack_require__(9);
 
 /** `Object#toString` result references. */
-var symbolTag = '[object Symbol]';
+let symbolTag = '[object Symbol]';
 
 /**
  * Checks if `value` is classified as a `Symbol` primitive or object.
@@ -2046,8 +2046,8 @@ module.exports = isSymbol;
 /***/ (function(module, exports, __webpack_require__) {
 
 // toObject with fallback for non-array-like ES3 strings
-var IndexedObject = __webpack_require__(131);
-var requireObjectCoercible = __webpack_require__(133);
+let IndexedObject = __webpack_require__(131);
+let requireObjectCoercible = __webpack_require__(133);
 
 module.exports = function (it) {
   return IndexedObject(requireObjectCoercible(it));
@@ -2058,12 +2058,12 @@ module.exports = function (it) {
 /* 38 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var DESCRIPTORS = __webpack_require__(14);
-var IE8_DOM_DEFINE = __webpack_require__(69);
-var anObject = __webpack_require__(25);
-var toPrimitive = __webpack_require__(68);
+let DESCRIPTORS = __webpack_require__(14);
+let IE8_DOM_DEFINE = __webpack_require__(69);
+let anObject = __webpack_require__(25);
+let toPrimitive = __webpack_require__(68);
 
-var nativeDefineProperty = Object.defineProperty;
+let nativeDefineProperty = Object.defineProperty;
 
 // `Object.defineProperty` method
 // https://tc39.github.io/ecma262/#sec-object.defineproperty
@@ -2084,8 +2084,8 @@ exports.f = DESCRIPTORS ? nativeDefineProperty : function defineProperty(O, P, A
 /* 39 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var global = __webpack_require__(3);
-var hide = __webpack_require__(17);
+let global = __webpack_require__(3);
+let hide = __webpack_require__(17);
 
 module.exports = function (key, value) {
   try {
@@ -2127,8 +2127,8 @@ module.exports = [
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ActionTypes", function() { return ActionTypes; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return createStore; });
-/* harmony import */ var lodash_es_isPlainObject__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(79);
-/* harmony import */ var symbol_observable__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(164);
+/* harmony import */ let lodash_es_isPlainObject__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(79);
+/* harmony import */ let symbol_observable__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(164);
 
 
 
@@ -2138,7 +2138,7 @@ __webpack_require__.r(__webpack_exports__);
  * If the current state is undefined, you must return the initial state.
  * Do not reference these action types directly in your code.
  */
-var ActionTypes = {
+let ActionTypes = {
   INIT: '@@redux/INIT'
 };
 
@@ -2168,7 +2168,7 @@ var ActionTypes = {
  * and subscribe to changes.
  */
 function createStore(reducer, preloadedState, enhancer) {
-  var _ref2;
+  let _ref2;
 
   if (typeof preloadedState === 'function' && typeof enhancer === 'undefined') {
     enhancer = preloadedState;
@@ -2187,11 +2187,11 @@ function createStore(reducer, preloadedState, enhancer) {
     throw new Error('Expected the reducer to be a function.');
   }
 
-  var currentReducer = reducer;
-  var currentState = preloadedState;
-  var currentListeners = [];
-  var nextListeners = currentListeners;
-  var isDispatching = false;
+  let currentReducer = reducer;
+  let currentState = preloadedState;
+  let currentListeners = [];
+  let nextListeners = currentListeners;
+  let isDispatching = false;
 
   function ensureCanMutateNextListeners() {
     if (nextListeners === currentListeners) {
@@ -2236,7 +2236,7 @@ function createStore(reducer, preloadedState, enhancer) {
       throw new Error('Expected listener to be a function.');
     }
 
-    var isSubscribed = true;
+    let isSubscribed = true;
 
     ensureCanMutateNextListeners();
     nextListeners.push(listener);
@@ -2249,7 +2249,7 @@ function createStore(reducer, preloadedState, enhancer) {
       isSubscribed = false;
 
       ensureCanMutateNextListeners();
-      var index = nextListeners.indexOf(listener);
+      let index = nextListeners.indexOf(listener);
       nextListeners.splice(index, 1);
     };
   }
@@ -2299,8 +2299,8 @@ function createStore(reducer, preloadedState, enhancer) {
       isDispatching = false;
     }
 
-    var listeners = currentListeners = nextListeners;
-    for (var i = 0; i < listeners.length; i++) {
+    let listeners = currentListeners = nextListeners;
+    for (let i = 0; i < listeners.length; i++) {
       listeners[i]();
     }
 
@@ -2333,9 +2333,9 @@ function createStore(reducer, preloadedState, enhancer) {
    * https://github.com/zenparsing/es-observable
    */
   function observable() {
-    var _ref;
+    let _ref;
 
-    var outerSubscribe = subscribe;
+    let outerSubscribe = subscribe;
     return _ref = {
       /**
        * The minimal observable subscription method.
@@ -2357,7 +2357,7 @@ function createStore(reducer, preloadedState, enhancer) {
         }
 
         observeState();
-        var unsubscribe = outerSubscribe(observeState);
+        let unsubscribe = outerSubscribe(observeState);
         return { unsubscribe: unsubscribe };
       }
     }, _ref[symbol_observable__WEBPACK_IMPORTED_MODULE_1__["default"]] = function () {
@@ -2397,7 +2397,7 @@ __webpack_require__.r(__webpack_exports__);
  */
 
 function compose() {
-  for (var _len = arguments.length, funcs = Array(_len), _key = 0; _key < _len; _key++) {
+  for (let _len = arguments.length, funcs = Array(_len), _key = 0; _key < _len; _key++) {
     funcs[_key] = arguments[_key];
   }
 
@@ -2411,8 +2411,8 @@ function compose() {
     return funcs[0];
   }
 
-  var last = funcs[funcs.length - 1];
-  var rest = funcs.slice(0, -1);
+  let last = funcs[funcs.length - 1];
+  let rest = funcs.slice(0, -1);
   return function () {
     return rest.reduceRight(function (composed, f) {
       return f(composed);
@@ -2427,22 +2427,22 @@ function compose() {
 "use strict";
 
 
-var _interopRequireDefault = __webpack_require__(0);
+let _interopRequireDefault = __webpack_require__(0);
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.TRANSFORM_STYLE_PREFIXED = exports.TRANSFORM_PREFIXED = exports.FLEX_PREFIXED = exports.ELEMENT_MATCHES = exports.withBrowser = exports.IS_BROWSER_ENV = void 0;
 
-var _find = _interopRequireDefault(__webpack_require__(85));
+let _find = _interopRequireDefault(__webpack_require__(85));
 /* eslint-env browser */
 
 
-var IS_BROWSER_ENV = typeof window !== 'undefined'; // $FlowFixMe
+let IS_BROWSER_ENV = typeof window !== 'undefined'; // $FlowFixMe
 
 exports.IS_BROWSER_ENV = IS_BROWSER_ENV;
 
-var withBrowser = function withBrowser(fn, fallback) {
+let withBrowser = function withBrowser(fn, fallback) {
   if (IS_BROWSER_ENV) {
     return fn();
   }
@@ -2451,22 +2451,22 @@ var withBrowser = function withBrowser(fn, fallback) {
 };
 
 exports.withBrowser = withBrowser;
-var ELEMENT_MATCHES = withBrowser(function () {
+let ELEMENT_MATCHES = withBrowser(function () {
   return (0, _find["default"])(['matches', 'matchesSelector', 'mozMatchesSelector', 'msMatchesSelector', 'oMatchesSelector', 'webkitMatchesSelector'], function (key) {
     return key in Element.prototype;
   });
 });
 exports.ELEMENT_MATCHES = ELEMENT_MATCHES;
-var FLEX_PREFIXED = withBrowser(function () {
-  var el = document.createElement('i');
-  var values = ['flex', '-webkit-flex', '-ms-flexbox', '-moz-box', '-webkit-box'];
-  var none = '';
+let FLEX_PREFIXED = withBrowser(function () {
+  let el = document.createElement('i');
+  let values = ['flex', '-webkit-flex', '-ms-flexbox', '-moz-box', '-webkit-box'];
+  let none = '';
 
   try {
-    var length = values.length;
+    let length = values.length;
 
-    for (var i = 0; i < length; i++) {
-      var value = values[i];
+    for (let i = 0; i < length; i++) {
+      let value = values[i];
       el.style.display = value;
 
       if (el.style.display === value) {
@@ -2480,16 +2480,16 @@ var FLEX_PREFIXED = withBrowser(function () {
   }
 }, 'flex');
 exports.FLEX_PREFIXED = FLEX_PREFIXED;
-var TRANSFORM_PREFIXED = withBrowser(function () {
-  var el = document.createElement('i');
+let TRANSFORM_PREFIXED = withBrowser(function () {
+  let el = document.createElement('i');
 
   if (el.style.transform == null) {
-    var prefixes = ['Webkit', 'Moz', 'ms'];
-    var suffix = 'Transform';
-    var length = prefixes.length;
+    let prefixes = ['Webkit', 'Moz', 'ms'];
+    let suffix = 'Transform';
+    let length = prefixes.length;
 
-    for (var i = 0; i < length; i++) {
-      var prop = prefixes[i] + suffix; // $FlowFixMe
+    for (let i = 0; i < length; i++) {
+      let prop = prefixes[i] + suffix; // $FlowFixMe
 
       if (el.style[prop] !== undefined) {
         return prop;
@@ -2501,8 +2501,8 @@ var TRANSFORM_PREFIXED = withBrowser(function () {
 }, 'transform'); // $FlowFixMe
 
 exports.TRANSFORM_PREFIXED = TRANSFORM_PREFIXED;
-var TRANSFORM_PREFIX = TRANSFORM_PREFIXED.split('transform')[0];
-var TRANSFORM_STYLE_PREFIXED = TRANSFORM_PREFIX ? TRANSFORM_PREFIX + 'TransformStyle' : 'transformStyle';
+let TRANSFORM_PREFIX = TRANSFORM_PREFIXED.split('transform')[0];
+let TRANSFORM_STYLE_PREFIXED = TRANSFORM_PREFIX ? TRANSFORM_PREFIX + 'TransformStyle' : 'transformStyle';
 exports.TRANSFORM_STYLE_PREFIXED = TRANSFORM_STYLE_PREFIXED;
 
 /***/ }),
@@ -2523,8 +2523,8 @@ exports.TRANSFORM_STYLE_PREFIXED = TRANSFORM_STYLE_PREFIXED;
  * @returns {boolean} Returns `true` if the values are equivalent, else `false`.
  * @example
  *
- * var object = { 'a': 1 };
- * var other = { 'a': 1 };
+ * let object = { 'a': 1 };
+ * let other = { 'a': 1 };
  *
  * _.eq(object, object);
  * // => true
@@ -2552,11 +2552,11 @@ module.exports = eq;
 /* 46 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var getNative = __webpack_require__(8),
+let getNative = __webpack_require__(8),
     root = __webpack_require__(4);
 
 /* Built-in method references that are verified to be native. */
-var Map = getNative(root, 'Map');
+let Map = getNative(root, 'Map');
 
 module.exports = Map;
 
@@ -2565,7 +2565,7 @@ module.exports = Map;
 /* 47 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var mapCacheClear = __webpack_require__(194),
+let mapCacheClear = __webpack_require__(194),
     mapCacheDelete = __webpack_require__(201),
     mapCacheGet = __webpack_require__(203),
     mapCacheHas = __webpack_require__(204),
@@ -2579,12 +2579,12 @@ var mapCacheClear = __webpack_require__(194),
  * @param {Array} [entries] The key-value pairs to cache.
  */
 function MapCache(entries) {
-  var index = -1,
+  let index = -1,
       length = entries == null ? 0 : entries.length;
 
   this.clear();
   while (++index < length) {
-    var entry = entries[index];
+    let entry = entries[index];
     this.set(entry[0], entry[1]);
   }
 }
@@ -2612,7 +2612,7 @@ module.exports = MapCache;
  * @returns {Array} Returns `array`.
  */
 function arrayPush(array, values) {
-  var index = -1,
+  let index = -1,
       length = values.length,
       offset = array.length;
 
@@ -2629,23 +2629,23 @@ module.exports = arrayPush;
 /* 49 */
 /***/ (function(module, exports, __webpack_require__) {
 
-/* WEBPACK VAR INJECTION */(function(module) {var root = __webpack_require__(4),
+/* WEBPACK let INJECTION */(function(module) {let root = __webpack_require__(4),
     stubFalse = __webpack_require__(221);
 
 /** Detect free variable `exports`. */
-var freeExports =  true && exports && !exports.nodeType && exports;
+let freeExports =  true && exports && !exports.nodeType && exports;
 
 /** Detect free variable `module`. */
-var freeModule = freeExports && typeof module == 'object' && module && !module.nodeType && module;
+let freeModule = freeExports && typeof module == 'object' && module && !module.nodeType && module;
 
 /** Detect the popular CommonJS extension `module.exports`. */
-var moduleExports = freeModule && freeModule.exports === freeExports;
+let moduleExports = freeModule && freeModule.exports === freeExports;
 
 /** Built-in value references. */
-var Buffer = moduleExports ? root.Buffer : undefined;
+let Buffer = moduleExports ? root.Buffer : undefined;
 
 /* Built-in method references for those with the same name as other `lodash` methods. */
-var nativeIsBuffer = Buffer ? Buffer.isBuffer : undefined;
+let nativeIsBuffer = Buffer ? Buffer.isBuffer : undefined;
 
 /**
  * Checks if `value` is a buffer.
@@ -2664,21 +2664,21 @@ var nativeIsBuffer = Buffer ? Buffer.isBuffer : undefined;
  * _.isBuffer(new Uint8Array(2));
  * // => false
  */
-var isBuffer = nativeIsBuffer || stubFalse;
+let isBuffer = nativeIsBuffer || stubFalse;
 
 module.exports = isBuffer;
 
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(97)(module)))
+/* WEBPACK let INJECTION */}.call(this, __webpack_require__(97)(module)))
 
 /***/ }),
 /* 50 */
 /***/ (function(module, exports) {
 
 /** Used as references for various `Number` constants. */
-var MAX_SAFE_INTEGER = 9007199254740991;
+let MAX_SAFE_INTEGER = 9007199254740991;
 
 /** Used to detect unsigned integer values. */
-var reIsUint = /^(?:0|[1-9]\d*)$/;
+let reIsUint = /^(?:0|[1-9]\d*)$/;
 
 /**
  * Checks if `value` is a valid array-like index.
@@ -2689,7 +2689,7 @@ var reIsUint = /^(?:0|[1-9]\d*)$/;
  * @returns {boolean} Returns `true` if `value` is a valid index, else `false`.
  */
 function isIndex(value, length) {
-  var type = typeof value;
+  let type = typeof value;
   length = length == null ? MAX_SAFE_INTEGER : length;
 
   return !!length &&
@@ -2705,12 +2705,12 @@ module.exports = isIndex;
 /* 51 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseIsTypedArray = __webpack_require__(222),
+let baseIsTypedArray = __webpack_require__(222),
     baseUnary = __webpack_require__(223),
     nodeUtil = __webpack_require__(224);
 
 /* Node.js helper references. */
-var nodeIsTypedArray = nodeUtil && nodeUtil.isTypedArray;
+let nodeIsTypedArray = nodeUtil && nodeUtil.isTypedArray;
 
 /**
  * Checks if `value` is classified as a typed array.
@@ -2729,7 +2729,7 @@ var nodeIsTypedArray = nodeUtil && nodeUtil.isTypedArray;
  * _.isTypedArray([]);
  * // => false
  */
-var isTypedArray = nodeIsTypedArray ? baseUnary(nodeIsTypedArray) : baseIsTypedArray;
+let isTypedArray = nodeIsTypedArray ? baseUnary(nodeIsTypedArray) : baseIsTypedArray;
 
 module.exports = isTypedArray;
 
@@ -2739,7 +2739,7 @@ module.exports = isTypedArray;
 /***/ (function(module, exports) {
 
 /** Used as references for various `Number` constants. */
-var MAX_SAFE_INTEGER = 9007199254740991;
+let MAX_SAFE_INTEGER = 9007199254740991;
 
 /**
  * Checks if `value` is a valid array-like length.
@@ -2779,14 +2779,14 @@ module.exports = isLength;
 /* 53 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var isPrototype = __webpack_require__(54),
+let isPrototype = __webpack_require__(54),
     nativeKeys = __webpack_require__(225);
 
 /** Used for built-in method references. */
-var objectProto = Object.prototype;
+let objectProto = Object.prototype;
 
 /** Used to check objects for own properties. */
-var hasOwnProperty = objectProto.hasOwnProperty;
+let hasOwnProperty = objectProto.hasOwnProperty;
 
 /**
  * The base implementation of `_.keys` which doesn't treat sparse arrays as dense.
@@ -2799,8 +2799,8 @@ function baseKeys(object) {
   if (!isPrototype(object)) {
     return nativeKeys(object);
   }
-  var result = [];
-  for (var key in Object(object)) {
+  let result = [];
+  for (let key in Object(object)) {
     if (hasOwnProperty.call(object, key) && key != 'constructor') {
       result.push(key);
     }
@@ -2816,7 +2816,7 @@ module.exports = baseKeys;
 /***/ (function(module, exports) {
 
 /** Used for built-in method references. */
-var objectProto = Object.prototype;
+let objectProto = Object.prototype;
 
 /**
  * Checks if `value` is likely a prototype object.
@@ -2826,7 +2826,7 @@ var objectProto = Object.prototype;
  * @returns {boolean} Returns `true` if `value` is a prototype, else `false`.
  */
 function isPrototype(value) {
-  var Ctor = value && value.constructor,
+  let Ctor = value && value.constructor,
       proto = (typeof Ctor == 'function' && Ctor.prototype) || objectProto;
 
   return value === proto;
@@ -2839,7 +2839,7 @@ module.exports = isPrototype;
 /* 55 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var DataView = __webpack_require__(226),
+let DataView = __webpack_require__(226),
     Map = __webpack_require__(46),
     Promise = __webpack_require__(227),
     Set = __webpack_require__(228),
@@ -2848,16 +2848,16 @@ var DataView = __webpack_require__(226),
     toSource = __webpack_require__(90);
 
 /** `Object#toString` result references. */
-var mapTag = '[object Map]',
+let mapTag = '[object Map]',
     objectTag = '[object Object]',
     promiseTag = '[object Promise]',
     setTag = '[object Set]',
     weakMapTag = '[object WeakMap]';
 
-var dataViewTag = '[object DataView]';
+let dataViewTag = '[object DataView]';
 
 /** Used to detect maps, sets, and weakmaps. */
-var dataViewCtorString = toSource(DataView),
+let dataViewCtorString = toSource(DataView),
     mapCtorString = toSource(Map),
     promiseCtorString = toSource(Promise),
     setCtorString = toSource(Set),
@@ -2870,7 +2870,7 @@ var dataViewCtorString = toSource(DataView),
  * @param {*} value The value to query.
  * @returns {string} Returns the `toStringTag`.
  */
-var getTag = baseGetTag;
+let getTag = baseGetTag;
 
 // Fallback for data views, maps, sets, and weak maps in IE 11 and promises in Node.js < 6.
 if ((DataView && getTag(new DataView(new ArrayBuffer(1))) != dataViewTag) ||
@@ -2879,7 +2879,7 @@ if ((DataView && getTag(new DataView(new ArrayBuffer(1))) != dataViewTag) ||
     (Set && getTag(new Set) != setTag) ||
     (WeakMap && getTag(new WeakMap) != weakMapTag)) {
   getTag = function(value) {
-    var result = baseGetTag(value),
+    let result = baseGetTag(value),
         Ctor = result == objectTag ? value.constructor : undefined,
         ctorString = Ctor ? toSource(Ctor) : '';
 
@@ -2903,7 +2903,7 @@ module.exports = getTag;
 /* 56 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseGet = __webpack_require__(57);
+let baseGet = __webpack_require__(57);
 
 /**
  * Gets the value at `path` of `object`. If the resolved value is
@@ -2919,7 +2919,7 @@ var baseGet = __webpack_require__(57);
  * @returns {*} Returns the resolved value.
  * @example
  *
- * var object = { 'a': [{ 'b': { 'c': 3 } }] };
+ * let object = { 'a': [{ 'b': { 'c': 3 } }] };
  *
  * _.get(object, 'a[0].b.c');
  * // => 3
@@ -2931,7 +2931,7 @@ var baseGet = __webpack_require__(57);
  * // => 'default'
  */
 function get(object, path, defaultValue) {
-  var result = object == null ? undefined : baseGet(object, path);
+  let result = object == null ? undefined : baseGet(object, path);
   return result === undefined ? defaultValue : result;
 }
 
@@ -2942,7 +2942,7 @@ module.exports = get;
 /* 57 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var castPath = __webpack_require__(35),
+let castPath = __webpack_require__(35),
     toKey = __webpack_require__(20);
 
 /**
@@ -2956,7 +2956,7 @@ var castPath = __webpack_require__(35),
 function baseGet(object, path) {
   path = castPath(path, object);
 
-  var index = 0,
+  let index = 0,
       length = path.length;
 
   while (object != null && index < length) {
@@ -2972,11 +2972,11 @@ module.exports = baseGet;
 /* 58 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var isArray = __webpack_require__(1),
+let isArray = __webpack_require__(1),
     isSymbol = __webpack_require__(36);
 
 /** Used to match property names within property paths. */
-var reIsDeepProp = /\.|\[(?:[^[\]]*|(["'])(?:(?!\1)[^\\]|\\.)*?\1)\]/,
+let reIsDeepProp = /\.|\[(?:[^[\]]*|(["'])(?:(?!\1)[^\\]|\\.)*?\1)\]/,
     reIsPlainProp = /^\w*$/;
 
 /**
@@ -2991,7 +2991,7 @@ function isKey(value, object) {
   if (isArray(value)) {
     return false;
   }
-  var type = typeof value;
+  let type = typeof value;
   if (type == 'number' || type == 'symbol' || type == 'boolean' ||
       value == null || isSymbol(value)) {
     return true;
@@ -3018,7 +3018,7 @@ module.exports = isKey;
  * @returns {*} Returns `value`.
  * @example
  *
- * var object = { 'a': 1 };
+ * let object = { 'a': 1 };
  *
  * console.log(_.identity(object) === object);
  * // => true
@@ -3034,24 +3034,24 @@ module.exports = identity;
 /* 60 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseTrim = __webpack_require__(243),
+let baseTrim = __webpack_require__(243),
     isObject = __webpack_require__(6),
     isSymbol = __webpack_require__(36);
 
 /** Used as references for various `Number` constants. */
-var NAN = 0 / 0;
+let NAN = 0 / 0;
 
 /** Used to detect bad signed hexadecimal string values. */
-var reIsBadHex = /^[-+]0x[0-9a-f]+$/i;
+let reIsBadHex = /^[-+]0x[0-9a-f]+$/i;
 
 /** Used to detect binary string values. */
-var reIsBinary = /^0b[01]+$/i;
+let reIsBinary = /^0b[01]+$/i;
 
 /** Used to detect octal string values. */
-var reIsOctal = /^0o[0-7]+$/i;
+let reIsOctal = /^0o[0-7]+$/i;
 
 /** Built-in method references without a dependency on `root`. */
-var freeParseInt = parseInt;
+let freeParseInt = parseInt;
 
 /**
  * Converts `value` to a number.
@@ -3084,14 +3084,14 @@ function toNumber(value) {
     return NAN;
   }
   if (isObject(value)) {
-    var other = typeof value.valueOf == 'function' ? value.valueOf() : value;
+    let other = typeof value.valueOf == 'function' ? value.valueOf() : value;
     value = isObject(other) ? (other + '') : other;
   }
   if (typeof value != 'string') {
     return value === 0 ? value : +value;
   }
   value = baseTrim(value);
-  var isBinary = reIsBinary.test(value);
+  let isBinary = reIsBinary.test(value);
   return (isBinary || reIsOctal.test(value))
     ? freeParseInt(value.slice(2), isBinary ? 2 : 8)
     : (reIsBadHex.test(value) ? NAN : +value);
@@ -3107,20 +3107,20 @@ module.exports = toNumber;
 "use strict";
 
 
-var _interopRequireDefault = __webpack_require__(0);
+let _interopRequireDefault = __webpack_require__(0);
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.mediaQueriesDefined = exports.viewportWidthChanged = exports.actionListPlaybackChanged = exports.elementStateChanged = exports.instanceRemoved = exports.instanceStarted = exports.instanceAdded = exports.parameterChanged = exports.animationFrameChanged = exports.eventStateChanged = exports.testFrameRendered = exports.eventListenerAdded = exports.clearRequested = exports.stopRequested = exports.playbackRequested = exports.previewRequested = exports.sessionStopped = exports.sessionStarted = exports.sessionInitialized = exports.rawDataImported = void 0;
 
-var _extends2 = _interopRequireDefault(__webpack_require__(28));
+let _extends2 = _interopRequireDefault(__webpack_require__(28));
 
-var _constants = __webpack_require__(2);
+let _constants = __webpack_require__(2);
 
-var _shared = __webpack_require__(10);
+let _shared = __webpack_require__(10);
 
-var _constants$IX2EngineA = _constants.IX2EngineActionTypes,
+let _constants$IX2EngineA = _constants.IX2EngineActionTypes,
     IX2_RAW_DATA_IMPORTED = _constants$IX2EngineA.IX2_RAW_DATA_IMPORTED,
     IX2_SESSION_INITIALIZED = _constants$IX2EngineA.IX2_SESSION_INITIALIZED,
     IX2_SESSION_STARTED = _constants$IX2EngineA.IX2_SESSION_STARTED,
@@ -3141,9 +3141,9 @@ var _constants$IX2EngineA = _constants.IX2EngineActionTypes,
     IX2_ACTION_LIST_PLAYBACK_CHANGED = _constants$IX2EngineA.IX2_ACTION_LIST_PLAYBACK_CHANGED,
     IX2_VIEWPORT_WIDTH_CHANGED = _constants$IX2EngineA.IX2_VIEWPORT_WIDTH_CHANGED,
     IX2_MEDIA_QUERIES_DEFINED = _constants$IX2EngineA.IX2_MEDIA_QUERIES_DEFINED;
-var reifyState = _shared.IX2VanillaUtils.reifyState; // TODO: Figure out what this is and elevate it
+let reifyState = _shared.IX2VanillaUtils.reifyState; // TODO: Figure out what this is and elevate it
 
-var rawDataImported = function rawDataImported(rawData) {
+let rawDataImported = function rawDataImported(rawData) {
   return {
     type: IX2_RAW_DATA_IMPORTED,
     payload: (0, _extends2["default"])({}, reifyState(rawData))
@@ -3152,8 +3152,8 @@ var rawDataImported = function rawDataImported(rawData) {
 
 exports.rawDataImported = rawDataImported;
 
-var sessionInitialized = function sessionInitialized(_ref) {
-  var hasBoundaryNodes = _ref.hasBoundaryNodes;
+let sessionInitialized = function sessionInitialized(_ref) {
+  let hasBoundaryNodes = _ref.hasBoundaryNodes;
   return {
     type: IX2_SESSION_INITIALIZED,
     payload: {
@@ -3164,7 +3164,7 @@ var sessionInitialized = function sessionInitialized(_ref) {
 
 exports.sessionInitialized = sessionInitialized;
 
-var sessionStarted = function sessionStarted() {
+let sessionStarted = function sessionStarted() {
   return {
     type: IX2_SESSION_STARTED
   };
@@ -3172,7 +3172,7 @@ var sessionStarted = function sessionStarted() {
 
 exports.sessionStarted = sessionStarted;
 
-var sessionStopped = function sessionStopped() {
+let sessionStopped = function sessionStopped() {
   return {
     type: IX2_SESSION_STOPPED
   };
@@ -3180,8 +3180,8 @@ var sessionStopped = function sessionStopped() {
 
 exports.sessionStopped = sessionStopped;
 
-var previewRequested = function previewRequested(_ref2) {
-  var rawData = _ref2.rawData,
+let previewRequested = function previewRequested(_ref2) {
+  let rawData = _ref2.rawData,
       defer = _ref2.defer;
   return {
     type: IX2_PREVIEW_REQUESTED,
@@ -3194,8 +3194,8 @@ var previewRequested = function previewRequested(_ref2) {
 
 exports.previewRequested = previewRequested;
 
-var playbackRequested = function playbackRequested(_ref3) {
-  var _ref3$actionTypeId = _ref3.actionTypeId,
+let playbackRequested = function playbackRequested(_ref3) {
+  let _ref3$actionTypeId = _ref3.actionTypeId,
       actionTypeId = _ref3$actionTypeId === void 0 ? _constants.ActionTypeConsts.GENERAL_START_ACTION : _ref3$actionTypeId,
       actionListId = _ref3.actionListId,
       actionItemId = _ref3.actionItemId,
@@ -3223,7 +3223,7 @@ var playbackRequested = function playbackRequested(_ref3) {
 
 exports.playbackRequested = playbackRequested;
 
-var stopRequested = function stopRequested(actionListId) {
+let stopRequested = function stopRequested(actionListId) {
   return {
     type: IX2_STOP_REQUESTED,
     payload: {
@@ -3234,7 +3234,7 @@ var stopRequested = function stopRequested(actionListId) {
 
 exports.stopRequested = stopRequested;
 
-var clearRequested = function clearRequested() {
+let clearRequested = function clearRequested() {
   return {
     type: IX2_CLEAR_REQUESTED
   };
@@ -3242,7 +3242,7 @@ var clearRequested = function clearRequested() {
 
 exports.clearRequested = clearRequested;
 
-var eventListenerAdded = function eventListenerAdded(target, listenerParams) {
+let eventListenerAdded = function eventListenerAdded(target, listenerParams) {
   return {
     type: IX2_EVENT_LISTENER_ADDED,
     payload: {
@@ -3254,8 +3254,8 @@ var eventListenerAdded = function eventListenerAdded(target, listenerParams) {
 
 exports.eventListenerAdded = eventListenerAdded;
 
-var testFrameRendered = function testFrameRendered() {
-  var step = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 1;
+let testFrameRendered = function testFrameRendered() {
+  let step = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 1;
   return {
     type: IX2_TEST_FRAME_RENDERED,
     payload: {
@@ -3266,7 +3266,7 @@ var testFrameRendered = function testFrameRendered() {
 
 exports.testFrameRendered = testFrameRendered;
 
-var eventStateChanged = function eventStateChanged(stateKey, newState) {
+let eventStateChanged = function eventStateChanged(stateKey, newState) {
   return {
     type: IX2_EVENT_STATE_CHANGED,
     payload: {
@@ -3278,7 +3278,7 @@ var eventStateChanged = function eventStateChanged(stateKey, newState) {
 
 exports.eventStateChanged = eventStateChanged;
 
-var animationFrameChanged = function animationFrameChanged(now, parameters) {
+let animationFrameChanged = function animationFrameChanged(now, parameters) {
   return {
     type: IX2_ANIMATION_FRAME_CHANGED,
     payload: {
@@ -3290,7 +3290,7 @@ var animationFrameChanged = function animationFrameChanged(now, parameters) {
 
 exports.animationFrameChanged = animationFrameChanged;
 
-var parameterChanged = function parameterChanged(key, value) {
+let parameterChanged = function parameterChanged(key, value) {
   return {
     type: IX2_PARAMETER_CHANGED,
     payload: {
@@ -3302,7 +3302,7 @@ var parameterChanged = function parameterChanged(key, value) {
 
 exports.parameterChanged = parameterChanged;
 
-var instanceAdded = function instanceAdded(options) {
+let instanceAdded = function instanceAdded(options) {
   return {
     type: IX2_INSTANCE_ADDED,
     payload: (0, _extends2["default"])({}, options)
@@ -3311,7 +3311,7 @@ var instanceAdded = function instanceAdded(options) {
 
 exports.instanceAdded = instanceAdded;
 
-var instanceStarted = function instanceStarted(instanceId, time) {
+let instanceStarted = function instanceStarted(instanceId, time) {
   return {
     type: IX2_INSTANCE_STARTED,
     payload: {
@@ -3323,7 +3323,7 @@ var instanceStarted = function instanceStarted(instanceId, time) {
 
 exports.instanceStarted = instanceStarted;
 
-var instanceRemoved = function instanceRemoved(instanceId) {
+let instanceRemoved = function instanceRemoved(instanceId) {
   return {
     type: IX2_INSTANCE_REMOVED,
     payload: {
@@ -3334,7 +3334,7 @@ var instanceRemoved = function instanceRemoved(instanceId) {
 
 exports.instanceRemoved = instanceRemoved;
 
-var elementStateChanged = function elementStateChanged(elementId, actionTypeId, current, actionItem) {
+let elementStateChanged = function elementStateChanged(elementId, actionTypeId, current, actionItem) {
   return {
     type: IX2_ELEMENT_STATE_CHANGED,
     payload: {
@@ -3348,8 +3348,8 @@ var elementStateChanged = function elementStateChanged(elementId, actionTypeId, 
 
 exports.elementStateChanged = elementStateChanged;
 
-var actionListPlaybackChanged = function actionListPlaybackChanged(_ref4) {
-  var actionListId = _ref4.actionListId,
+let actionListPlaybackChanged = function actionListPlaybackChanged(_ref4) {
+  let actionListId = _ref4.actionListId,
       isPlaying = _ref4.isPlaying;
   return {
     type: IX2_ACTION_LIST_PLAYBACK_CHANGED,
@@ -3362,8 +3362,8 @@ var actionListPlaybackChanged = function actionListPlaybackChanged(_ref4) {
 
 exports.actionListPlaybackChanged = actionListPlaybackChanged;
 
-var viewportWidthChanged = function viewportWidthChanged(_ref5) {
-  var width = _ref5.width,
+let viewportWidthChanged = function viewportWidthChanged(_ref5) {
+  let width = _ref5.width,
       mediaQueries = _ref5.mediaQueries;
   return {
     type: IX2_VIEWPORT_WIDTH_CHANGED,
@@ -3376,7 +3376,7 @@ var viewportWidthChanged = function viewportWidthChanged(_ref5) {
 
 exports.viewportWidthChanged = viewportWidthChanged;
 
-var mediaQueriesDefined = function mediaQueriesDefined() {
+let mediaQueriesDefined = function mediaQueriesDefined() {
   return {
     type: IX2_MEDIA_QUERIES_DEFINED
   };
@@ -3388,7 +3388,7 @@ exports.mediaQueriesDefined = mediaQueriesDefined;
 /* 62 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseCreate = __webpack_require__(117),
+let baseCreate = __webpack_require__(117),
     baseLodash = __webpack_require__(63);
 
 /**
@@ -3432,11 +3432,11 @@ module.exports = baseLodash;
 /* 64 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseCreate = __webpack_require__(117),
+let baseCreate = __webpack_require__(117),
     baseLodash = __webpack_require__(63);
 
 /** Used as references for the maximum length and index of an array. */
-var MAX_ARRAY_LENGTH = 4294967295;
+let MAX_ARRAY_LENGTH = 4294967295;
 
 /**
  * Creates a lazy wrapper object which wraps `value` to enable lazy evaluation.
@@ -3482,13 +3482,13 @@ module.exports = LazyWrapper;
 
 /* prettier-ignore */
 
-var _interopRequireDefault = __webpack_require__(0);
+let _interopRequireDefault = __webpack_require__(0);
 
-var _typeof2 = _interopRequireDefault(__webpack_require__(21));
+let _typeof2 = _interopRequireDefault(__webpack_require__(21));
 
 window.tram = function (a) {
   function b(a, b) {
-    var c = new M.Bare();
+    let c = new M.Bare();
     return c.init(a, b);
   }
 
@@ -3499,7 +3499,7 @@ window.tram = function (a) {
   }
 
   function d(a) {
-    var b = parseInt(a.slice(1), 16),
+    let b = parseInt(a.slice(1), 16),
         c = b >> 16 & 255,
         d = b >> 8 & 255,
         e = 255 & b;
@@ -3522,7 +3522,7 @@ window.tram = function (a) {
 
   function i(a, b, c) {
     if (void 0 !== b && (c = b), void 0 === a) return c;
-    var d = c;
+    let d = c;
     return $.test(a) || !_.test(a) ? d = parseInt(a, 10) : _.test(a) && (d = 1e3 * parseFloat(a)), 0 > d && (d = 0), d === d ? d : c;
   }
 
@@ -3531,15 +3531,15 @@ window.tram = function (a) {
   }
 
   function k(a) {
-    for (var b = -1, c = a ? a.length : 0, d = []; ++b < c;) {
-      var e = a[b];
+    for (let b = -1, c = a ? a.length : 0, d = []; ++b < c;) {
+      let e = a[b];
       e && d.push(e);
     }
 
     return d;
   }
 
-  var l = function (a, b, c) {
+  let l = function (a, b, c) {
     function d(a) {
       return "object" == (0, _typeof2["default"])(a);
     }
@@ -3552,20 +3552,20 @@ window.tram = function (a) {
 
     function g(h, i) {
       function j() {
-        var a = new k();
+        let a = new k();
         return e(a.init) && a.init.apply(a, arguments), a;
       }
 
       function k() {}
 
       i === c && (i = h, h = Object), j.Bare = k;
-      var l,
+      let l,
           m = f[a] = h[a],
           n = k[a] = j[a] = new f();
       return n.constructor = j, j.mixin = function (b) {
         return k[a] = j[a] = g(j, b)[a], j;
       }, j.open = function (a) {
-        if (l = {}, e(a) ? l = a.call(j, n, m, j, h) : d(a) && (l = a), d(l)) for (var c in l) {
+        if (l = {}, e(a) ? l = a.call(j, n, m, j, h) : d(a) && (l = a), d(l)) for (let c in l) {
           b.call(l, c) && (n[c] = l[c]);
         }
         return e(n.init) || (n.init = h), j;
@@ -3576,22 +3576,22 @@ window.tram = function (a) {
   }("prototype", {}.hasOwnProperty),
       m = {
     ease: ["ease", function (a, b, c, d) {
-      var e = (a /= d) * a,
+      let e = (a /= d) * a,
           f = e * a;
       return b + c * (-2.75 * f * e + 11 * e * e + -15.5 * f + 8 * e + .25 * a);
     }],
     "ease-in": ["ease-in", function (a, b, c, d) {
-      var e = (a /= d) * a,
+      let e = (a /= d) * a,
           f = e * a;
       return b + c * (-1 * f * e + 3 * e * e + -3 * f + 2 * e);
     }],
     "ease-out": ["ease-out", function (a, b, c, d) {
-      var e = (a /= d) * a,
+      let e = (a /= d) * a,
           f = e * a;
       return b + c * (.3 * f * e + -1.6 * e * e + 2.2 * f + -1.8 * e + 1.9 * a);
     }],
     "ease-in-out": ["ease-in-out", function (a, b, c, d) {
-      var e = (a /= d) * a,
+      let e = (a /= d) * a,
           f = e * a;
       return b + c * (2 * f * e + -5 * e * e + 2 * f + 2 * e);
     }],
@@ -3698,7 +3698,7 @@ window.tram = function (a) {
       dom: a,
       css: a
     };
-    var b,
+    let b,
         c,
         d = "",
         e = a.split("-");
@@ -3723,20 +3723,20 @@ window.tram = function (a) {
   };
 
   if (G.transition) {
-    var H = G.timing.dom;
-    if (C.style[H] = m["ease-in-back"][0], !C.style[H]) for (var I in n) {
+    let H = G.timing.dom;
+    if (C.style[H] = m["ease-in-back"][0], !C.style[H]) for (let I in n) {
       m[I][0] = n[I];
     }
   }
 
-  var J = b.frame = function () {
-    var a = p.requestAnimationFrame || p.webkitRequestAnimationFrame || p.mozRequestAnimationFrame || p.oRequestAnimationFrame || p.msRequestAnimationFrame;
+  let J = b.frame = function () {
+    let a = p.requestAnimationFrame || p.webkitRequestAnimationFrame || p.mozRequestAnimationFrame || p.oRequestAnimationFrame || p.msRequestAnimationFrame;
     return a && G.bind ? a.bind(p) : function (a) {
       p.setTimeout(a, 16);
     };
   }(),
       K = b.now = function () {
-    var a = p.performance,
+    let a = p.performance,
         b = a && (a.now || a.webkitNow || a.msNow || a.mozNow);
     return b && G.bind ? b.bind(a) : Date.now || function () {
       return +new Date();
@@ -3744,14 +3744,14 @@ window.tram = function (a) {
   }(),
       L = l(function (b) {
     function d(a, b) {
-      var c = k(("" + a).split(B)),
+      let c = k(("" + a).split(B)),
           d = c[0];
       b = b || {};
-      var e = Y[d];
+      let e = Y[d];
       if (!e) return j("Unsupported property: " + d);
 
       if (!b.weak || !this.props[d]) {
-        var f = e[0],
+        let f = e[0],
             g = this.props[d];
         return g || (g = this.props[d] = new f.Bare()), g.init(this.$el, c, e, b), g;
       }
@@ -3759,7 +3759,7 @@ window.tram = function (a) {
 
     function e(a, b, c) {
       if (a) {
-        var e = (0, _typeof2["default"])(a);
+        let e = (0, _typeof2["default"])(a);
         if (b || (this.timer && this.timer.destroy(), this.queue = [], this.active = !1), "number" == e && b) return this.timer = new S({
           duration: a,
           context: this,
@@ -3790,7 +3790,7 @@ window.tram = function (a) {
         if ("function" == e) return void a.call(this, this);
 
         if ("object" == e) {
-          var f = 0;
+          let f = 0;
           u.call(this, a, function (a, b) {
             a.span > f && (f = a.span), a.stop(), a.animate(b);
           }, function (a) {
@@ -3799,7 +3799,7 @@ window.tram = function (a) {
             duration: f,
             context: this
           }), this.active = !0, b && (this.timer.complete = h));
-          var g = this,
+          let g = this,
               j = !1,
               k = {};
           J(function () {
@@ -3830,14 +3830,14 @@ window.tram = function (a) {
 
     function h() {
       if (this.timer && this.timer.destroy(), this.active = !1, this.queue.length) {
-        var a = this.queue.shift();
+        let a = this.queue.shift();
         e.call(this, a.options, !0, a.args);
       }
     }
 
     function l(a) {
       this.timer && this.timer.destroy(), this.queue = [], this.active = !1;
-      var b;
+      let b;
       "string" == typeof a ? (b = {}, b[a] = 1) : b = "object" == (0, _typeof2["default"])(a) && null != a ? a : this.props, u.call(this, b, v), t.call(this);
     }
 
@@ -3862,7 +3862,7 @@ window.tram = function (a) {
     }
 
     function t() {
-      var a,
+      let a,
           b,
           c = [];
       this.upstream && c.push(this.upstream);
@@ -3875,7 +3875,7 @@ window.tram = function (a) {
     }
 
     function u(a, b, e) {
-      var f,
+      let f,
           g,
           h,
           i,
@@ -3917,7 +3917,7 @@ window.tram = function (a) {
     }
 
     function A(a, b) {
-      var c,
+      let c,
           d = this.children.length;
 
       for (c = 0; d > c; c++) {
@@ -3929,7 +3929,7 @@ window.tram = function (a) {
 
     b.init = function (b) {
       if (this.$el = a(b), this.el = this.$el[0], this.props = {}, this.queue = [], this.style = "", this.active = !1, U.keepInherited && !U.fallback) {
-        var c = W(this.el, "transition");
+        let c = W(this.el, "transition");
         c && !z.test(c) && (this.upstream = c);
       }
 
@@ -3938,15 +3938,15 @@ window.tram = function (a) {
   }),
       M = l(L, function (b) {
     function c(b, c) {
-      var d = a.data(b, q) || a.data(b, q, new L.Bare());
+      let d = a.data(b, q) || a.data(b, q, new L.Bare());
       return d.el || d.init(b), c ? d.start(c) : d;
     }
 
     b.init = function (b, d) {
-      var e = a(b);
+      let e = a(b);
       if (!e.length) return this;
       if (1 === e.length) return c(e[0], d);
-      var f = [];
+      let f = [];
       return e.each(function (a, b) {
         f.push(c(b, d));
       }), this.children = f, this;
@@ -3954,9 +3954,9 @@ window.tram = function (a) {
   }),
       N = l(function (a) {
     function b() {
-      var a = this.get();
+      let a = this.get();
       this.update("auto");
-      var b = this.get();
+      let b = this.get();
       return this.update(a), b;
     }
 
@@ -3965,25 +3965,25 @@ window.tram = function (a) {
     }
 
     function d(a) {
-      var b = /rgba?\((\d+),\s*(\d+),\s*(\d+)/.exec(a);
+      let b = /rgba?\((\d+),\s*(\d+),\s*(\d+)/.exec(a);
       return (b ? e(b[1], b[2], b[3]) : a).replace(/#(\w)(\w)(\w)$/, "#$1$1$2$2$3$3");
     }
 
-    var f = {
+    let f = {
       duration: 500,
       ease: "ease",
       delay: 0
     };
     a.init = function (a, b, d, e) {
       this.$el = a, this.el = a[0];
-      var g = b[0];
+      let g = b[0];
       d[2] && (g = d[2]), X[g] && (g = X[g]), this.name = g, this.type = d[1], this.duration = i(b[1], this.duration, f.duration), this.ease = c(b[2], this.ease, f.ease), this.delay = i(b[3], this.delay, f.delay), this.span = this.duration + this.delay, this.active = !1, this.nextStyle = null, this.auto = A.test(this.name), this.unit = e.unit || this.unit || U.defaultUnit, this.angle = e.angle || this.angle || U.defaultAngle, U.fallback || e.fallback ? this.animate = this.fallback : (this.animate = this.transition, this.string = this.name + B + this.duration + "ms" + ("ease" != this.ease ? B + m[this.ease][0] : "") + (this.delay ? B + this.delay + "ms" : ""));
     }, a.set = function (a) {
       a = this.convert(a, this.type), this.update(a), this.redraw();
     }, a.transition = function (a) {
       this.active = !0, a = this.convert(a, this.type), this.auto && ("auto" == this.el.style[this.name] && (this.update(this.get()), this.redraw()), "auto" == a && (a = b.call(this))), this.nextStyle = a;
     }, a.fallback = function (a) {
-      var c = this.el.style[this.name] || this.convert(this.get(), this.type);
+      let c = this.el.style[this.name] || this.convert(this.get(), this.type);
       a = this.convert(a, this.type), this.auto && ("auto" == c && (c = this.convert(this.get(), this.type)), "auto" == a && (a = b.call(this))), this.tween = new R({
         from: c,
         to: a,
@@ -3999,11 +3999,11 @@ window.tram = function (a) {
       V(this.el, this.name, a);
     }, a.stop = function () {
       (this.active || this.nextStyle) && (this.active = !1, this.nextStyle = null, V(this.el, this.name, this.get()));
-      var a = this.tween;
+      let a = this.tween;
       a && a.context && a.destroy();
     }, a.convert = function (a, b) {
       if ("auto" == a && this.auto) return a;
-      var c,
+      let c,
           e = "number" == typeof a,
           f = "string" == typeof a;
 
@@ -4068,7 +4068,7 @@ window.tram = function (a) {
   }),
       Q = l(N, function (a, b) {
     function c(a, b) {
-      var c, d, e, f, g;
+      let c, d, e, f, g;
 
       for (c in a) {
         f = Z[c], e = f[0], d = f[1] || c, g = this.convert(a[c], e), b.call(this, d, g, e);
@@ -4082,7 +4082,7 @@ window.tram = function (a) {
         this.current[a] = b;
       }), V(this.el, this.name, this.style(this.current)), this.redraw();
     }, a.transition = function (a) {
-      var b = this.values(a);
+      let b = this.values(a);
       this.tween = new T({
         current: this.current,
         values: b,
@@ -4090,7 +4090,7 @@ window.tram = function (a) {
         delay: this.delay,
         ease: this.ease
       });
-      var c,
+      let c,
           d = {};
 
       for (c in this.current) {
@@ -4099,7 +4099,7 @@ window.tram = function (a) {
 
       this.active = !0, this.nextStyle = this.style(d);
     }, a.fallback = function (a) {
-      var b = this.values(a);
+      let b = this.values(a);
       this.tween = new T({
         current: this.current,
         values: b,
@@ -4112,7 +4112,7 @@ window.tram = function (a) {
     }, a.update = function () {
       V(this.el, this.name, this.style(this.current));
     }, a.style = function (a) {
-      var b,
+      let b,
           c = "";
 
       for (b in a) {
@@ -4121,7 +4121,7 @@ window.tram = function (a) {
 
       return c;
     }, a.values = function (a) {
-      var b,
+      let b,
           d = {};
       return c.call(this, a, function (a, c, e) {
         d[a] = c, void 0 === this.current[a] && (b = 0, ~a.indexOf("scale") && (b = 1), this.current[a] = this.convert(b, e));
@@ -4134,7 +4134,7 @@ window.tram = function (a) {
     }
 
     function g() {
-      var a,
+      let a,
           b,
           c,
           d = n.length;
@@ -4144,7 +4144,7 @@ window.tram = function (a) {
     }
 
     function i(b) {
-      var c,
+      let c,
           d = a.inArray(b, n);
       d >= 0 && (c = n.slice(d + 1), n.length = d, c.length && (n = n.concat(c)));
     }
@@ -4157,16 +4157,16 @@ window.tram = function (a) {
       return e(a[0] + c * (b[0] - a[0]), a[1] + c * (b[1] - a[1]), a[2] + c * (b[2] - a[2]));
     }
 
-    var l = {
+    let l = {
       ease: m.ease[1],
       from: 0,
       to: 1
     };
     b.init = function (a) {
       this.duration = a.duration || 0, this.delay = a.delay || 0;
-      var b = a.ease || l.ease;
+      let b = a.ease || l.ease;
       m[b] && (b = m[b][1]), "function" != typeof b && (b = l.ease), this.ease = b, this.update = a.update || f, this.complete = a.complete || f, this.context = a.context || this, this.name = a.name;
-      var c = a.from,
+      let c = a.from,
           d = a.to;
       void 0 === c && (c = l.from), void 0 === d && (d = l.to), this.unit = a.unit || "", "number" == typeof c && "number" == typeof d ? (this.begin = c, this.change = d - c) : this.format(d, c), this.value = this.begin + this.unit, this.start = K(), a.autoplay !== !1 && this.play();
     }, b.play = function () {
@@ -4174,7 +4174,7 @@ window.tram = function (a) {
     }, b.stop = function () {
       this.active && (this.active = !1, i(this));
     }, b.render = function (a) {
-      var b,
+      let b,
           c = a - this.start;
 
       if (this.delay) {
@@ -4183,7 +4183,7 @@ window.tram = function (a) {
       }
 
       if (c < this.duration) {
-        var d = this.ease(c, 0, 1, this.duration);
+        let d = this.ease(c, 0, 1, this.duration);
         return b = this.startRGB ? k(this.startRGB, this.endRGB, d) : j(this.begin + d * this.change), this.value = b + this.unit, void this.update.call(this.context, this.value);
       }
 
@@ -4192,7 +4192,7 @@ window.tram = function (a) {
       if (b += "", a += "", "#" == a.charAt(0)) return this.startRGB = d(b), this.endRGB = d(a), this.endHex = a, this.begin = 0, void (this.change = 1);
 
       if (!this.unit) {
-        var c = b.replace(r, ""),
+        let c = b.replace(r, ""),
             e = a.replace(r, "");
         c !== e && h("tween", b, a), this.unit = c;
       }
@@ -4201,21 +4201,21 @@ window.tram = function (a) {
     }, b.destroy = function () {
       this.stop(), this.context = null, this.ease = this.update = this.complete = f;
     };
-    var n = [],
+    let n = [],
         o = 1e3;
   }),
       S = l(R, function (a) {
     a.init = function (a) {
       this.duration = a.duration || 0, this.complete = a.complete || f, this.context = a.context, this.play();
     }, a.render = function (a) {
-      var b = a - this.start;
+      let b = a - this.start;
       b < this.duration || (this.complete.call(this.context), this.destroy());
     };
   }),
       T = l(R, function (a, b) {
     a.init = function (a) {
       this.context = a.context, this.update = a.update, this.tweens = [], this.current = a.current;
-      var b, c;
+      let b, c;
 
       for (b in a.values) {
         c = a.values[b], this.current[b] !== c && this.tweens.push(new R({
@@ -4231,7 +4231,7 @@ window.tram = function (a) {
 
       this.play();
     }, a.render = function (a) {
-      var b,
+      let b,
           c,
           d = this.tweens.length,
           e = !1;
@@ -4243,7 +4243,7 @@ window.tram = function (a) {
       return e ? void (this.update && this.update.call(this.context)) : this.destroy();
     }, a.destroy = function () {
       if (b.destroy.call(this), this.tweens) {
-        var a,
+        let a,
             c = this.tweens.length;
 
         for (a = c; a--;) {
@@ -4268,7 +4268,7 @@ window.tram = function (a) {
   b.fallback = function (a) {
     if (!G.transition) return U.fallback = !0;
     U.agentTests.push("(" + a + ")");
-    var b = new RegExp(U.agentTests.join("|"), "i");
+    let b = new RegExp(U.agentTests.join("|"), "i");
     U.fallback = b.test(navigator.userAgent);
   }, b.fallback("6.0.[2-5] Safari"), b.tween = function (a) {
     return new R(a);
@@ -4281,7 +4281,7 @@ window.tram = function (a) {
   }, a.fn.tram = function (a) {
     return b.call(null, this, a);
   };
-  var V = a.style,
+  let V = a.style,
       W = a.css,
       X = {
     transform: G.transform && G.transform.css
@@ -4345,7 +4345,7 @@ window.tram = function (a) {
     skewX: [x],
     skewY: [x]
   }), G.transform && G.backface && (Z.z = [w, "translateZ"], Z.rotateZ = [x], Z.scaleZ = [t], Z.perspective = [v]);
-  var $ = /ms/,
+  let $ = /ms/,
       _ = /s|\./;
   return a.tram = b;
 }(window.jQuery);
@@ -4354,15 +4354,15 @@ window.tram = function (a) {
 /* 66 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var DESCRIPTORS = __webpack_require__(14);
-var propertyIsEnumerableModule = __webpack_require__(130);
-var createPropertyDescriptor = __webpack_require__(67);
-var toIndexedObject = __webpack_require__(37);
-var toPrimitive = __webpack_require__(68);
-var has = __webpack_require__(16);
-var IE8_DOM_DEFINE = __webpack_require__(69);
+let DESCRIPTORS = __webpack_require__(14);
+let propertyIsEnumerableModule = __webpack_require__(130);
+let createPropertyDescriptor = __webpack_require__(67);
+let toIndexedObject = __webpack_require__(37);
+let toPrimitive = __webpack_require__(68);
+let has = __webpack_require__(16);
+let IE8_DOM_DEFINE = __webpack_require__(69);
 
-var nativeGetOwnPropertyDescriptor = Object.getOwnPropertyDescriptor;
+let nativeGetOwnPropertyDescriptor = Object.getOwnPropertyDescriptor;
 
 // `Object.getOwnPropertyDescriptor` method
 // https://tc39.github.io/ecma262/#sec-object.getownpropertydescriptor
@@ -4394,7 +4394,7 @@ module.exports = function (bitmap, value) {
 /* 68 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var isObject = __webpack_require__(24);
+let isObject = __webpack_require__(24);
 
 // `ToPrimitive` abstract operation
 // https://tc39.github.io/ecma262/#sec-toprimitive
@@ -4402,7 +4402,7 @@ var isObject = __webpack_require__(24);
 // and the second argument - flag - preferred type is a string
 module.exports = function (input, PREFERRED_STRING) {
   if (!isObject(input)) return input;
-  var fn, val;
+  let fn, val;
   if (PREFERRED_STRING && typeof (fn = input.toString) == 'function' && !isObject(val = fn.call(input))) return val;
   if (typeof (fn = input.valueOf) == 'function' && !isObject(val = fn.call(input))) return val;
   if (!PREFERRED_STRING && typeof (fn = input.toString) == 'function' && !isObject(val = fn.call(input))) return val;
@@ -4414,9 +4414,9 @@ module.exports = function (input, PREFERRED_STRING) {
 /* 69 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var DESCRIPTORS = __webpack_require__(14);
-var fails = __webpack_require__(15);
-var createElement = __webpack_require__(70);
+let DESCRIPTORS = __webpack_require__(14);
+let fails = __webpack_require__(15);
+let createElement = __webpack_require__(70);
 
 // Thank's IE8 for his funny defineProperty
 module.exports = !DESCRIPTORS && !fails(function () {
@@ -4430,12 +4430,12 @@ module.exports = !DESCRIPTORS && !fails(function () {
 /* 70 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var global = __webpack_require__(3);
-var isObject = __webpack_require__(24);
+let global = __webpack_require__(3);
+let isObject = __webpack_require__(24);
 
-var document = global.document;
+let document = global.document;
 // typeof document.createElement is 'object' in old IE
-var EXISTS = isObject(document) && isObject(document.createElement);
+let EXISTS = isObject(document) && isObject(document.createElement);
 
 module.exports = function (it) {
   return EXISTS ? document.createElement(it) : {};
@@ -4446,7 +4446,7 @@ module.exports = function (it) {
 /* 71 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var shared = __webpack_require__(26);
+let shared = __webpack_require__(26);
 
 module.exports = shared('native-function-to-string', Function.toString);
 
@@ -4455,10 +4455,10 @@ module.exports = shared('native-function-to-string', Function.toString);
 /* 72 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var shared = __webpack_require__(26);
-var uid = __webpack_require__(73);
+let shared = __webpack_require__(26);
+let uid = __webpack_require__(73);
 
-var keys = shared('keys');
+let keys = shared('keys');
 
 module.exports = function (key) {
   return keys[key] || (keys[key] = uid(key));
@@ -4469,8 +4469,8 @@ module.exports = function (key) {
 /* 73 */
 /***/ (function(module, exports) {
 
-var id = 0;
-var postfix = Math.random();
+let id = 0;
+let postfix = Math.random();
 
 module.exports = function (key) {
   return 'Symbol(' + String(key === undefined ? '' : key) + ')_' + (++id + postfix).toString(36);
@@ -4481,10 +4481,10 @@ module.exports = function (key) {
 /* 74 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var path = __webpack_require__(140);
-var global = __webpack_require__(3);
+let path = __webpack_require__(140);
+let global = __webpack_require__(3);
 
-var aFunction = function (variable) {
+let aFunction = function (variable) {
   return typeof variable == 'function' ? variable : undefined;
 };
 
@@ -4498,16 +4498,16 @@ module.exports = function (namespace, method) {
 /* 75 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var has = __webpack_require__(16);
-var toIndexedObject = __webpack_require__(37);
-var indexOf = __webpack_require__(76).indexOf;
-var hiddenKeys = __webpack_require__(40);
+let has = __webpack_require__(16);
+let toIndexedObject = __webpack_require__(37);
+let indexOf = __webpack_require__(76).indexOf;
+let hiddenKeys = __webpack_require__(40);
 
 module.exports = function (object, names) {
-  var O = toIndexedObject(object);
-  var i = 0;
-  var result = [];
-  var key;
+  let O = toIndexedObject(object);
+  let i = 0;
+  let result = [];
+  let key;
   for (key in O) !has(hiddenKeys, key) && has(O, key) && result.push(key);
   // Don't enum bug & hidden keys
   while (names.length > i) if (has(O, key = names[i++])) {
@@ -4521,17 +4521,17 @@ module.exports = function (object, names) {
 /* 76 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var toIndexedObject = __webpack_require__(37);
-var toLength = __webpack_require__(142);
-var toAbsoluteIndex = __webpack_require__(143);
+let toIndexedObject = __webpack_require__(37);
+let toLength = __webpack_require__(142);
+let toAbsoluteIndex = __webpack_require__(143);
 
 // `Array.prototype.{ indexOf, includes }` methods implementation
-var createMethod = function (IS_INCLUDES) {
+let createMethod = function (IS_INCLUDES) {
   return function ($this, el, fromIndex) {
-    var O = toIndexedObject($this);
-    var length = toLength(O.length);
-    var index = toAbsoluteIndex(fromIndex, length);
-    var value;
+    let O = toIndexedObject($this);
+    let length = toLength(O.length);
+    let index = toAbsoluteIndex(fromIndex, length);
+    let value;
     // Array#includes uses SameValueZero equality algorithm
     // eslint-disable-next-line no-self-compare
     if (IS_INCLUDES && el != el) while (length > index) {
@@ -4559,8 +4559,8 @@ module.exports = {
 /* 77 */
 /***/ (function(module, exports) {
 
-var ceil = Math.ceil;
-var floor = Math.floor;
+let ceil = Math.ceil;
+let floor = Math.floor;
 
 // `ToInteger` abstract operation
 // https://tc39.github.io/ecma262/#sec-tointeger
@@ -4575,22 +4575,22 @@ module.exports = function (argument) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _createStore__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(42);
+/* harmony import */ let _createStore__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(42);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "createStore", function() { return _createStore__WEBPACK_IMPORTED_MODULE_0__["default"]; });
 
-/* harmony import */ var _combineReducers__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(81);
+/* harmony import */ let _combineReducers__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(81);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "combineReducers", function() { return _combineReducers__WEBPACK_IMPORTED_MODULE_1__["default"]; });
 
-/* harmony import */ var _bindActionCreators__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(83);
+/* harmony import */ let _bindActionCreators__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(83);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "bindActionCreators", function() { return _bindActionCreators__WEBPACK_IMPORTED_MODULE_2__["default"]; });
 
-/* harmony import */ var _applyMiddleware__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(84);
+/* harmony import */ let _applyMiddleware__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(84);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "applyMiddleware", function() { return _applyMiddleware__WEBPACK_IMPORTED_MODULE_3__["default"]; });
 
-/* harmony import */ var _compose__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(43);
+/* harmony import */ let _compose__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(43);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "compose", function() { return _compose__WEBPACK_IMPORTED_MODULE_4__["default"]; });
 
-/* harmony import */ var _utils_warning__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(82);
+/* harmony import */ let _utils_warning__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(82);
 
 
 
@@ -4614,28 +4614,28 @@ if (false) {}
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _baseGetTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(156);
-/* harmony import */ var _getPrototype_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(161);
-/* harmony import */ var _isObjectLike_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(163);
+/* harmony import */ let _baseGetTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(156);
+/* harmony import */ let _getPrototype_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(161);
+/* harmony import */ let _isObjectLike_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(163);
 
 
 
 
 /** `Object#toString` result references. */
-var objectTag = '[object Object]';
+let objectTag = '[object Object]';
 
 /** Used for built-in method references. */
-var funcProto = Function.prototype,
+let funcProto = Function.prototype,
     objectProto = Object.prototype;
 
 /** Used to resolve the decompiled source of functions. */
-var funcToString = funcProto.toString;
+let funcToString = funcProto.toString;
 
 /** Used to check objects for own properties. */
-var hasOwnProperty = objectProto.hasOwnProperty;
+let hasOwnProperty = objectProto.hasOwnProperty;
 
 /** Used to infer the `Object` constructor. */
-var objectCtorString = funcToString.call(Object);
+let objectCtorString = funcToString.call(Object);
 
 /**
  * Checks if `value` is a plain object, that is, an object created by the
@@ -4669,11 +4669,11 @@ function isPlainObject(value) {
   if (!Object(_isObjectLike_js__WEBPACK_IMPORTED_MODULE_2__["default"])(value) || Object(_baseGetTag_js__WEBPACK_IMPORTED_MODULE_0__["default"])(value) != objectTag) {
     return false;
   }
-  var proto = Object(_getPrototype_js__WEBPACK_IMPORTED_MODULE_1__["default"])(value);
+  let proto = Object(_getPrototype_js__WEBPACK_IMPORTED_MODULE_1__["default"])(value);
   if (proto === null) {
     return true;
   }
-  var Ctor = hasOwnProperty.call(proto, 'constructor') && proto.constructor;
+  let Ctor = hasOwnProperty.call(proto, 'constructor') && proto.constructor;
   return typeof Ctor == 'function' && Ctor instanceof Ctor &&
     funcToString.call(Ctor) == objectCtorString;
 }
@@ -4687,11 +4687,11 @@ function isPlainObject(value) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _root_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(157);
+/* harmony import */ let _root_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(157);
 
 
 /** Built-in value references. */
-var Symbol = _root_js__WEBPACK_IMPORTED_MODULE_0__["default"].Symbol;
+let Symbol = _root_js__WEBPACK_IMPORTED_MODULE_0__["default"].Symbol;
 
 /* harmony default export */ __webpack_exports__["default"] = (Symbol);
 
@@ -4703,23 +4703,23 @@ var Symbol = _root_js__WEBPACK_IMPORTED_MODULE_0__["default"].Symbol;
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return combineReducers; });
-/* harmony import */ var _createStore__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(42);
-/* harmony import */ var lodash_es_isPlainObject__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(79);
-/* harmony import */ var _utils_warning__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(82);
+/* harmony import */ let _createStore__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(42);
+/* harmony import */ let lodash_es_isPlainObject__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(79);
+/* harmony import */ let _utils_warning__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(82);
 
 
 
 
 function getUndefinedStateErrorMessage(key, action) {
-  var actionType = action && action.type;
-  var actionName = actionType && '"' + actionType.toString() + '"' || 'an action';
+  let actionType = action && action.type;
+  let actionName = actionType && '"' + actionType.toString() + '"' || 'an action';
 
   return 'Given action ' + actionName + ', reducer "' + key + '" returned undefined. ' + 'To ignore an action, you must explicitly return the previous state.';
 }
 
 function getUnexpectedStateShapeWarningMessage(inputState, reducers, action, unexpectedKeyCache) {
-  var reducerKeys = Object.keys(reducers);
-  var argumentName = action && action.type === _createStore__WEBPACK_IMPORTED_MODULE_0__["ActionTypes"].INIT ? 'preloadedState argument passed to createStore' : 'previous state received by the reducer';
+  let reducerKeys = Object.keys(reducers);
+  let argumentName = action && action.type === _createStore__WEBPACK_IMPORTED_MODULE_0__["ActionTypes"].INIT ? 'preloadedState argument passed to createStore' : 'previous state received by the reducer';
 
   if (reducerKeys.length === 0) {
     return 'Store does not have a valid reducer. Make sure the argument passed ' + 'to combineReducers is an object whose values are reducers.';
@@ -4729,7 +4729,7 @@ function getUnexpectedStateShapeWarningMessage(inputState, reducers, action, une
     return 'The ' + argumentName + ' has unexpected type of "' + {}.toString.call(inputState).match(/\s([a-z|A-Z]+)/)[1] + '". Expected argument to be an object with the following ' + ('keys: "' + reducerKeys.join('", "') + '"');
   }
 
-  var unexpectedKeys = Object.keys(inputState).filter(function (key) {
+  let unexpectedKeys = Object.keys(inputState).filter(function (key) {
     return !reducers.hasOwnProperty(key) && !unexpectedKeyCache[key];
   });
 
@@ -4744,14 +4744,14 @@ function getUnexpectedStateShapeWarningMessage(inputState, reducers, action, une
 
 function assertReducerSanity(reducers) {
   Object.keys(reducers).forEach(function (key) {
-    var reducer = reducers[key];
-    var initialState = reducer(undefined, { type: _createStore__WEBPACK_IMPORTED_MODULE_0__["ActionTypes"].INIT });
+    let reducer = reducers[key];
+    let initialState = reducer(undefined, { type: _createStore__WEBPACK_IMPORTED_MODULE_0__["ActionTypes"].INIT });
 
     if (typeof initialState === 'undefined') {
       throw new Error('Reducer "' + key + '" returned undefined during initialization. ' + 'If the state passed to the reducer is undefined, you must ' + 'explicitly return the initial state. The initial state may ' + 'not be undefined.');
     }
 
-    var type = '@@redux/PROBE_UNKNOWN_ACTION_' + Math.random().toString(36).substring(7).split('').join('.');
+    let type = '@@redux/PROBE_UNKNOWN_ACTION_' + Math.random().toString(36).substring(7).split('').join('.');
     if (typeof reducer(undefined, { type: type }) === 'undefined') {
       throw new Error('Reducer "' + key + '" returned undefined when probed with a random type. ' + ('Don\'t try to handle ' + _createStore__WEBPACK_IMPORTED_MODULE_0__["ActionTypes"].INIT + ' or other actions in "redux/*" ') + 'namespace. They are considered private. Instead, you must return the ' + 'current state for any unknown actions, unless it is undefined, ' + 'in which case you must return the initial state, regardless of the ' + 'action type. The initial state may not be undefined.');
     }
@@ -4775,10 +4775,10 @@ function assertReducerSanity(reducers) {
  * passed object, and builds a state object with the same shape.
  */
 function combineReducers(reducers) {
-  var reducerKeys = Object.keys(reducers);
-  var finalReducers = {};
-  for (var i = 0; i < reducerKeys.length; i++) {
-    var key = reducerKeys[i];
+  let reducerKeys = Object.keys(reducers);
+  let finalReducers = {};
+  for (let i = 0; i < reducerKeys.length; i++) {
+    let key = reducerKeys[i];
 
     if (false) {}
 
@@ -4786,11 +4786,11 @@ function combineReducers(reducers) {
       finalReducers[key] = reducers[key];
     }
   }
-  var finalReducerKeys = Object.keys(finalReducers);
+  let finalReducerKeys = Object.keys(finalReducers);
 
-  if (false) { var unexpectedKeyCache; }
+  if (false) { let unexpectedKeyCache; }
 
-  var sanityError;
+  let sanityError;
   try {
     assertReducerSanity(finalReducers);
   } catch (e) {
@@ -4798,24 +4798,24 @@ function combineReducers(reducers) {
   }
 
   return function combination() {
-    var state = arguments.length <= 0 || arguments[0] === undefined ? {} : arguments[0];
-    var action = arguments[1];
+    let state = arguments.length <= 0 || arguments[0] === undefined ? {} : arguments[0];
+    let action = arguments[1];
 
     if (sanityError) {
       throw sanityError;
     }
 
-    if (false) { var warningMessage; }
+    if (false) { let warningMessage; }
 
-    var hasChanged = false;
-    var nextState = {};
-    for (var i = 0; i < finalReducerKeys.length; i++) {
-      var key = finalReducerKeys[i];
-      var reducer = finalReducers[key];
-      var previousStateForKey = state[key];
-      var nextStateForKey = reducer(previousStateForKey, action);
+    let hasChanged = false;
+    let nextState = {};
+    for (let i = 0; i < finalReducerKeys.length; i++) {
+      let key = finalReducerKeys[i];
+      let reducer = finalReducers[key];
+      let previousStateForKey = state[key];
+      let nextStateForKey = reducer(previousStateForKey, action);
       if (typeof nextStateForKey === 'undefined') {
-        var errorMessage = getUndefinedStateErrorMessage(key, action);
+        let errorMessage = getUndefinedStateErrorMessage(key, action);
         throw new Error(errorMessage);
       }
       nextState[key] = nextStateForKey;
@@ -4897,11 +4897,11 @@ function bindActionCreators(actionCreators, dispatch) {
     throw new Error('bindActionCreators expected an object or a function, instead received ' + (actionCreators === null ? 'null' : typeof actionCreators) + '. ' + 'Did you write "import ActionCreators from" instead of "import * as ActionCreators from"?');
   }
 
-  var keys = Object.keys(actionCreators);
-  var boundActionCreators = {};
-  for (var i = 0; i < keys.length; i++) {
-    var key = keys[i];
-    var actionCreator = actionCreators[key];
+  let keys = Object.keys(actionCreators);
+  let boundActionCreators = {};
+  for (let i = 0; i < keys.length; i++) {
+    let key = keys[i];
+    let actionCreator = actionCreators[key];
     if (typeof actionCreator === 'function') {
       boundActionCreators[key] = bindActionCreator(actionCreator, dispatch);
     }
@@ -4916,8 +4916,8 @@ function bindActionCreators(actionCreators, dispatch) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return applyMiddleware; });
-/* harmony import */ var _compose__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(43);
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+/* harmony import */ let _compose__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(43);
+let _extends = Object.assign || function (target) { for (let i = 1; i < arguments.length; i++) { let source = arguments[i]; for (let key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 
 
@@ -4938,17 +4938,17 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
  * @returns {Function} A store enhancer applying the middleware.
  */
 function applyMiddleware() {
-  for (var _len = arguments.length, middlewares = Array(_len), _key = 0; _key < _len; _key++) {
+  for (let _len = arguments.length, middlewares = Array(_len), _key = 0; _key < _len; _key++) {
     middlewares[_key] = arguments[_key];
   }
 
   return function (createStore) {
     return function (reducer, preloadedState, enhancer) {
-      var store = createStore(reducer, preloadedState, enhancer);
-      var _dispatch = store.dispatch;
-      var chain = [];
+      let store = createStore(reducer, preloadedState, enhancer);
+      let _dispatch = store.dispatch;
+      let chain = [];
 
-      var middlewareAPI = {
+      let middlewareAPI = {
         getState: store.getState,
         dispatch: function dispatch(action) {
           return _dispatch(action);
@@ -4970,7 +4970,7 @@ function applyMiddleware() {
 /* 85 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var createFind = __webpack_require__(86),
+let createFind = __webpack_require__(86),
     findIndex = __webpack_require__(241);
 
 /**
@@ -4988,7 +4988,7 @@ var createFind = __webpack_require__(86),
  * @returns {*} Returns the matched element, else `undefined`.
  * @example
  *
- * var users = [
+ * let users = [
  *   { 'user': 'barney',  'age': 36, 'active': true },
  *   { 'user': 'fred',    'age': 40, 'active': false },
  *   { 'user': 'pebbles', 'age': 1,  'active': true }
@@ -5009,7 +5009,7 @@ var createFind = __webpack_require__(86),
  * _.find(users, 'active');
  * // => object for 'barney'
  */
-var find = createFind(findIndex);
+let find = createFind(findIndex);
 
 module.exports = find;
 
@@ -5018,7 +5018,7 @@ module.exports = find;
 /* 86 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseIteratee = __webpack_require__(7),
+let baseIteratee = __webpack_require__(7),
     isArrayLike = __webpack_require__(12),
     keys = __webpack_require__(33);
 
@@ -5031,13 +5031,13 @@ var baseIteratee = __webpack_require__(7),
  */
 function createFind(findIndexFunc) {
   return function(collection, predicate, fromIndex) {
-    var iterable = Object(collection);
+    let iterable = Object(collection);
     if (!isArrayLike(collection)) {
-      var iteratee = baseIteratee(predicate, 3);
+      let iteratee = baseIteratee(predicate, 3);
       collection = keys(collection);
       predicate = function(key) { return iteratee(iterable[key], key, iterable); };
     }
-    var index = findIndexFunc(collection, predicate, fromIndex);
+    let index = findIndexFunc(collection, predicate, fromIndex);
     return index > -1 ? iterable[iteratee ? collection[index] : index] : undefined;
   };
 }
@@ -5049,7 +5049,7 @@ module.exports = createFind;
 /* 87 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var ListCache = __webpack_require__(29),
+let ListCache = __webpack_require__(29),
     stackClear = __webpack_require__(183),
     stackDelete = __webpack_require__(184),
     stackGet = __webpack_require__(185),
@@ -5064,7 +5064,7 @@ var ListCache = __webpack_require__(29),
  * @param {Array} [entries] The key-value pairs to cache.
  */
 function Stack(entries) {
-  var data = this.__data__ = new ListCache(entries);
+  let data = this.__data__ = new ListCache(entries);
   this.size = data.size;
 }
 
@@ -5082,11 +5082,11 @@ module.exports = Stack;
 /* 88 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseGetTag = __webpack_require__(11),
+let baseGetTag = __webpack_require__(11),
     isObject = __webpack_require__(6);
 
 /** `Object#toString` result references. */
-var asyncTag = '[object AsyncFunction]',
+let asyncTag = '[object AsyncFunction]',
     funcTag = '[object Function]',
     genTag = '[object GeneratorFunction]',
     proxyTag = '[object Proxy]';
@@ -5114,7 +5114,7 @@ function isFunction(value) {
   }
   // The use of `Object#toString` avoids issues with the `typeof` operator
   // in Safari 9 which returns 'object' for typed arrays and other constructors.
-  var tag = baseGetTag(value);
+  let tag = baseGetTag(value);
   return tag == funcTag || tag == genTag || tag == asyncTag || tag == proxyTag;
 }
 
@@ -5125,22 +5125,22 @@ module.exports = isFunction;
 /* 89 */
 /***/ (function(module, exports, __webpack_require__) {
 
-/* WEBPACK VAR INJECTION */(function(global) {/** Detect free variable `global` from Node.js. */
-var freeGlobal = typeof global == 'object' && global && global.Object === Object && global;
+/* WEBPACK let INJECTION */(function(global) {/** Detect free variable `global` from Node.js. */
+let freeGlobal = typeof global == 'object' && global && global.Object === Object && global;
 
 module.exports = freeGlobal;
 
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(23)))
+/* WEBPACK let INJECTION */}.call(this, __webpack_require__(23)))
 
 /***/ }),
 /* 90 */
 /***/ (function(module, exports) {
 
 /** Used for built-in method references. */
-var funcProto = Function.prototype;
+let funcProto = Function.prototype;
 
 /** Used to resolve the decompiled source of functions. */
-var funcToString = funcProto.toString;
+let funcToString = funcProto.toString;
 
 /**
  * Converts `func` to its source code.
@@ -5168,7 +5168,7 @@ module.exports = toSource;
 /* 91 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseIsEqualDeep = __webpack_require__(206),
+let baseIsEqualDeep = __webpack_require__(206),
     isObjectLike = __webpack_require__(9);
 
 /**
@@ -5202,12 +5202,12 @@ module.exports = baseIsEqual;
 /* 92 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var SetCache = __webpack_require__(207),
+let SetCache = __webpack_require__(207),
     arraySome = __webpack_require__(210),
     cacheHas = __webpack_require__(211);
 
 /** Used to compose bitmasks for value comparisons. */
-var COMPARE_PARTIAL_FLAG = 1,
+let COMPARE_PARTIAL_FLAG = 1,
     COMPARE_UNORDERED_FLAG = 2;
 
 /**
@@ -5224,7 +5224,7 @@ var COMPARE_PARTIAL_FLAG = 1,
  * @returns {boolean} Returns `true` if the arrays are equivalent, else `false`.
  */
 function equalArrays(array, other, bitmask, customizer, equalFunc, stack) {
-  var isPartial = bitmask & COMPARE_PARTIAL_FLAG,
+  let isPartial = bitmask & COMPARE_PARTIAL_FLAG,
       arrLength = array.length,
       othLength = other.length;
 
@@ -5232,12 +5232,12 @@ function equalArrays(array, other, bitmask, customizer, equalFunc, stack) {
     return false;
   }
   // Check that cyclic values are equal.
-  var arrStacked = stack.get(array);
-  var othStacked = stack.get(other);
+  let arrStacked = stack.get(array);
+  let othStacked = stack.get(other);
   if (arrStacked && othStacked) {
     return arrStacked == other && othStacked == array;
   }
-  var index = -1,
+  let index = -1,
       result = true,
       seen = (bitmask & COMPARE_UNORDERED_FLAG) ? new SetCache : undefined;
 
@@ -5246,11 +5246,11 @@ function equalArrays(array, other, bitmask, customizer, equalFunc, stack) {
 
   // Ignore non-index properties.
   while (++index < arrLength) {
-    var arrValue = array[index],
+    let arrValue = array[index],
         othValue = other[index];
 
     if (customizer) {
-      var compared = isPartial
+      let compared = isPartial
         ? customizer(othValue, arrValue, index, other, array, stack)
         : customizer(arrValue, othValue, index, array, other, stack);
     }
@@ -5292,7 +5292,7 @@ module.exports = equalArrays;
 /* 93 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var arrayPush = __webpack_require__(48),
+let arrayPush = __webpack_require__(48),
     isArray = __webpack_require__(1);
 
 /**
@@ -5307,7 +5307,7 @@ var arrayPush = __webpack_require__(48),
  * @returns {Array} Returns the array of property names and symbols.
  */
 function baseGetAllKeys(object, keysFunc, symbolsFunc) {
-  var result = keysFunc(object);
+  let result = keysFunc(object);
   return isArray(object) ? result : arrayPush(result, symbolsFunc(object));
 }
 
@@ -5318,17 +5318,17 @@ module.exports = baseGetAllKeys;
 /* 94 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var arrayFilter = __webpack_require__(218),
+let arrayFilter = __webpack_require__(218),
     stubArray = __webpack_require__(95);
 
 /** Used for built-in method references. */
-var objectProto = Object.prototype;
+let objectProto = Object.prototype;
 
 /** Built-in value references. */
-var propertyIsEnumerable = objectProto.propertyIsEnumerable;
+let propertyIsEnumerable = objectProto.propertyIsEnumerable;
 
 /* Built-in method references for those with the same name as other `lodash` methods. */
-var nativeGetSymbols = Object.getOwnPropertySymbols;
+let nativeGetSymbols = Object.getOwnPropertySymbols;
 
 /**
  * Creates an array of the own enumerable symbols of `object`.
@@ -5337,7 +5337,7 @@ var nativeGetSymbols = Object.getOwnPropertySymbols;
  * @param {Object} object The object to query.
  * @returns {Array} Returns the array of symbols.
  */
-var getSymbols = !nativeGetSymbols ? stubArray : function(object) {
+let getSymbols = !nativeGetSymbols ? stubArray : function(object) {
   if (object == null) {
     return [];
   }
@@ -5364,7 +5364,7 @@ module.exports = getSymbols;
  * @returns {Array} Returns the new empty array.
  * @example
  *
- * var arrays = _.times(2, _.stubArray);
+ * let arrays = _.times(2, _.stubArray);
  *
  * console.log(arrays);
  * // => [[], []]
@@ -5383,7 +5383,7 @@ module.exports = stubArray;
 /* 96 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseTimes = __webpack_require__(219),
+let baseTimes = __webpack_require__(219),
     isArguments = __webpack_require__(34),
     isArray = __webpack_require__(1),
     isBuffer = __webpack_require__(49),
@@ -5391,10 +5391,10 @@ var baseTimes = __webpack_require__(219),
     isTypedArray = __webpack_require__(51);
 
 /** Used for built-in method references. */
-var objectProto = Object.prototype;
+let objectProto = Object.prototype;
 
 /** Used to check objects for own properties. */
-var hasOwnProperty = objectProto.hasOwnProperty;
+let hasOwnProperty = objectProto.hasOwnProperty;
 
 /**
  * Creates an array of the enumerable property names of the array-like `value`.
@@ -5405,7 +5405,7 @@ var hasOwnProperty = objectProto.hasOwnProperty;
  * @returns {Array} Returns the array of property names.
  */
 function arrayLikeKeys(value, inherited) {
-  var isArr = isArray(value),
+  let isArr = isArray(value),
       isArg = !isArr && isArguments(value),
       isBuff = !isArr && !isArg && isBuffer(value),
       isType = !isArr && !isArg && !isBuff && isTypedArray(value),
@@ -5413,7 +5413,7 @@ function arrayLikeKeys(value, inherited) {
       result = skipIndexes ? baseTimes(value.length, String) : [],
       length = result.length;
 
-  for (var key in value) {
+  for (let key in value) {
     if ((inherited || hasOwnProperty.call(value, key)) &&
         !(skipIndexes && (
            // Safari 9 has enumerable `arguments.length` in strict mode.
@@ -5487,11 +5487,11 @@ module.exports = overArg;
 /* 99 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var getNative = __webpack_require__(8),
+let getNative = __webpack_require__(8),
     root = __webpack_require__(4);
 
 /* Built-in method references that are verified to be native. */
-var WeakMap = getNative(root, 'WeakMap');
+let WeakMap = getNative(root, 'WeakMap');
 
 module.exports = WeakMap;
 
@@ -5500,7 +5500,7 @@ module.exports = WeakMap;
 /* 100 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var isObject = __webpack_require__(6);
+let isObject = __webpack_require__(6);
 
 /**
  * Checks if `value` is suitable for strict equality comparisons, i.e. `===`.
@@ -5557,7 +5557,7 @@ module.exports = matchesStrictComparable;
  * @returns {Array} Returns the new mapped array.
  */
 function arrayMap(array, iteratee) {
-  var index = -1,
+  let index = -1,
       length = array == null ? 0 : array.length,
       result = Array(length);
 
@@ -5606,7 +5606,7 @@ module.exports = baseProperty;
  * @returns {number} Returns the index of the matched value, else `-1`.
  */
 function baseFindIndex(array, predicate, fromIndex, fromRight) {
-  var length = array.length,
+  let length = array.length,
       index = fromIndex + (fromRight ? 1 : -1);
 
   while ((fromRight ? index-- : ++index < length)) {
@@ -5624,7 +5624,7 @@ module.exports = baseFindIndex;
 /* 105 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var toFinite = __webpack_require__(242);
+let toFinite = __webpack_require__(242);
 
 /**
  * Converts `value` to an integer.
@@ -5653,7 +5653,7 @@ var toFinite = __webpack_require__(242);
  * // => 3
  */
 function toInteger(value) {
-  var result = toFinite(value),
+  let result = toFinite(value),
       remainder = result % 1;
 
   return result === result ? (remainder ? result - remainder : result) : 0;
@@ -5669,7 +5669,7 @@ module.exports = toInteger;
 "use strict";
 
 
-var _interopRequireDefault = __webpack_require__(0);
+let _interopRequireDefault = __webpack_require__(0);
 
 Object.defineProperty(exports, "__esModule", {
   value: true
@@ -5709,19 +5709,19 @@ exports.bounce = bounce;
 exports.bouncePast = bouncePast;
 exports.easeInOut = exports.easeOut = exports.easeIn = exports.ease = void 0;
 
-var _bezierEasing = _interopRequireDefault(__webpack_require__(107)); // Easing functions adapted from Thomas Fuchs & Jeremy Kahn
+let _bezierEasing = _interopRequireDefault(__webpack_require__(107)); // Easing functions adapted from Thomas Fuchs & Jeremy Kahn
 // Easing Equations (c) 2003 Robert Penner, BSD license
 // https://raw.github.com/danro/easing-js/master/LICENSE
 
 
-var magicSwing = 1.70158;
-var ease = (0, _bezierEasing["default"])(0.25, 0.1, 0.25, 1.0);
+let magicSwing = 1.70158;
+let ease = (0, _bezierEasing["default"])(0.25, 0.1, 0.25, 1.0);
 exports.ease = ease;
-var easeIn = (0, _bezierEasing["default"])(0.42, 0.0, 1.0, 1.0);
+let easeIn = (0, _bezierEasing["default"])(0.42, 0.0, 1.0, 1.0);
 exports.easeIn = easeIn;
-var easeOut = (0, _bezierEasing["default"])(0.0, 0.0, 0.58, 1.0);
+let easeOut = (0, _bezierEasing["default"])(0.0, 0.0, 0.58, 1.0);
 exports.easeOut = easeOut;
-var easeInOut = (0, _bezierEasing["default"])(0.42, 0.0, 0.58, 1.0);
+let easeInOut = (0, _bezierEasing["default"])(0.42, 0.0, 0.58, 1.0);
 exports.easeInOut = easeInOut;
 
 function inQuad(pos) {
@@ -5853,17 +5853,17 @@ function outBounce(pos) {
 }
 
 function inBack(pos) {
-  var s = magicSwing;
+  let s = magicSwing;
   return pos * pos * ((s + 1) * pos - s);
 }
 
 function outBack(pos) {
-  var s = magicSwing;
+  let s = magicSwing;
   return (pos -= 1) * pos * ((s + 1) * pos + s) + 1;
 }
 
 function inOutBack(pos) {
-  var s = magicSwing;
+  let s = magicSwing;
 
   if ((pos /= 0.5) < 1) {
     return 0.5 * (pos * pos * (((s *= 1.525) + 1) * pos - s));
@@ -5873,9 +5873,9 @@ function inOutBack(pos) {
 }
 
 function inElastic(pos) {
-  var s = magicSwing;
-  var p = 0;
-  var a = 1;
+  let s = magicSwing;
+  let p = 0;
+  let a = 1;
 
   if (pos === 0) {
     return 0;
@@ -5900,9 +5900,9 @@ function inElastic(pos) {
 }
 
 function outElastic(pos) {
-  var s = magicSwing;
-  var p = 0;
-  var a = 1;
+  let s = magicSwing;
+  let p = 0;
+  let a = 1;
 
   if (pos === 0) {
     return 0;
@@ -5927,9 +5927,9 @@ function outElastic(pos) {
 }
 
 function inOutElastic(pos) {
-  var s = magicSwing;
-  var p = 0;
-  var a = 1;
+  let s = magicSwing;
+  let p = 0;
+  let a = 1;
 
   if (pos === 0) {
     return 0;
@@ -5958,17 +5958,17 @@ function inOutElastic(pos) {
 }
 
 function swingFromTo(pos) {
-  var s = magicSwing;
+  let s = magicSwing;
   return (pos /= 0.5) < 1 ? 0.5 * (pos * pos * (((s *= 1.525) + 1) * pos - s)) : 0.5 * ((pos -= 2) * pos * (((s *= 1.525) + 1) * pos + s) + 2);
 }
 
 function swingFrom(pos) {
-  var s = magicSwing;
+  let s = magicSwing;
   return pos * pos * ((s + 1) * pos - s);
 }
 
 function swingTo(pos) {
-  var s = magicSwing;
+  let s = magicSwing;
   return (pos -= 1) * pos * ((s + 1) * pos + s) + 1;
 }
 
@@ -6007,15 +6007,15 @@ function bouncePast(pos) {
  */
 
 // These values are established by empiricism with tests (tradeoff: performance VS precision)
-var NEWTON_ITERATIONS = 4;
-var NEWTON_MIN_SLOPE = 0.001;
-var SUBDIVISION_PRECISION = 0.0000001;
-var SUBDIVISION_MAX_ITERATIONS = 10;
+let NEWTON_ITERATIONS = 4;
+let NEWTON_MIN_SLOPE = 0.001;
+let SUBDIVISION_PRECISION = 0.0000001;
+let SUBDIVISION_MAX_ITERATIONS = 10;
 
-var kSplineTableSize = 11;
-var kSampleStepSize = 1.0 / (kSplineTableSize - 1.0);
+let kSplineTableSize = 11;
+let kSampleStepSize = 1.0 / (kSplineTableSize - 1.0);
 
-var float32ArraySupported = typeof Float32Array === 'function';
+let float32ArraySupported = typeof Float32Array === 'function';
 
 function A (aA1, aA2) { return 1.0 - 3.0 * aA2 + 3.0 * aA1; }
 function B (aA1, aA2) { return 3.0 * aA2 - 6.0 * aA1; }
@@ -6028,7 +6028,7 @@ function calcBezier (aT, aA1, aA2) { return ((A(aA1, aA2) * aT + B(aA1, aA2)) * 
 function getSlope (aT, aA1, aA2) { return 3.0 * A(aA1, aA2) * aT * aT + 2.0 * B(aA1, aA2) * aT + C(aA1); }
 
 function binarySubdivide (aX, aA, aB, mX1, mX2) {
-  var currentX, currentT, i = 0;
+  let currentX, currentT, i = 0;
   do {
     currentT = aA + (aB - aA) / 2.0;
     currentX = calcBezier(currentT, mX1, mX2) - aX;
@@ -6042,12 +6042,12 @@ function binarySubdivide (aX, aA, aB, mX1, mX2) {
 }
 
 function newtonRaphsonIterate (aX, aGuessT, mX1, mX2) {
- for (var i = 0; i < NEWTON_ITERATIONS; ++i) {
-   var currentSlope = getSlope(aGuessT, mX1, mX2);
+ for (let i = 0; i < NEWTON_ITERATIONS; ++i) {
+   let currentSlope = getSlope(aGuessT, mX1, mX2);
    if (currentSlope === 0.0) {
      return aGuessT;
    }
-   var currentX = calcBezier(aGuessT, mX1, mX2) - aX;
+   let currentX = calcBezier(aGuessT, mX1, mX2) - aX;
    aGuessT -= currentX / currentSlope;
  }
  return aGuessT;
@@ -6059,17 +6059,17 @@ module.exports = function bezier (mX1, mY1, mX2, mY2) {
   }
 
   // Precompute samples table
-  var sampleValues = float32ArraySupported ? new Float32Array(kSplineTableSize) : new Array(kSplineTableSize);
+  let sampleValues = float32ArraySupported ? new Float32Array(kSplineTableSize) : new Array(kSplineTableSize);
   if (mX1 !== mY1 || mX2 !== mY2) {
-    for (var i = 0; i < kSplineTableSize; ++i) {
+    for (let i = 0; i < kSplineTableSize; ++i) {
       sampleValues[i] = calcBezier(i * kSampleStepSize, mX1, mX2);
     }
   }
 
   function getTForX (aX) {
-    var intervalStart = 0.0;
-    var currentSample = 1;
-    var lastSample = kSplineTableSize - 1;
+    let intervalStart = 0.0;
+    let currentSample = 1;
+    let lastSample = kSplineTableSize - 1;
 
     for (; currentSample !== lastSample && sampleValues[currentSample] <= aX; ++currentSample) {
       intervalStart += kSampleStepSize;
@@ -6077,10 +6077,10 @@ module.exports = function bezier (mX1, mY1, mX2, mY2) {
     --currentSample;
 
     // Interpolate to provide an initial guess for t
-    var dist = (aX - sampleValues[currentSample]) / (sampleValues[currentSample + 1] - sampleValues[currentSample]);
-    var guessForT = intervalStart + dist * kSampleStepSize;
+    let dist = (aX - sampleValues[currentSample]) / (sampleValues[currentSample + 1] - sampleValues[currentSample]);
+    let guessForT = intervalStart + dist * kSampleStepSize;
 
-    var initialSlope = getSlope(guessForT, mX1, mX2);
+    let initialSlope = getSlope(guessForT, mX1, mX2);
     if (initialSlope >= NEWTON_MIN_SLOPE) {
       return newtonRaphsonIterate(aX, guessForT, mX1, mX2);
     } else if (initialSlope === 0.0) {
@@ -6113,13 +6113,13 @@ module.exports = function bezier (mX1, mY1, mX2, mY2) {
 "use strict";
 
 
-var _interopRequireDefault2 = __webpack_require__(0);
+let _interopRequireDefault2 = __webpack_require__(0);
 
-var _toConsumableArray2 = _interopRequireDefault2(__webpack_require__(109));
+let _toConsumableArray2 = _interopRequireDefault2(__webpack_require__(109));
 
-var _interopRequireDefault = __webpack_require__(0);
+let _interopRequireDefault = __webpack_require__(0);
 
-var _interopRequireWildcard = __webpack_require__(13);
+let _interopRequireWildcard = __webpack_require__(13);
 
 Object.defineProperty(exports, "__esModule", {
   value: true
@@ -6128,16 +6128,16 @@ exports.optimizeFloat = optimizeFloat;
 exports.createBezierEasing = createBezierEasing;
 exports.applyEasing = applyEasing;
 
-var easings = _interopRequireWildcard(__webpack_require__(106));
+let easings = _interopRequireWildcard(__webpack_require__(106));
 
-var _bezierEasing = _interopRequireDefault(__webpack_require__(107));
+let _bezierEasing = _interopRequireDefault(__webpack_require__(107));
 
 function optimizeFloat(value) {
-  var digits = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 5;
-  var base = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 10;
-  var pow = Math.pow(base, digits);
+  let digits = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 5;
+  let base = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 10;
+  let pow = Math.pow(base, digits);
 
-  var _float = Number(Math.round(value * pow) / pow);
+  let _float = Number(Math.round(value * pow) / pow);
 
   return Math.abs(_float) > 0.0001 ? _float : 0;
 }
@@ -6166,11 +6166,11 @@ function applyEasing(easing, position, customEasingFn) {
 /* 109 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var arrayWithoutHoles = __webpack_require__(245);
+let arrayWithoutHoles = __webpack_require__(245);
 
-var iterableToArray = __webpack_require__(246);
+let iterableToArray = __webpack_require__(246);
 
-var nonIterableSpread = __webpack_require__(247);
+let nonIterableSpread = __webpack_require__(247);
 
 function _toConsumableArray(arr) {
   return arrayWithoutHoles(arr) || iterableToArray(arr) || nonIterableSpread();
@@ -6185,9 +6185,9 @@ module.exports = _toConsumableArray;
 "use strict";
 
 
-var _interopRequireDefault = __webpack_require__(0);
+let _interopRequireDefault = __webpack_require__(0);
 
-var _defineProperty2 = _interopRequireDefault(__webpack_require__(27));
+let _defineProperty2 = _interopRequireDefault(__webpack_require__(27));
 
 Object.defineProperty(exports, "__esModule", {
   value: true
@@ -6195,14 +6195,14 @@ Object.defineProperty(exports, "__esModule", {
 exports.isPluginType = isPluginType;
 exports.clearPlugin = exports.renderPlugin = exports.createPluginInstance = exports.getPluginDestination = exports.getPluginDuration = exports.getPluginOrigin = exports.getPluginConfig = void 0;
 
-var _IX2LottieUtils = __webpack_require__(249);
+let _IX2LottieUtils = __webpack_require__(249);
 
-var _constants = __webpack_require__(2);
+let _constants = __webpack_require__(2);
 
-var _IX2BrowserSupport = __webpack_require__(44); // eslint-disable-next-line webflow/module-top-level-imports, webflow/packages-must-be-defined
+let _IX2BrowserSupport = __webpack_require__(44); // eslint-disable-next-line webflow/module-top-level-imports, webflow/packages-must-be-defined
 
 
-var pluginMethodMap = (0, _defineProperty2["default"])({}, _constants.ActionTypeConsts.PLUGIN_LOTTIE, {
+let pluginMethodMap = (0, _defineProperty2["default"])({}, _constants.ActionTypeConsts.PLUGIN_LOTTIE, {
   getConfig: _IX2LottieUtils.getPluginConfig,
   getOrigin: _IX2LottieUtils.getPluginOrigin,
   getDuration: _IX2LottieUtils.getPluginDuration,
@@ -6216,7 +6216,7 @@ function isPluginType(actionTypeId) {
   return actionTypeId === _constants.ActionTypeConsts.PLUGIN_LOTTIE;
 }
 
-var pluginMethod = function pluginMethod(methodName) {
+let pluginMethod = function pluginMethod(methodName) {
   return function (actionTypeId) {
     if (!_IX2BrowserSupport.IS_BROWSER_ENV) {
       // IX2 plugins require browser libs for now
@@ -6225,13 +6225,13 @@ var pluginMethod = function pluginMethod(methodName) {
       };
     }
 
-    var plugin = pluginMethodMap[actionTypeId];
+    let plugin = pluginMethodMap[actionTypeId];
 
     if (!plugin) {
       throw new Error("IX2 no plugin configured for: ".concat(actionTypeId));
     }
 
-    var method = plugin[methodName];
+    let method = plugin[methodName];
 
     if (!method) {
       throw new Error("IX2 invalid plugin method: ".concat(methodName));
@@ -6241,26 +6241,26 @@ var pluginMethod = function pluginMethod(methodName) {
   };
 };
 
-var getPluginConfig = pluginMethod('getConfig');
+let getPluginConfig = pluginMethod('getConfig');
 exports.getPluginConfig = getPluginConfig;
-var getPluginOrigin = pluginMethod('getOrigin');
+let getPluginOrigin = pluginMethod('getOrigin');
 exports.getPluginOrigin = getPluginOrigin;
-var getPluginDuration = pluginMethod('getDuration');
+let getPluginDuration = pluginMethod('getDuration');
 exports.getPluginDuration = getPluginDuration;
-var getPluginDestination = pluginMethod('getDestination');
+let getPluginDestination = pluginMethod('getDestination');
 exports.getPluginDestination = getPluginDestination;
-var createPluginInstance = pluginMethod('createInstance');
+let createPluginInstance = pluginMethod('createInstance');
 exports.createPluginInstance = createPluginInstance;
-var renderPlugin = pluginMethod('render');
+let renderPlugin = pluginMethod('render');
 exports.renderPlugin = renderPlugin;
-var clearPlugin = pluginMethod('clear');
+let clearPlugin = pluginMethod('clear');
 exports.clearPlugin = clearPlugin;
 
 /***/ }),
 /* 111 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseForOwn = __webpack_require__(112),
+let baseForOwn = __webpack_require__(112),
     createBaseEach = __webpack_require__(256);
 
 /**
@@ -6271,7 +6271,7 @@ var baseForOwn = __webpack_require__(112),
  * @param {Function} iteratee The function invoked per iteration.
  * @returns {Array|Object} Returns `collection`.
  */
-var baseEach = createBaseEach(baseForOwn);
+let baseEach = createBaseEach(baseForOwn);
 
 module.exports = baseEach;
 
@@ -6280,7 +6280,7 @@ module.exports = baseEach;
 /* 112 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseFor = __webpack_require__(254),
+let baseFor = __webpack_require__(254),
     keys = __webpack_require__(33);
 
 /**
@@ -6305,14 +6305,14 @@ module.exports = baseForOwn;
 "use strict";
 
 
-var _interopRequireDefault = __webpack_require__(260);
+let _interopRequireDefault = __webpack_require__(260);
 
 exports.__esModule = true;
 exports.default = void 0;
 
-var _shallowEqual = _interopRequireDefault(__webpack_require__(261));
+let _shallowEqual = _interopRequireDefault(__webpack_require__(261));
 
-var _default = _shallowEqual.default;
+let _default = _shallowEqual.default;
 exports.default = _default;
 
 /***/ }),
@@ -6322,13 +6322,13 @@ exports.default = _default;
 "use strict";
 
 
-var _interopRequireDefault2 = __webpack_require__(0);
+let _interopRequireDefault2 = __webpack_require__(0);
 
-var _toConsumableArray2 = _interopRequireDefault2(__webpack_require__(109));
+let _toConsumableArray2 = _interopRequireDefault2(__webpack_require__(109));
 
-var _interopRequireWildcard = __webpack_require__(13);
+let _interopRequireWildcard = __webpack_require__(13);
 
-var _interopRequireDefault = __webpack_require__(0);
+let _interopRequireDefault = __webpack_require__(0);
 
 Object.defineProperty(exports, "__esModule", {
   value: true
@@ -6340,53 +6340,53 @@ exports.stopAllActionGroups = stopAllActionGroups;
 exports.stopActionGroup = stopActionGroup;
 exports.startActionGroup = startActionGroup;
 
-var _extends2 = _interopRequireDefault(__webpack_require__(28));
+let _extends2 = _interopRequireDefault(__webpack_require__(28));
 
-var _objectWithoutPropertiesLoose2 = _interopRequireDefault(__webpack_require__(264));
+let _objectWithoutPropertiesLoose2 = _interopRequireDefault(__webpack_require__(264));
 
-var _find = _interopRequireDefault(__webpack_require__(85));
+let _find = _interopRequireDefault(__webpack_require__(85));
 
-var _get = _interopRequireDefault(__webpack_require__(56));
+let _get = _interopRequireDefault(__webpack_require__(56));
 
-var _size = _interopRequireDefault(__webpack_require__(265));
+let _size = _interopRequireDefault(__webpack_require__(265));
 
-var _omitBy = _interopRequireDefault(__webpack_require__(271));
+let _omitBy = _interopRequireDefault(__webpack_require__(271));
 
-var _isEmpty = _interopRequireDefault(__webpack_require__(283));
+let _isEmpty = _interopRequireDefault(__webpack_require__(283));
 
-var _mapValues = _interopRequireDefault(__webpack_require__(284));
+let _mapValues = _interopRequireDefault(__webpack_require__(284));
 
-var _forEach = _interopRequireDefault(__webpack_require__(285));
+let _forEach = _interopRequireDefault(__webpack_require__(285));
 
-var _throttle = _interopRequireDefault(__webpack_require__(288));
+let _throttle = _interopRequireDefault(__webpack_require__(288));
 
-var _shallowEqual = _interopRequireDefault(__webpack_require__(113));
+let _shallowEqual = _interopRequireDefault(__webpack_require__(113));
 
-var _constants = __webpack_require__(2);
+let _constants = __webpack_require__(2);
 
-var _shared = __webpack_require__(10);
+let _shared = __webpack_require__(10);
 
-var _IX2EngineActions = __webpack_require__(61);
+let _IX2EngineActions = __webpack_require__(61);
 
-var elementApi = _interopRequireWildcard(__webpack_require__(291));
+let elementApi = _interopRequireWildcard(__webpack_require__(291));
 
-var _IX2VanillaEvents = _interopRequireDefault(__webpack_require__(292));
+let _IX2VanillaEvents = _interopRequireDefault(__webpack_require__(292));
 /* eslint-env browser */
 
 
-var QuickEffectsIdList = Object.keys(_constants.QuickEffectIds);
+let QuickEffectsIdList = Object.keys(_constants.QuickEffectIds);
 
-var isQuickEffect = function isQuickEffect(actionTypeId) {
+let isQuickEffect = function isQuickEffect(actionTypeId) {
   return QuickEffectsIdList.includes(actionTypeId);
 };
 
-var _constants$IX2EngineC = _constants.IX2EngineConstants,
+let _constants$IX2EngineC = _constants.IX2EngineConstants,
     COLON_DELIMITER = _constants$IX2EngineC.COLON_DELIMITER,
     BOUNDARY_SELECTOR = _constants$IX2EngineC.BOUNDARY_SELECTOR,
     HTML_ELEMENT = _constants$IX2EngineC.HTML_ELEMENT,
     RENDER_GENERAL = _constants$IX2EngineC.RENDER_GENERAL,
     W_MOD_IX = _constants$IX2EngineC.W_MOD_IX;
-var _shared$IX2VanillaUti = _shared.IX2VanillaUtils,
+let _shared$IX2VanillaUti = _shared.IX2VanillaUtils,
     getAffectedElements = _shared$IX2VanillaUti.getAffectedElements,
     getElementId = _shared$IX2VanillaUti.getElementId,
     getDestinationValues = _shared$IX2VanillaUti.getDestinationValues,
@@ -6404,20 +6404,20 @@ var _shared$IX2VanillaUti = _shared.IX2VanillaUtils,
     cleanupHTMLElement = _shared$IX2VanillaUti.cleanupHTMLElement,
     stringifyTarget = _shared$IX2VanillaUti.stringifyTarget,
     mediaQueriesEqual = _shared$IX2VanillaUti.mediaQueriesEqual;
-var _shared$IX2VanillaPlu = _shared.IX2VanillaPlugins,
+let _shared$IX2VanillaPlu = _shared.IX2VanillaPlugins,
     isPluginType = _shared$IX2VanillaPlu.isPluginType,
     createPluginInstance = _shared$IX2VanillaPlu.createPluginInstance,
     getPluginDuration = _shared$IX2VanillaPlu.getPluginDuration;
-var ua = navigator.userAgent;
-var IS_MOBILE_SAFARI = ua.match(/iPad/i) || ua.match(/iPhone/); // Keep throttled events at ~80fps to reduce reflows while maintaining render accuracy
+let ua = navigator.userAgent;
+let IS_MOBILE_SAFARI = ua.match(/iPad/i) || ua.match(/iPhone/); // Keep throttled events at ~80fps to reduce reflows while maintaining render accuracy
 
-var THROTTLED_EVENT_WAIT = 12; // $FlowFixMe
+let THROTTLED_EVENT_WAIT = 12; // $FlowFixMe
 
 function observeRequests(store) {
   observeStore({
     store: store,
     select: function select(_ref) {
-      var ixRequest = _ref.ixRequest;
+      let ixRequest = _ref.ixRequest;
       return ixRequest.preview;
     },
     onChange: handlePreviewRequest
@@ -6425,7 +6425,7 @@ function observeRequests(store) {
   observeStore({
     store: store,
     select: function select(_ref2) {
-      var ixRequest = _ref2.ixRequest;
+      let ixRequest = _ref2.ixRequest;
       return ixRequest.playback;
     },
     onChange: handlePlaybackRequest
@@ -6433,7 +6433,7 @@ function observeRequests(store) {
   observeStore({
     store: store,
     select: function select(_ref3) {
-      var ixRequest = _ref3.ixRequest;
+      let ixRequest = _ref3.ixRequest;
       return ixRequest.stop;
     },
     onChange: handleStopRequest
@@ -6441,7 +6441,7 @@ function observeRequests(store) {
   observeStore({
     store: store,
     select: function select(_ref4) {
-      var ixRequest = _ref4.ixRequest;
+      let ixRequest = _ref4.ixRequest;
       return ixRequest.clear;
     },
     onChange: handleClearRequest
@@ -6452,7 +6452,7 @@ function observeMediaQueryChange(store) {
   observeStore({
     store: store,
     select: function select(_ref5) {
-      var ixSession = _ref5.ixSession;
+      let ixSession = _ref5.ixSession;
       return ixSession.mediaQueryKey;
     },
     onChange: function onChange() {
@@ -6471,10 +6471,10 @@ function observeMediaQueryChange(store) {
 }
 
 function observeOneRenderTick(store, onTick) {
-  var unsubscribe = observeStore({
+  let unsubscribe = observeStore({
     store: store,
     select: function select(_ref6) {
-      var ixSession = _ref6.ixSession;
+      let ixSession = _ref6.ixSession;
       return ixSession.tick;
     },
     onChange: function onChange(tick) {
@@ -6485,10 +6485,10 @@ function observeOneRenderTick(store, onTick) {
 }
 
 function handlePreviewRequest(_ref7, store) {
-  var rawData = _ref7.rawData,
+  let rawData = _ref7.rawData,
       defer = _ref7.defer;
 
-  var start = function start() {
+  let start = function start() {
     startEngine({
       store: store,
       rawData: rawData,
@@ -6505,7 +6505,7 @@ function dispatchPageUpdateEvent() {
 }
 
 function handlePlaybackRequest(playback, store) {
-  var actionTypeId = playback.actionTypeId,
+  let actionTypeId = playback.actionTypeId,
       actionListId = playback.actionListId,
       actionItemId = playback.actionItemId,
       eventId = playback.eventId,
@@ -6514,10 +6514,10 @@ function handlePlaybackRequest(playback, store) {
       testManual = playback.testManual,
       _playback$verbose = playback.verbose,
       verbose = _playback$verbose === void 0 ? true : _playback$verbose;
-  var rawData = playback.rawData;
+  let rawData = playback.rawData;
 
   if (actionListId && actionItemId && rawData && immediate) {
-    var actionList = rawData.actionLists[actionListId];
+    let actionList = rawData.actionLists[actionListId];
 
     if (actionList) {
       rawData = reduceListToGroup({
@@ -6545,7 +6545,7 @@ function handlePlaybackRequest(playback, store) {
       actionListId: actionListId,
       eventId: eventId
     });
-    var started = startActionGroup({
+    let started = startActionGroup({
       store: store,
       eventId: eventId,
       actionListId: actionListId,
@@ -6563,7 +6563,7 @@ function handlePlaybackRequest(playback, store) {
 }
 
 function handleStopRequest(_ref8, store) {
-  var actionListId = _ref8.actionListId;
+  let actionListId = _ref8.actionListId;
 
   if (actionListId) {
     stopActionGroup({
@@ -6589,12 +6589,12 @@ function handleClearRequest(state, store) {
 
 
 function startEngine(_ref9) {
-  var store = _ref9.store,
+  let store = _ref9.store,
       rawData = _ref9.rawData,
       allowEvents = _ref9.allowEvents,
       testManual = _ref9.testManual;
 
-  var _store$getState = store.getState(),
+  let _store$getState = store.getState(),
       ixSession = _store$getState.ixSession;
 
   if (rawData) {
@@ -6621,7 +6621,7 @@ function startEngine(_ref9) {
 }
 
 function addDocumentClass() {
-  var _document = document,
+  let _document = document,
       documentElement = _document.documentElement; // $FlowFixMe
 
   if (documentElement.className.indexOf(W_MOD_IX) === -1) {
@@ -6631,8 +6631,8 @@ function addDocumentClass() {
 }
 
 function startRenderLoop(store, testManual) {
-  var handleFrame = function handleFrame(now) {
-    var _store$getState2 = store.getState(),
+  let handleFrame = function handleFrame(now) {
+    let _store$getState2 = store.getState(),
         ixSession = _store$getState2.ixSession,
         ixParameters = _store$getState2.ixParameters;
 
@@ -6652,24 +6652,24 @@ function startRenderLoop(store, testManual) {
 
 
 function stopEngine(store) {
-  var _store$getState3 = store.getState(),
+  let _store$getState3 = store.getState(),
       ixSession = _store$getState3.ixSession;
 
   if (ixSession.active) {
-    var eventListeners = ixSession.eventListeners;
+    let eventListeners = ixSession.eventListeners;
     eventListeners.forEach(clearEventListener);
     store.dispatch((0, _IX2EngineActions.sessionStopped)());
   }
 }
 
 function clearEventListener(_ref10) {
-  var target = _ref10.target,
+  let target = _ref10.target,
       listenerParams = _ref10.listenerParams;
   target.removeEventListener.apply(target, listenerParams);
 }
 
 function createGroupInstances(_ref11) {
-  var store = _ref11.store,
+  let store = _ref11.store,
       eventStateKey = _ref11.eventStateKey,
       eventTarget = _ref11.eventTarget,
       eventId = _ref11.eventId,
@@ -6679,43 +6679,43 @@ function createGroupInstances(_ref11) {
       smoothing = _ref11.smoothing,
       restingValue = _ref11.restingValue;
 
-  var _store$getState4 = store.getState(),
+  let _store$getState4 = store.getState(),
       ixData = _store$getState4.ixData,
       ixSession = _store$getState4.ixSession;
 
-  var events = ixData.events;
-  var event = events[eventId];
-  var eventTypeId = event.eventTypeId;
-  var targetCache = {};
-  var instanceActionGroups = {};
-  var instanceConfigs = [];
-  var continuousActionGroups = parameterGroup.continuousActionGroups;
-  var parameterId = parameterGroup.id;
+  let events = ixData.events;
+  let event = events[eventId];
+  let eventTypeId = event.eventTypeId;
+  let targetCache = {};
+  let instanceActionGroups = {};
+  let instanceConfigs = [];
+  let continuousActionGroups = parameterGroup.continuousActionGroups;
+  let parameterId = parameterGroup.id;
 
   if (shouldNamespaceEventParameter(eventTypeId, eventConfig)) {
     parameterId = getNamespacedParameterId(eventStateKey, parameterId);
   } // Limit affected elements when event target is within a boundary node
 
 
-  var eventElementRoot = ixSession.hasBoundaryNodes && eventTarget ? elementApi.getClosestElement(eventTarget, BOUNDARY_SELECTOR) : null;
+  let eventElementRoot = ixSession.hasBoundaryNodes && eventTarget ? elementApi.getClosestElement(eventTarget, BOUNDARY_SELECTOR) : null;
   continuousActionGroups.forEach(function (actionGroup) {
-    var keyframe = actionGroup.keyframe,
+    let keyframe = actionGroup.keyframe,
         actionItems = actionGroup.actionItems;
     actionItems.forEach(function (actionItem) {
-      var actionTypeId = actionItem.actionTypeId;
-      var target = actionItem.config.target;
+      let actionTypeId = actionItem.actionTypeId;
+      let target = actionItem.config.target;
 
       if (!target) {
         return;
       }
 
-      var elementRoot = target.boundaryMode ? eventElementRoot : null;
-      var key = stringifyTarget(target) + COLON_DELIMITER + actionTypeId;
+      let elementRoot = target.boundaryMode ? eventElementRoot : null;
+      let key = stringifyTarget(target) + COLON_DELIMITER + actionTypeId;
       instanceActionGroups[key] = appendActionItem(instanceActionGroups[key], keyframe, actionItem);
 
       if (!targetCache[key]) {
         targetCache[key] = true;
-        var config = actionItem.config;
+        let config = actionItem.config;
         getAffectedElements({
           config: config,
           event: event,
@@ -6732,14 +6732,14 @@ function createGroupInstances(_ref11) {
     });
   });
   instanceConfigs.forEach(function (_ref12) {
-    var element = _ref12.element,
+    let element = _ref12.element,
         key = _ref12.key;
-    var actionGroups = instanceActionGroups[key];
-    var actionItem = (0, _get["default"])(actionGroups, "[0].actionItems[0]", {});
-    var actionTypeId = actionItem.actionTypeId;
-    var pluginInstance = isPluginType(actionTypeId) ? // $FlowFixMe
+    let actionGroups = instanceActionGroups[key];
+    let actionItem = (0, _get["default"])(actionGroups, "[0].actionItems[0]", {});
+    let actionTypeId = actionItem.actionTypeId;
+    let pluginInstance = isPluginType(actionTypeId) ? // $FlowFixMe
     createPluginInstance(actionTypeId)(element, actionItem) : null;
-    var destination = getDestinationValues({
+    let destination = getDestinationValues({
       element: element,
       actionItem: actionItem,
       elementApi: elementApi
@@ -6763,11 +6763,11 @@ function createGroupInstances(_ref11) {
 }
 
 function appendActionItem() {
-  var actionGroups = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];
-  var keyframe = arguments.length > 1 ? arguments[1] : undefined;
-  var actionItem = arguments.length > 2 ? arguments[2] : undefined;
-  var newActionGroups = (0, _toConsumableArray2["default"])(actionGroups);
-  var groupIndex;
+  let actionGroups = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];
+  let keyframe = arguments.length > 1 ? arguments[1] : undefined;
+  let actionItem = arguments.length > 2 ? arguments[2] : undefined;
+  let newActionGroups = (0, _toConsumableArray2["default"])(actionGroups);
+  let groupIndex;
   newActionGroups.some(function (group, index) {
     if (group.keyframe === keyframe) {
       groupIndex = index;
@@ -6790,13 +6790,13 @@ function appendActionItem() {
 }
 
 function bindEvents(store) {
-  var _store$getState5 = store.getState(),
+  let _store$getState5 = store.getState(),
       ixData = _store$getState5.ixData;
 
-  var eventTypeMap = ixData.eventTypeMap;
+  let eventTypeMap = ixData.eventTypeMap;
   updateViewportWidth(store);
   (0, _forEach["default"])(eventTypeMap, function (events, key) {
-    var logic = _IX2VanillaEvents["default"][key];
+    let logic = _IX2VanillaEvents["default"][key];
 
     if (!logic) {
       console.warn("IX2 event type not configured: ".concat(key));
@@ -6810,7 +6810,7 @@ function bindEvents(store) {
     });
   });
 
-  var _store$getState6 = store.getState(),
+  let _store$getState6 = store.getState(),
       ixSession = _store$getState6.ixSession;
 
   if (ixSession.eventListeners.length) {
@@ -6818,10 +6818,10 @@ function bindEvents(store) {
   }
 }
 
-var WINDOW_RESIZE_EVENTS = ['resize', 'orientationchange'];
+let WINDOW_RESIZE_EVENTS = ['resize', 'orientationchange'];
 
 function bindResizeEvents(store) {
-  var handleResize = function handleResize() {
+  let handleResize = function handleResize() {
     updateViewportWidth(store);
   };
 
@@ -6833,14 +6833,14 @@ function bindResizeEvents(store) {
 }
 
 function updateViewportWidth(store) {
-  var _store$getState7 = store.getState(),
+  let _store$getState7 = store.getState(),
       ixSession = _store$getState7.ixSession,
       ixData = _store$getState7.ixData;
 
-  var width = window.innerWidth;
+  let width = window.innerWidth;
 
   if (width !== ixSession.viewportWidth) {
-    var mediaQueries = ixData.mediaQueries;
+    let mediaQueries = ixData.mediaQueries;
     store.dispatch((0, _IX2EngineActions.viewportWidthChanged)({
       width: width,
       mediaQueries: mediaQueries
@@ -6848,21 +6848,21 @@ function updateViewportWidth(store) {
   }
 }
 
-var mapFoundValues = function mapFoundValues(object, iteratee) {
+let mapFoundValues = function mapFoundValues(object, iteratee) {
   return (0, _omitBy["default"])((0, _mapValues["default"])(object, iteratee), _isEmpty["default"]);
 };
 
-var forEachEventTarget = function forEachEventTarget(eventTargets, eventCallback) {
+let forEachEventTarget = function forEachEventTarget(eventTargets, eventCallback) {
   (0, _forEach["default"])(eventTargets, function (elements, eventId) {
     elements.forEach(function (element, index) {
-      var eventStateKey = eventId + COLON_DELIMITER + index;
+      let eventStateKey = eventId + COLON_DELIMITER + index;
       eventCallback(element, eventId, eventStateKey);
     });
   });
 };
 
-var getAffectedForEvent = function getAffectedForEvent(event) {
-  var config = {
+let getAffectedForEvent = function getAffectedForEvent(event) {
+  let config = {
     target: event.target,
     targets: event.targets
   };
@@ -6873,53 +6873,53 @@ var getAffectedForEvent = function getAffectedForEvent(event) {
 };
 
 function bindEventType(_ref13) {
-  var logic = _ref13.logic,
+  let logic = _ref13.logic,
       store = _ref13.store,
       events = _ref13.events;
   injectBehaviorCSSFixes(events);
-  var eventTypes = logic.types,
+  let eventTypes = logic.types,
       eventHandler = logic.handler;
 
-  var _store$getState8 = store.getState(),
+  let _store$getState8 = store.getState(),
       ixData = _store$getState8.ixData;
 
-  var actionLists = ixData.actionLists;
-  var eventTargets = mapFoundValues(events, getAffectedForEvent);
+  let actionLists = ixData.actionLists;
+  let eventTargets = mapFoundValues(events, getAffectedForEvent);
 
   if (!(0, _size["default"])(eventTargets)) {
     return;
   }
 
   (0, _forEach["default"])(eventTargets, function (elements, key) {
-    var event = events[key];
-    var eventAction = event.action,
+    let event = events[key];
+    let eventAction = event.action,
         eventId = event.id,
         _event$mediaQueries = event.mediaQueries,
         mediaQueries = _event$mediaQueries === void 0 ? ixData.mediaQueryKeys : _event$mediaQueries;
-    var actionListId = eventAction.config.actionListId;
+    let actionListId = eventAction.config.actionListId;
 
     if (!mediaQueriesEqual(mediaQueries, ixData.mediaQueryKeys)) {
       store.dispatch((0, _IX2EngineActions.mediaQueriesDefined)());
     }
 
     if (eventAction.actionTypeId === _constants.ActionTypeConsts.GENERAL_CONTINUOUS_ACTION) {
-      var configs = Array.isArray(event.config) ? event.config : [event.config];
+      let configs = Array.isArray(event.config) ? event.config : [event.config];
       configs.forEach(function (eventConfig) {
-        var continuousParameterGroupId = eventConfig.continuousParameterGroupId;
-        var paramGroups = (0, _get["default"])(actionLists, "".concat(actionListId, ".continuousParameterGroups"), []);
-        var parameterGroup = (0, _find["default"])(paramGroups, function (_ref14) {
-          var id = _ref14.id;
+        let continuousParameterGroupId = eventConfig.continuousParameterGroupId;
+        let paramGroups = (0, _get["default"])(actionLists, "".concat(actionListId, ".continuousParameterGroups"), []);
+        let parameterGroup = (0, _find["default"])(paramGroups, function (_ref14) {
+          let id = _ref14.id;
           return id === continuousParameterGroupId;
         });
-        var smoothing = (eventConfig.smoothing || 0) / 100;
-        var restingValue = (eventConfig.restingState || 0) / 100;
+        let smoothing = (eventConfig.smoothing || 0) / 100;
+        let restingValue = (eventConfig.restingState || 0) / 100;
 
         if (!parameterGroup) {
           return;
         }
 
         elements.forEach(function (eventTarget, index) {
-          var eventStateKey = eventId + COLON_DELIMITER + index;
+          let eventStateKey = eventId + COLON_DELIMITER + index;
           createGroupInstances({
             store: store,
             eventStateKey: eventStateKey,
@@ -6944,14 +6944,14 @@ function bindEventType(_ref13) {
     }
   });
 
-  var handleEvent = function handleEvent(nativeEvent) {
-    var _store$getState9 = store.getState(),
+  let handleEvent = function handleEvent(nativeEvent) {
+    let _store$getState9 = store.getState(),
         ixSession = _store$getState9.ixSession;
 
     forEachEventTarget(eventTargets, function (element, eventId, eventStateKey) {
-      var event = events[eventId];
-      var oldState = ixSession.eventState[eventStateKey];
-      var eventAction = event.action,
+      let event = events[eventId];
+      let oldState = ixSession.eventState[eventStateKey];
+      let eventAction = event.action,
           _event$mediaQueries2 = event.mediaQueries,
           mediaQueries = _event$mediaQueries2 === void 0 ? ixData.mediaQueryKeys : _event$mediaQueries2; // Bypass event handler if current media query is not listed in event config
 
@@ -6959,9 +6959,9 @@ function bindEventType(_ref13) {
         return;
       }
 
-      var handleEventWithConfig = function handleEventWithConfig() {
-        var eventConfig = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
-        var newState = eventHandler({
+      let handleEventWithConfig = function handleEventWithConfig() {
+        let eventConfig = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+        let newState = eventHandler({
           store: store,
           element: element,
           event: event,
@@ -6976,7 +6976,7 @@ function bindEventType(_ref13) {
       };
 
       if (eventAction.actionTypeId === _constants.ActionTypeConsts.GENERAL_CONTINUOUS_ACTION) {
-        var configs = Array.isArray(event.config) ? event.config : [event.config];
+        let configs = Array.isArray(event.config) ? event.config : [event.config];
         configs.forEach(handleEventWithConfig);
       } else {
         handleEventWithConfig();
@@ -6984,15 +6984,15 @@ function bindEventType(_ref13) {
     });
   };
 
-  var handleEventThrottled = (0, _throttle["default"])(handleEvent, THROTTLED_EVENT_WAIT);
+  let handleEventThrottled = (0, _throttle["default"])(handleEvent, THROTTLED_EVENT_WAIT);
 
-  var addListeners = function addListeners(_ref15) {
-    var _ref15$target = _ref15.target,
+  let addListeners = function addListeners(_ref15) {
+    let _ref15$target = _ref15.target,
         target = _ref15$target === void 0 ? document : _ref15$target,
         types = _ref15.types,
         shouldThrottle = _ref15.throttle;
     types.split(' ').filter(Boolean).forEach(function (type) {
-      var handlerFunc = shouldThrottle ? handleEventThrottled : handleEvent; // $FlowFixMe
+      let handlerFunc = shouldThrottle ? handleEventThrottled : handleEvent; // $FlowFixMe
 
       target.addEventListener(type, handlerFunc);
       store.dispatch((0, _IX2EngineActions.eventListenerAdded)(target, [type, handlerFunc]));
@@ -7016,14 +7016,14 @@ function injectBehaviorCSSFixes(events) {
     return;
   }
 
-  var injectedSelectors = {};
-  var cssText = '';
+  let injectedSelectors = {};
+  let cssText = '';
 
-  for (var eventId in events) {
-    var _events$eventId = events[eventId],
+  for (let eventId in events) {
+    let _events$eventId = events[eventId],
         eventTypeId = _events$eventId.eventTypeId,
         target = _events$eventId.target;
-    var selector = elementApi.getQuerySelector(target); // $FlowFixMe
+    let selector = elementApi.getQuerySelector(target); // $FlowFixMe
 
     if (injectedSelectors[selector]) {
       continue;
@@ -7039,7 +7039,7 @@ function injectBehaviorCSSFixes(events) {
   }
 
   if (cssText) {
-    var style = document.createElement('style');
+    let style = document.createElement('style');
     style.textContent = cssText; // $FlowFixMe
 
     document.body.appendChild(style);
@@ -7047,46 +7047,46 @@ function injectBehaviorCSSFixes(events) {
 }
 
 function renderInitialGroup(_ref16) {
-  var store = _ref16.store,
+  let store = _ref16.store,
       actionListId = _ref16.actionListId,
       eventId = _ref16.eventId;
 
-  var _store$getState10 = store.getState(),
+  let _store$getState10 = store.getState(),
       ixData = _store$getState10.ixData,
       ixSession = _store$getState10.ixSession;
 
-  var actionLists = ixData.actionLists,
+  let actionLists = ixData.actionLists,
       events = ixData.events;
-  var event = events[eventId];
-  var actionList = actionLists[actionListId];
+  let event = events[eventId];
+  let actionList = actionLists[actionListId];
 
   if (actionList && actionList.useFirstGroupAsInitialState) {
-    var initialStateItems = (0, _get["default"])(actionList, 'actionItemGroups[0].actionItems', []); // Bypass initial state render if current media query is not listed in event config
+    let initialStateItems = (0, _get["default"])(actionList, 'actionItemGroups[0].actionItems', []); // Bypass initial state render if current media query is not listed in event config
 
-    var mediaQueries = (0, _get["default"])(event, 'mediaQueries', ixData.mediaQueryKeys);
+    let mediaQueries = (0, _get["default"])(event, 'mediaQueries', ixData.mediaQueryKeys);
 
     if (!shouldAllowMediaQuery(mediaQueries, ixSession.mediaQueryKey)) {
       return;
     }
 
     initialStateItems.forEach(function (actionItem) {
-      var _itemConfig$target;
+      let _itemConfig$target;
 
-      var itemConfig = actionItem.config,
+      let itemConfig = actionItem.config,
           actionTypeId = actionItem.actionTypeId;
-      var config = // When useEventTarget is explicitly true, use event target/targets to query elements
+      let config = // When useEventTarget is explicitly true, use event target/targets to query elements
       (itemConfig === null || itemConfig === void 0 ? void 0 : (_itemConfig$target = itemConfig.target) === null || _itemConfig$target === void 0 ? void 0 : _itemConfig$target.useEventTarget) === true ? {
         target: event.target,
         targets: event.targets
       } : itemConfig;
-      var itemElements = getAffectedElements({
+      let itemElements = getAffectedElements({
         config: config,
         event: event,
         elementApi: elementApi
       });
-      var shouldUsePlugin = isPluginType(actionTypeId);
+      let shouldUsePlugin = isPluginType(actionTypeId);
       itemElements.forEach(function (element) {
-        var pluginInstance = shouldUsePlugin ? // $FlowFixMe
+        let pluginInstance = shouldUsePlugin ? // $FlowFixMe
         createPluginInstance(actionTypeId)(element, actionItem) : null;
         createInstance({
           destination: getDestinationValues({
@@ -7110,14 +7110,14 @@ function renderInitialGroup(_ref16) {
 
 
 function stopAllActionGroups(_ref17) {
-  var store = _ref17.store;
+  let store = _ref17.store;
 
-  var _store$getState11 = store.getState(),
+  let _store$getState11 = store.getState(),
       ixInstances = _store$getState11.ixInstances;
 
   (0, _forEach["default"])(ixInstances, function (instance) {
     if (!instance.continuous) {
-      var actionListId = instance.actionListId,
+      let actionListId = instance.actionListId,
           verbose = instance.verbose;
       removeInstance(instance, store);
 
@@ -7133,22 +7133,22 @@ function stopAllActionGroups(_ref17) {
 
 
 function stopActionGroup(_ref18) {
-  var store = _ref18.store,
+  let store = _ref18.store,
       eventId = _ref18.eventId,
       eventTarget = _ref18.eventTarget,
       eventStateKey = _ref18.eventStateKey,
       actionListId = _ref18.actionListId;
 
-  var _store$getState12 = store.getState(),
+  let _store$getState12 = store.getState(),
       ixInstances = _store$getState12.ixInstances,
       ixSession = _store$getState12.ixSession; // Check for element boundary before stopping engine instances
 
 
-  var eventElementRoot = ixSession.hasBoundaryNodes && eventTarget ? elementApi.getClosestElement(eventTarget, BOUNDARY_SELECTOR) : null;
+  let eventElementRoot = ixSession.hasBoundaryNodes && eventTarget ? elementApi.getClosestElement(eventTarget, BOUNDARY_SELECTOR) : null;
   (0, _forEach["default"])(ixInstances, function (instance) {
-    var boundaryMode = (0, _get["default"])(instance, 'actionItem.config.target.boundaryMode'); // Validate event key if eventStateKey was provided, otherwise default to true
+    let boundaryMode = (0, _get["default"])(instance, 'actionItem.config.target.boundaryMode'); // Validate event key if eventStateKey was provided, otherwise default to true
 
-    var validEventKey = eventStateKey ? instance.eventStateKey === eventStateKey : true; // Remove engine instances that match the required ids
+    let validEventKey = eventStateKey ? instance.eventStateKey === eventStateKey : true; // Remove engine instances that match the required ids
 
     if (instance.actionListId === actionListId && instance.eventId === eventId && validEventKey) {
       // Avoid removal when root boundary does not contain instance element
@@ -7170,7 +7170,7 @@ function stopActionGroup(_ref18) {
 
 
 function startActionGroup(_ref19) {
-  var store = _ref19.store,
+  let store = _ref19.store,
       eventId = _ref19.eventId,
       eventTarget = _ref19.eventTarget,
       eventStateKey = _ref19.eventStateKey,
@@ -7180,18 +7180,18 @@ function startActionGroup(_ref19) {
       immediate = _ref19.immediate,
       verbose = _ref19.verbose;
 
-  var _event$action;
+  let _event$action;
 
-  var _store$getState13 = store.getState(),
+  let _store$getState13 = store.getState(),
       ixData = _store$getState13.ixData,
       ixSession = _store$getState13.ixSession;
 
-  var events = ixData.events;
-  var event = events[eventId] || {};
-  var _event$mediaQueries3 = event.mediaQueries,
+  let events = ixData.events;
+  let event = events[eventId] || {};
+  let _event$mediaQueries3 = event.mediaQueries,
       mediaQueries = _event$mediaQueries3 === void 0 ? ixData.mediaQueryKeys : _event$mediaQueries3;
-  var actionList = (0, _get["default"])(ixData, "actionLists.".concat(actionListId), {});
-  var actionItemGroups = actionList.actionItemGroups,
+  let actionList = (0, _get["default"])(ixData, "actionLists.".concat(actionListId), {});
+  let actionItemGroups = actionList.actionItemGroups,
       useFirstGroupAsInitialState = actionList.useFirstGroupAsInitialState; // Abort playback if no action groups
 
   if (!actionItemGroups || !actionItemGroups.length) {
@@ -7209,10 +7209,10 @@ function startActionGroup(_ref19) {
   } // Identify first animated group and apply the initial QuickEffect delay
 
 
-  var isFirstGroup = groupIndex === 0 || groupIndex === 1 && useFirstGroupAsInitialState;
-  var instanceDelay = isFirstGroup && isQuickEffect((_event$action = event.action) === null || _event$action === void 0 ? void 0 : _event$action.actionTypeId) ? event.config.delay : undefined; // Abort playback if no action items exist at group index
+  let isFirstGroup = groupIndex === 0 || groupIndex === 1 && useFirstGroupAsInitialState;
+  let instanceDelay = isFirstGroup && isQuickEffect((_event$action = event.action) === null || _event$action === void 0 ? void 0 : _event$action.actionTypeId) ? event.config.delay : undefined; // Abort playback if no action items exist at group index
 
-  var actionItems = (0, _get["default"])(actionItemGroups, [groupIndex, 'actionItems'], []);
+  let actionItems = (0, _get["default"])(actionItemGroups, [groupIndex, 'actionItems'], []);
 
   if (!actionItems.length) {
     return false;
@@ -7224,21 +7224,21 @@ function startActionGroup(_ref19) {
   } // Limit affected elements when event target is within a boundary node
 
 
-  var eventElementRoot = ixSession.hasBoundaryNodes && eventTarget ? elementApi.getClosestElement(eventTarget, BOUNDARY_SELECTOR) : null;
-  var carrierIndex = getMaxDurationItemIndex(actionItems);
-  var groupStartResult = false;
+  let eventElementRoot = ixSession.hasBoundaryNodes && eventTarget ? elementApi.getClosestElement(eventTarget, BOUNDARY_SELECTOR) : null;
+  let carrierIndex = getMaxDurationItemIndex(actionItems);
+  let groupStartResult = false;
   actionItems.forEach(function (actionItem, actionIndex) {
-    var config = actionItem.config,
+    let config = actionItem.config,
         actionTypeId = actionItem.actionTypeId;
-    var shouldUsePlugin = isPluginType(actionTypeId);
-    var target = config.target;
+    let shouldUsePlugin = isPluginType(actionTypeId);
+    let target = config.target;
 
     if (!target) {
       return;
     }
 
-    var elementRoot = target.boundaryMode ? eventElementRoot : null;
-    var elements = getAffectedElements({
+    let elementRoot = target.boundaryMode ? eventElementRoot : null;
+    let elements = getAffectedElements({
       config: config,
       event: event,
       eventTarget: eventTarget,
@@ -7246,17 +7246,17 @@ function startActionGroup(_ref19) {
       elementApi: elementApi
     });
     elements.forEach(function (element, elementIndex) {
-      var pluginInstance = shouldUsePlugin ? // $FlowFixMe
+      let pluginInstance = shouldUsePlugin ? // $FlowFixMe
       createPluginInstance(actionTypeId)(element, actionItem) : null;
-      var pluginDuration = shouldUsePlugin ? // $FlowFixMe
+      let pluginDuration = shouldUsePlugin ? // $FlowFixMe
       getPluginDuration(actionTypeId)(element, actionItem) : null;
       groupStartResult = true;
-      var isCarrier = carrierIndex === actionIndex && elementIndex === 0;
-      var computedStyle = getComputedStyle({
+      let isCarrier = carrierIndex === actionIndex && elementIndex === 0;
+      let computedStyle = getComputedStyle({
         element: element,
         actionItem: actionItem
       });
-      var destination = getDestinationValues({
+      let destination = getDestinationValues({
         element: element,
         actionItem: actionItem,
         elementApi: elementApi
@@ -7287,29 +7287,29 @@ function startActionGroup(_ref19) {
 
 function createInstance(options) {
   // $FlowFixMe
-  var store = options.store,
+  let store = options.store,
       computedStyle = options.computedStyle,
       rest = (0, _objectWithoutPropertiesLoose2["default"])(options, ["store", "computedStyle"]); // $FlowFixMe
 
-  var autoStart = !rest.continuous; // $FlowFixMe
+  let autoStart = !rest.continuous; // $FlowFixMe
 
-  var element = rest.element,
+  let element = rest.element,
       actionItem = rest.actionItem,
       immediate = rest.immediate,
       pluginInstance = rest.pluginInstance;
-  var instanceId = getInstanceId();
+  let instanceId = getInstanceId();
 
-  var _store$getState14 = store.getState(),
+  let _store$getState14 = store.getState(),
       ixElements = _store$getState14.ixElements,
       ixSession = _store$getState14.ixSession;
 
-  var elementId = getElementId(ixElements, element);
+  let elementId = getElementId(ixElements, element);
 
-  var _ref20 = ixElements[elementId] || {},
+  let _ref20 = ixElements[elementId] || {},
       refState = _ref20.refState;
 
-  var refType = elementApi.getRefType(element);
-  var origin = getInstanceOrigin(element, refState, computedStyle, actionItem, elementApi, // $FlowFixMe
+  let refType = elementApi.getRefType(element);
+  let origin = getInstanceOrigin(element, refState, computedStyle, actionItem, elementApi, // $FlowFixMe
   pluginInstance);
   store.dispatch((0, _IX2EngineActions.instanceAdded)((0, _extends2["default"])({
     instanceId: instanceId,
@@ -7327,7 +7327,7 @@ function createInstance(options) {
   observeStore({
     store: store,
     select: function select(_ref21) {
-      var ixInstances = _ref21.ixInstances;
+      let ixInstances = _ref21.ixInstances;
       return ixInstances[instanceId];
     },
     onChange: handleInstanceChange
@@ -7343,13 +7343,13 @@ function removeInstance(instance, store) {
     instanceId: instance.id,
     state: store.getState()
   });
-  var elementId = instance.elementId,
+  let elementId = instance.elementId,
       actionItem = instance.actionItem;
 
-  var _store$getState15 = store.getState(),
+  let _store$getState15 = store.getState(),
       ixElements = _store$getState15.ixElements;
 
-  var _ref22 = ixElements[elementId] || {},
+  let _ref22 = ixElements[elementId] || {},
       ref = _ref22.ref,
       refType = _ref22.refType;
 
@@ -7361,27 +7361,27 @@ function removeInstance(instance, store) {
 }
 
 function dispatchCustomEvent(element, eventName, detail) {
-  var event = document.createEvent('CustomEvent');
+  let event = document.createEvent('CustomEvent');
   event.initCustomEvent(eventName, true, true, detail); // $FlowFixMe
 
   element.dispatchEvent(event);
 }
 
 function renderImmediateInstance(store, instanceId) {
-  var _store$getState16 = store.getState(),
+  let _store$getState16 = store.getState(),
       ixParameters = _store$getState16.ixParameters;
 
   store.dispatch((0, _IX2EngineActions.instanceStarted)(instanceId, 0));
   store.dispatch((0, _IX2EngineActions.animationFrameChanged)(performance.now(), ixParameters));
 
-  var _store$getState17 = store.getState(),
+  let _store$getState17 = store.getState(),
       ixInstances = _store$getState17.ixInstances;
 
   handleInstanceChange(ixInstances[instanceId], store);
 }
 
 function handleInstanceChange(instance, store) {
-  var active = instance.active,
+  let active = instance.active,
       continuous = instance.continuous,
       complete = instance.complete,
       elementId = instance.elementId,
@@ -7399,13 +7399,13 @@ function handleInstanceChange(instance, store) {
       verbose = instance.verbose,
       pluginInstance = instance.pluginInstance; // Bypass render if current media query is not listed in event config
 
-  var _store$getState18 = store.getState(),
+  let _store$getState18 = store.getState(),
       ixData = _store$getState18.ixData,
       ixSession = _store$getState18.ixSession;
 
-  var events = ixData.events;
-  var event = events[eventId] || {};
-  var _event$mediaQueries4 = event.mediaQueries,
+  let events = ixData.events;
+  let event = events[eventId] || {};
+  let _event$mediaQueries4 = event.mediaQueries,
       mediaQueries = _event$mediaQueries4 === void 0 ? ixData.mediaQueryKeys : _event$mediaQueries4;
 
   if (!shouldAllowMediaQuery(mediaQueries, ixSession.mediaQueryKey)) {
@@ -7417,15 +7417,15 @@ function handleInstanceChange(instance, store) {
       // Render current values to ref state and grab latest
       store.dispatch((0, _IX2EngineActions.elementStateChanged)(elementId, actionTypeId, current, actionItem));
 
-      var _store$getState19 = store.getState(),
+      let _store$getState19 = store.getState(),
           ixElements = _store$getState19.ixElements;
 
-      var _ref23 = ixElements[elementId] || {},
+      let _ref23 = ixElements[elementId] || {},
           ref = _ref23.ref,
           refType = _ref23.refType,
           refState = _ref23.refState;
 
-      var actionState = refState && refState[actionTypeId]; // Choose render based on ref type
+      let actionState = refState && refState[actionTypeId]; // Choose render based on ref type
 
       switch (refType) {
         case HTML_ELEMENT:
@@ -7438,7 +7438,7 @@ function handleInstanceChange(instance, store) {
 
     if (complete) {
       if (isCarrier) {
-        var started = startActionGroup({
+        let started = startActionGroup({
           store: store,
           eventId: eventId,
           eventTarget: eventTarget,
@@ -7465,7 +7465,7 @@ function handleInstanceChange(instance, store) {
 /* 115 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var defineProperty = __webpack_require__(116);
+let defineProperty = __webpack_require__(116);
 
 /**
  * The base implementation of `assignValue` and `assignMergeValue` without
@@ -7496,11 +7496,11 @@ module.exports = baseAssignValue;
 /* 116 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var getNative = __webpack_require__(8);
+let getNative = __webpack_require__(8);
 
-var defineProperty = (function() {
+let defineProperty = (function() {
   try {
-    var func = getNative(Object, 'defineProperty');
+    let func = getNative(Object, 'defineProperty');
     func({}, '', {});
     return func;
   } catch (e) {}
@@ -7513,10 +7513,10 @@ module.exports = defineProperty;
 /* 117 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var isObject = __webpack_require__(6);
+let isObject = __webpack_require__(6);
 
 /** Built-in value references. */
-var objectCreate = Object.create;
+let objectCreate = Object.create;
 
 /**
  * The base implementation of `_.create` without support for assigning
@@ -7526,7 +7526,7 @@ var objectCreate = Object.create;
  * @param {Object} proto The object to inherit from.
  * @returns {Object} Returns the new object.
  */
-var baseCreate = (function() {
+let baseCreate = (function() {
   function object() {}
   return function(proto) {
     if (!isObject(proto)) {
@@ -7536,7 +7536,7 @@ var baseCreate = (function() {
       return objectCreate(proto);
     }
     object.prototype = proto;
-    var result = new object;
+    let result = new object;
     object.prototype = undefined;
     return result;
   };
@@ -7549,7 +7549,7 @@ module.exports = baseCreate;
 /* 118 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var metaMap = __webpack_require__(305),
+let metaMap = __webpack_require__(305),
     noop = __webpack_require__(306);
 
 /**
@@ -7559,7 +7559,7 @@ var metaMap = __webpack_require__(305),
  * @param {Function} func The function to query.
  * @returns {*} Returns the metadata for `func`.
  */
-var getData = !metaMap ? noop : function(func) {
+let getData = !metaMap ? noop : function(func) {
   return metaMap.get(func);
 };
 
@@ -7570,13 +7570,13 @@ module.exports = getData;
 /* 119 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var realNames = __webpack_require__(307);
+let realNames = __webpack_require__(307);
 
 /** Used for built-in method references. */
-var objectProto = Object.prototype;
+let objectProto = Object.prototype;
 
 /** Used to check objects for own properties. */
-var hasOwnProperty = objectProto.hasOwnProperty;
+let hasOwnProperty = objectProto.hasOwnProperty;
 
 /**
  * Gets the name of `func`.
@@ -7586,12 +7586,12 @@ var hasOwnProperty = objectProto.hasOwnProperty;
  * @returns {string} Returns the function name.
  */
 function getFuncName(func) {
-  var result = (func.name + ''),
+  let result = (func.name + ''),
       array = realNames[result],
       length = hasOwnProperty.call(realNames, result) ? array.length : 0;
 
   while (length--) {
-    var data = array[length],
+    let data = array[length],
         otherFunc = data.func;
     if (otherFunc == null || otherFunc == func) {
       return data.name;
@@ -7628,29 +7628,29 @@ module.exports = __webpack_require__(324);
 
 /* globals document, window, navigator */
 
-/* eslint-disable no-var */
+/* eslint-disable no-let */
 
 /**
  * Webflow: Brand pages on the subdomain
  */
 
-var Webflow = __webpack_require__(5);
+let Webflow = __webpack_require__(5);
 
 Webflow.define('brand', module.exports = function ($) {
-  var api = {};
-  var doc = document;
-  var $html = $('html');
-  var $body = $('body');
-  var namespace = '.w-webflow-badge';
-  var location = window.location;
-  var isPhantom = /PhantomJS/i.test(navigator.userAgent);
-  var fullScreenEvents = 'fullscreenchange webkitfullscreenchange mozfullscreenchange msfullscreenchange';
-  var brandElement; // -----------------------------------
+  let api = {};
+  let doc = document;
+  let $html = $('html');
+  let $body = $('body');
+  let namespace = '.w-webflow-badge';
+  let location = window.location;
+  let isPhantom = /PhantomJS/i.test(navigator.userAgent);
+  let fullScreenEvents = 'fullscreenchange webkitfullscreenchange mozfullscreenchange msfullscreenchange';
+  let brandElement; // -----------------------------------
   // Module methods
 
   api.ready = function () {
-    var shouldBrand = $html.attr('data-wf-status');
-    var publishedDomain = $html.attr('data-wf-domain') || '';
+    let shouldBrand = $html.attr('data-wf-status');
+    let publishedDomain = $html.attr('data-wf-domain') || '';
 
     if (/\.webflow\.io$/i.test(publishedDomain) && location.hostname !== publishedDomain) {
       shouldBrand = true;
@@ -7665,25 +7665,25 @@ Webflow.define('brand', module.exports = function ($) {
   };
 
   function onFullScreenChange() {
-    var fullScreen = doc.fullScreen || doc.mozFullScreen || doc.webkitIsFullScreen || doc.msFullscreenElement || Boolean(doc.webkitFullscreenElement);
+    let fullScreen = doc.fullScreen || doc.mozFullScreen || doc.webkitIsFullScreen || doc.msFullscreenElement || Boolean(doc.webkitFullscreenElement);
     $(brandElement).attr('style', fullScreen ? 'display: none !important;' : '');
   }
 
   function createBadge() {
-    var $brand = $('<a class="w-webflow-badge"></a>').attr('href', 'https://webflow.com?utm_campaign=brandjs');
-    var $logoArt = $('<img>').attr('src', 'https://d3e54v103j8qbb.cloudfront.net/img/webflow-badge-icon.f67cd735e3.svg').attr('alt', '').css({
+    let $brand = $('<a class="w-webflow-badge"></a>').attr('href', 'https://webflow.com?utm_campaign=brandjs');
+    let $logoArt = $('<img>').attr('src', 'https://d3e54v103j8qbb.cloudfront.net/img/webflow-badge-icon.f67cd735e3.svg').attr('alt', '').css({
       marginRight: '8px',
       width: '16px'
     });
-    var $logoText = $('<img>').attr('src', 'https://d1otoma47x30pg.cloudfront.net/img/webflow-badge-text.6faa6a38cd.svg').attr('alt', 'Made in Webflow');
+    let $logoText = $('<img>').attr('src', 'https://d1otoma47x30pg.cloudfront.net/img/webflow-badge-text.6faa6a38cd.svg').attr('alt', 'Made in Webflow');
     $brand.append($logoArt, $logoText);
     return $brand[0];
   }
 
   function ensureBrand() {
-    var found = $body.children(namespace);
-    var match = found.length && found.get(0) === brandElement;
-    var inEditor = Webflow.env('editor');
+    let found = $body.children(namespace);
+    let match = found.length && found.get(0) === brandElement;
+    let inEditor = Webflow.env('editor');
 
     if (match) {
       // Remove brand when Editor is active
@@ -7720,10 +7720,10 @@ Webflow.define('brand', module.exports = function ($) {
 
 /* globals window */
 
-/* eslint-disable no-var */
+/* eslint-disable no-let */
 
-var $ = window.$;
-var tram = __webpack_require__(65) && $.tram;
+let $ = window.$;
+let tram = __webpack_require__(65) && $.tram;
 /*!
  * Webflow._ (aka) Underscore.js 1.6.0 (custom build)
  * _.each
@@ -7747,23 +7747,23 @@ var tram = __webpack_require__(65) && $.tram;
  */
 
 module.exports = function () {
-  var _ = {}; // Current version.
+  let _ = {}; // Current version.
 
   _.VERSION = '1.6.0-Webflow'; // Establish the object that gets returned to break out of a loop iteration.
 
-  var breaker = {}; // Save bytes in the minified (but not gzipped) version:
+  let breaker = {}; // Save bytes in the minified (but not gzipped) version:
 
-  /* eslint-disable one-var */
+  /* eslint-disable one-let */
 
-  var ArrayProto = Array.prototype,
+  let ArrayProto = Array.prototype,
       ObjProto = Object.prototype,
       FuncProto = Function.prototype;
-  /* eslint-enable one-var */
+  /* eslint-enable one-let */
   // Create quick reference variables for speed access to core prototypes.
 
   /* eslint-disable one-var, no-unused-vars */
 
-  var push = ArrayProto.push,
+  let push = ArrayProto.push,
       slice = ArrayProto.slice,
       concat = ArrayProto.concat,
       toString = ObjProto.toString,
@@ -7774,7 +7774,7 @@ module.exports = function () {
 
   /* eslint-disable one-var, no-unused-vars */
 
-  var nativeForEach = ArrayProto.forEach,
+  let nativeForEach = ArrayProto.forEach,
       nativeMap = ArrayProto.map,
       nativeReduce = ArrayProto.reduce,
       nativeReduceRight = ArrayProto.reduceRight,
@@ -7793,21 +7793,21 @@ module.exports = function () {
   // Handles objects with the built-in `forEach`, arrays, and raw objects.
   // Delegates to **ECMAScript 5**'s native `forEach` if available.
 
-  var each = _.each = _.forEach = function (obj, iterator, context) {
+  let each = _.each = _.forEach = function (obj, iterator, context) {
     /* jshint shadow:true */
     if (obj == null) return obj;
 
     if (nativeForEach && obj.forEach === nativeForEach) {
       obj.forEach(iterator, context); // eslint-disable-next-line no-implicit-coercion
     } else if (obj.length === +obj.length) {
-      for (var i = 0, length = obj.length; i < length; i++) {
+      for (let i = 0, length = obj.length; i < length; i++) {
         if (iterator.call(context, obj[i], i, obj) === breaker) return;
       }
     } else {
-      var keys = _.keys(obj); // eslint-disable-next-line no-redeclare
+      let keys = _.keys(obj); // eslint-disable-next-line no-redeclare
 
 
-      for (var i = 0, length = keys.length; i < length; i++) {
+      for (let i = 0, length = keys.length; i < length; i++) {
         if (iterator.call(context, obj[keys[i]], keys[i], obj) === breaker) return;
       }
     }
@@ -7818,7 +7818,7 @@ module.exports = function () {
 
 
   _.map = _.collect = function (obj, iterator, context) {
-    var results = [];
+    let results = [];
     if (obj == null) return results;
     if (nativeMap && obj.map === nativeMap) return obj.map(iterator, context);
     each(obj, function (value, index, list) {
@@ -7829,7 +7829,7 @@ module.exports = function () {
 
 
   _.find = _.detect = function (obj, predicate, context) {
-    var result;
+    let result;
     any(obj, function (value, index, list) {
       if (predicate.call(context, value, index, list)) {
         result = value;
@@ -7843,7 +7843,7 @@ module.exports = function () {
 
 
   _.filter = _.select = function (obj, predicate, context) {
-    var results = [];
+    let results = [];
     if (obj == null) return results;
     if (nativeFilter && obj.filter === nativeFilter) return obj.filter(predicate, context);
     each(obj, function (value, index, list) {
@@ -7855,9 +7855,9 @@ module.exports = function () {
   // Aliased as `any`.
 
 
-  var any = _.some = _.any = function (obj, predicate, context) {
+  let any = _.some = _.any = function (obj, predicate, context) {
     predicate || (predicate = _.identity);
-    var result = false;
+    let result = false;
     if (obj == null) return result;
     if (nativeSome && obj.some === nativeSome) return obj.some(predicate, context);
     each(obj, function (value, index, list) {
@@ -7882,7 +7882,7 @@ module.exports = function () {
 
 
   _.delay = function (func, wait) {
-    var args = slice.call(arguments, 2);
+    let args = slice.call(arguments, 2);
     return setTimeout(function () {
       return func.apply(null, args);
     }, wait);
@@ -7898,7 +7898,7 @@ module.exports = function () {
 
   _.throttle = function (func) {
     // eslint-disable-next-line one-var
-    var wait, args, context;
+    let wait, args, context;
     return function () {
       if (wait) return;
       wait = true;
@@ -7917,10 +7917,10 @@ module.exports = function () {
 
   _.debounce = function (func, wait, immediate) {
     // eslint-disable-next-line one-var
-    var timeout, args, context, timestamp, result;
+    let timeout, args, context, timestamp, result;
 
-    var later = function later() {
-      var last = _.now() - timestamp;
+    let later = function later() {
+      let last = _.now() - timestamp;
 
       if (last < wait) {
         timeout = setTimeout(later, wait - last);
@@ -7938,7 +7938,7 @@ module.exports = function () {
       context = this;
       args = arguments;
       timestamp = _.now();
-      var callNow = immediate && !timeout;
+      let callNow = immediate && !timeout;
 
       if (!timeout) {
         timeout = setTimeout(later, wait);
@@ -7959,10 +7959,10 @@ module.exports = function () {
   _.defaults = function (obj) {
     if (!_.isObject(obj)) return obj;
 
-    for (var i = 1, length = arguments.length; i < length; i++) {
-      var source = arguments[i];
+    for (let i = 1, length = arguments.length; i < length; i++) {
+      let source = arguments[i];
 
-      for (var prop in source) {
+      for (let prop in source) {
         // eslint-disable-next-line no-void
         if (obj[prop] === void 0) obj[prop] = source[prop];
       }
@@ -7976,9 +7976,9 @@ module.exports = function () {
   _.keys = function (obj) {
     if (!_.isObject(obj)) return [];
     if (nativeKeys) return nativeKeys(obj);
-    var keys = [];
+    let keys = [];
 
-    for (var key in obj) {
+    for (let key in obj) {
       if (_.has(obj, key)) keys.push(key);
     }
 
@@ -8013,10 +8013,10 @@ module.exports = function () {
   // interpolation, evaluation or escaping regex, we need one that is
   // guaranteed not to match.
 
-  var noMatch = /(.)^/; // Certain characters need to be escaped so that they can be put into a
+  let noMatch = /(.)^/; // Certain characters need to be escaped so that they can be put into a
   // string literal.
 
-  var escapes = {
+  let escapes = {
     "'": "'",
     '\\': '\\',
     '\r': 'r',
@@ -8024,9 +8024,9 @@ module.exports = function () {
     "\u2028": 'u2028',
     "\u2029": 'u2029'
   };
-  var escaper = /\\|'|\r|\n|\u2028|\u2029/g;
+  let escaper = /\\|'|\r|\n|\u2028|\u2029/g;
 
-  var escapeChar = function escapeChar(match) {
+  let escapeChar = function escapeChar(match) {
     return '\\' + escapes[match];
   }; // JavaScript micro-templating, similar to John Resig's implementation.
   // Underscore templating handles arbitrary delimiters, preserves whitespace,
@@ -8038,10 +8038,10 @@ module.exports = function () {
     if (!settings && oldSettings) settings = oldSettings;
     settings = _.defaults({}, settings, _.templateSettings); // Combine delimiters into one regular expression via alternation.
 
-    var matcher = RegExp([(settings.escape || noMatch).source, (settings.interpolate || noMatch).source, (settings.evaluate || noMatch).source].join('|') + '|$', 'g'); // Compile the template source, escaping string literals appropriately.
+    let matcher = RegExp([(settings.escape || noMatch).source, (settings.interpolate || noMatch).source, (settings.evaluate || noMatch).source].join('|') + '|$', 'g'); // Compile the template source, escaping string literals appropriately.
 
-    var index = 0;
-    var source = "__p+='";
+    let index = 0;
+    let source = "__p+='";
     text.replace(matcher, function (match, escape, interpolate, evaluate, offset) {
       source += text.slice(index, offset).replace(escaper, escapeChar);
       index = offset + match.length;
@@ -8060,22 +8060,22 @@ module.exports = function () {
     source += "';\n"; // If a variable is not specified, place data values in local scope.
 
     if (!settings.variable) source = 'with(obj||{}){\n' + source + '}\n';
-    source = "var __t,__p='',__j=Array.prototype.join," + "print=function(){__p+=__j.call(arguments,'');};\n" + source + 'return __p;\n';
+    source = "let __t,__p='',__j=Array.prototype.join," + "print=function(){__p+=__j.call(arguments,'');};\n" + source + 'return __p;\n';
 
     try {
       // eslint-disable-next-line no-new-func
-      var render = new Function(settings.variable || 'obj', '_', source);
+      let render = new Function(settings.variable || 'obj', '_', source);
     } catch (e) {
       e.source = source;
       throw e;
     }
 
-    var template = function template(data) {
+    let template = function template(data) {
       return render.call(this, data, _);
     }; // Provide the compiled source as a convenience for precompilation.
 
 
-    var argument = settings.variable || 'obj';
+    let argument = settings.variable || 'obj';
     template.source = 'function(' + argument + '){\n' + source + '}';
     return template;
   }; // Export underscore
@@ -8094,7 +8094,7 @@ module.exports = function () {
 
 /* globals window */
 
-/* eslint-disable no-var */
+/* eslint-disable no-let */
 
 /**
  * Webflow: IX Event triggers for other modules
@@ -8102,11 +8102,11 @@ module.exports = function () {
 // eslint-disable-next-line strict
 
 
-var $ = window.jQuery;
-var api = {};
-var eventQueue = [];
-var namespace = '.w-ix';
-var eventTriggers = {
+let $ = window.jQuery;
+let api = {};
+let eventQueue = [];
+let namespace = '.w-ix';
+let eventTriggers = {
   reset: function reset(i, el) {
     el.__wf_intro = null;
   },
@@ -8134,10 +8134,10 @@ api.types = {
 }; // Trigger any events in queue + restore trigger methods
 
 api.init = function () {
-  var count = eventQueue.length;
+  let count = eventQueue.length;
 
-  for (var i = 0; i < count; i++) {
-    var memo = eventQueue[i];
+  for (let i = 0; i < count; i++) {
+    let memo = eventQueue[i];
     memo[0](0, memo[1]);
   }
 
@@ -8147,8 +8147,8 @@ api.init = function () {
 
 
 api.async = function () {
-  for (var key in eventTriggers) {
-    var func = eventTriggers[key];
+  for (let key in eventTriggers) {
+    let func = eventTriggers[key];
 
     if (!eventTriggers.hasOwnProperty(key)) {
       continue;
@@ -8172,15 +8172,15 @@ module.exports = api;
 "use strict";
  // @wf-will-never-add-flow-to-this-file
 
-/* eslint-disable no-var */
+/* eslint-disable no-let */
 
 /**
  * Webflow: Interactions 2
  */
 
-var Webflow = __webpack_require__(5);
+let Webflow = __webpack_require__(5);
 
-var ix2 = __webpack_require__(125);
+let ix2 = __webpack_require__(125);
 
 ix2.setEnv(Webflow.env);
 Webflow.define('ix2', module.exports = function () {
@@ -8194,9 +8194,9 @@ Webflow.define('ix2', module.exports = function () {
 "use strict";
 
 
-var _interopRequireWildcard = __webpack_require__(13);
+let _interopRequireWildcard = __webpack_require__(13);
 
-var _interopRequireDefault = __webpack_require__(0);
+let _interopRequireDefault = __webpack_require__(0);
 
 Object.defineProperty(exports, "__esModule", {
   value: true
@@ -8208,17 +8208,17 @@ exports.actions = exports.store = void 0;
 
 __webpack_require__(126);
 
-var _redux = __webpack_require__(78);
+let _redux = __webpack_require__(78);
 
-var _IX2Reducer = _interopRequireDefault(__webpack_require__(167));
+let _IX2Reducer = _interopRequireDefault(__webpack_require__(167));
 
-var _IX2VanillaEngine = __webpack_require__(114);
+let _IX2VanillaEngine = __webpack_require__(114);
 
-var actions = _interopRequireWildcard(__webpack_require__(61));
+let actions = _interopRequireWildcard(__webpack_require__(61));
 
 exports.actions = actions; // Array.includes needed for IE11 @packages/systems/ix2/shared/utils/quick-effects
 
-var store = (0, _redux.createStore)(_IX2Reducer["default"]);
+let store = (0, _redux.createStore)(_IX2Reducer["default"]);
 exports.store = store;
 
 function setEnv(env) {
@@ -8252,7 +8252,7 @@ module.exports = __webpack_require__(127);
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(128);
-var entryUnbind = __webpack_require__(153);
+let entryUnbind = __webpack_require__(153);
 
 module.exports = entryUnbind('Array', 'includes');
 
@@ -8263,9 +8263,9 @@ module.exports = entryUnbind('Array', 'includes');
 
 "use strict";
 
-var $ = __webpack_require__(129);
-var $includes = __webpack_require__(76).includes;
-var addToUnscopables = __webpack_require__(146);
+let $ = __webpack_require__(129);
+let $includes = __webpack_require__(76).includes;
+let addToUnscopables = __webpack_require__(146);
 
 // `Array.prototype.includes` method
 // https://tc39.github.io/ecma262/#sec-array.prototype.includes
@@ -8283,13 +8283,13 @@ addToUnscopables('includes');
 /* 129 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var global = __webpack_require__(3);
-var getOwnPropertyDescriptor = __webpack_require__(66).f;
-var hide = __webpack_require__(17);
-var redefine = __webpack_require__(134);
-var setGlobal = __webpack_require__(39);
-var copyConstructorProperties = __webpack_require__(138);
-var isForced = __webpack_require__(145);
+let global = __webpack_require__(3);
+let getOwnPropertyDescriptor = __webpack_require__(66).f;
+let hide = __webpack_require__(17);
+let redefine = __webpack_require__(134);
+let setGlobal = __webpack_require__(39);
+let copyConstructorProperties = __webpack_require__(138);
+let isForced = __webpack_require__(145);
 
 /*
   options.target      - name of the target object
@@ -8306,10 +8306,10 @@ var isForced = __webpack_require__(145);
   options.noTargetGet - prevent calling a getter on target
 */
 module.exports = function (options, source) {
-  var TARGET = options.target;
-  var GLOBAL = options.global;
-  var STATIC = options.stat;
-  var FORCED, target, key, targetProperty, sourceProperty, descriptor;
+  let TARGET = options.target;
+  let GLOBAL = options.global;
+  let STATIC = options.stat;
+  let FORCED, target, key, targetProperty, sourceProperty, descriptor;
   if (GLOBAL) {
     target = global;
   } else if (STATIC) {
@@ -8345,16 +8345,16 @@ module.exports = function (options, source) {
 
 "use strict";
 
-var nativePropertyIsEnumerable = {}.propertyIsEnumerable;
-var getOwnPropertyDescriptor = Object.getOwnPropertyDescriptor;
+let nativePropertyIsEnumerable = {}.propertyIsEnumerable;
+let getOwnPropertyDescriptor = Object.getOwnPropertyDescriptor;
 
 // Nashorn ~ JDK8 bug
-var NASHORN_BUG = getOwnPropertyDescriptor && !nativePropertyIsEnumerable.call({ 1: 2 }, 1);
+let NASHORN_BUG = getOwnPropertyDescriptor && !nativePropertyIsEnumerable.call({ 1: 2 }, 1);
 
 // `Object.prototype.propertyIsEnumerable` method implementation
 // https://tc39.github.io/ecma262/#sec-object.prototype.propertyisenumerable
 exports.f = NASHORN_BUG ? function propertyIsEnumerable(V) {
-  var descriptor = getOwnPropertyDescriptor(this, V);
+  let descriptor = getOwnPropertyDescriptor(this, V);
   return !!descriptor && descriptor.enumerable;
 } : nativePropertyIsEnumerable;
 
@@ -8363,10 +8363,10 @@ exports.f = NASHORN_BUG ? function propertyIsEnumerable(V) {
 /* 131 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var fails = __webpack_require__(15);
-var classof = __webpack_require__(132);
+let fails = __webpack_require__(15);
+let classof = __webpack_require__(132);
 
-var split = ''.split;
+let split = ''.split;
 
 // fallback for non-array-like ES3 and non-enumerable old V8 strings
 module.exports = fails(function () {
@@ -8382,7 +8382,7 @@ module.exports = fails(function () {
 /* 132 */
 /***/ (function(module, exports) {
 
-var toString = {}.toString;
+let toString = {}.toString;
 
 module.exports = function (it) {
   return toString.call(it).slice(8, -1);
@@ -8405,26 +8405,26 @@ module.exports = function (it) {
 /* 134 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var global = __webpack_require__(3);
-var shared = __webpack_require__(26);
-var hide = __webpack_require__(17);
-var has = __webpack_require__(16);
-var setGlobal = __webpack_require__(39);
-var nativeFunctionToString = __webpack_require__(71);
-var InternalStateModule = __webpack_require__(136);
+let global = __webpack_require__(3);
+let shared = __webpack_require__(26);
+let hide = __webpack_require__(17);
+let has = __webpack_require__(16);
+let setGlobal = __webpack_require__(39);
+let nativeFunctionToString = __webpack_require__(71);
+let InternalStateModule = __webpack_require__(136);
 
-var getInternalState = InternalStateModule.get;
-var enforceInternalState = InternalStateModule.enforce;
-var TEMPLATE = String(nativeFunctionToString).split('toString');
+let getInternalState = InternalStateModule.get;
+let enforceInternalState = InternalStateModule.enforce;
+let TEMPLATE = String(nativeFunctionToString).split('toString');
 
 shared('inspectSource', function (it) {
   return nativeFunctionToString.call(it);
 });
 
 (module.exports = function (O, key, value, options) {
-  var unsafe = options ? !!options.unsafe : false;
-  var simple = options ? !!options.enumerable : false;
-  var noTargetGet = options ? !!options.noTargetGet : false;
+  let unsafe = options ? !!options.unsafe : false;
+  let simple = options ? !!options.enumerable : false;
+  let noTargetGet = options ? !!options.noTargetGet : false;
   if (typeof value == 'function') {
     if (typeof key == 'string' && !has(value, 'name')) hide(value, 'name', key);
     enforceInternalState(value).source = TEMPLATE.join(typeof key == 'string' ? key : '');
@@ -8457,24 +8457,24 @@ module.exports = false;
 /* 136 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var NATIVE_WEAK_MAP = __webpack_require__(137);
-var global = __webpack_require__(3);
-var isObject = __webpack_require__(24);
-var hide = __webpack_require__(17);
-var objectHas = __webpack_require__(16);
-var sharedKey = __webpack_require__(72);
-var hiddenKeys = __webpack_require__(40);
+let NATIVE_WEAK_MAP = __webpack_require__(137);
+let global = __webpack_require__(3);
+let isObject = __webpack_require__(24);
+let hide = __webpack_require__(17);
+let objectHas = __webpack_require__(16);
+let sharedKey = __webpack_require__(72);
+let hiddenKeys = __webpack_require__(40);
 
-var WeakMap = global.WeakMap;
-var set, get, has;
+let WeakMap = global.WeakMap;
+let set, get, has;
 
-var enforce = function (it) {
+let enforce = function (it) {
   return has(it) ? get(it) : set(it, {});
 };
 
-var getterFor = function (TYPE) {
+let getterFor = function (TYPE) {
   return function (it) {
-    var state;
+    let state;
     if (!isObject(it) || (state = get(it)).type !== TYPE) {
       throw TypeError('Incompatible receiver, ' + TYPE + ' required');
     } return state;
@@ -8482,10 +8482,10 @@ var getterFor = function (TYPE) {
 };
 
 if (NATIVE_WEAK_MAP) {
-  var store = new WeakMap();
-  var wmget = store.get;
-  var wmhas = store.has;
-  var wmset = store.set;
+  let store = new WeakMap();
+  let wmget = store.get;
+  let wmhas = store.has;
+  let wmset = store.set;
   set = function (it, metadata) {
     wmset.call(store, it, metadata);
     return metadata;
@@ -8497,7 +8497,7 @@ if (NATIVE_WEAK_MAP) {
     return wmhas.call(store, it);
   };
 } else {
-  var STATE = sharedKey('state');
+  let STATE = sharedKey('state');
   hiddenKeys[STATE] = true;
   set = function (it, metadata) {
     hide(it, STATE, metadata);
@@ -8524,10 +8524,10 @@ module.exports = {
 /* 137 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var global = __webpack_require__(3);
-var nativeFunctionToString = __webpack_require__(71);
+let global = __webpack_require__(3);
+let nativeFunctionToString = __webpack_require__(71);
 
-var WeakMap = global.WeakMap;
+let WeakMap = global.WeakMap;
 
 module.exports = typeof WeakMap === 'function' && /native code/.test(nativeFunctionToString.call(WeakMap));
 
@@ -8536,17 +8536,17 @@ module.exports = typeof WeakMap === 'function' && /native code/.test(nativeFunct
 /* 138 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var has = __webpack_require__(16);
-var ownKeys = __webpack_require__(139);
-var getOwnPropertyDescriptorModule = __webpack_require__(66);
-var definePropertyModule = __webpack_require__(38);
+let has = __webpack_require__(16);
+let ownKeys = __webpack_require__(139);
+let getOwnPropertyDescriptorModule = __webpack_require__(66);
+let definePropertyModule = __webpack_require__(38);
 
 module.exports = function (target, source) {
-  var keys = ownKeys(source);
-  var defineProperty = definePropertyModule.f;
-  var getOwnPropertyDescriptor = getOwnPropertyDescriptorModule.f;
-  for (var i = 0; i < keys.length; i++) {
-    var key = keys[i];
+  let keys = ownKeys(source);
+  let defineProperty = definePropertyModule.f;
+  let getOwnPropertyDescriptor = getOwnPropertyDescriptorModule.f;
+  for (let i = 0; i < keys.length; i++) {
+    let key = keys[i];
     if (!has(target, key)) defineProperty(target, key, getOwnPropertyDescriptor(source, key));
   }
 };
@@ -8556,15 +8556,15 @@ module.exports = function (target, source) {
 /* 139 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var getBuiltIn = __webpack_require__(74);
-var getOwnPropertyNamesModule = __webpack_require__(141);
-var getOwnPropertySymbolsModule = __webpack_require__(144);
-var anObject = __webpack_require__(25);
+let getBuiltIn = __webpack_require__(74);
+let getOwnPropertyNamesModule = __webpack_require__(141);
+let getOwnPropertySymbolsModule = __webpack_require__(144);
+let anObject = __webpack_require__(25);
 
 // all object keys, includes non-enumerable and symbols
 module.exports = getBuiltIn('Reflect', 'ownKeys') || function ownKeys(it) {
-  var keys = getOwnPropertyNamesModule.f(anObject(it));
-  var getOwnPropertySymbols = getOwnPropertySymbolsModule.f;
+  let keys = getOwnPropertyNamesModule.f(anObject(it));
+  let getOwnPropertySymbols = getOwnPropertySymbolsModule.f;
   return getOwnPropertySymbols ? keys.concat(getOwnPropertySymbols(it)) : keys;
 };
 
@@ -8580,10 +8580,10 @@ module.exports = __webpack_require__(3);
 /* 141 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var internalObjectKeys = __webpack_require__(75);
-var enumBugKeys = __webpack_require__(41);
+let internalObjectKeys = __webpack_require__(75);
+let enumBugKeys = __webpack_require__(41);
 
-var hiddenKeys = enumBugKeys.concat('length', 'prototype');
+let hiddenKeys = enumBugKeys.concat('length', 'prototype');
 
 // `Object.getOwnPropertyNames` method
 // https://tc39.github.io/ecma262/#sec-object.getownpropertynames
@@ -8596,9 +8596,9 @@ exports.f = Object.getOwnPropertyNames || function getOwnPropertyNames(O) {
 /* 142 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var toInteger = __webpack_require__(77);
+let toInteger = __webpack_require__(77);
 
-var min = Math.min;
+let min = Math.min;
 
 // `ToLength` abstract operation
 // https://tc39.github.io/ecma262/#sec-tolength
@@ -8611,16 +8611,16 @@ module.exports = function (argument) {
 /* 143 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var toInteger = __webpack_require__(77);
+let toInteger = __webpack_require__(77);
 
-var max = Math.max;
-var min = Math.min;
+let max = Math.max;
+let min = Math.min;
 
 // Helper for a popular repeating case of the spec:
 // Let integer be ? ToInteger(index).
 // If integer < 0, let result be max((length + integer), 0); else let result be min(length, length).
 module.exports = function (index, length) {
-  var integer = toInteger(index);
+  let integer = toInteger(index);
   return integer < 0 ? max(integer + length, 0) : min(integer, length);
 };
 
@@ -8636,25 +8636,25 @@ exports.f = Object.getOwnPropertySymbols;
 /* 145 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var fails = __webpack_require__(15);
+let fails = __webpack_require__(15);
 
-var replacement = /#|\.prototype\./;
+let replacement = /#|\.prototype\./;
 
-var isForced = function (feature, detection) {
-  var value = data[normalize(feature)];
+let isForced = function (feature, detection) {
+  let value = data[normalize(feature)];
   return value == POLYFILL ? true
     : value == NATIVE ? false
     : typeof detection == 'function' ? fails(detection)
     : !!detection;
 };
 
-var normalize = isForced.normalize = function (string) {
+let normalize = isForced.normalize = function (string) {
   return String(string).replace(replacement, '.').toLowerCase();
 };
 
-var data = isForced.data = {};
-var NATIVE = isForced.NATIVE = 'N';
-var POLYFILL = isForced.POLYFILL = 'P';
+let data = isForced.data = {};
+let NATIVE = isForced.NATIVE = 'N';
+let POLYFILL = isForced.POLYFILL = 'P';
 
 module.exports = isForced;
 
@@ -8663,12 +8663,12 @@ module.exports = isForced;
 /* 146 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var wellKnownSymbol = __webpack_require__(147);
-var create = __webpack_require__(149);
-var hide = __webpack_require__(17);
+let wellKnownSymbol = __webpack_require__(147);
+let create = __webpack_require__(149);
+let hide = __webpack_require__(17);
 
-var UNSCOPABLES = wellKnownSymbol('unscopables');
-var ArrayPrototype = Array.prototype;
+let UNSCOPABLES = wellKnownSymbol('unscopables');
+let ArrayPrototype = Array.prototype;
 
 // Array.prototype[@@unscopables]
 // https://tc39.github.io/ecma262/#sec-array.prototype-@@unscopables
@@ -8686,13 +8686,13 @@ module.exports = function (key) {
 /* 147 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var global = __webpack_require__(3);
-var shared = __webpack_require__(26);
-var uid = __webpack_require__(73);
-var NATIVE_SYMBOL = __webpack_require__(148);
+let global = __webpack_require__(3);
+let shared = __webpack_require__(26);
+let uid = __webpack_require__(73);
+let NATIVE_SYMBOL = __webpack_require__(148);
 
-var Symbol = global.Symbol;
-var store = shared('wks');
+let Symbol = global.Symbol;
+let store = shared('wks');
 
 module.exports = function (name) {
   return store[name] || (store[name] = NATIVE_SYMBOL && Symbol[name]
@@ -8704,7 +8704,7 @@ module.exports = function (name) {
 /* 148 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var fails = __webpack_require__(15);
+let fails = __webpack_require__(15);
 
 module.exports = !!Object.getOwnPropertySymbols && !fails(function () {
   // Chrome 38 Symbol has incorrect toString conversion
@@ -8717,28 +8717,28 @@ module.exports = !!Object.getOwnPropertySymbols && !fails(function () {
 /* 149 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var anObject = __webpack_require__(25);
-var defineProperties = __webpack_require__(150);
-var enumBugKeys = __webpack_require__(41);
-var hiddenKeys = __webpack_require__(40);
-var html = __webpack_require__(152);
-var documentCreateElement = __webpack_require__(70);
-var sharedKey = __webpack_require__(72);
-var IE_PROTO = sharedKey('IE_PROTO');
+let anObject = __webpack_require__(25);
+let defineProperties = __webpack_require__(150);
+let enumBugKeys = __webpack_require__(41);
+let hiddenKeys = __webpack_require__(40);
+let html = __webpack_require__(152);
+let documentCreateElement = __webpack_require__(70);
+let sharedKey = __webpack_require__(72);
+let IE_PROTO = sharedKey('IE_PROTO');
 
-var PROTOTYPE = 'prototype';
-var Empty = function () { /* empty */ };
+let PROTOTYPE = 'prototype';
+let Empty = function () { /* empty */ };
 
 // Create object with fake `null` prototype: use iframe Object with cleared prototype
-var createDict = function () {
+let createDict = function () {
   // Thrash, waste and sodomy: IE GC bug
-  var iframe = documentCreateElement('iframe');
-  var length = enumBugKeys.length;
-  var lt = '<';
-  var script = 'script';
-  var gt = '>';
-  var js = 'java' + script + ':';
-  var iframeDocument;
+  let iframe = documentCreateElement('iframe');
+  let length = enumBugKeys.length;
+  let lt = '<';
+  let script = 'script';
+  let gt = '>';
+  let js = 'java' + script + ':';
+  let iframeDocument;
   iframe.style.display = 'none';
   html.appendChild(iframe);
   iframe.src = String(js);
@@ -8754,7 +8754,7 @@ var createDict = function () {
 // `Object.create` method
 // https://tc39.github.io/ecma262/#sec-object.create
 module.exports = Object.create || function create(O, Properties) {
-  var result;
+  let result;
   if (O !== null) {
     Empty[PROTOTYPE] = anObject(O);
     result = new Empty();
@@ -8772,19 +8772,19 @@ hiddenKeys[IE_PROTO] = true;
 /* 150 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var DESCRIPTORS = __webpack_require__(14);
-var definePropertyModule = __webpack_require__(38);
-var anObject = __webpack_require__(25);
-var objectKeys = __webpack_require__(151);
+let DESCRIPTORS = __webpack_require__(14);
+let definePropertyModule = __webpack_require__(38);
+let anObject = __webpack_require__(25);
+let objectKeys = __webpack_require__(151);
 
 // `Object.defineProperties` method
 // https://tc39.github.io/ecma262/#sec-object.defineproperties
 module.exports = DESCRIPTORS ? Object.defineProperties : function defineProperties(O, Properties) {
   anObject(O);
-  var keys = objectKeys(Properties);
-  var length = keys.length;
-  var index = 0;
-  var key;
+  let keys = objectKeys(Properties);
+  let length = keys.length;
+  let index = 0;
+  let key;
   while (length > index) definePropertyModule.f(O, key = keys[index++], Properties[key]);
   return O;
 };
@@ -8794,8 +8794,8 @@ module.exports = DESCRIPTORS ? Object.defineProperties : function defineProperti
 /* 151 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var internalObjectKeys = __webpack_require__(75);
-var enumBugKeys = __webpack_require__(41);
+let internalObjectKeys = __webpack_require__(75);
+let enumBugKeys = __webpack_require__(41);
 
 // `Object.keys` method
 // https://tc39.github.io/ecma262/#sec-object.keys
@@ -8808,7 +8808,7 @@ module.exports = Object.keys || function keys(O) {
 /* 152 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var getBuiltIn = __webpack_require__(74);
+let getBuiltIn = __webpack_require__(74);
 
 module.exports = getBuiltIn('document', 'documentElement');
 
@@ -8817,10 +8817,10 @@ module.exports = getBuiltIn('document', 'documentElement');
 /* 153 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var global = __webpack_require__(3);
-var bind = __webpack_require__(154);
+let global = __webpack_require__(3);
+let bind = __webpack_require__(154);
 
-var call = Function.call;
+let call = Function.call;
 
 module.exports = function (CONSTRUCTOR, METHOD, length) {
   return bind(call, global[CONSTRUCTOR].prototype[METHOD], length);
@@ -8831,7 +8831,7 @@ module.exports = function (CONSTRUCTOR, METHOD, length) {
 /* 154 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var aFunction = __webpack_require__(155);
+let aFunction = __webpack_require__(155);
 
 // optional / simple context binding
 module.exports = function (fn, that, length) {
@@ -8874,19 +8874,19 @@ module.exports = function (it) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _Symbol_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(80);
-/* harmony import */ var _getRawTag_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(159);
-/* harmony import */ var _objectToString_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(160);
+/* harmony import */ let _Symbol_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(80);
+/* harmony import */ let _getRawTag_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(159);
+/* harmony import */ let _objectToString_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(160);
 
 
 
 
 /** `Object#toString` result references. */
-var nullTag = '[object Null]',
+let nullTag = '[object Null]',
     undefinedTag = '[object Undefined]';
 
 /** Built-in value references. */
-var symToStringTag = _Symbol_js__WEBPACK_IMPORTED_MODULE_0__["default"] ? _Symbol_js__WEBPACK_IMPORTED_MODULE_0__["default"].toStringTag : undefined;
+let symToStringTag = _Symbol_js__WEBPACK_IMPORTED_MODULE_0__["default"] ? _Symbol_js__WEBPACK_IMPORTED_MODULE_0__["default"].toStringTag : undefined;
 
 /**
  * The base implementation of `getTag` without fallbacks for buggy environments.
@@ -8913,14 +8913,14 @@ function baseGetTag(value) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _freeGlobal_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(158);
+/* harmony import */ let _freeGlobal_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(158);
 
 
 /** Detect free variable `self`. */
-var freeSelf = typeof self == 'object' && self && self.Object === Object && self;
+let freeSelf = typeof self == 'object' && self && self.Object === Object && self;
 
 /** Used as a reference to the global object. */
-var root = _freeGlobal_js__WEBPACK_IMPORTED_MODULE_0__["default"] || freeSelf || Function('return this')();
+let root = _freeGlobal_js__WEBPACK_IMPORTED_MODULE_0__["default"] || freeSelf || Function('return this')();
 
 /* harmony default export */ __webpack_exports__["default"] = (root);
 
@@ -8931,12 +8931,12 @@ var root = _freeGlobal_js__WEBPACK_IMPORTED_MODULE_0__["default"] || freeSelf ||
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* WEBPACK VAR INJECTION */(function(global) {/** Detect free variable `global` from Node.js. */
-var freeGlobal = typeof global == 'object' && global && global.Object === Object && global;
+/* WEBPACK let INJECTION */(function(global) {/** Detect free variable `global` from Node.js. */
+let freeGlobal = typeof global == 'object' && global && global.Object === Object && global;
 
 /* harmony default export */ __webpack_exports__["default"] = (freeGlobal);
 
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(23)))
+/* WEBPACK let INJECTION */}.call(this, __webpack_require__(23)))
 
 /***/ }),
 /* 159 */
@@ -8944,24 +8944,24 @@ var freeGlobal = typeof global == 'object' && global && global.Object === Object
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _Symbol_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(80);
+/* harmony import */ let _Symbol_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(80);
 
 
 /** Used for built-in method references. */
-var objectProto = Object.prototype;
+let objectProto = Object.prototype;
 
 /** Used to check objects for own properties. */
-var hasOwnProperty = objectProto.hasOwnProperty;
+let hasOwnProperty = objectProto.hasOwnProperty;
 
 /**
  * Used to resolve the
  * [`toStringTag`](http://ecma-international.org/ecma-262/7.0/#sec-object.prototype.tostring)
  * of values.
  */
-var nativeObjectToString = objectProto.toString;
+let nativeObjectToString = objectProto.toString;
 
 /** Built-in value references. */
-var symToStringTag = _Symbol_js__WEBPACK_IMPORTED_MODULE_0__["default"] ? _Symbol_js__WEBPACK_IMPORTED_MODULE_0__["default"].toStringTag : undefined;
+let symToStringTag = _Symbol_js__WEBPACK_IMPORTED_MODULE_0__["default"] ? _Symbol_js__WEBPACK_IMPORTED_MODULE_0__["default"].toStringTag : undefined;
 
 /**
  * A specialized version of `baseGetTag` which ignores `Symbol.toStringTag` values.
@@ -8971,15 +8971,15 @@ var symToStringTag = _Symbol_js__WEBPACK_IMPORTED_MODULE_0__["default"] ? _Symbo
  * @returns {string} Returns the raw `toStringTag`.
  */
 function getRawTag(value) {
-  var isOwn = hasOwnProperty.call(value, symToStringTag),
+  let isOwn = hasOwnProperty.call(value, symToStringTag),
       tag = value[symToStringTag];
 
   try {
     value[symToStringTag] = undefined;
-    var unmasked = true;
+    let unmasked = true;
   } catch (e) {}
 
-  var result = nativeObjectToString.call(value);
+  let result = nativeObjectToString.call(value);
   if (unmasked) {
     if (isOwn) {
       value[symToStringTag] = tag;
@@ -9000,14 +9000,14 @@ function getRawTag(value) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /** Used for built-in method references. */
-var objectProto = Object.prototype;
+let objectProto = Object.prototype;
 
 /**
  * Used to resolve the
  * [`toStringTag`](http://ecma-international.org/ecma-262/7.0/#sec-object.prototype.tostring)
  * of values.
  */
-var nativeObjectToString = objectProto.toString;
+let nativeObjectToString = objectProto.toString;
 
 /**
  * Converts `value` to a string using `Object.prototype.toString`.
@@ -9029,11 +9029,11 @@ function objectToString(value) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _overArg_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(162);
+/* harmony import */ let _overArg_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(162);
 
 
 /** Built-in value references. */
-var getPrototype = Object(_overArg_js__WEBPACK_IMPORTED_MODULE_0__["default"])(Object.getPrototypeOf, Object);
+let getPrototype = Object(_overArg_js__WEBPACK_IMPORTED_MODULE_0__["default"])(Object.getPrototypeOf, Object);
 
 /* harmony default export */ __webpack_exports__["default"] = (getPrototype);
 
@@ -9104,11 +9104,11 @@ function isObjectLike(value) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* WEBPACK VAR INJECTION */(function(global, module) {/* harmony import */ var _ponyfill_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(166);
+/* WEBPACK let INJECTION */(function(global, module) {/* harmony import */ let _ponyfill_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(166);
 /* global window */
 
 
-var root;
+let root;
 
 if (typeof self !== 'undefined') {
   root = self;
@@ -9120,10 +9120,10 @@ if (typeof self !== 'undefined') {
   root = module;
 } else {}
 
-var result = Object(_ponyfill_js__WEBPACK_IMPORTED_MODULE_0__["default"])(root);
+let result = Object(_ponyfill_js__WEBPACK_IMPORTED_MODULE_0__["default"])(root);
 /* harmony default export */ __webpack_exports__["default"] = (result);
 
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(23), __webpack_require__(165)(module)))
+/* WEBPACK let INJECTION */}.call(this, __webpack_require__(23), __webpack_require__(165)(module)))
 
 /***/ }),
 /* 165 */
@@ -9131,7 +9131,7 @@ var result = Object(_ponyfill_js__WEBPACK_IMPORTED_MODULE_0__["default"])(root);
 
 module.exports = function(originalModule) {
 	if (!originalModule.webpackPolyfill) {
-		var module = Object.create(originalModule);
+		let module = Object.create(originalModule);
 		// module.parent = undefined by default
 		if (!module.children) module.children = [];
 		Object.defineProperty(module, "loaded", {
@@ -9163,8 +9163,8 @@ module.exports = function(originalModule) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return symbolObservablePonyfill; });
 function symbolObservablePonyfill(root) {
-	var result;
-	var Symbol = root.Symbol;
+	let result;
+	let Symbol = root.Symbol;
 
 	if (typeof Symbol === 'function') {
 		if (Symbol.observable) {
@@ -9193,23 +9193,23 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports["default"] = void 0;
 
-var _redux = __webpack_require__(78);
+let _redux = __webpack_require__(78);
 
-var _IX2DataReducer = __webpack_require__(168);
+let _IX2DataReducer = __webpack_require__(168);
 
-var _IX2RequestReducer = __webpack_require__(174);
+let _IX2RequestReducer = __webpack_require__(174);
 
-var _IX2SessionReducer = __webpack_require__(175);
+let _IX2SessionReducer = __webpack_require__(175);
 
-var _shared = __webpack_require__(10);
+let _shared = __webpack_require__(10);
 
-var _IX2InstancesReducer = __webpack_require__(262);
+let _IX2InstancesReducer = __webpack_require__(262);
 
-var _IX2ParametersReducer = __webpack_require__(263);
+let _IX2ParametersReducer = __webpack_require__(263);
 
-var ixElements = _shared.IX2ElementsReducer.ixElements;
+let ixElements = _shared.IX2ElementsReducer.ixElements;
 
-var _default = (0, _redux.combineReducers)({
+let _default = (0, _redux.combineReducers)({
   ixData: _IX2DataReducer.ixData,
   ixRequest: _IX2RequestReducer.ixRequest,
   ixSession: _IX2SessionReducer.ixSession,
@@ -9232,13 +9232,13 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.ixData = void 0;
 
-var _constants = __webpack_require__(2);
+let _constants = __webpack_require__(2);
 
-var IX2_RAW_DATA_IMPORTED = _constants.IX2EngineActionTypes.IX2_RAW_DATA_IMPORTED;
+let IX2_RAW_DATA_IMPORTED = _constants.IX2EngineActionTypes.IX2_RAW_DATA_IMPORTED;
 
-var ixData = function ixData() {
-  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : Object.freeze({});
-  var action = arguments.length > 1 ? arguments[1] : undefined;
+let ixData = function ixData() {
+  let state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : Object.freeze({});
+  let action = arguments.length > 1 ? arguments[1] : undefined;
 
   switch (action.type) {
     case IX2_RAW_DATA_IMPORTED:
@@ -9270,7 +9270,7 @@ exports.QuickEffectDirectionConsts = exports.QuickEffectIds = exports.EventLimit
  * Event Type IDs
  */
 
-var EventTypeConsts = {
+let EventTypeConsts = {
   NAVBAR_OPEN: 'NAVBAR_OPEN',
   NAVBAR_CLOSE: 'NAVBAR_CLOSE',
   TAB_ACTIVE: 'TAB_ACTIVE',
@@ -9303,23 +9303,23 @@ var EventTypeConsts = {
  */
 
 exports.EventTypeConsts = EventTypeConsts;
-var EventAppliesTo = {
+let EventAppliesTo = {
   ELEMENT: 'ELEMENT',
   CLASS: 'CLASS',
   PAGE: 'PAGE'
 };
 exports.EventAppliesTo = EventAppliesTo;
-var EventBasedOn = {
+let EventBasedOn = {
   ELEMENT: 'ELEMENT',
   VIEWPORT: 'VIEWPORT'
 };
 exports.EventBasedOn = EventBasedOn;
-var EventContinuousMouseAxes = {
+let EventContinuousMouseAxes = {
   X_AXIS: 'X_AXIS',
   Y_AXIS: 'Y_AXIS'
 };
 exports.EventContinuousMouseAxes = EventContinuousMouseAxes;
-var EventLimitAffectedElements = {
+let EventLimitAffectedElements = {
   CHILDREN: 'CHILDREN',
   SIBLINGS: 'SIBLINGS',
   IMMEDIATE_CHILDREN: 'IMMEDIATE_CHILDREN'
@@ -9329,7 +9329,7 @@ var EventLimitAffectedElements = {
  */
 
 exports.EventLimitAffectedElements = EventLimitAffectedElements;
-var QuickEffectIds = {
+let QuickEffectIds = {
   FADE_EFFECT: 'FADE_EFFECT',
   SLIDE_EFFECT: 'SLIDE_EFFECT',
   GROW_EFFECT: 'GROW_EFFECT',
@@ -9356,7 +9356,7 @@ var QuickEffectIds = {
  */
 
 exports.QuickEffectIds = QuickEffectIds;
-var QuickEffectDirectionConsts = {
+let QuickEffectDirectionConsts = {
   LEFT: 'LEFT',
   RIGHT: 'RIGHT',
   BOTTOM: 'BOTTOM',
@@ -9381,7 +9381,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.ActionAppliesTo = exports.ActionTypeConsts = void 0;
-var ActionTypeConsts = {
+let ActionTypeConsts = {
   TRANSFORM_MOVE: 'TRANSFORM_MOVE',
   TRANSFORM_SCALE: 'TRANSFORM_SCALE',
   TRANSFORM_ROTATE: 'TRANSFORM_ROTATE',
@@ -9403,7 +9403,7 @@ var ActionTypeConsts = {
   STYLE_BOX_SHADOW: 'STYLE_BOX_SHADOW'
 };
 exports.ActionTypeConsts = ActionTypeConsts;
-var ActionAppliesTo = {
+let ActionAppliesTo = {
   ELEMENT: 'ELEMENT',
   ELEMENT_CLASS: 'ELEMENT_CLASS',
   TRIGGER_ELEMENT: 'TRIGGER_ELEMENT'
@@ -9421,7 +9421,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.InteractionTypeConsts = void 0;
-var InteractionTypeConsts = {
+let InteractionTypeConsts = {
   MOUSE_CLICK_INTERACTION: 'MOUSE_CLICK_INTERACTION',
   MOUSE_HOVER_INTERACTION: 'MOUSE_HOVER_INTERACTION',
   MOUSE_MOVE_INTERACTION: 'MOUSE_MOVE_INTERACTION',
@@ -9450,45 +9450,45 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.IX2_TEST_FRAME_RENDERED = exports.IX2_MEDIA_QUERIES_DEFINED = exports.IX2_VIEWPORT_WIDTH_CHANGED = exports.IX2_ACTION_LIST_PLAYBACK_CHANGED = exports.IX2_ELEMENT_STATE_CHANGED = exports.IX2_INSTANCE_REMOVED = exports.IX2_INSTANCE_STARTED = exports.IX2_INSTANCE_ADDED = exports.IX2_PARAMETER_CHANGED = exports.IX2_ANIMATION_FRAME_CHANGED = exports.IX2_EVENT_STATE_CHANGED = exports.IX2_EVENT_LISTENER_ADDED = exports.IX2_CLEAR_REQUESTED = exports.IX2_STOP_REQUESTED = exports.IX2_PLAYBACK_REQUESTED = exports.IX2_PREVIEW_REQUESTED = exports.IX2_SESSION_STOPPED = exports.IX2_SESSION_STARTED = exports.IX2_SESSION_INITIALIZED = exports.IX2_RAW_DATA_IMPORTED = void 0;
-var IX2_RAW_DATA_IMPORTED = 'IX2_RAW_DATA_IMPORTED';
+let IX2_RAW_DATA_IMPORTED = 'IX2_RAW_DATA_IMPORTED';
 exports.IX2_RAW_DATA_IMPORTED = IX2_RAW_DATA_IMPORTED;
-var IX2_SESSION_INITIALIZED = 'IX2_SESSION_INITIALIZED';
+let IX2_SESSION_INITIALIZED = 'IX2_SESSION_INITIALIZED';
 exports.IX2_SESSION_INITIALIZED = IX2_SESSION_INITIALIZED;
-var IX2_SESSION_STARTED = 'IX2_SESSION_STARTED';
+let IX2_SESSION_STARTED = 'IX2_SESSION_STARTED';
 exports.IX2_SESSION_STARTED = IX2_SESSION_STARTED;
-var IX2_SESSION_STOPPED = 'IX2_SESSION_STOPPED';
+let IX2_SESSION_STOPPED = 'IX2_SESSION_STOPPED';
 exports.IX2_SESSION_STOPPED = IX2_SESSION_STOPPED;
-var IX2_PREVIEW_REQUESTED = 'IX2_PREVIEW_REQUESTED';
+let IX2_PREVIEW_REQUESTED = 'IX2_PREVIEW_REQUESTED';
 exports.IX2_PREVIEW_REQUESTED = IX2_PREVIEW_REQUESTED;
-var IX2_PLAYBACK_REQUESTED = 'IX2_PLAYBACK_REQUESTED';
+let IX2_PLAYBACK_REQUESTED = 'IX2_PLAYBACK_REQUESTED';
 exports.IX2_PLAYBACK_REQUESTED = IX2_PLAYBACK_REQUESTED;
-var IX2_STOP_REQUESTED = 'IX2_STOP_REQUESTED';
+let IX2_STOP_REQUESTED = 'IX2_STOP_REQUESTED';
 exports.IX2_STOP_REQUESTED = IX2_STOP_REQUESTED;
-var IX2_CLEAR_REQUESTED = 'IX2_CLEAR_REQUESTED';
+let IX2_CLEAR_REQUESTED = 'IX2_CLEAR_REQUESTED';
 exports.IX2_CLEAR_REQUESTED = IX2_CLEAR_REQUESTED;
-var IX2_EVENT_LISTENER_ADDED = 'IX2_EVENT_LISTENER_ADDED';
+let IX2_EVENT_LISTENER_ADDED = 'IX2_EVENT_LISTENER_ADDED';
 exports.IX2_EVENT_LISTENER_ADDED = IX2_EVENT_LISTENER_ADDED;
-var IX2_EVENT_STATE_CHANGED = 'IX2_EVENT_STATE_CHANGED';
+let IX2_EVENT_STATE_CHANGED = 'IX2_EVENT_STATE_CHANGED';
 exports.IX2_EVENT_STATE_CHANGED = IX2_EVENT_STATE_CHANGED;
-var IX2_ANIMATION_FRAME_CHANGED = 'IX2_ANIMATION_FRAME_CHANGED';
+let IX2_ANIMATION_FRAME_CHANGED = 'IX2_ANIMATION_FRAME_CHANGED';
 exports.IX2_ANIMATION_FRAME_CHANGED = IX2_ANIMATION_FRAME_CHANGED;
-var IX2_PARAMETER_CHANGED = 'IX2_PARAMETER_CHANGED';
+let IX2_PARAMETER_CHANGED = 'IX2_PARAMETER_CHANGED';
 exports.IX2_PARAMETER_CHANGED = IX2_PARAMETER_CHANGED;
-var IX2_INSTANCE_ADDED = 'IX2_INSTANCE_ADDED';
+let IX2_INSTANCE_ADDED = 'IX2_INSTANCE_ADDED';
 exports.IX2_INSTANCE_ADDED = IX2_INSTANCE_ADDED;
-var IX2_INSTANCE_STARTED = 'IX2_INSTANCE_STARTED';
+let IX2_INSTANCE_STARTED = 'IX2_INSTANCE_STARTED';
 exports.IX2_INSTANCE_STARTED = IX2_INSTANCE_STARTED;
-var IX2_INSTANCE_REMOVED = 'IX2_INSTANCE_REMOVED';
+let IX2_INSTANCE_REMOVED = 'IX2_INSTANCE_REMOVED';
 exports.IX2_INSTANCE_REMOVED = IX2_INSTANCE_REMOVED;
-var IX2_ELEMENT_STATE_CHANGED = 'IX2_ELEMENT_STATE_CHANGED';
+let IX2_ELEMENT_STATE_CHANGED = 'IX2_ELEMENT_STATE_CHANGED';
 exports.IX2_ELEMENT_STATE_CHANGED = IX2_ELEMENT_STATE_CHANGED;
-var IX2_ACTION_LIST_PLAYBACK_CHANGED = 'IX2_ACTION_LIST_PLAYBACK_CHANGED';
+let IX2_ACTION_LIST_PLAYBACK_CHANGED = 'IX2_ACTION_LIST_PLAYBACK_CHANGED';
 exports.IX2_ACTION_LIST_PLAYBACK_CHANGED = IX2_ACTION_LIST_PLAYBACK_CHANGED;
-var IX2_VIEWPORT_WIDTH_CHANGED = 'IX2_VIEWPORT_WIDTH_CHANGED';
+let IX2_VIEWPORT_WIDTH_CHANGED = 'IX2_VIEWPORT_WIDTH_CHANGED';
 exports.IX2_VIEWPORT_WIDTH_CHANGED = IX2_VIEWPORT_WIDTH_CHANGED;
-var IX2_MEDIA_QUERIES_DEFINED = 'IX2_MEDIA_QUERIES_DEFINED';
+let IX2_MEDIA_QUERIES_DEFINED = 'IX2_MEDIA_QUERIES_DEFINED';
 exports.IX2_MEDIA_QUERIES_DEFINED = IX2_MEDIA_QUERIES_DEFINED;
-var IX2_TEST_FRAME_RENDERED = 'IX2_TEST_FRAME_RENDERED';
+let IX2_TEST_FRAME_RENDERED = 'IX2_TEST_FRAME_RENDERED';
 exports.IX2_TEST_FRAME_RENDERED = IX2_TEST_FRAME_RENDERED;
 
 /***/ }),
@@ -9502,115 +9502,115 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.RENDER_PLUGIN = exports.RENDER_STYLE = exports.RENDER_GENERAL = exports.RENDER_TRANSFORM = exports.ABSTRACT_NODE = exports.PLAIN_OBJECT = exports.HTML_ELEMENT = exports.PRESERVE_3D = exports.PARENT = exports.SIBLINGS = exports.IMMEDIATE_CHILDREN = exports.CHILDREN = exports.BAR_DELIMITER = exports.COLON_DELIMITER = exports.COMMA_DELIMITER = exports.AUTO = exports.WILL_CHANGE = exports.FLEX = exports.DISPLAY = exports.COLOR = exports.BORDER_COLOR = exports.BACKGROUND = exports.BACKGROUND_COLOR = exports.HEIGHT = exports.WIDTH = exports.FILTER = exports.OPACITY = exports.SKEW_Y = exports.SKEW_X = exports.SKEW = exports.ROTATE_Z = exports.ROTATE_Y = exports.ROTATE_X = exports.SCALE_3D = exports.SCALE_Z = exports.SCALE_Y = exports.SCALE_X = exports.TRANSLATE_3D = exports.TRANSLATE_Z = exports.TRANSLATE_Y = exports.TRANSLATE_X = exports.TRANSFORM = exports.CONFIG_UNIT = exports.CONFIG_Z_UNIT = exports.CONFIG_Y_UNIT = exports.CONFIG_X_UNIT = exports.CONFIG_VALUE = exports.CONFIG_Z_VALUE = exports.CONFIG_Y_VALUE = exports.CONFIG_X_VALUE = exports.BOUNDARY_SELECTOR = exports.W_MOD_IX = exports.W_MOD_JS = exports.WF_PAGE = exports.IX2_ID_DELIMITER = void 0;
-var IX2_ID_DELIMITER = '|';
+let IX2_ID_DELIMITER = '|';
 exports.IX2_ID_DELIMITER = IX2_ID_DELIMITER;
-var WF_PAGE = 'data-wf-page';
+let WF_PAGE = 'data-wf-page';
 exports.WF_PAGE = WF_PAGE;
-var W_MOD_JS = 'w-mod-js';
+let W_MOD_JS = 'w-mod-js';
 exports.W_MOD_JS = W_MOD_JS;
-var W_MOD_IX = 'w-mod-ix';
+let W_MOD_IX = 'w-mod-ix';
 exports.W_MOD_IX = W_MOD_IX;
-var BOUNDARY_SELECTOR = '.w-dyn-item';
+let BOUNDARY_SELECTOR = '.w-dyn-item';
 exports.BOUNDARY_SELECTOR = BOUNDARY_SELECTOR;
-var CONFIG_X_VALUE = 'xValue';
+let CONFIG_X_VALUE = 'xValue';
 exports.CONFIG_X_VALUE = CONFIG_X_VALUE;
-var CONFIG_Y_VALUE = 'yValue';
+let CONFIG_Y_VALUE = 'yValue';
 exports.CONFIG_Y_VALUE = CONFIG_Y_VALUE;
-var CONFIG_Z_VALUE = 'zValue';
+let CONFIG_Z_VALUE = 'zValue';
 exports.CONFIG_Z_VALUE = CONFIG_Z_VALUE;
-var CONFIG_VALUE = 'value';
+let CONFIG_VALUE = 'value';
 exports.CONFIG_VALUE = CONFIG_VALUE;
-var CONFIG_X_UNIT = 'xUnit';
+let CONFIG_X_UNIT = 'xUnit';
 exports.CONFIG_X_UNIT = CONFIG_X_UNIT;
-var CONFIG_Y_UNIT = 'yUnit';
+let CONFIG_Y_UNIT = 'yUnit';
 exports.CONFIG_Y_UNIT = CONFIG_Y_UNIT;
-var CONFIG_Z_UNIT = 'zUnit';
+let CONFIG_Z_UNIT = 'zUnit';
 exports.CONFIG_Z_UNIT = CONFIG_Z_UNIT;
-var CONFIG_UNIT = 'unit';
+let CONFIG_UNIT = 'unit';
 exports.CONFIG_UNIT = CONFIG_UNIT;
-var TRANSFORM = 'transform';
+let TRANSFORM = 'transform';
 exports.TRANSFORM = TRANSFORM;
-var TRANSLATE_X = 'translateX';
+let TRANSLATE_X = 'translateX';
 exports.TRANSLATE_X = TRANSLATE_X;
-var TRANSLATE_Y = 'translateY';
+let TRANSLATE_Y = 'translateY';
 exports.TRANSLATE_Y = TRANSLATE_Y;
-var TRANSLATE_Z = 'translateZ';
+let TRANSLATE_Z = 'translateZ';
 exports.TRANSLATE_Z = TRANSLATE_Z;
-var TRANSLATE_3D = 'translate3d';
+let TRANSLATE_3D = 'translate3d';
 exports.TRANSLATE_3D = TRANSLATE_3D;
-var SCALE_X = 'scaleX';
+let SCALE_X = 'scaleX';
 exports.SCALE_X = SCALE_X;
-var SCALE_Y = 'scaleY';
+let SCALE_Y = 'scaleY';
 exports.SCALE_Y = SCALE_Y;
-var SCALE_Z = 'scaleZ';
+let SCALE_Z = 'scaleZ';
 exports.SCALE_Z = SCALE_Z;
-var SCALE_3D = 'scale3d';
+let SCALE_3D = 'scale3d';
 exports.SCALE_3D = SCALE_3D;
-var ROTATE_X = 'rotateX';
+let ROTATE_X = 'rotateX';
 exports.ROTATE_X = ROTATE_X;
-var ROTATE_Y = 'rotateY';
+let ROTATE_Y = 'rotateY';
 exports.ROTATE_Y = ROTATE_Y;
-var ROTATE_Z = 'rotateZ';
+let ROTATE_Z = 'rotateZ';
 exports.ROTATE_Z = ROTATE_Z;
-var SKEW = 'skew';
+let SKEW = 'skew';
 exports.SKEW = SKEW;
-var SKEW_X = 'skewX';
+let SKEW_X = 'skewX';
 exports.SKEW_X = SKEW_X;
-var SKEW_Y = 'skewY';
+let SKEW_Y = 'skewY';
 exports.SKEW_Y = SKEW_Y;
-var OPACITY = 'opacity';
+let OPACITY = 'opacity';
 exports.OPACITY = OPACITY;
-var FILTER = 'filter';
+let FILTER = 'filter';
 exports.FILTER = FILTER;
-var WIDTH = 'width';
+let WIDTH = 'width';
 exports.WIDTH = WIDTH;
-var HEIGHT = 'height';
+let HEIGHT = 'height';
 exports.HEIGHT = HEIGHT;
-var BACKGROUND_COLOR = 'backgroundColor';
+let BACKGROUND_COLOR = 'backgroundColor';
 exports.BACKGROUND_COLOR = BACKGROUND_COLOR;
-var BACKGROUND = 'background';
+let BACKGROUND = 'background';
 exports.BACKGROUND = BACKGROUND;
-var BORDER_COLOR = 'borderColor';
+let BORDER_COLOR = 'borderColor';
 exports.BORDER_COLOR = BORDER_COLOR;
-var COLOR = 'color';
+let COLOR = 'color';
 exports.COLOR = COLOR;
-var DISPLAY = 'display';
+let DISPLAY = 'display';
 exports.DISPLAY = DISPLAY;
-var FLEX = 'flex';
+let FLEX = 'flex';
 exports.FLEX = FLEX;
-var WILL_CHANGE = 'willChange';
+let WILL_CHANGE = 'willChange';
 exports.WILL_CHANGE = WILL_CHANGE;
-var AUTO = 'AUTO';
+let AUTO = 'AUTO';
 exports.AUTO = AUTO;
-var COMMA_DELIMITER = ',';
+let COMMA_DELIMITER = ',';
 exports.COMMA_DELIMITER = COMMA_DELIMITER;
-var COLON_DELIMITER = ':';
+let COLON_DELIMITER = ':';
 exports.COLON_DELIMITER = COLON_DELIMITER;
-var BAR_DELIMITER = '|';
+let BAR_DELIMITER = '|';
 exports.BAR_DELIMITER = BAR_DELIMITER;
-var CHILDREN = 'CHILDREN';
+let CHILDREN = 'CHILDREN';
 exports.CHILDREN = CHILDREN;
-var IMMEDIATE_CHILDREN = 'IMMEDIATE_CHILDREN';
+let IMMEDIATE_CHILDREN = 'IMMEDIATE_CHILDREN';
 exports.IMMEDIATE_CHILDREN = IMMEDIATE_CHILDREN;
-var SIBLINGS = 'SIBLINGS';
+let SIBLINGS = 'SIBLINGS';
 exports.SIBLINGS = SIBLINGS;
-var PARENT = 'PARENT';
+let PARENT = 'PARENT';
 exports.PARENT = PARENT;
-var PRESERVE_3D = 'preserve-3d';
+let PRESERVE_3D = 'preserve-3d';
 exports.PRESERVE_3D = PRESERVE_3D;
-var HTML_ELEMENT = 'HTML_ELEMENT';
+let HTML_ELEMENT = 'HTML_ELEMENT';
 exports.HTML_ELEMENT = HTML_ELEMENT;
-var PLAIN_OBJECT = 'PLAIN_OBJECT';
+let PLAIN_OBJECT = 'PLAIN_OBJECT';
 exports.PLAIN_OBJECT = PLAIN_OBJECT;
-var ABSTRACT_NODE = 'ABSTRACT_NODE';
+let ABSTRACT_NODE = 'ABSTRACT_NODE';
 exports.ABSTRACT_NODE = ABSTRACT_NODE;
-var RENDER_TRANSFORM = 'RENDER_TRANSFORM';
+let RENDER_TRANSFORM = 'RENDER_TRANSFORM';
 exports.RENDER_TRANSFORM = RENDER_TRANSFORM;
-var RENDER_GENERAL = 'RENDER_GENERAL';
+let RENDER_GENERAL = 'RENDER_GENERAL';
 exports.RENDER_GENERAL = RENDER_GENERAL;
-var RENDER_STYLE = 'RENDER_STYLE';
+let RENDER_STYLE = 'RENDER_STYLE';
 exports.RENDER_STYLE = RENDER_STYLE;
-var RENDER_PLUGIN = 'RENDER_PLUGIN';
+let RENDER_PLUGIN = 'RENDER_PLUGIN';
 exports.RENDER_PLUGIN = RENDER_PLUGIN;
 
 /***/ }),
@@ -9620,37 +9620,37 @@ exports.RENDER_PLUGIN = RENDER_PLUGIN;
 "use strict";
 
 
-var _interopRequireDefault2 = __webpack_require__(0);
+let _interopRequireDefault2 = __webpack_require__(0);
 
-var _defineProperty2 = _interopRequireDefault2(__webpack_require__(27));
+let _defineProperty2 = _interopRequireDefault2(__webpack_require__(27));
 
-var _Object$create;
+let _Object$create;
 
-var _interopRequireDefault = __webpack_require__(0);
+let _interopRequireDefault = __webpack_require__(0);
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.ixRequest = void 0;
 
-var _extends2 = _interopRequireDefault(__webpack_require__(28));
+let _extends2 = _interopRequireDefault(__webpack_require__(28));
 
-var _constants = __webpack_require__(2);
+let _constants = __webpack_require__(2);
 
-var _timm = __webpack_require__(18);
+let _timm = __webpack_require__(18);
 
-var _constants$IX2EngineA = _constants.IX2EngineActionTypes,
+let _constants$IX2EngineA = _constants.IX2EngineActionTypes,
     IX2_PREVIEW_REQUESTED = _constants$IX2EngineA.IX2_PREVIEW_REQUESTED,
     IX2_PLAYBACK_REQUESTED = _constants$IX2EngineA.IX2_PLAYBACK_REQUESTED,
     IX2_STOP_REQUESTED = _constants$IX2EngineA.IX2_STOP_REQUESTED,
     IX2_CLEAR_REQUESTED = _constants$IX2EngineA.IX2_CLEAR_REQUESTED;
-var initialState = {
+let initialState = {
   preview: {},
   playback: {},
   stop: {},
   clear: {}
 };
-var stateKeys = Object.create(null, (_Object$create = {}, (0, _defineProperty2["default"])(_Object$create, IX2_PREVIEW_REQUESTED, {
+let stateKeys = Object.create(null, (_Object$create = {}, (0, _defineProperty2["default"])(_Object$create, IX2_PREVIEW_REQUESTED, {
   value: 'preview'
 }), (0, _defineProperty2["default"])(_Object$create, IX2_PLAYBACK_REQUESTED, {
   value: 'playback'
@@ -9660,12 +9660,12 @@ var stateKeys = Object.create(null, (_Object$create = {}, (0, _defineProperty2["
   value: 'clear'
 }), _Object$create));
 
-var ixRequest = function ixRequest() {
-  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : initialState;
-  var action = arguments.length > 1 ? arguments[1] : undefined;
+let ixRequest = function ixRequest() {
+  let state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : initialState;
+  let action = arguments.length > 1 ? arguments[1] : undefined;
 
   if (action.type in stateKeys) {
-    var key = [stateKeys[action.type]];
+    let key = [stateKeys[action.type]];
     return (0, _timm.setIn)(state, [key], (0, _extends2["default"])({}, action.payload));
   }
 
@@ -9686,11 +9686,11 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.ixSession = void 0;
 
-var _constants = __webpack_require__(2);
+let _constants = __webpack_require__(2);
 
-var _timm = __webpack_require__(18);
+let _timm = __webpack_require__(18);
 
-var _constants$IX2EngineA = _constants.IX2EngineActionTypes,
+let _constants$IX2EngineA = _constants.IX2EngineActionTypes,
     IX2_SESSION_INITIALIZED = _constants$IX2EngineA.IX2_SESSION_INITIALIZED,
     IX2_SESSION_STARTED = _constants$IX2EngineA.IX2_SESSION_STARTED,
     IX2_TEST_FRAME_RENDERED = _constants$IX2EngineA.IX2_TEST_FRAME_RENDERED,
@@ -9701,7 +9701,7 @@ var _constants$IX2EngineA = _constants.IX2EngineActionTypes,
     IX2_ACTION_LIST_PLAYBACK_CHANGED = _constants$IX2EngineA.IX2_ACTION_LIST_PLAYBACK_CHANGED,
     IX2_VIEWPORT_WIDTH_CHANGED = _constants$IX2EngineA.IX2_VIEWPORT_WIDTH_CHANGED,
     IX2_MEDIA_QUERIES_DEFINED = _constants$IX2EngineA.IX2_MEDIA_QUERIES_DEFINED;
-var initialState = {
+let initialState = {
   active: false,
   tick: 0,
   eventListeners: [],
@@ -9712,16 +9712,16 @@ var initialState = {
   hasBoundaryNodes: false,
   hasDefinedMediaQueries: false
 };
-var TEST_FRAME_STEPS_SIZE = 20; // $FlowFixMe
+let TEST_FRAME_STEPS_SIZE = 20; // $FlowFixMe
 
-var ixSession = function ixSession() {
-  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : initialState;
-  var action = arguments.length > 1 ? arguments[1] : undefined;
+let ixSession = function ixSession() {
+  let state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : initialState;
+  let action = arguments.length > 1 ? arguments[1] : undefined;
 
   switch (action.type) {
     case IX2_SESSION_INITIALIZED:
       {
-        var hasBoundaryNodes = action.payload.hasBoundaryNodes;
+        let hasBoundaryNodes = action.payload.hasBoundaryNodes;
         return (0, _timm.set)(state, 'hasBoundaryNodes', hasBoundaryNodes);
       }
 
@@ -9732,7 +9732,7 @@ var ixSession = function ixSession() {
 
     case IX2_TEST_FRAME_RENDERED:
       {
-        var _action$payload$step = action.payload.step,
+        let _action$payload$step = action.payload.step,
             step = _action$payload$step === void 0 ? TEST_FRAME_STEPS_SIZE : _action$payload$step;
         return (0, _timm.set)(state, 'tick', state.tick + step);
       }
@@ -9744,19 +9744,19 @@ var ixSession = function ixSession() {
 
     case IX2_ANIMATION_FRAME_CHANGED:
       {
-        var now = action.payload.now;
+        let now = action.payload.now;
         return (0, _timm.set)(state, 'tick', now);
       }
 
     case IX2_EVENT_LISTENER_ADDED:
       {
-        var eventListeners = (0, _timm.addLast)(state.eventListeners, action.payload);
+        let eventListeners = (0, _timm.addLast)(state.eventListeners, action.payload);
         return (0, _timm.set)(state, 'eventListeners', eventListeners);
       }
 
     case IX2_EVENT_STATE_CHANGED:
       {
-        var _action$payload = action.payload,
+        let _action$payload = action.payload,
             stateKey = _action$payload.stateKey,
             newState = _action$payload.newState;
         return (0, _timm.setIn)(state, ['eventState', stateKey], newState);
@@ -9764,7 +9764,7 @@ var ixSession = function ixSession() {
 
     case IX2_ACTION_LIST_PLAYBACK_CHANGED:
       {
-        var _action$payload2 = action.payload,
+        let _action$payload2 = action.payload,
             actionListId = _action$payload2.actionListId,
             isPlaying = _action$payload2.isPlaying;
         return (0, _timm.setIn)(state, ['playbackState', actionListId], isPlaying);
@@ -9772,14 +9772,14 @@ var ixSession = function ixSession() {
 
     case IX2_VIEWPORT_WIDTH_CHANGED:
       {
-        var _action$payload3 = action.payload,
+        let _action$payload3 = action.payload,
             width = _action$payload3.width,
             mediaQueries = _action$payload3.mediaQueries;
-        var mediaQueryCount = mediaQueries.length;
-        var mediaQueryKey = null;
+        let mediaQueryCount = mediaQueries.length;
+        let mediaQueryKey = null;
 
-        for (var i = 0; i < mediaQueryCount; i++) {
-          var _mediaQueries$i = mediaQueries[i],
+        for (let i = 0; i < mediaQueryCount; i++) {
+          let _mediaQueries$i = mediaQueries[i],
               key = _mediaQueries$i.key,
               min = _mediaQueries$i.min,
               max = _mediaQueries$i.max;
@@ -9814,7 +9814,7 @@ exports.ixSession = ixSession;
 /* 176 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseIsMatch = __webpack_require__(177),
+let baseIsMatch = __webpack_require__(177),
     getMatchData = __webpack_require__(229),
     matchesStrictComparable = __webpack_require__(101);
 
@@ -9826,7 +9826,7 @@ var baseIsMatch = __webpack_require__(177),
  * @returns {Function} Returns the new spec function.
  */
 function baseMatches(source) {
-  var matchData = getMatchData(source);
+  let matchData = getMatchData(source);
   if (matchData.length == 1 && matchData[0][2]) {
     return matchesStrictComparable(matchData[0][0], matchData[0][1]);
   }
@@ -9842,11 +9842,11 @@ module.exports = baseMatches;
 /* 177 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var Stack = __webpack_require__(87),
+let Stack = __webpack_require__(87),
     baseIsEqual = __webpack_require__(91);
 
 /** Used to compose bitmasks for value comparisons. */
-var COMPARE_PARTIAL_FLAG = 1,
+let COMPARE_PARTIAL_FLAG = 1,
     COMPARE_UNORDERED_FLAG = 2;
 
 /**
@@ -9860,7 +9860,7 @@ var COMPARE_PARTIAL_FLAG = 1,
  * @returns {boolean} Returns `true` if `object` is a match, else `false`.
  */
 function baseIsMatch(object, source, matchData, customizer) {
-  var index = matchData.length,
+  let index = matchData.length,
       length = index,
       noCustomizer = !customizer;
 
@@ -9869,7 +9869,7 @@ function baseIsMatch(object, source, matchData, customizer) {
   }
   object = Object(object);
   while (index--) {
-    var data = matchData[index];
+    let data = matchData[index];
     if ((noCustomizer && data[2])
           ? data[1] !== object[data[0]]
           : !(data[0] in object)
@@ -9879,7 +9879,7 @@ function baseIsMatch(object, source, matchData, customizer) {
   }
   while (++index < length) {
     data = matchData[index];
-    var key = data[0],
+    let key = data[0],
         objValue = object[key],
         srcValue = data[1];
 
@@ -9888,9 +9888,9 @@ function baseIsMatch(object, source, matchData, customizer) {
         return false;
       }
     } else {
-      var stack = new Stack;
+      let stack = new Stack;
       if (customizer) {
-        var result = customizer(objValue, srcValue, key, object, source, stack);
+        let result = customizer(objValue, srcValue, key, object, source, stack);
       }
       if (!(result === undefined
             ? baseIsEqual(srcValue, objValue, COMPARE_PARTIAL_FLAG | COMPARE_UNORDERED_FLAG, customizer, stack)
@@ -9929,13 +9929,13 @@ module.exports = listCacheClear;
 /* 179 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var assocIndexOf = __webpack_require__(30);
+let assocIndexOf = __webpack_require__(30);
 
 /** Used for built-in method references. */
-var arrayProto = Array.prototype;
+let arrayProto = Array.prototype;
 
 /** Built-in value references. */
-var splice = arrayProto.splice;
+let splice = arrayProto.splice;
 
 /**
  * Removes `key` and its value from the list cache.
@@ -9947,13 +9947,13 @@ var splice = arrayProto.splice;
  * @returns {boolean} Returns `true` if the entry was removed, else `false`.
  */
 function listCacheDelete(key) {
-  var data = this.__data__,
+  let data = this.__data__,
       index = assocIndexOf(data, key);
 
   if (index < 0) {
     return false;
   }
-  var lastIndex = data.length - 1;
+  let lastIndex = data.length - 1;
   if (index == lastIndex) {
     data.pop();
   } else {
@@ -9970,7 +9970,7 @@ module.exports = listCacheDelete;
 /* 180 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var assocIndexOf = __webpack_require__(30);
+let assocIndexOf = __webpack_require__(30);
 
 /**
  * Gets the list cache value for `key`.
@@ -9982,7 +9982,7 @@ var assocIndexOf = __webpack_require__(30);
  * @returns {*} Returns the entry value.
  */
 function listCacheGet(key) {
-  var data = this.__data__,
+  let data = this.__data__,
       index = assocIndexOf(data, key);
 
   return index < 0 ? undefined : data[index][1];
@@ -9995,7 +9995,7 @@ module.exports = listCacheGet;
 /* 181 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var assocIndexOf = __webpack_require__(30);
+let assocIndexOf = __webpack_require__(30);
 
 /**
  * Checks if a list cache value for `key` exists.
@@ -10017,7 +10017,7 @@ module.exports = listCacheHas;
 /* 182 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var assocIndexOf = __webpack_require__(30);
+let assocIndexOf = __webpack_require__(30);
 
 /**
  * Sets the list cache `key` to `value`.
@@ -10030,7 +10030,7 @@ var assocIndexOf = __webpack_require__(30);
  * @returns {Object} Returns the list cache instance.
  */
 function listCacheSet(key, value) {
-  var data = this.__data__,
+  let data = this.__data__,
       index = assocIndexOf(data, key);
 
   if (index < 0) {
@@ -10049,7 +10049,7 @@ module.exports = listCacheSet;
 /* 183 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var ListCache = __webpack_require__(29);
+let ListCache = __webpack_require__(29);
 
 /**
  * Removes all key-value entries from the stack.
@@ -10080,7 +10080,7 @@ module.exports = stackClear;
  * @returns {boolean} Returns `true` if the entry was removed, else `false`.
  */
 function stackDelete(key) {
-  var data = this.__data__,
+  let data = this.__data__,
       result = data['delete'](key);
 
   this.size = data.size;
@@ -10134,12 +10134,12 @@ module.exports = stackHas;
 /* 187 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var ListCache = __webpack_require__(29),
+let ListCache = __webpack_require__(29),
     Map = __webpack_require__(46),
     MapCache = __webpack_require__(47);
 
 /** Used as the size to enable large array optimizations. */
-var LARGE_ARRAY_SIZE = 200;
+let LARGE_ARRAY_SIZE = 200;
 
 /**
  * Sets the stack `key` to `value`.
@@ -10152,9 +10152,9 @@ var LARGE_ARRAY_SIZE = 200;
  * @returns {Object} Returns the stack cache instance.
  */
 function stackSet(key, value) {
-  var data = this.__data__;
+  let data = this.__data__;
   if (data instanceof ListCache) {
-    var pairs = data.__data__;
+    let pairs = data.__data__;
     if (!Map || (pairs.length < LARGE_ARRAY_SIZE - 1)) {
       pairs.push([key, value]);
       this.size = ++data.size;
@@ -10174,7 +10174,7 @@ module.exports = stackSet;
 /* 188 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var isFunction = __webpack_require__(88),
+let isFunction = __webpack_require__(88),
     isMasked = __webpack_require__(191),
     isObject = __webpack_require__(6),
     toSource = __webpack_require__(90);
@@ -10183,23 +10183,23 @@ var isFunction = __webpack_require__(88),
  * Used to match `RegExp`
  * [syntax characters](http://ecma-international.org/ecma-262/7.0/#sec-patterns).
  */
-var reRegExpChar = /[\\^$.*+?()[\]{}|]/g;
+let reRegExpChar = /[\\^$.*+?()[\]{}|]/g;
 
 /** Used to detect host constructors (Safari). */
-var reIsHostCtor = /^\[object .+?Constructor\]$/;
+let reIsHostCtor = /^\[object .+?Constructor\]$/;
 
 /** Used for built-in method references. */
-var funcProto = Function.prototype,
+let funcProto = Function.prototype,
     objectProto = Object.prototype;
 
 /** Used to resolve the decompiled source of functions. */
-var funcToString = funcProto.toString;
+let funcToString = funcProto.toString;
 
 /** Used to check objects for own properties. */
-var hasOwnProperty = objectProto.hasOwnProperty;
+let hasOwnProperty = objectProto.hasOwnProperty;
 
 /** Used to detect if a method is native. */
-var reIsNative = RegExp('^' +
+let reIsNative = RegExp('^' +
   funcToString.call(hasOwnProperty).replace(reRegExpChar, '\\$&')
   .replace(/hasOwnProperty|(function).*?(?=\\\()| for .+?(?=\\\])/g, '$1.*?') + '$'
 );
@@ -10216,7 +10216,7 @@ function baseIsNative(value) {
   if (!isObject(value) || isMasked(value)) {
     return false;
   }
-  var pattern = isFunction(value) ? reIsNative : reIsHostCtor;
+  let pattern = isFunction(value) ? reIsNative : reIsHostCtor;
   return pattern.test(toSource(value));
 }
 
@@ -10227,23 +10227,23 @@ module.exports = baseIsNative;
 /* 189 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var Symbol = __webpack_require__(19);
+let Symbol = __webpack_require__(19);
 
 /** Used for built-in method references. */
-var objectProto = Object.prototype;
+let objectProto = Object.prototype;
 
 /** Used to check objects for own properties. */
-var hasOwnProperty = objectProto.hasOwnProperty;
+let hasOwnProperty = objectProto.hasOwnProperty;
 
 /**
  * Used to resolve the
  * [`toStringTag`](http://ecma-international.org/ecma-262/7.0/#sec-object.prototype.tostring)
  * of values.
  */
-var nativeObjectToString = objectProto.toString;
+let nativeObjectToString = objectProto.toString;
 
 /** Built-in value references. */
-var symToStringTag = Symbol ? Symbol.toStringTag : undefined;
+let symToStringTag = Symbol ? Symbol.toStringTag : undefined;
 
 /**
  * A specialized version of `baseGetTag` which ignores `Symbol.toStringTag` values.
@@ -10253,15 +10253,15 @@ var symToStringTag = Symbol ? Symbol.toStringTag : undefined;
  * @returns {string} Returns the raw `toStringTag`.
  */
 function getRawTag(value) {
-  var isOwn = hasOwnProperty.call(value, symToStringTag),
+  let isOwn = hasOwnProperty.call(value, symToStringTag),
       tag = value[symToStringTag];
 
   try {
     value[symToStringTag] = undefined;
-    var unmasked = true;
+    let unmasked = true;
   } catch (e) {}
 
-  var result = nativeObjectToString.call(value);
+  let result = nativeObjectToString.call(value);
   if (unmasked) {
     if (isOwn) {
       value[symToStringTag] = tag;
@@ -10280,14 +10280,14 @@ module.exports = getRawTag;
 /***/ (function(module, exports) {
 
 /** Used for built-in method references. */
-var objectProto = Object.prototype;
+let objectProto = Object.prototype;
 
 /**
  * Used to resolve the
  * [`toStringTag`](http://ecma-international.org/ecma-262/7.0/#sec-object.prototype.tostring)
  * of values.
  */
-var nativeObjectToString = objectProto.toString;
+let nativeObjectToString = objectProto.toString;
 
 /**
  * Converts `value` to a string using `Object.prototype.toString`.
@@ -10307,11 +10307,11 @@ module.exports = objectToString;
 /* 191 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var coreJsData = __webpack_require__(192);
+let coreJsData = __webpack_require__(192);
 
 /** Used to detect methods masquerading as native. */
-var maskSrcKey = (function() {
-  var uid = /[^.]+$/.exec(coreJsData && coreJsData.keys && coreJsData.keys.IE_PROTO || '');
+let maskSrcKey = (function() {
+  let uid = /[^.]+$/.exec(coreJsData && coreJsData.keys && coreJsData.keys.IE_PROTO || '');
   return uid ? ('Symbol(src)_1.' + uid) : '';
 }());
 
@@ -10333,10 +10333,10 @@ module.exports = isMasked;
 /* 192 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var root = __webpack_require__(4);
+let root = __webpack_require__(4);
 
 /** Used to detect overreaching core-js shims. */
-var coreJsData = root['__core-js_shared__'];
+let coreJsData = root['__core-js_shared__'];
 
 module.exports = coreJsData;
 
@@ -10364,7 +10364,7 @@ module.exports = getValue;
 /* 194 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var Hash = __webpack_require__(195),
+let Hash = __webpack_require__(195),
     ListCache = __webpack_require__(29),
     Map = __webpack_require__(46);
 
@@ -10391,7 +10391,7 @@ module.exports = mapCacheClear;
 /* 195 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var hashClear = __webpack_require__(196),
+let hashClear = __webpack_require__(196),
     hashDelete = __webpack_require__(197),
     hashGet = __webpack_require__(198),
     hashHas = __webpack_require__(199),
@@ -10405,12 +10405,12 @@ var hashClear = __webpack_require__(196),
  * @param {Array} [entries] The key-value pairs to cache.
  */
 function Hash(entries) {
-  var index = -1,
+  let index = -1,
       length = entries == null ? 0 : entries.length;
 
   this.clear();
   while (++index < length) {
-    var entry = entries[index];
+    let entry = entries[index];
     this.set(entry[0], entry[1]);
   }
 }
@@ -10429,7 +10429,7 @@ module.exports = Hash;
 /* 196 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var nativeCreate = __webpack_require__(31);
+let nativeCreate = __webpack_require__(31);
 
 /**
  * Removes all key-value entries from the hash.
@@ -10461,7 +10461,7 @@ module.exports = hashClear;
  * @returns {boolean} Returns `true` if the entry was removed, else `false`.
  */
 function hashDelete(key) {
-  var result = this.has(key) && delete this.__data__[key];
+  let result = this.has(key) && delete this.__data__[key];
   this.size -= result ? 1 : 0;
   return result;
 }
@@ -10473,16 +10473,16 @@ module.exports = hashDelete;
 /* 198 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var nativeCreate = __webpack_require__(31);
+let nativeCreate = __webpack_require__(31);
 
 /** Used to stand-in for `undefined` hash values. */
-var HASH_UNDEFINED = '__lodash_hash_undefined__';
+let HASH_UNDEFINED = '__lodash_hash_undefined__';
 
 /** Used for built-in method references. */
-var objectProto = Object.prototype;
+let objectProto = Object.prototype;
 
 /** Used to check objects for own properties. */
-var hasOwnProperty = objectProto.hasOwnProperty;
+let hasOwnProperty = objectProto.hasOwnProperty;
 
 /**
  * Gets the hash value for `key`.
@@ -10494,9 +10494,9 @@ var hasOwnProperty = objectProto.hasOwnProperty;
  * @returns {*} Returns the entry value.
  */
 function hashGet(key) {
-  var data = this.__data__;
+  let data = this.__data__;
   if (nativeCreate) {
-    var result = data[key];
+    let result = data[key];
     return result === HASH_UNDEFINED ? undefined : result;
   }
   return hasOwnProperty.call(data, key) ? data[key] : undefined;
@@ -10509,13 +10509,13 @@ module.exports = hashGet;
 /* 199 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var nativeCreate = __webpack_require__(31);
+let nativeCreate = __webpack_require__(31);
 
 /** Used for built-in method references. */
-var objectProto = Object.prototype;
+let objectProto = Object.prototype;
 
 /** Used to check objects for own properties. */
-var hasOwnProperty = objectProto.hasOwnProperty;
+let hasOwnProperty = objectProto.hasOwnProperty;
 
 /**
  * Checks if a hash value for `key` exists.
@@ -10527,7 +10527,7 @@ var hasOwnProperty = objectProto.hasOwnProperty;
  * @returns {boolean} Returns `true` if an entry for `key` exists, else `false`.
  */
 function hashHas(key) {
-  var data = this.__data__;
+  let data = this.__data__;
   return nativeCreate ? (data[key] !== undefined) : hasOwnProperty.call(data, key);
 }
 
@@ -10538,10 +10538,10 @@ module.exports = hashHas;
 /* 200 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var nativeCreate = __webpack_require__(31);
+let nativeCreate = __webpack_require__(31);
 
 /** Used to stand-in for `undefined` hash values. */
-var HASH_UNDEFINED = '__lodash_hash_undefined__';
+let HASH_UNDEFINED = '__lodash_hash_undefined__';
 
 /**
  * Sets the hash `key` to `value`.
@@ -10554,7 +10554,7 @@ var HASH_UNDEFINED = '__lodash_hash_undefined__';
  * @returns {Object} Returns the hash instance.
  */
 function hashSet(key, value) {
-  var data = this.__data__;
+  let data = this.__data__;
   this.size += this.has(key) ? 0 : 1;
   data[key] = (nativeCreate && value === undefined) ? HASH_UNDEFINED : value;
   return this;
@@ -10567,7 +10567,7 @@ module.exports = hashSet;
 /* 201 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var getMapData = __webpack_require__(32);
+let getMapData = __webpack_require__(32);
 
 /**
  * Removes `key` and its value from the map.
@@ -10579,7 +10579,7 @@ var getMapData = __webpack_require__(32);
  * @returns {boolean} Returns `true` if the entry was removed, else `false`.
  */
 function mapCacheDelete(key) {
-  var result = getMapData(this, key)['delete'](key);
+  let result = getMapData(this, key)['delete'](key);
   this.size -= result ? 1 : 0;
   return result;
 }
@@ -10599,7 +10599,7 @@ module.exports = mapCacheDelete;
  * @returns {boolean} Returns `true` if `value` is suitable, else `false`.
  */
 function isKeyable(value) {
-  var type = typeof value;
+  let type = typeof value;
   return (type == 'string' || type == 'number' || type == 'symbol' || type == 'boolean')
     ? (value !== '__proto__')
     : (value === null);
@@ -10612,7 +10612,7 @@ module.exports = isKeyable;
 /* 203 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var getMapData = __webpack_require__(32);
+let getMapData = __webpack_require__(32);
 
 /**
  * Gets the map value for `key`.
@@ -10634,7 +10634,7 @@ module.exports = mapCacheGet;
 /* 204 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var getMapData = __webpack_require__(32);
+let getMapData = __webpack_require__(32);
 
 /**
  * Checks if a map value for `key` exists.
@@ -10656,7 +10656,7 @@ module.exports = mapCacheHas;
 /* 205 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var getMapData = __webpack_require__(32);
+let getMapData = __webpack_require__(32);
 
 /**
  * Sets the map `key` to `value`.
@@ -10669,7 +10669,7 @@ var getMapData = __webpack_require__(32);
  * @returns {Object} Returns the map cache instance.
  */
 function mapCacheSet(key, value) {
-  var data = getMapData(this, key),
+  let data = getMapData(this, key),
       size = data.size;
 
   data.set(key, value);
@@ -10684,7 +10684,7 @@ module.exports = mapCacheSet;
 /* 206 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var Stack = __webpack_require__(87),
+let Stack = __webpack_require__(87),
     equalArrays = __webpack_require__(92),
     equalByTag = __webpack_require__(212),
     equalObjects = __webpack_require__(216),
@@ -10694,18 +10694,18 @@ var Stack = __webpack_require__(87),
     isTypedArray = __webpack_require__(51);
 
 /** Used to compose bitmasks for value comparisons. */
-var COMPARE_PARTIAL_FLAG = 1;
+let COMPARE_PARTIAL_FLAG = 1;
 
 /** `Object#toString` result references. */
-var argsTag = '[object Arguments]',
+let argsTag = '[object Arguments]',
     arrayTag = '[object Array]',
     objectTag = '[object Object]';
 
 /** Used for built-in method references. */
-var objectProto = Object.prototype;
+let objectProto = Object.prototype;
 
 /** Used to check objects for own properties. */
-var hasOwnProperty = objectProto.hasOwnProperty;
+let hasOwnProperty = objectProto.hasOwnProperty;
 
 /**
  * A specialized version of `baseIsEqual` for arrays and objects which performs
@@ -10722,7 +10722,7 @@ var hasOwnProperty = objectProto.hasOwnProperty;
  * @returns {boolean} Returns `true` if the objects are equivalent, else `false`.
  */
 function baseIsEqualDeep(object, other, bitmask, customizer, equalFunc, stack) {
-  var objIsArr = isArray(object),
+  let objIsArr = isArray(object),
       othIsArr = isArray(other),
       objTag = objIsArr ? arrayTag : getTag(object),
       othTag = othIsArr ? arrayTag : getTag(other);
@@ -10730,7 +10730,7 @@ function baseIsEqualDeep(object, other, bitmask, customizer, equalFunc, stack) {
   objTag = objTag == argsTag ? objectTag : objTag;
   othTag = othTag == argsTag ? objectTag : othTag;
 
-  var objIsObj = objTag == objectTag,
+  let objIsObj = objTag == objectTag,
       othIsObj = othTag == objectTag,
       isSameTag = objTag == othTag;
 
@@ -10748,11 +10748,11 @@ function baseIsEqualDeep(object, other, bitmask, customizer, equalFunc, stack) {
       : equalByTag(object, other, objTag, bitmask, customizer, equalFunc, stack);
   }
   if (!(bitmask & COMPARE_PARTIAL_FLAG)) {
-    var objIsWrapped = objIsObj && hasOwnProperty.call(object, '__wrapped__'),
+    let objIsWrapped = objIsObj && hasOwnProperty.call(object, '__wrapped__'),
         othIsWrapped = othIsObj && hasOwnProperty.call(other, '__wrapped__');
 
     if (objIsWrapped || othIsWrapped) {
-      var objUnwrapped = objIsWrapped ? object.value() : object,
+      let objUnwrapped = objIsWrapped ? object.value() : object,
           othUnwrapped = othIsWrapped ? other.value() : other;
 
       stack || (stack = new Stack);
@@ -10773,7 +10773,7 @@ module.exports = baseIsEqualDeep;
 /* 207 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var MapCache = __webpack_require__(47),
+let MapCache = __webpack_require__(47),
     setCacheAdd = __webpack_require__(208),
     setCacheHas = __webpack_require__(209);
 
@@ -10786,7 +10786,7 @@ var MapCache = __webpack_require__(47),
  * @param {Array} [values] The values to cache.
  */
 function SetCache(values) {
-  var index = -1,
+  let index = -1,
       length = values == null ? 0 : values.length;
 
   this.__data__ = new MapCache;
@@ -10807,7 +10807,7 @@ module.exports = SetCache;
 /***/ (function(module, exports) {
 
 /** Used to stand-in for `undefined` hash values. */
-var HASH_UNDEFINED = '__lodash_hash_undefined__';
+let HASH_UNDEFINED = '__lodash_hash_undefined__';
 
 /**
  * Adds `value` to the array cache.
@@ -10862,7 +10862,7 @@ module.exports = setCacheHas;
  *  else `false`.
  */
 function arraySome(array, predicate) {
-  var index = -1,
+  let index = -1,
       length = array == null ? 0 : array.length;
 
   while (++index < length) {
@@ -10899,7 +10899,7 @@ module.exports = cacheHas;
 /* 212 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var Symbol = __webpack_require__(19),
+let Symbol = __webpack_require__(19),
     Uint8Array = __webpack_require__(213),
     eq = __webpack_require__(45),
     equalArrays = __webpack_require__(92),
@@ -10907,11 +10907,11 @@ var Symbol = __webpack_require__(19),
     setToArray = __webpack_require__(215);
 
 /** Used to compose bitmasks for value comparisons. */
-var COMPARE_PARTIAL_FLAG = 1,
+let COMPARE_PARTIAL_FLAG = 1,
     COMPARE_UNORDERED_FLAG = 2;
 
 /** `Object#toString` result references. */
-var boolTag = '[object Boolean]',
+let boolTag = '[object Boolean]',
     dateTag = '[object Date]',
     errorTag = '[object Error]',
     mapTag = '[object Map]',
@@ -10921,11 +10921,11 @@ var boolTag = '[object Boolean]',
     stringTag = '[object String]',
     symbolTag = '[object Symbol]';
 
-var arrayBufferTag = '[object ArrayBuffer]',
+let arrayBufferTag = '[object ArrayBuffer]',
     dataViewTag = '[object DataView]';
 
 /** Used to convert symbols to primitives and strings. */
-var symbolProto = Symbol ? Symbol.prototype : undefined,
+let symbolProto = Symbol ? Symbol.prototype : undefined,
     symbolValueOf = symbolProto ? symbolProto.valueOf : undefined;
 
 /**
@@ -10980,17 +10980,17 @@ function equalByTag(object, other, tag, bitmask, customizer, equalFunc, stack) {
       return object == (other + '');
 
     case mapTag:
-      var convert = mapToArray;
+      let convert = mapToArray;
 
     case setTag:
-      var isPartial = bitmask & COMPARE_PARTIAL_FLAG;
+      let isPartial = bitmask & COMPARE_PARTIAL_FLAG;
       convert || (convert = setToArray);
 
       if (object.size != other.size && !isPartial) {
         return false;
       }
       // Assume cyclic values are equal.
-      var stacked = stack.get(object);
+      let stacked = stack.get(object);
       if (stacked) {
         return stacked == other;
       }
@@ -10998,7 +10998,7 @@ function equalByTag(object, other, tag, bitmask, customizer, equalFunc, stack) {
 
       // Recursively compare objects (susceptible to call stack limits).
       stack.set(object, other);
-      var result = equalArrays(convert(object), convert(other), bitmask, customizer, equalFunc, stack);
+      let result = equalArrays(convert(object), convert(other), bitmask, customizer, equalFunc, stack);
       stack['delete'](object);
       return result;
 
@@ -11017,10 +11017,10 @@ module.exports = equalByTag;
 /* 213 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var root = __webpack_require__(4);
+let root = __webpack_require__(4);
 
 /** Built-in value references. */
-var Uint8Array = root.Uint8Array;
+let Uint8Array = root.Uint8Array;
 
 module.exports = Uint8Array;
 
@@ -11037,7 +11037,7 @@ module.exports = Uint8Array;
  * @returns {Array} Returns the key-value pairs.
  */
 function mapToArray(map) {
-  var index = -1,
+  let index = -1,
       result = Array(map.size);
 
   map.forEach(function(value, key) {
@@ -11061,7 +11061,7 @@ module.exports = mapToArray;
  * @returns {Array} Returns the values.
  */
 function setToArray(set) {
-  var index = -1,
+  let index = -1,
       result = Array(set.size);
 
   set.forEach(function(value) {
@@ -11077,16 +11077,16 @@ module.exports = setToArray;
 /* 216 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var getAllKeys = __webpack_require__(217);
+let getAllKeys = __webpack_require__(217);
 
 /** Used to compose bitmasks for value comparisons. */
-var COMPARE_PARTIAL_FLAG = 1;
+let COMPARE_PARTIAL_FLAG = 1;
 
 /** Used for built-in method references. */
-var objectProto = Object.prototype;
+let objectProto = Object.prototype;
 
 /** Used to check objects for own properties. */
-var hasOwnProperty = objectProto.hasOwnProperty;
+let hasOwnProperty = objectProto.hasOwnProperty;
 
 /**
  * A specialized version of `baseIsEqualDeep` for objects with support for
@@ -11102,7 +11102,7 @@ var hasOwnProperty = objectProto.hasOwnProperty;
  * @returns {boolean} Returns `true` if the objects are equivalent, else `false`.
  */
 function equalObjects(object, other, bitmask, customizer, equalFunc, stack) {
-  var isPartial = bitmask & COMPARE_PARTIAL_FLAG,
+  let isPartial = bitmask & COMPARE_PARTIAL_FLAG,
       objProps = getAllKeys(object),
       objLength = objProps.length,
       othProps = getAllKeys(other),
@@ -11111,31 +11111,31 @@ function equalObjects(object, other, bitmask, customizer, equalFunc, stack) {
   if (objLength != othLength && !isPartial) {
     return false;
   }
-  var index = objLength;
+  let index = objLength;
   while (index--) {
-    var key = objProps[index];
+    let key = objProps[index];
     if (!(isPartial ? key in other : hasOwnProperty.call(other, key))) {
       return false;
     }
   }
   // Check that cyclic values are equal.
-  var objStacked = stack.get(object);
-  var othStacked = stack.get(other);
+  let objStacked = stack.get(object);
+  let othStacked = stack.get(other);
   if (objStacked && othStacked) {
     return objStacked == other && othStacked == object;
   }
-  var result = true;
+  let result = true;
   stack.set(object, other);
   stack.set(other, object);
 
-  var skipCtor = isPartial;
+  let skipCtor = isPartial;
   while (++index < objLength) {
     key = objProps[index];
-    var objValue = object[key],
+    let objValue = object[key],
         othValue = other[key];
 
     if (customizer) {
-      var compared = isPartial
+      let compared = isPartial
         ? customizer(othValue, objValue, key, other, object, stack)
         : customizer(objValue, othValue, key, object, other, stack);
     }
@@ -11150,7 +11150,7 @@ function equalObjects(object, other, bitmask, customizer, equalFunc, stack) {
     skipCtor || (skipCtor = key == 'constructor');
   }
   if (result && !skipCtor) {
-    var objCtor = object.constructor,
+    let objCtor = object.constructor,
         othCtor = other.constructor;
 
     // Non `Object` object instances with different constructors are not equal.
@@ -11173,7 +11173,7 @@ module.exports = equalObjects;
 /* 217 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseGetAllKeys = __webpack_require__(93),
+let baseGetAllKeys = __webpack_require__(93),
     getSymbols = __webpack_require__(94),
     keys = __webpack_require__(33);
 
@@ -11205,13 +11205,13 @@ module.exports = getAllKeys;
  * @returns {Array} Returns the new filtered array.
  */
 function arrayFilter(array, predicate) {
-  var index = -1,
+  let index = -1,
       length = array == null ? 0 : array.length,
       resIndex = 0,
       result = [];
 
   while (++index < length) {
-    var value = array[index];
+    let value = array[index];
     if (predicate(value, index, array)) {
       result[resIndex++] = value;
     }
@@ -11236,7 +11236,7 @@ module.exports = arrayFilter;
  * @returns {Array} Returns the array of results.
  */
 function baseTimes(n, iteratee) {
-  var index = -1,
+  let index = -1,
       result = Array(n);
 
   while (++index < n) {
@@ -11252,11 +11252,11 @@ module.exports = baseTimes;
 /* 220 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseGetTag = __webpack_require__(11),
+let baseGetTag = __webpack_require__(11),
     isObjectLike = __webpack_require__(9);
 
 /** `Object#toString` result references. */
-var argsTag = '[object Arguments]';
+let argsTag = '[object Arguments]';
 
 /**
  * The base implementation of `_.isArguments`.
@@ -11300,12 +11300,12 @@ module.exports = stubFalse;
 /* 222 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseGetTag = __webpack_require__(11),
+let baseGetTag = __webpack_require__(11),
     isLength = __webpack_require__(52),
     isObjectLike = __webpack_require__(9);
 
 /** `Object#toString` result references. */
-var argsTag = '[object Arguments]',
+let argsTag = '[object Arguments]',
     arrayTag = '[object Array]',
     boolTag = '[object Boolean]',
     dateTag = '[object Date]',
@@ -11319,7 +11319,7 @@ var argsTag = '[object Arguments]',
     stringTag = '[object String]',
     weakMapTag = '[object WeakMap]';
 
-var arrayBufferTag = '[object ArrayBuffer]',
+let arrayBufferTag = '[object ArrayBuffer]',
     dataViewTag = '[object DataView]',
     float32Tag = '[object Float32Array]',
     float64Tag = '[object Float64Array]',
@@ -11332,7 +11332,7 @@ var arrayBufferTag = '[object ArrayBuffer]',
     uint32Tag = '[object Uint32Array]';
 
 /** Used to identify `toStringTag` values of typed arrays. */
-var typedArrayTags = {};
+let typedArrayTags = {};
 typedArrayTags[float32Tag] = typedArrayTags[float64Tag] =
 typedArrayTags[int8Tag] = typedArrayTags[int16Tag] =
 typedArrayTags[int32Tag] = typedArrayTags[uint8Tag] =
@@ -11386,25 +11386,25 @@ module.exports = baseUnary;
 /* 224 */
 /***/ (function(module, exports, __webpack_require__) {
 
-/* WEBPACK VAR INJECTION */(function(module) {var freeGlobal = __webpack_require__(89);
+/* WEBPACK let INJECTION */(function(module) {let freeGlobal = __webpack_require__(89);
 
 /** Detect free variable `exports`. */
-var freeExports =  true && exports && !exports.nodeType && exports;
+let freeExports =  true && exports && !exports.nodeType && exports;
 
 /** Detect free variable `module`. */
-var freeModule = freeExports && typeof module == 'object' && module && !module.nodeType && module;
+let freeModule = freeExports && typeof module == 'object' && module && !module.nodeType && module;
 
 /** Detect the popular CommonJS extension `module.exports`. */
-var moduleExports = freeModule && freeModule.exports === freeExports;
+let moduleExports = freeModule && freeModule.exports === freeExports;
 
 /** Detect free variable `process` from Node.js. */
-var freeProcess = moduleExports && freeGlobal.process;
+let freeProcess = moduleExports && freeGlobal.process;
 
 /** Used to access faster Node.js helpers. */
-var nodeUtil = (function() {
+let nodeUtil = (function() {
   try {
     // Use `util.types` for Node.js 10+.
-    var types = freeModule && freeModule.require && freeModule.require('util').types;
+    let types = freeModule && freeModule.require && freeModule.require('util').types;
 
     if (types) {
       return types;
@@ -11417,16 +11417,16 @@ var nodeUtil = (function() {
 
 module.exports = nodeUtil;
 
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(97)(module)))
+/* WEBPACK let INJECTION */}.call(this, __webpack_require__(97)(module)))
 
 /***/ }),
 /* 225 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var overArg = __webpack_require__(98);
+let overArg = __webpack_require__(98);
 
 /* Built-in method references for those with the same name as other `lodash` methods. */
-var nativeKeys = overArg(Object.keys, Object);
+let nativeKeys = overArg(Object.keys, Object);
 
 module.exports = nativeKeys;
 
@@ -11435,11 +11435,11 @@ module.exports = nativeKeys;
 /* 226 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var getNative = __webpack_require__(8),
+let getNative = __webpack_require__(8),
     root = __webpack_require__(4);
 
 /* Built-in method references that are verified to be native. */
-var DataView = getNative(root, 'DataView');
+let DataView = getNative(root, 'DataView');
 
 module.exports = DataView;
 
@@ -11448,11 +11448,11 @@ module.exports = DataView;
 /* 227 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var getNative = __webpack_require__(8),
+let getNative = __webpack_require__(8),
     root = __webpack_require__(4);
 
 /* Built-in method references that are verified to be native. */
-var Promise = getNative(root, 'Promise');
+let Promise = getNative(root, 'Promise');
 
 module.exports = Promise;
 
@@ -11461,11 +11461,11 @@ module.exports = Promise;
 /* 228 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var getNative = __webpack_require__(8),
+let getNative = __webpack_require__(8),
     root = __webpack_require__(4);
 
 /* Built-in method references that are verified to be native. */
-var Set = getNative(root, 'Set');
+let Set = getNative(root, 'Set');
 
 module.exports = Set;
 
@@ -11474,7 +11474,7 @@ module.exports = Set;
 /* 229 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var isStrictComparable = __webpack_require__(100),
+let isStrictComparable = __webpack_require__(100),
     keys = __webpack_require__(33);
 
 /**
@@ -11485,11 +11485,11 @@ var isStrictComparable = __webpack_require__(100),
  * @returns {Array} Returns the match data of `object`.
  */
 function getMatchData(object) {
-  var result = keys(object),
+  let result = keys(object),
       length = result.length;
 
   while (length--) {
-    var key = result[length],
+    let key = result[length],
         value = object[key];
 
     result[length] = [key, value, isStrictComparable(value)];
@@ -11504,7 +11504,7 @@ module.exports = getMatchData;
 /* 230 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseIsEqual = __webpack_require__(91),
+let baseIsEqual = __webpack_require__(91),
     get = __webpack_require__(56),
     hasIn = __webpack_require__(236),
     isKey = __webpack_require__(58),
@@ -11513,7 +11513,7 @@ var baseIsEqual = __webpack_require__(91),
     toKey = __webpack_require__(20);
 
 /** Used to compose bitmasks for value comparisons. */
-var COMPARE_PARTIAL_FLAG = 1,
+let COMPARE_PARTIAL_FLAG = 1,
     COMPARE_UNORDERED_FLAG = 2;
 
 /**
@@ -11529,7 +11529,7 @@ function baseMatchesProperty(path, srcValue) {
     return matchesStrictComparable(toKey(path), srcValue);
   }
   return function(object) {
-    var objValue = get(object, path);
+    let objValue = get(object, path);
     return (objValue === undefined && objValue === srcValue)
       ? hasIn(object, path)
       : baseIsEqual(srcValue, objValue, COMPARE_PARTIAL_FLAG | COMPARE_UNORDERED_FLAG);
@@ -11543,13 +11543,13 @@ module.exports = baseMatchesProperty;
 /* 231 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var memoizeCapped = __webpack_require__(232);
+let memoizeCapped = __webpack_require__(232);
 
 /** Used to match property names within property paths. */
-var rePropName = /[^.[\]]+|\[(?:(-?\d+(?:\.\d+)?)|(["'])((?:(?!\2)[^\\]|\\.)*?)\2)\]|(?=(?:\.|\[\])(?:\.|\[\]|$))/g;
+let rePropName = /[^.[\]]+|\[(?:(-?\d+(?:\.\d+)?)|(["'])((?:(?!\2)[^\\]|\\.)*?)\2)\]|(?=(?:\.|\[\])(?:\.|\[\]|$))/g;
 
 /** Used to match backslashes in property paths. */
-var reEscapeChar = /\\(\\)?/g;
+let reEscapeChar = /\\(\\)?/g;
 
 /**
  * Converts `string` to a property path array.
@@ -11558,8 +11558,8 @@ var reEscapeChar = /\\(\\)?/g;
  * @param {string} string The string to convert.
  * @returns {Array} Returns the property path array.
  */
-var stringToPath = memoizeCapped(function(string) {
-  var result = [];
+let stringToPath = memoizeCapped(function(string) {
+  let result = [];
   if (string.charCodeAt(0) === 46 /* . */) {
     result.push('');
   }
@@ -11576,10 +11576,10 @@ module.exports = stringToPath;
 /* 232 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var memoize = __webpack_require__(233);
+let memoize = __webpack_require__(233);
 
 /** Used as the maximum memoize cache size. */
-var MAX_MEMOIZE_SIZE = 500;
+let MAX_MEMOIZE_SIZE = 500;
 
 /**
  * A specialized version of `_.memoize` which clears the memoized function's
@@ -11590,14 +11590,14 @@ var MAX_MEMOIZE_SIZE = 500;
  * @returns {Function} Returns the new memoized function.
  */
 function memoizeCapped(func) {
-  var result = memoize(func, function(key) {
+  let result = memoize(func, function(key) {
     if (cache.size === MAX_MEMOIZE_SIZE) {
       cache.clear();
     }
     return key;
   });
 
-  var cache = result.cache;
+  let cache = result.cache;
   return result;
 }
 
@@ -11608,10 +11608,10 @@ module.exports = memoizeCapped;
 /* 233 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var MapCache = __webpack_require__(47);
+let MapCache = __webpack_require__(47);
 
 /** Error message constants. */
-var FUNC_ERROR_TEXT = 'Expected a function';
+let FUNC_ERROR_TEXT = 'Expected a function';
 
 /**
  * Creates a function that memoizes the result of `func`. If `resolver` is
@@ -11635,10 +11635,10 @@ var FUNC_ERROR_TEXT = 'Expected a function';
  * @returns {Function} Returns the new memoized function.
  * @example
  *
- * var object = { 'a': 1, 'b': 2 };
- * var other = { 'c': 3, 'd': 4 };
+ * let object = { 'a': 1, 'b': 2 };
+ * let other = { 'c': 3, 'd': 4 };
  *
- * var values = _.memoize(_.values);
+ * let values = _.memoize(_.values);
  * values(object);
  * // => [1, 2]
  *
@@ -11661,15 +11661,15 @@ function memoize(func, resolver) {
   if (typeof func != 'function' || (resolver != null && typeof resolver != 'function')) {
     throw new TypeError(FUNC_ERROR_TEXT);
   }
-  var memoized = function() {
-    var args = arguments,
+  let memoized = function() {
+    let args = arguments,
         key = resolver ? resolver.apply(this, args) : args[0],
         cache = memoized.cache;
 
     if (cache.has(key)) {
       return cache.get(key);
     }
-    var result = func.apply(this, args);
+    let result = func.apply(this, args);
     memoized.cache = cache.set(key, result) || cache;
     return result;
   };
@@ -11687,7 +11687,7 @@ module.exports = memoize;
 /* 234 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseToString = __webpack_require__(235);
+let baseToString = __webpack_require__(235);
 
 /**
  * Converts `value` to a string. An empty string is returned for `null`
@@ -11721,16 +11721,16 @@ module.exports = toString;
 /* 235 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var Symbol = __webpack_require__(19),
+let Symbol = __webpack_require__(19),
     arrayMap = __webpack_require__(102),
     isArray = __webpack_require__(1),
     isSymbol = __webpack_require__(36);
 
 /** Used as references for various `Number` constants. */
-var INFINITY = 1 / 0;
+let INFINITY = 1 / 0;
 
 /** Used to convert symbols to primitives and strings. */
-var symbolProto = Symbol ? Symbol.prototype : undefined,
+let symbolProto = Symbol ? Symbol.prototype : undefined,
     symbolToString = symbolProto ? symbolProto.toString : undefined;
 
 /**
@@ -11753,7 +11753,7 @@ function baseToString(value) {
   if (isSymbol(value)) {
     return symbolToString ? symbolToString.call(value) : '';
   }
-  var result = (value + '');
+  let result = (value + '');
   return (result == '0' && (1 / value) == -INFINITY) ? '-0' : result;
 }
 
@@ -11764,7 +11764,7 @@ module.exports = baseToString;
 /* 236 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseHasIn = __webpack_require__(237),
+let baseHasIn = __webpack_require__(237),
     hasPath = __webpack_require__(238);
 
 /**
@@ -11779,7 +11779,7 @@ var baseHasIn = __webpack_require__(237),
  * @returns {boolean} Returns `true` if `path` exists, else `false`.
  * @example
  *
- * var object = _.create({ 'a': _.create({ 'b': 2 }) });
+ * let object = _.create({ 'a': _.create({ 'b': 2 }) });
  *
  * _.hasIn(object, 'a');
  * // => true
@@ -11823,7 +11823,7 @@ module.exports = baseHasIn;
 /* 238 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var castPath = __webpack_require__(35),
+let castPath = __webpack_require__(35),
     isArguments = __webpack_require__(34),
     isArray = __webpack_require__(1),
     isIndex = __webpack_require__(50),
@@ -11842,12 +11842,12 @@ var castPath = __webpack_require__(35),
 function hasPath(object, path, hasFunc) {
   path = castPath(path, object);
 
-  var index = -1,
+  let index = -1,
       length = path.length,
       result = false;
 
   while (++index < length) {
-    var key = toKey(path[index]);
+    let key = toKey(path[index]);
     if (!(result = object != null && hasFunc(object, key))) {
       break;
     }
@@ -11868,7 +11868,7 @@ module.exports = hasPath;
 /* 239 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseProperty = __webpack_require__(103),
+let baseProperty = __webpack_require__(103),
     basePropertyDeep = __webpack_require__(240),
     isKey = __webpack_require__(58),
     toKey = __webpack_require__(20);
@@ -11884,7 +11884,7 @@ var baseProperty = __webpack_require__(103),
  * @returns {Function} Returns the new accessor function.
  * @example
  *
- * var objects = [
+ * let objects = [
  *   { 'a': { 'b': 2 } },
  *   { 'a': { 'b': 1 } }
  * ];
@@ -11906,7 +11906,7 @@ module.exports = property;
 /* 240 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseGet = __webpack_require__(57);
+let baseGet = __webpack_require__(57);
 
 /**
  * A specialized version of `baseProperty` which supports deep paths.
@@ -11928,12 +11928,12 @@ module.exports = basePropertyDeep;
 /* 241 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseFindIndex = __webpack_require__(104),
+let baseFindIndex = __webpack_require__(104),
     baseIteratee = __webpack_require__(7),
     toInteger = __webpack_require__(105);
 
 /* Built-in method references for those with the same name as other `lodash` methods. */
-var nativeMax = Math.max;
+let nativeMax = Math.max;
 
 /**
  * This method is like `_.find` except that it returns the index of the first
@@ -11949,7 +11949,7 @@ var nativeMax = Math.max;
  * @returns {number} Returns the index of the found element, else `-1`.
  * @example
  *
- * var users = [
+ * let users = [
  *   { 'user': 'barney',  'active': false },
  *   { 'user': 'fred',    'active': false },
  *   { 'user': 'pebbles', 'active': true }
@@ -11971,11 +11971,11 @@ var nativeMax = Math.max;
  * // => 2
  */
 function findIndex(array, predicate, fromIndex) {
-  var length = array == null ? 0 : array.length;
+  let length = array == null ? 0 : array.length;
   if (!length) {
     return -1;
   }
-  var index = fromIndex == null ? 0 : toInteger(fromIndex);
+  let index = fromIndex == null ? 0 : toInteger(fromIndex);
   if (index < 0) {
     index = nativeMax(length + index, 0);
   }
@@ -11989,10 +11989,10 @@ module.exports = findIndex;
 /* 242 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var toNumber = __webpack_require__(60);
+let toNumber = __webpack_require__(60);
 
 /** Used as references for various `Number` constants. */
-var INFINITY = 1 / 0,
+let INFINITY = 1 / 0,
     MAX_INTEGER = 1.7976931348623157e+308;
 
 /**
@@ -12024,7 +12024,7 @@ function toFinite(value) {
   }
   value = toNumber(value);
   if (value === INFINITY || value === -INFINITY) {
-    var sign = (value < 0 ? -1 : 1);
+    let sign = (value < 0 ? -1 : 1);
     return sign * MAX_INTEGER;
   }
   return value === value ? value : 0;
@@ -12037,10 +12037,10 @@ module.exports = toFinite;
 /* 243 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var trimmedEndIndex = __webpack_require__(244);
+let trimmedEndIndex = __webpack_require__(244);
 
 /** Used to match leading whitespace. */
-var reTrimStart = /^\s+/;
+let reTrimStart = /^\s+/;
 
 /**
  * The base implementation of `_.trim`.
@@ -12063,7 +12063,7 @@ module.exports = baseTrim;
 /***/ (function(module, exports) {
 
 /** Used to match a single whitespace character. */
-var reWhitespace = /\s/;
+let reWhitespace = /\s/;
 
 /**
  * Used by `_.trim` and `_.trimEnd` to get the index of the last non-whitespace
@@ -12074,7 +12074,7 @@ var reWhitespace = /\s/;
  * @returns {number} Returns the index of the last non-whitespace character.
  */
 function trimmedEndIndex(string) {
-  var index = string.length;
+  let index = string.length;
 
   while (index-- && reWhitespace.test(string.charAt(index))) {}
   return index;
@@ -12089,7 +12089,7 @@ module.exports = trimmedEndIndex;
 
 function _arrayWithoutHoles(arr) {
   if (Array.isArray(arr)) {
-    for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) {
+    for (let i = 0, arr2 = new Array(arr.length); i < arr.length; i++) {
       arr2[i] = arr[i];
     }
 
@@ -12133,11 +12133,11 @@ exports.createElementState = createElementState;
 exports.mergeActionState = mergeActionState;
 exports.ixElements = void 0;
 
-var _timm = __webpack_require__(18);
+let _timm = __webpack_require__(18);
 
-var _constants = __webpack_require__(2);
+let _constants = __webpack_require__(2);
 
-var _constants$IX2EngineC = _constants.IX2EngineConstants,
+let _constants$IX2EngineC = _constants.IX2EngineConstants,
     HTML_ELEMENT = _constants$IX2EngineC.HTML_ELEMENT,
     PLAIN_OBJECT = _constants$IX2EngineC.PLAIN_OBJECT,
     ABSTRACT_NODE = _constants$IX2EngineC.ABSTRACT_NODE,
@@ -12149,16 +12149,16 @@ var _constants$IX2EngineC = _constants.IX2EngineConstants,
     CONFIG_Y_UNIT = _constants$IX2EngineC.CONFIG_Y_UNIT,
     CONFIG_Z_UNIT = _constants$IX2EngineC.CONFIG_Z_UNIT,
     CONFIG_UNIT = _constants$IX2EngineC.CONFIG_UNIT;
-var _constants$IX2EngineA = _constants.IX2EngineActionTypes,
+let _constants$IX2EngineA = _constants.IX2EngineActionTypes,
     IX2_SESSION_STOPPED = _constants$IX2EngineA.IX2_SESSION_STOPPED,
     IX2_INSTANCE_ADDED = _constants$IX2EngineA.IX2_INSTANCE_ADDED,
     IX2_ELEMENT_STATE_CHANGED = _constants$IX2EngineA.IX2_ELEMENT_STATE_CHANGED;
-var initialState = {};
-var refState = 'refState';
+let initialState = {};
+let refState = 'refState';
 
-var ixElements = function ixElements() {
-  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : initialState;
-  var action = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+let ixElements = function ixElements() {
+  let state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : initialState;
+  let action = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
 
   switch (action.type) {
     case IX2_SESSION_STOPPED:
@@ -12168,14 +12168,14 @@ var ixElements = function ixElements() {
 
     case IX2_INSTANCE_ADDED:
       {
-        var _action$payload = action.payload,
+        let _action$payload = action.payload,
             elementId = _action$payload.elementId,
             ref = _action$payload.element,
             origin = _action$payload.origin,
             actionItem = _action$payload.actionItem,
             refType = _action$payload.refType;
-        var actionTypeId = actionItem.actionTypeId;
-        var newState = state; // Create new ref entry if it doesn't exist
+        let actionTypeId = actionItem.actionTypeId;
+        let newState = state; // Create new ref entry if it doesn't exist
 
         if ((0, _timm.getIn)(newState, [elementId, ref]) !== ref) {
           newState = createElementState(newState, ref, refType, elementId, actionItem);
@@ -12187,7 +12187,7 @@ var ixElements = function ixElements() {
 
     case IX2_ELEMENT_STATE_CHANGED:
       {
-        var _action$payload2 = action.payload,
+        let _action$payload2 = action.payload,
             _elementId = _action$payload2.elementId,
             _actionTypeId = _action$payload2.actionTypeId,
             current = _action$payload2.current,
@@ -12205,7 +12205,7 @@ var ixElements = function ixElements() {
 exports.ixElements = ixElements;
 
 function createElementState(state, ref, refType, elementId, actionItem) {
-  var refId = refType === PLAIN_OBJECT ? (0, _timm.getIn)(actionItem, ['config', 'target', 'objectId']) : null;
+  let refId = refType === PLAIN_OBJECT ? (0, _timm.getIn)(actionItem, ['config', 'target', 'objectId']) : null;
   return (0, _timm.mergeIn)(state, [elementId], {
     id: elementId,
     ref: ref,
@@ -12216,21 +12216,21 @@ function createElementState(state, ref, refType, elementId, actionItem) {
 
 function mergeActionState(state, elementId, actionTypeId, actionState, // FIXME: weak type is used
 actionItem) {
-  var units = pickUnits(actionItem);
-  var mergePath = [elementId, refState, actionTypeId];
+  let units = pickUnits(actionItem);
+  let mergePath = [elementId, refState, actionTypeId];
   return (0, _timm.mergeIn)(state, mergePath, actionState, units);
 }
 
-var valueUnitPairs = [[CONFIG_X_VALUE, CONFIG_X_UNIT], [CONFIG_Y_VALUE, CONFIG_Y_UNIT], [CONFIG_Z_VALUE, CONFIG_Z_UNIT], [CONFIG_VALUE, CONFIG_UNIT]]; // FIXME: weak type is used
+let valueUnitPairs = [[CONFIG_X_VALUE, CONFIG_X_UNIT], [CONFIG_Y_VALUE, CONFIG_Y_UNIT], [CONFIG_Z_VALUE, CONFIG_Z_UNIT], [CONFIG_VALUE, CONFIG_UNIT]]; // FIXME: weak type is used
 // eslint-disable-next-line flowtype/no-weak-types
 
 function pickUnits(actionItem) {
-  var config = actionItem.config;
+  let config = actionItem.config;
   return valueUnitPairs.reduce(function (result, pair) {
-    var valueKey = pair[0];
-    var unitKey = pair[1];
-    var configValue = config[valueKey];
-    var configUnit = config[unitKey];
+    let valueKey = pair[0];
+    let unitKey = pair[1];
+    let configValue = config[valueKey];
+    let configUnit = config[unitKey];
 
     if (configValue != null && configUnit != null) {
       result[unitKey] = configUnit;
@@ -12254,19 +12254,19 @@ exports.clearPlugin = exports.renderPlugin = exports.createPluginInstance = expo
 /* eslint-env browser */
 // $FlowFixMe
 
-var getPluginConfig = function getPluginConfig(actionItemConfig) {
+let getPluginConfig = function getPluginConfig(actionItemConfig) {
   return actionItemConfig.value;
 }; // $FlowFixMe
 
 
 exports.getPluginConfig = getPluginConfig;
 
-var getPluginDuration = function getPluginDuration(element, actionItem) {
+let getPluginDuration = function getPluginDuration(element, actionItem) {
   if (actionItem.config.duration !== 'auto') {
     return null;
   }
 
-  var duration = parseFloat(element.getAttribute('data-duration'));
+  let duration = parseFloat(element.getAttribute('data-duration'));
 
   if (duration > 0) {
     return duration * 1000;
@@ -12278,7 +12278,7 @@ var getPluginDuration = function getPluginDuration(element, actionItem) {
 
 exports.getPluginDuration = getPluginDuration;
 
-var getPluginOrigin = function getPluginOrigin(refState) {
+let getPluginOrigin = function getPluginOrigin(refState) {
   return refState || {
     value: 0
   };
@@ -12287,7 +12287,7 @@ var getPluginOrigin = function getPluginOrigin(refState) {
 
 exports.getPluginOrigin = getPluginOrigin;
 
-var getPluginDestination = function getPluginDestination(actionItemConfig) {
+let getPluginDestination = function getPluginDestination(actionItemConfig) {
   return {
     value: actionItemConfig.value
   };
@@ -12296,8 +12296,8 @@ var getPluginDestination = function getPluginDestination(actionItemConfig) {
 
 exports.getPluginDestination = getPluginDestination;
 
-var createPluginInstance = function createPluginInstance(element) {
-  var instance = window.Webflow.require('lottie').createInstance(element);
+let createPluginInstance = function createPluginInstance(element) {
+  let instance = window.Webflow.require('lottie').createInstance(element);
 
   instance.stop();
   instance.setSubframe(true);
@@ -12307,20 +12307,20 @@ var createPluginInstance = function createPluginInstance(element) {
 
 exports.createPluginInstance = createPluginInstance;
 
-var renderPlugin = function renderPlugin(pluginInstance, refState, actionItem) {
+let renderPlugin = function renderPlugin(pluginInstance, refState, actionItem) {
   if (!pluginInstance) {
     return;
   }
 
-  var percent = refState[actionItem.actionTypeId].value / 100;
+  let percent = refState[actionItem.actionTypeId].value / 100;
   pluginInstance.goToFrame(pluginInstance.frames * percent);
 }; // $FlowFixMe
 
 
 exports.renderPlugin = renderPlugin;
 
-var clearPlugin = function clearPlugin(element) {
-  var instance = window.Webflow.require('lottie').createInstance(element);
+let clearPlugin = function clearPlugin(element) {
+  let instance = window.Webflow.require('lottie').createInstance(element);
 
   instance.stop();
 };
@@ -12334,15 +12334,15 @@ exports.clearPlugin = clearPlugin;
 "use strict";
 
 
-var _interopRequireDefault2 = __webpack_require__(0);
+let _interopRequireDefault2 = __webpack_require__(0);
 
-var _typeof2 = _interopRequireDefault2(__webpack_require__(21));
+let _typeof2 = _interopRequireDefault2(__webpack_require__(21));
 
-var _defineProperty2 = _interopRequireDefault2(__webpack_require__(27));
+let _defineProperty2 = _interopRequireDefault2(__webpack_require__(27));
 
-var _Object$freeze, _Object$freeze2, _transformDefaults;
+let _Object$freeze, _Object$freeze2, _transformDefaults;
 
-var _interopRequireDefault = __webpack_require__(0);
+let _interopRequireDefault = __webpack_require__(0);
 
 Object.defineProperty(exports, "__esModule", {
   value: true
@@ -12370,27 +12370,27 @@ exports.mediaQueriesEqual = mediaQueriesEqual;
 exports.stringifyTarget = stringifyTarget;
 exports.getItemConfigByKey = void 0;
 
-var _defaultTo = _interopRequireDefault(__webpack_require__(251));
+let _defaultTo = _interopRequireDefault(__webpack_require__(251));
 
-var _reduce = _interopRequireDefault(__webpack_require__(252));
+let _reduce = _interopRequireDefault(__webpack_require__(252));
 
-var _findLast = _interopRequireDefault(__webpack_require__(258));
+let _findLast = _interopRequireDefault(__webpack_require__(258));
 
-var _timm = __webpack_require__(18);
+let _timm = __webpack_require__(18);
 
-var _shallowEqual = _interopRequireDefault(__webpack_require__(113));
+let _shallowEqual = _interopRequireDefault(__webpack_require__(113));
 
-var _constants = __webpack_require__(2);
+let _constants = __webpack_require__(2);
 
-var _IX2EasingUtils = __webpack_require__(108);
+let _IX2EasingUtils = __webpack_require__(108);
 
-var _IX2VanillaPlugins = __webpack_require__(110);
+let _IX2VanillaPlugins = __webpack_require__(110);
 
-var _IX2BrowserSupport = __webpack_require__(44);
+let _IX2BrowserSupport = __webpack_require__(44);
 /* eslint-env browser */
 
 
-var _constants$IX2EngineC = _constants.IX2EngineConstants,
+let _constants$IX2EngineC = _constants.IX2EngineConstants,
     BACKGROUND = _constants$IX2EngineC.BACKGROUND,
     TRANSFORM = _constants$IX2EngineC.TRANSFORM,
     TRANSLATE_3D = _constants$IX2EngineC.TRANSLATE_3D,
@@ -12422,7 +12422,7 @@ var _constants$IX2EngineC = _constants.IX2EngineConstants,
     RENDER_GENERAL = _constants$IX2EngineC.RENDER_GENERAL,
     RENDER_STYLE = _constants$IX2EngineC.RENDER_STYLE,
     RENDER_PLUGIN = _constants$IX2EngineC.RENDER_PLUGIN;
-var _constants$ActionType = _constants.ActionTypeConsts,
+let _constants$ActionType = _constants.ActionTypeConsts,
     TRANSFORM_MOVE = _constants$ActionType.TRANSFORM_MOVE,
     TRANSFORM_SCALE = _constants$ActionType.TRANSFORM_SCALE,
     TRANSFORM_ROTATE = _constants$ActionType.TRANSFORM_ROTATE,
@@ -12434,27 +12434,27 @@ var _constants$ActionType = _constants.ActionTypeConsts,
     STYLE_BORDER = _constants$ActionType.STYLE_BORDER,
     STYLE_TEXT_COLOR = _constants$ActionType.STYLE_TEXT_COLOR,
     GENERAL_DISPLAY = _constants$ActionType.GENERAL_DISPLAY;
-var OBJECT_VALUE = 'OBJECT_VALUE';
+let OBJECT_VALUE = 'OBJECT_VALUE';
 
-var trim = function trim(v) {
+let trim = function trim(v) {
   return v.trim();
 };
 
-var colorStyleProps = Object.freeze((_Object$freeze = {}, (0, _defineProperty2["default"])(_Object$freeze, STYLE_BACKGROUND_COLOR, BACKGROUND_COLOR), (0, _defineProperty2["default"])(_Object$freeze, STYLE_BORDER, BORDER_COLOR), (0, _defineProperty2["default"])(_Object$freeze, STYLE_TEXT_COLOR, COLOR), _Object$freeze));
-var willChangeProps = Object.freeze((_Object$freeze2 = {}, (0, _defineProperty2["default"])(_Object$freeze2, _IX2BrowserSupport.TRANSFORM_PREFIXED, TRANSFORM), (0, _defineProperty2["default"])(_Object$freeze2, BACKGROUND_COLOR, BACKGROUND), (0, _defineProperty2["default"])(_Object$freeze2, OPACITY, OPACITY), (0, _defineProperty2["default"])(_Object$freeze2, FILTER, FILTER), (0, _defineProperty2["default"])(_Object$freeze2, WIDTH, WIDTH), (0, _defineProperty2["default"])(_Object$freeze2, HEIGHT, HEIGHT), _Object$freeze2));
-var objectCache = {};
-var instanceCount = 1;
+let colorStyleProps = Object.freeze((_Object$freeze = {}, (0, _defineProperty2["default"])(_Object$freeze, STYLE_BACKGROUND_COLOR, BACKGROUND_COLOR), (0, _defineProperty2["default"])(_Object$freeze, STYLE_BORDER, BORDER_COLOR), (0, _defineProperty2["default"])(_Object$freeze, STYLE_TEXT_COLOR, COLOR), _Object$freeze));
+let willChangeProps = Object.freeze((_Object$freeze2 = {}, (0, _defineProperty2["default"])(_Object$freeze2, _IX2BrowserSupport.TRANSFORM_PREFIXED, TRANSFORM), (0, _defineProperty2["default"])(_Object$freeze2, BACKGROUND_COLOR, BACKGROUND), (0, _defineProperty2["default"])(_Object$freeze2, OPACITY, OPACITY), (0, _defineProperty2["default"])(_Object$freeze2, FILTER, FILTER), (0, _defineProperty2["default"])(_Object$freeze2, WIDTH, WIDTH), (0, _defineProperty2["default"])(_Object$freeze2, HEIGHT, HEIGHT), _Object$freeze2));
+let objectCache = {};
+let instanceCount = 1;
 
 function getInstanceId() {
   return 'i' + instanceCount++;
 }
 
-var elementCount = 1; // $FlowFixMe
+let elementCount = 1; // $FlowFixMe
 
 function getElementId(ixElements, ref) {
   // TODO: optimize element lookup
-  for (var key in ixElements) {
-    var ixEl = ixElements[key];
+  for (let key in ixElements) {
+    let ixEl = ixElements[key];
 
     if (ixEl && ixEl.ref === ref) {
       return ixEl.id;
@@ -12466,13 +12466,13 @@ function getElementId(ixElements, ref) {
 
 
 function reifyState() {
-  var _ref2 = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {},
+  let _ref2 = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {},
       events = _ref2.events,
       actionLists = _ref2.actionLists,
       site = _ref2.site;
 
-  var eventTypeMap = (0, _reduce["default"])(events, function (result, event) {
-    var eventTypeId = event.eventTypeId;
+  let eventTypeMap = (0, _reduce["default"])(events, function (result, event) {
+    let eventTypeId = event.eventTypeId;
 
     if (!result[eventTypeId]) {
       result[eventTypeId] = {};
@@ -12481,8 +12481,8 @@ function reifyState() {
     result[eventTypeId][event.id] = event;
     return result;
   }, {});
-  var mediaQueries = site && site.mediaQueries;
-  var mediaQueryKeys = [];
+  let mediaQueries = site && site.mediaQueries;
+  let mediaQueryKeys = [];
 
   if (mediaQueries) {
     mediaQueryKeys = mediaQueries.map(function (mq) {
@@ -12504,24 +12504,24 @@ function reifyState() {
   };
 }
 
-var strictEqual = function strictEqual(a, b) {
+let strictEqual = function strictEqual(a, b) {
   return a === b;
 }; // $FlowFixMe
 
 
 function observeStore(_ref3) {
-  var store = _ref3.store,
+  let store = _ref3.store,
       select = _ref3.select,
       onChange = _ref3.onChange,
       _ref3$comparator = _ref3.comparator,
       comparator = _ref3$comparator === void 0 ? strictEqual : _ref3$comparator;
-  var getState = store.getState,
+  let getState = store.getState,
       subscribe = store.subscribe;
-  var unsubscribe = subscribe(handleChange);
-  var currentState = select(getState());
+  let unsubscribe = subscribe(handleChange);
+  let currentState = select(getState());
 
   function handleChange() {
-    var nextState = select(getState());
+    let nextState = select(getState());
 
     if (nextState == null) {
       unsubscribe();
@@ -12538,14 +12538,14 @@ function observeStore(_ref3) {
 }
 
 function normalizeTarget(target) {
-  var type = (0, _typeof2["default"])(target);
+  let type = (0, _typeof2["default"])(target);
 
   if (type === 'string') {
     return {
       id: target
     };
   } else if (target != null && type === 'object') {
-    var id = target.id,
+    let id = target.id,
         objectId = target.objectId,
         selector = target.selector,
         selectorGuids = target.selectorGuids,
@@ -12565,19 +12565,19 @@ function normalizeTarget(target) {
 }
 
 function getAffectedElements(_ref4) {
-  var config = _ref4.config,
+  let config = _ref4.config,
       event = _ref4.event,
       eventTarget = _ref4.eventTarget,
       elementRoot = _ref4.elementRoot,
       elementApi = _ref4.elementApi;
 
-  var _ref, _event$action, _event$action$config;
+  let _ref, _event$action, _event$action$config;
 
   if (!elementApi) {
     throw new Error('IX2 missing elementApi');
   }
 
-  var targets = config.targets;
+  let targets = config.targets;
 
   if (Array.isArray(targets) && targets.length > 0) {
     return targets.reduce(function (accumulator, target) {
@@ -12593,7 +12593,7 @@ function getAffectedElements(_ref4) {
     }, []);
   }
 
-  var getValidDocument = elementApi.getValidDocument,
+  let getValidDocument = elementApi.getValidDocument,
       getQuerySelector = elementApi.getQuerySelector,
       queryDocument = elementApi.queryDocument,
       getChildElements = elementApi.getChildElements,
@@ -12601,13 +12601,13 @@ function getAffectedElements(_ref4) {
       matchSelector = elementApi.matchSelector,
       elementContains = elementApi.elementContains,
       isSiblingNode = elementApi.isSiblingNode;
-  var target = config.target;
+  let target = config.target;
 
   if (!target) {
     return [];
   }
 
-  var _normalizeTarget = normalizeTarget(target),
+  let _normalizeTarget = normalizeTarget(target),
       id = _normalizeTarget.id,
       objectId = _normalizeTarget.objectId,
       selector = _normalizeTarget.selector,
@@ -12616,22 +12616,22 @@ function getAffectedElements(_ref4) {
       useEventTarget = _normalizeTarget.useEventTarget;
 
   if (objectId) {
-    var ref = objectCache[objectId] || (objectCache[objectId] = {});
+    let ref = objectCache[objectId] || (objectCache[objectId] = {});
     return [ref];
   }
 
   if (appliesTo === _constants.EventAppliesTo.PAGE) {
-    var doc = getValidDocument(id);
+    let doc = getValidDocument(id);
     return doc ? [doc] : [];
   }
 
-  var overrides = (_ref = event === null || event === void 0 ? void 0 : (_event$action = event.action) === null || _event$action === void 0 ? void 0 : (_event$action$config = _event$action.config) === null || _event$action$config === void 0 ? void 0 : _event$action$config.affectedElements) !== null && _ref !== void 0 ? _ref : {};
-  var override = overrides[id || selector] || {};
-  var validOverride = Boolean(override.id || override.selector);
-  var limitAffectedElements;
-  var baseSelector;
-  var finalSelector;
-  var eventTargetSelector = event && getQuerySelector(normalizeTarget(event.target));
+  let overrides = (_ref = event === null || event === void 0 ? void 0 : (_event$action = event.action) === null || _event$action === void 0 ? void 0 : (_event$action$config = _event$action.config) === null || _event$action$config === void 0 ? void 0 : _event$action$config.affectedElements) !== null && _ref !== void 0 ? _ref : {};
+  let override = overrides[id || selector] || {};
+  let validOverride = Boolean(override.id || override.selector);
+  let limitAffectedElements;
+  let baseSelector;
+  let finalSelector;
+  let eventTargetSelector = event && getQuerySelector(normalizeTarget(event.target));
 
   if (validOverride) {
     limitAffectedElements = override.limitAffectedElements;
@@ -12649,7 +12649,7 @@ function getAffectedElements(_ref4) {
   if (event && useEventTarget) {
     // eventTarget is not defined when this function is called in a clear request, so find
     // all target elements associated with the event data, and return affected elements.
-    var eventTargets = eventTarget && (finalSelector || useEventTarget === true) ? [eventTarget] : queryDocument(eventTargetSelector);
+    let eventTargets = eventTarget && (finalSelector || useEventTarget === true) ? [eventTarget] : queryDocument(eventTargetSelector);
 
     if (finalSelector) {
       if (useEventTarget === PARENT) {
@@ -12703,14 +12703,14 @@ function getAffectedElements(_ref4) {
 
 
 function getComputedStyle(_ref5) {
-  var element = _ref5.element,
+  let element = _ref5.element,
       actionItem = _ref5.actionItem;
 
   if (!_IX2BrowserSupport.IS_BROWSER_ENV) {
     return {};
   }
 
-  var actionTypeId = actionItem.actionTypeId;
+  let actionTypeId = actionItem.actionTypeId;
 
   switch (actionTypeId) {
     case STYLE_SIZE:
@@ -12725,9 +12725,9 @@ function getComputedStyle(_ref5) {
   }
 }
 
-var pxValueRegex = /px/;
+let pxValueRegex = /px/;
 
-var getFilterDefaults = function getFilterDefaults(actionState, filters) {
+let getFilterDefaults = function getFilterDefaults(actionState, filters) {
   return filters.reduce(function (result, filter) {
     if (result[filter.type] == null) {
       result[filter.type] = filterDefaults[filter.type];
@@ -12739,14 +12739,14 @@ var getFilterDefaults = function getFilterDefaults(actionState, filters) {
 
 function getInstanceOrigin( // $FlowFixMe
 element) {
-  var refState = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
-  var computedStyle = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
-  var // $FlowFixMe
+  let refState = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+  let computedStyle = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
+  let // $FlowFixMe
   actionItem = arguments.length > 3 ? arguments[3] : undefined;
-  var // $FlowFixMe
+  let // $FlowFixMe
   elementApi = arguments.length > 4 ? arguments[4] : undefined;
-  var getStyle = elementApi.getStyle;
-  var actionTypeId = actionItem.actionTypeId,
+  let getStyle = elementApi.getStyle;
+  let actionTypeId = actionItem.actionTypeId,
       config = actionItem.config;
 
   if ((0, _IX2VanillaPlugins.isPluginType)(actionTypeId)) {
@@ -12771,10 +12771,10 @@ element) {
 
     case STYLE_SIZE:
       {
-        var inlineWidth = getStyle(element, WIDTH);
-        var inlineHeight = getStyle(element, HEIGHT);
-        var widthValue;
-        var heightValue; // When destination unit is 'AUTO', ensure origin values are in px
+        let inlineWidth = getStyle(element, WIDTH);
+        let inlineHeight = getStyle(element, HEIGHT);
+        let widthValue;
+        let heightValue; // When destination unit is 'AUTO', ensure origin values are in px
 
         if (config.widthUnit === AUTO) {
           widthValue = pxValueRegex.test(inlineWidth) ? parseFloat(inlineWidth) : parseFloat(computedStyle.width);
@@ -12819,7 +12819,7 @@ element) {
   }
 }
 
-var reduceFilters = function reduceFilters(result, filter) {
+let reduceFilters = function reduceFilters(result, filter) {
   if (filter) {
     result[filter.type] = filter.value || 0;
   }
@@ -12828,7 +12828,7 @@ var reduceFilters = function reduceFilters(result, filter) {
 }; // $FlowFixMe
 
 
-var getItemConfigByKey = function getItemConfigByKey(actionTypeId, key, config) {
+let getItemConfigByKey = function getItemConfigByKey(actionTypeId, key, config) {
   if ((0, _IX2VanillaPlugins.isPluginType)(actionTypeId)) {
     // $FlowFixMe
     return (0, _IX2VanillaPlugins.getPluginConfig)(actionTypeId)(config, key);
@@ -12837,8 +12837,8 @@ var getItemConfigByKey = function getItemConfigByKey(actionTypeId, key, config) 
   switch (actionTypeId) {
     case STYLE_FILTER:
       {
-        var filter = (0, _findLast["default"])(config.filters, function (_ref6) {
-          var type = _ref6.type;
+        let filter = (0, _findLast["default"])(config.filters, function (_ref6) {
+          let type = _ref6.type;
           return type === key;
         });
         return filter ? filter.value : 0;
@@ -12853,10 +12853,10 @@ var getItemConfigByKey = function getItemConfigByKey(actionTypeId, key, config) 
 exports.getItemConfigByKey = getItemConfigByKey;
 
 function getDestinationValues(_ref7) {
-  var element = _ref7.element,
+  let element = _ref7.element,
       actionItem = _ref7.actionItem,
       elementApi = _ref7.elementApi;
-  var actionTypeId = actionItem.actionTypeId;
+  let actionTypeId = actionItem.actionTypeId;
 
   if ((0, _IX2VanillaPlugins.isPluginType)(actionTypeId)) {
     // $FlowFixMe
@@ -12869,7 +12869,7 @@ function getDestinationValues(_ref7) {
     case TRANSFORM_ROTATE:
     case TRANSFORM_SKEW:
       {
-        var _actionItem$config = actionItem.config,
+        let _actionItem$config = actionItem.config,
             xValue = _actionItem$config.xValue,
             yValue = _actionItem$config.yValue,
             zValue = _actionItem$config.zValue;
@@ -12882,13 +12882,13 @@ function getDestinationValues(_ref7) {
 
     case STYLE_SIZE:
       {
-        var getStyle = elementApi.getStyle,
+        let getStyle = elementApi.getStyle,
             setStyle = elementApi.setStyle,
             getProperty = elementApi.getProperty;
-        var _actionItem$config2 = actionItem.config,
+        let _actionItem$config2 = actionItem.config,
             widthUnit = _actionItem$config2.widthUnit,
             heightUnit = _actionItem$config2.heightUnit;
-        var _actionItem$config3 = actionItem.config,
+        let _actionItem$config3 = actionItem.config,
             widthValue = _actionItem$config3.widthValue,
             heightValue = _actionItem$config3.heightValue;
 
@@ -12900,14 +12900,14 @@ function getDestinationValues(_ref7) {
         }
 
         if (widthUnit === AUTO) {
-          var temp = getStyle(element, WIDTH);
+          let temp = getStyle(element, WIDTH);
           setStyle(element, WIDTH, '');
           widthValue = getProperty(element, 'offsetWidth');
           setStyle(element, WIDTH, temp);
         }
 
         if (heightUnit === AUTO) {
-          var _temp = getStyle(element, HEIGHT);
+          let _temp = getStyle(element, HEIGHT);
 
           setStyle(element, HEIGHT, '');
           heightValue = getProperty(element, 'offsetHeight');
@@ -12924,7 +12924,7 @@ function getDestinationValues(_ref7) {
     case STYLE_BORDER:
     case STYLE_TEXT_COLOR:
       {
-        var _actionItem$config4 = actionItem.config,
+        let _actionItem$config4 = actionItem.config,
             rValue = _actionItem$config4.rValue,
             gValue = _actionItem$config4.gValue,
             bValue = _actionItem$config4.bValue,
@@ -12944,7 +12944,7 @@ function getDestinationValues(_ref7) {
 
     default:
       {
-        var value = actionItem.config.value;
+        let value = actionItem.config.value;
         return {
           value: value
         };
@@ -13004,7 +13004,7 @@ pluginInstance) {
 
     case RENDER_PLUGIN:
       {
-        var actionTypeId = actionItem.actionTypeId;
+        let actionTypeId = actionItem.actionTypeId;
 
         if ((0, _IX2VanillaPlugins.isPluginType)(actionTypeId)) {
           // $FlowFixMe
@@ -13014,7 +13014,7 @@ pluginInstance) {
   }
 }
 
-var transformDefaults = (_transformDefaults = {}, (0, _defineProperty2["default"])(_transformDefaults, TRANSFORM_MOVE, Object.freeze({
+let transformDefaults = (_transformDefaults = {}, (0, _defineProperty2["default"])(_transformDefaults, TRANSFORM_MOVE, Object.freeze({
   xValue: 0,
   yValue: 0,
   zValue: 0
@@ -13030,7 +13030,7 @@ var transformDefaults = (_transformDefaults = {}, (0, _defineProperty2["default"
   xValue: 0,
   yValue: 0
 })), _transformDefaults);
-var filterDefaults = Object.freeze({
+let filterDefaults = Object.freeze({
   blur: 0,
   'hue-rotate': 0,
   invert: 0,
@@ -13041,9 +13041,9 @@ var filterDefaults = Object.freeze({
   brightness: 100
 });
 
-var getFilterUnit = function getFilterUnit(filterType, actionItemConfig) {
-  var filter = (0, _findLast["default"])(actionItemConfig.filters, function (_ref8) {
-    var type = _ref8.type;
+let getFilterUnit = function getFilterUnit(filterType, actionItemConfig) {
+  let filter = (0, _findLast["default"])(actionItemConfig.filters, function (_ref8) {
+    let type = _ref8.type;
     return type === filterType;
   });
 
@@ -13063,13 +13063,13 @@ var getFilterUnit = function getFilterUnit(filterType, actionItemConfig) {
   }
 };
 
-var transformKeys = Object.keys(transformDefaults);
+let transformKeys = Object.keys(transformDefaults);
 
 function renderTransform(element, refState, actionState, actionItem, elementApi) {
-  var newTransform = transformKeys.map(function (actionTypeId) {
-    var defaults = transformDefaults[actionTypeId];
+  let newTransform = transformKeys.map(function (actionTypeId) {
+    let defaults = transformDefaults[actionTypeId];
 
-    var _ref9 = refState[actionTypeId] || {},
+    let _ref9 = refState[actionTypeId] || {},
         _ref9$xValue = _ref9.xValue,
         xValue = _ref9$xValue === void 0 ? defaults.xValue : _ref9$xValue,
         _ref9$yValue = _ref9.yValue,
@@ -13100,7 +13100,7 @@ function renderTransform(element, refState, actionState, actionItem, elementApi)
         return '';
     }
   }).join(' ');
-  var setStyle = elementApi.setStyle;
+  let setStyle = elementApi.setStyle;
   addWillChange(element, _IX2BrowserSupport.TRANSFORM_PREFIXED, elementApi);
   setStyle(element, _IX2BrowserSupport.TRANSFORM_PREFIXED, newTransform); // Set transform-style: preserve-3d
 
@@ -13110,17 +13110,17 @@ function renderTransform(element, refState, actionState, actionItem, elementApi)
 }
 
 function renderFilter(element, actionState, actionItemConfig, elementApi) {
-  var filterValue = (0, _reduce["default"])(actionState, function (result, value, type) {
+  let filterValue = (0, _reduce["default"])(actionState, function (result, value, type) {
     return "".concat(result, " ").concat(type, "(").concat(value).concat(getFilterUnit(type, actionItemConfig), ")");
   }, '');
-  var setStyle = elementApi.setStyle;
+  let setStyle = elementApi.setStyle;
   addWillChange(element, FILTER, elementApi);
   setStyle(element, FILTER, filterValue);
 }
 
 function hasDefined3dTransform(_ref10, _ref11) {
-  var actionTypeId = _ref10.actionTypeId;
-  var xValue = _ref11.xValue,
+  let actionTypeId = _ref10.actionTypeId;
+  let xValue = _ref11.xValue,
       yValue = _ref11.yValue,
       zValue = _ref11.zValue;
   // TRANSLATE_Z
@@ -13129,24 +13129,24 @@ function hasDefined3dTransform(_ref10, _ref11) {
   actionTypeId === TRANSFORM_ROTATE && (xValue !== undefined || yValue !== undefined);
 }
 
-var paramCapture = '\\(([^)]+)\\)';
-var rgbValidRegex = /^rgb/;
-var rgbMatchRegex = RegExp("rgba?".concat(paramCapture));
+let paramCapture = '\\(([^)]+)\\)';
+let rgbValidRegex = /^rgb/;
+let rgbMatchRegex = RegExp("rgba?".concat(paramCapture));
 
 function getFirstMatch(regex, value) {
-  var match = regex.exec(value);
+  let match = regex.exec(value);
   return match ? match[1] : '';
 }
 
 function parseColor(_ref12) {
-  var element = _ref12.element,
+  let element = _ref12.element,
       actionTypeId = _ref12.actionTypeId,
       computedStyle = _ref12.computedStyle,
       getStyle = _ref12.getStyle;
-  var prop = colorStyleProps[actionTypeId];
-  var inlineValue = getStyle(element, prop);
-  var value = rgbValidRegex.test(inlineValue) ? inlineValue : computedStyle[prop];
-  var matches = getFirstMatch(rgbMatchRegex, value).split(COMMA_DELIMITER);
+  let prop = colorStyleProps[actionTypeId];
+  let inlineValue = getStyle(element, prop);
+  let value = rgbValidRegex.test(inlineValue) ? inlineValue : computedStyle[prop];
+  let matches = getFirstMatch(rgbMatchRegex, value).split(COMMA_DELIMITER);
   return {
     rValue: (0, _defaultTo["default"])(parseInt(matches[0], 10), 255),
     gValue: (0, _defaultTo["default"])(parseInt(matches[1], 10), 255),
@@ -13156,19 +13156,19 @@ function parseColor(_ref12) {
 }
 
 function renderStyle(element, refState, actionState, actionItem, styleProp, elementApi) {
-  var setStyle = elementApi.setStyle;
-  var actionTypeId = actionItem.actionTypeId,
+  let setStyle = elementApi.setStyle;
+  let actionTypeId = actionItem.actionTypeId,
       config = actionItem.config;
 
   switch (actionTypeId) {
     case STYLE_SIZE:
       {
-        var _actionItem$config5 = actionItem.config,
+        let _actionItem$config5 = actionItem.config,
             _actionItem$config5$w = _actionItem$config5.widthUnit,
             widthUnit = _actionItem$config5$w === void 0 ? '' : _actionItem$config5$w,
             _actionItem$config5$h = _actionItem$config5.heightUnit,
             heightUnit = _actionItem$config5$h === void 0 ? '' : _actionItem$config5$h;
-        var widthValue = actionState.widthValue,
+        let widthValue = actionState.widthValue,
             heightValue = actionState.heightValue;
 
         if (widthValue !== undefined) {
@@ -13202,11 +13202,11 @@ function renderStyle(element, refState, actionState, actionItem, styleProp, elem
     case STYLE_BORDER:
     case STYLE_TEXT_COLOR:
       {
-        var prop = colorStyleProps[actionTypeId];
-        var rValue = Math.round(actionState.rValue);
-        var gValue = Math.round(actionState.gValue);
-        var bValue = Math.round(actionState.bValue);
-        var aValue = actionState.aValue;
+        let prop = colorStyleProps[actionTypeId];
+        let rValue = Math.round(actionState.rValue);
+        let gValue = Math.round(actionState.gValue);
+        let bValue = Math.round(actionState.bValue);
+        let aValue = actionState.aValue;
         addWillChange(element, prop, elementApi);
         setStyle(element, prop, aValue >= 1 ? "rgb(".concat(rValue, ",").concat(gValue, ",").concat(bValue, ")") : "rgba(".concat(rValue, ",").concat(gValue, ",").concat(bValue, ",").concat(aValue, ")"));
         break;
@@ -13214,7 +13214,7 @@ function renderStyle(element, refState, actionState, actionItem, styleProp, elem
 
     default:
       {
-        var _config$unit = config.unit,
+        let _config$unit = config.unit,
             unit = _config$unit === void 0 ? '' : _config$unit;
         addWillChange(element, styleProp, elementApi);
         setStyle(element, styleProp, actionState.value + unit);
@@ -13224,12 +13224,12 @@ function renderStyle(element, refState, actionState, actionItem, styleProp, elem
 }
 
 function renderGeneral(element, actionItem, elementApi) {
-  var setStyle = elementApi.setStyle;
+  let setStyle = elementApi.setStyle;
 
   switch (actionItem.actionTypeId) {
     case GENERAL_DISPLAY:
       {
-        var value = actionItem.config.value;
+        let value = actionItem.config.value;
 
         if (value === FLEX && _IX2BrowserSupport.IS_BROWSER_ENV) {
           setStyle(element, DISPLAY, _IX2BrowserSupport.FLEX_PREFIXED);
@@ -13248,22 +13248,22 @@ function addWillChange(element, prop, elementApi) {
   } // $FlowFixMe
 
 
-  var validProp = willChangeProps[prop];
+  let validProp = willChangeProps[prop];
 
   if (!validProp) {
     return;
   }
 
-  var getStyle = elementApi.getStyle,
+  let getStyle = elementApi.getStyle,
       setStyle = elementApi.setStyle;
-  var value = getStyle(element, WILL_CHANGE);
+  let value = getStyle(element, WILL_CHANGE);
 
   if (!value) {
     setStyle(element, WILL_CHANGE, validProp);
     return;
   }
 
-  var values = value.split(COMMA_DELIMITER).map(trim);
+  let values = value.split(COMMA_DELIMITER).map(trim);
 
   if (values.indexOf(validProp) === -1) {
     setStyle(element, WILL_CHANGE, values.concat(validProp).join(COMMA_DELIMITER));
@@ -13276,15 +13276,15 @@ function removeWillChange(element, prop, elementApi) {
   } // $FlowFixMe
 
 
-  var validProp = willChangeProps[prop];
+  let validProp = willChangeProps[prop];
 
   if (!validProp) {
     return;
   }
 
-  var getStyle = elementApi.getStyle,
+  let getStyle = elementApi.getStyle,
       setStyle = elementApi.setStyle;
-  var value = getStyle(element, WILL_CHANGE);
+  let value = getStyle(element, WILL_CHANGE);
 
   if (!value || value.indexOf(validProp) === -1) {
     return;
@@ -13297,21 +13297,21 @@ function removeWillChange(element, prop, elementApi) {
 
 
 function clearAllStyles(_ref13) {
-  var store = _ref13.store,
+  let store = _ref13.store,
       elementApi = _ref13.elementApi;
 
-  var _store$getState = store.getState(),
+  let _store$getState = store.getState(),
       ixData = _store$getState.ixData;
 
-  var _ixData$events = ixData.events,
+  let _ixData$events = ixData.events,
       events = _ixData$events === void 0 ? {} : _ixData$events,
       _ixData$actionLists = ixData.actionLists,
       actionLists = _ixData$actionLists === void 0 ? {} : _ixData$actionLists;
   Object.keys(events).forEach(function (eventId) {
-    var event = events[eventId];
-    var config = event.action.config;
-    var actionListId = config.actionListId;
-    var actionList = actionLists[actionListId];
+    let event = events[eventId];
+    let config = event.action.config;
+    let actionListId = config.actionListId;
+    let actionList = actionLists[actionListId];
 
     if (actionList) {
       clearActionListStyles({
@@ -13331,11 +13331,11 @@ function clearAllStyles(_ref13) {
 
 
 function clearActionListStyles(_ref14) {
-  var _ref14$actionList = _ref14.actionList,
+  let _ref14$actionList = _ref14.actionList,
       actionList = _ref14$actionList === void 0 ? {} : _ref14$actionList,
       event = _ref14.event,
       elementApi = _ref14.elementApi;
-  var actionItemGroups = actionList.actionItemGroups,
+  let actionItemGroups = actionList.actionItemGroups,
       continuousParameterGroups = actionList.continuousParameterGroups;
   actionItemGroups && actionItemGroups.forEach(function (actionGroup) {
     clearActionGroupStyles({
@@ -13345,7 +13345,7 @@ function clearActionListStyles(_ref14) {
     });
   });
   continuousParameterGroups && continuousParameterGroups.forEach(function (paramGroup) {
-    var continuousActionGroups = paramGroup.continuousActionGroups;
+    let continuousActionGroups = paramGroup.continuousActionGroups;
     continuousActionGroups.forEach(function (actionGroup) {
       clearActionGroupStyles({
         actionGroup: actionGroup,
@@ -13357,14 +13357,14 @@ function clearActionListStyles(_ref14) {
 }
 
 function clearActionGroupStyles(_ref15) {
-  var actionGroup = _ref15.actionGroup,
+  let actionGroup = _ref15.actionGroup,
       event = _ref15.event,
       elementApi = _ref15.elementApi;
-  var actionItems = actionGroup.actionItems;
+  let actionItems = actionGroup.actionItems;
   actionItems.forEach(function (_ref16) {
-    var actionTypeId = _ref16.actionTypeId,
+    let actionTypeId = _ref16.actionTypeId,
         config = _ref16.config;
-    var clearElement;
+    let clearElement;
 
     if ((0, _IX2VanillaPlugins.isPluginType)(actionTypeId)) {
       clearElement = (0, _IX2VanillaPlugins.clearPlugin)(actionTypeId);
@@ -13386,12 +13386,12 @@ function clearActionGroupStyles(_ref15) {
 
 
 function cleanupHTMLElement(element, actionItem, elementApi) {
-  var setStyle = elementApi.setStyle,
+  let setStyle = elementApi.setStyle,
       getStyle = elementApi.getStyle;
-  var actionTypeId = actionItem.actionTypeId;
+  let actionTypeId = actionItem.actionTypeId;
 
   if (actionTypeId === STYLE_SIZE) {
-    var config = actionItem.config;
+    let config = actionItem.config;
 
     if (config.widthUnit === AUTO) {
       setStyle(element, WIDTH, '');
@@ -13411,8 +13411,8 @@ function cleanupHTMLElement(element, actionItem, elementApi) {
   }
 }
 
-var processElementByType = function processElementByType(_ref17) {
-  var effect = _ref17.effect,
+let processElementByType = function processElementByType(_ref17) {
+  let effect = _ref17.effect,
       actionTypeId = _ref17.actionTypeId,
       elementApi = _ref17.elementApi;
   return function (element) {
@@ -13451,7 +13451,7 @@ var processElementByType = function processElementByType(_ref17) {
 };
 
 function clearStyleProp(element, prop, elementApi) {
-  var setStyle = elementApi.setStyle;
+  let setStyle = elementApi.setStyle;
   removeWillChange(element, prop, elementApi);
   setStyle(element, prop, ''); // Clear transform-style: preserve-3d
 
@@ -13462,11 +13462,11 @@ function clearStyleProp(element, prop, elementApi) {
 
 
 function getMaxDurationItemIndex(actionItems) {
-  var maxDuration = 0;
-  var resultIndex = 0;
+  let maxDuration = 0;
+  let resultIndex = 0;
   actionItems.forEach(function (actionItem, index) {
-    var config = actionItem.config;
-    var total = config.delay + config.duration;
+    let config = actionItem.config;
+    let total = config.delay + config.duration;
 
     if (total >= maxDuration) {
       maxDuration = total;
@@ -13478,28 +13478,28 @@ function getMaxDurationItemIndex(actionItems) {
 
 
 function getActionListProgress(actionList, instance) {
-  var actionItemGroups = actionList.actionItemGroups,
+  let actionItemGroups = actionList.actionItemGroups,
       useFirstGroupAsInitialState = actionList.useFirstGroupAsInitialState;
-  var instanceItem = instance.actionItem,
+  let instanceItem = instance.actionItem,
       _instance$verboseTime = instance.verboseTimeElapsed,
       verboseTimeElapsed = _instance$verboseTime === void 0 ? 0 : _instance$verboseTime;
-  var totalDuration = 0;
-  var elapsedDuration = 0;
+  let totalDuration = 0;
+  let elapsedDuration = 0;
   actionItemGroups.forEach(function (group, index) {
     if (useFirstGroupAsInitialState && index === 0) {
       return;
     }
 
-    var actionItems = group.actionItems;
-    var carrierItem = actionItems[getMaxDurationItemIndex(actionItems)];
-    var config = carrierItem.config,
+    let actionItems = group.actionItems;
+    let carrierItem = actionItems[getMaxDurationItemIndex(actionItems)];
+    let config = carrierItem.config,
         actionTypeId = carrierItem.actionTypeId;
 
     if (instanceItem.id === carrierItem.id) {
       elapsedDuration = totalDuration + verboseTimeElapsed;
     }
 
-    var duration = getRenderType(actionTypeId) === RENDER_GENERAL ? 0 : config.duration;
+    let duration = getRenderType(actionTypeId) === RENDER_GENERAL ? 0 : config.duration;
     totalDuration += config.delay + duration;
   });
   return totalDuration > 0 ? (0, _IX2EasingUtils.optimizeFloat)(elapsedDuration / totalDuration) : 0;
@@ -13507,14 +13507,14 @@ function getActionListProgress(actionList, instance) {
 
 
 function reduceListToGroup(_ref18) {
-  var actionList = _ref18.actionList,
+  let actionList = _ref18.actionList,
       actionItemId = _ref18.actionItemId,
       rawData = _ref18.rawData;
-  var actionItemGroups = actionList.actionItemGroups,
+  let actionItemGroups = actionList.actionItemGroups,
       continuousParameterGroups = actionList.continuousParameterGroups;
-  var newActionItems = [];
+  let newActionItems = [];
 
-  var takeItemUntilMatch = function takeItemUntilMatch(actionItem) {
+  let takeItemUntilMatch = function takeItemUntilMatch(actionItem) {
     newActionItems.push((0, _timm.mergeIn)(actionItem, ['config'], {
       delay: 0,
       duration: 0
@@ -13523,13 +13523,13 @@ function reduceListToGroup(_ref18) {
   };
 
   actionItemGroups && actionItemGroups.some(function (_ref19) {
-    var actionItems = _ref19.actionItems;
+    let actionItems = _ref19.actionItems;
     return actionItems.some(takeItemUntilMatch);
   });
   continuousParameterGroups && continuousParameterGroups.some(function (paramGroup) {
-    var continuousActionGroups = paramGroup.continuousActionGroups;
+    let continuousActionGroups = paramGroup.continuousActionGroups;
     return continuousActionGroups.some(function (_ref20) {
-      var actionItems = _ref20.actionItems;
+      let actionItems = _ref20.actionItems;
       return actionItems.some(takeItemUntilMatch);
     });
   });
@@ -13543,12 +13543,12 @@ function reduceListToGroup(_ref18) {
 
 
 function shouldNamespaceEventParameter(eventTypeId, _ref22) {
-  var basedOn = _ref22.basedOn;
+  let basedOn = _ref22.basedOn;
   return eventTypeId === _constants.EventTypeConsts.SCROLLING_IN_VIEW && (basedOn === _constants.EventBasedOn.ELEMENT || basedOn == null) || eventTypeId === _constants.EventTypeConsts.MOUSE_MOVE && basedOn === _constants.EventBasedOn.ELEMENT;
 }
 
 function getNamespacedParameterId(eventStateKey, continuousParameterGroupId) {
-  var namespacedParameterId = eventStateKey + COLON_DELIMITER + continuousParameterGroupId;
+  let namespacedParameterId = eventStateKey + COLON_DELIMITER + continuousParameterGroupId;
   return namespacedParameterId;
 } // $FlowFixMe
 
@@ -13573,7 +13573,7 @@ function stringifyTarget(target) {
     return target;
   }
 
-  var _target$id = target.id,
+  let _target$id = target.id,
       id = _target$id === void 0 ? '' : _target$id,
       _target$selector = target.selector,
       selector = _target$selector === void 0 ? '' : _target$selector,
@@ -13617,7 +13617,7 @@ module.exports = defaultTo;
 /* 252 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var arrayReduce = __webpack_require__(253),
+let arrayReduce = __webpack_require__(253),
     baseEach = __webpack_require__(111),
     baseIteratee = __webpack_require__(7),
     baseReduce = __webpack_require__(257),
@@ -13661,7 +13661,7 @@ var arrayReduce = __webpack_require__(253),
  * // => { '1': ['a', 'c'], '2': ['b'] } (iteration order is not guaranteed)
  */
 function reduce(collection, iteratee, accumulator) {
-  var func = isArray(collection) ? arrayReduce : baseReduce,
+  let func = isArray(collection) ? arrayReduce : baseReduce,
       initAccum = arguments.length < 3;
 
   return func(collection, baseIteratee(iteratee, 4), accumulator, initAccum, baseEach);
@@ -13687,7 +13687,7 @@ module.exports = reduce;
  * @returns {*} Returns the accumulated value.
  */
 function arrayReduce(array, iteratee, accumulator, initAccum) {
-  var index = -1,
+  let index = -1,
       length = array == null ? 0 : array.length;
 
   if (initAccum && length) {
@@ -13706,7 +13706,7 @@ module.exports = arrayReduce;
 /* 254 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var createBaseFor = __webpack_require__(255);
+let createBaseFor = __webpack_require__(255);
 
 /**
  * The base implementation of `baseForOwn` which iterates over `object`
@@ -13719,7 +13719,7 @@ var createBaseFor = __webpack_require__(255);
  * @param {Function} keysFunc The function to get the keys of `object`.
  * @returns {Object} Returns `object`.
  */
-var baseFor = createBaseFor();
+let baseFor = createBaseFor();
 
 module.exports = baseFor;
 
@@ -13737,13 +13737,13 @@ module.exports = baseFor;
  */
 function createBaseFor(fromRight) {
   return function(object, iteratee, keysFunc) {
-    var index = -1,
+    let index = -1,
         iterable = Object(object),
         props = keysFunc(object),
         length = props.length;
 
     while (length--) {
-      var key = props[fromRight ? length : ++index];
+      let key = props[fromRight ? length : ++index];
       if (iteratee(iterable[key], key, iterable) === false) {
         break;
       }
@@ -13759,7 +13759,7 @@ module.exports = createBaseFor;
 /* 256 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var isArrayLike = __webpack_require__(12);
+let isArrayLike = __webpack_require__(12);
 
 /**
  * Creates a `baseEach` or `baseEachRight` function.
@@ -13777,7 +13777,7 @@ function createBaseEach(eachFunc, fromRight) {
     if (!isArrayLike(collection)) {
       return eachFunc(collection, iteratee);
     }
-    var length = collection.length,
+    let length = collection.length,
         index = fromRight ? length : -1,
         iterable = Object(collection);
 
@@ -13826,7 +13826,7 @@ module.exports = baseReduce;
 /* 258 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var createFind = __webpack_require__(86),
+let createFind = __webpack_require__(86),
     findLastIndex = __webpack_require__(259);
 
 /**
@@ -13848,7 +13848,7 @@ var createFind = __webpack_require__(86),
  * });
  * // => 3
  */
-var findLast = createFind(findLastIndex);
+let findLast = createFind(findLastIndex);
 
 module.exports = findLast;
 
@@ -13857,12 +13857,12 @@ module.exports = findLast;
 /* 259 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseFindIndex = __webpack_require__(104),
+let baseFindIndex = __webpack_require__(104),
     baseIteratee = __webpack_require__(7),
     toInteger = __webpack_require__(105);
 
 /* Built-in method references for those with the same name as other `lodash` methods. */
-var nativeMax = Math.max,
+let nativeMax = Math.max,
     nativeMin = Math.min;
 
 /**
@@ -13879,7 +13879,7 @@ var nativeMax = Math.max,
  * @returns {number} Returns the index of the found element, else `-1`.
  * @example
  *
- * var users = [
+ * let users = [
  *   { 'user': 'barney',  'active': true },
  *   { 'user': 'fred',    'active': false },
  *   { 'user': 'pebbles', 'active': false }
@@ -13901,11 +13901,11 @@ var nativeMax = Math.max,
  * // => 0
  */
 function findLastIndex(array, predicate, fromIndex) {
-  var length = array == null ? 0 : array.length;
+  let length = array == null ? 0 : array.length;
   if (!length) {
     return -1;
   }
-  var index = length - 1;
+  let index = length - 1;
   if (fromIndex !== undefined) {
     index = toInteger(fromIndex);
     index = fromIndex < 0
@@ -13949,7 +13949,7 @@ module.exports = _interopRequireDefault;
 
 
 
-var hasOwnProperty = Object.prototype.hasOwnProperty;
+let hasOwnProperty = Object.prototype.hasOwnProperty;
 
 /**
  * inlined Object.is polyfill to avoid requiring consumers ship their own
@@ -13982,15 +13982,15 @@ function shallowEqual(objA, objB) {
     return false;
   }
 
-  var keysA = Object.keys(objA);
-  var keysB = Object.keys(objB);
+  let keysA = Object.keys(objA);
+  let keysB = Object.keys(objB);
 
   if (keysA.length !== keysB.length) {
     return false;
   }
 
   // Test for A's keys different from B.
-  for (var i = 0; i < keysA.length; i++) {
+  for (let i = 0; i < keysA.length; i++) {
     if (!hasOwnProperty.call(objB, keysA[i]) || !is(objA[keysA[i]], objB[keysA[i]])) {
       return false;
     }
@@ -14013,33 +14013,33 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.ixInstances = void 0;
 
-var _constants = __webpack_require__(2);
+let _constants = __webpack_require__(2);
 
-var _shared = __webpack_require__(10);
+let _shared = __webpack_require__(10);
 
-var _timm = __webpack_require__(18);
+let _timm = __webpack_require__(18);
 /* eslint-env browser */
 
 
-var _constants$IX2EngineA = _constants.IX2EngineActionTypes,
+let _constants$IX2EngineA = _constants.IX2EngineActionTypes,
     IX2_RAW_DATA_IMPORTED = _constants$IX2EngineA.IX2_RAW_DATA_IMPORTED,
     IX2_SESSION_STOPPED = _constants$IX2EngineA.IX2_SESSION_STOPPED,
     IX2_INSTANCE_ADDED = _constants$IX2EngineA.IX2_INSTANCE_ADDED,
     IX2_INSTANCE_STARTED = _constants$IX2EngineA.IX2_INSTANCE_STARTED,
     IX2_INSTANCE_REMOVED = _constants$IX2EngineA.IX2_INSTANCE_REMOVED,
     IX2_ANIMATION_FRAME_CHANGED = _constants$IX2EngineA.IX2_ANIMATION_FRAME_CHANGED;
-var _shared$IX2EasingUtil = _shared.IX2EasingUtils,
+let _shared$IX2EasingUtil = _shared.IX2EasingUtils,
     optimizeFloat = _shared$IX2EasingUtil.optimizeFloat,
     applyEasing = _shared$IX2EasingUtil.applyEasing,
     createBezierEasing = _shared$IX2EasingUtil.createBezierEasing;
-var RENDER_GENERAL = _constants.IX2EngineConstants.RENDER_GENERAL;
-var _shared$IX2VanillaUti = _shared.IX2VanillaUtils,
+let RENDER_GENERAL = _constants.IX2EngineConstants.RENDER_GENERAL;
+let _shared$IX2VanillaUti = _shared.IX2VanillaUtils,
     getItemConfigByKey = _shared$IX2VanillaUti.getItemConfigByKey,
     getRenderType = _shared$IX2VanillaUti.getRenderType,
     getStyleProp = _shared$IX2VanillaUti.getStyleProp;
 
-var continuousInstance = function continuousInstance(state, action) {
-  var lastPosition = state.position,
+let continuousInstance = function continuousInstance(state, action) {
+  let lastPosition = state.position,
       parameterId = state.parameterId,
       actionGroups = state.actionGroups,
       destinationKeys = state.destinationKeys,
@@ -14047,31 +14047,31 @@ var continuousInstance = function continuousInstance(state, action) {
       restingValue = state.restingValue,
       actionTypeId = state.actionTypeId,
       customEasingFn = state.customEasingFn;
-  var parameters = action.payload.parameters;
-  var velocity = Math.max(1 - smoothing, 0.01);
-  var paramValue = parameters[parameterId];
+  let parameters = action.payload.parameters;
+  let velocity = Math.max(1 - smoothing, 0.01);
+  let paramValue = parameters[parameterId];
 
   if (paramValue == null) {
     velocity = 1;
     paramValue = restingValue;
   }
 
-  var nextPosition = Math.max(paramValue, 0) || 0;
-  var positionDiff = optimizeFloat(nextPosition - lastPosition);
-  var position = optimizeFloat(lastPosition + positionDiff * velocity);
-  var keyframePosition = position * 100;
+  let nextPosition = Math.max(paramValue, 0) || 0;
+  let positionDiff = optimizeFloat(nextPosition - lastPosition);
+  let position = optimizeFloat(lastPosition + positionDiff * velocity);
+  let keyframePosition = position * 100;
 
   if (position === lastPosition && state.current) {
     return state;
   }
 
-  var fromActionItem;
-  var toActionItem;
-  var positionOffset;
-  var positionRange;
+  let fromActionItem;
+  let toActionItem;
+  let positionOffset;
+  let positionRange;
 
-  for (var i = 0, length = actionGroups.length; i < length; i++) {
-    var _actionGroups$i = actionGroups[i],
+  for (let i = 0, length = actionGroups.length; i < length; i++) {
+    let _actionGroups$i = actionGroups[i],
         keyframe = _actionGroups$i.keyframe,
         actionItems = _actionGroups$i.actionItems;
 
@@ -14081,8 +14081,8 @@ var continuousInstance = function continuousInstance(state, action) {
 
     if (keyframePosition >= keyframe) {
       fromActionItem = actionItems[0];
-      var nextGroup = actionGroups[i + 1];
-      var hasNextItem = nextGroup && keyframePosition !== keyframe;
+      let nextGroup = actionGroups[i + 1];
+      let hasNextItem = nextGroup && keyframePosition !== keyframe;
       toActionItem = hasNextItem ? nextGroup.actionItems[0] : null;
 
       if (hasNextItem) {
@@ -14092,26 +14092,26 @@ var continuousInstance = function continuousInstance(state, action) {
     }
   }
 
-  var current = {};
+  let current = {};
 
   if (fromActionItem && !toActionItem) {
-    for (var _i = 0, _length = destinationKeys.length; _i < _length; _i++) {
-      var key = destinationKeys[_i];
+    for (let _i = 0, _length = destinationKeys.length; _i < _length; _i++) {
+      let key = destinationKeys[_i];
       current[key] = getItemConfigByKey(actionTypeId, key, fromActionItem.config);
     }
   } else if (fromActionItem && toActionItem && positionOffset !== undefined && positionRange !== undefined) {
-    var localPosition = (position - positionOffset) / positionRange;
-    var easing = fromActionItem.config.easing;
-    var eased = applyEasing(easing, localPosition, customEasingFn);
+    let localPosition = (position - positionOffset) / positionRange;
+    let easing = fromActionItem.config.easing;
+    let eased = applyEasing(easing, localPosition, customEasingFn);
 
-    for (var _i2 = 0, _length2 = destinationKeys.length; _i2 < _length2; _i2++) {
-      var _key = destinationKeys[_i2];
-      var fromVal = getItemConfigByKey(actionTypeId, _key, fromActionItem.config);
-      var toVal = getItemConfigByKey(actionTypeId, _key, toActionItem.config); // $FlowFixMe — toVal and fromVal could potentially be null, need to update type higher to determine number
+    for (let _i2 = 0, _length2 = destinationKeys.length; _i2 < _length2; _i2++) {
+      let _key = destinationKeys[_i2];
+      let fromVal = getItemConfigByKey(actionTypeId, _key, fromActionItem.config);
+      let toVal = getItemConfigByKey(actionTypeId, _key, toActionItem.config); // $FlowFixMe — toVal and fromVal could potentially be null, need to update type higher to determine number
 
-      var diff = toVal - fromVal; // $FlowFixMe
+      let diff = toVal - fromVal; // $FlowFixMe
 
-      var value = diff * eased + fromVal;
+      let value = diff * eased + fromVal;
       current[_key] = value;
     }
   }
@@ -14122,8 +14122,8 @@ var continuousInstance = function continuousInstance(state, action) {
   });
 };
 
-var timedInstance = function timedInstance(state, action) {
-  var _state = state,
+let timedInstance = function timedInstance(state, action) {
+  let _state = state,
       active = _state.active,
       origin = _state.origin,
       start = _state.start,
@@ -14136,8 +14136,8 @@ var timedInstance = function timedInstance(state, action) {
       pluginDuration = _state.pluginDuration,
       instanceDelay = _state.instanceDelay,
       customEasingFn = _state.customEasingFn;
-  var easing = actionItem.config.easing;
-  var _actionItem$config = actionItem.config,
+  let easing = actionItem.config.easing;
+  let _actionItem$config = actionItem.config,
       duration = _actionItem$config.duration,
       delay = _actionItem$config.delay;
 
@@ -14153,15 +14153,15 @@ var timedInstance = function timedInstance(state, action) {
     duration = delay = 0;
   }
 
-  var now = action.payload.now;
+  let now = action.payload.now;
 
   if (active && origin) {
-    var delta = now - (start + delay);
+    let delta = now - (start + delay);
 
     if (verbose) {
-      var verboseDelta = now - start;
-      var verboseDuration = duration + delay;
-      var verbosePosition = optimizeFloat(Math.min(Math.max(0, verboseDelta / verboseDuration), 1));
+      let verboseDelta = now - start;
+      let verboseDuration = duration + delay;
+      let verbosePosition = optimizeFloat(Math.min(Math.max(0, verboseDelta / verboseDuration), 1));
       state = (0, _timm.set)(state, 'verboseTimeElapsed', verboseDuration * verbosePosition);
     }
 
@@ -14169,17 +14169,17 @@ var timedInstance = function timedInstance(state, action) {
       return state;
     }
 
-    var position = optimizeFloat(Math.min(Math.max(0, delta / duration), 1));
-    var eased = applyEasing(easing, position, customEasingFn);
-    var newProps = {};
-    var current = null;
+    let position = optimizeFloat(Math.min(Math.max(0, delta / duration), 1));
+    let eased = applyEasing(easing, position, customEasingFn);
+    let newProps = {};
+    let current = null;
 
     if (destinationKeys.length) {
       current = destinationKeys.reduce(function (result, key) {
-        var destValue = destination[key];
-        var originVal = parseFloat(origin[key]) || 0;
-        var diff = parseFloat(destValue) - originVal;
-        var value = diff * eased + originVal;
+        let destValue = destination[key];
+        let originVal = parseFloat(origin[key]) || 0;
+        let diff = parseFloat(destValue) - originVal;
+        let value = diff * eased + originVal;
         result[key] = value;
         return result;
       }, {});
@@ -14199,9 +14199,9 @@ var timedInstance = function timedInstance(state, action) {
   return state;
 };
 
-var ixInstances = function ixInstances() {
-  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : Object.freeze({});
-  var action = arguments.length > 1 ? arguments[1] : undefined;
+let ixInstances = function ixInstances() {
+  let state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : Object.freeze({});
+  let action = arguments.length > 1 ? arguments[1] : undefined;
 
   switch (action.type) {
     case IX2_RAW_DATA_IMPORTED:
@@ -14216,7 +14216,7 @@ var ixInstances = function ixInstances() {
 
     case IX2_INSTANCE_ADDED:
       {
-        var _action$payload = action.payload,
+        let _action$payload = action.payload,
             instanceId = _action$payload.instanceId,
             elementId = _action$payload.elementId,
             actionItem = _action$payload.actionItem,
@@ -14238,13 +14238,13 @@ var ixInstances = function ixInstances() {
             pluginInstance = _action$payload.pluginInstance,
             pluginDuration = _action$payload.pluginDuration,
             instanceDelay = _action$payload.instanceDelay;
-        var actionTypeId = actionItem.actionTypeId;
-        var renderType = getRenderType(actionTypeId);
-        var styleProp = getStyleProp(renderType, actionTypeId);
-        var destinationKeys = Object.keys(destination).filter(function (key) {
+        let actionTypeId = actionItem.actionTypeId;
+        let renderType = getRenderType(actionTypeId);
+        let styleProp = getStyleProp(renderType, actionTypeId);
+        let destinationKeys = Object.keys(destination).filter(function (key) {
           return destination[key] != null;
         });
-        var easing = actionItem.config.easing;
+        let easing = actionItem.config.easing;
         return (0, _timm.set)(state, instanceId, {
           id: instanceId,
           elementId: elementId,
@@ -14281,7 +14281,7 @@ var ixInstances = function ixInstances() {
 
     case IX2_INSTANCE_STARTED:
       {
-        var _action$payload2 = action.payload,
+        let _action$payload2 = action.payload,
             _instanceId = _action$payload2.instanceId,
             time = _action$payload2.time;
         return (0, _timm.mergeIn)(state, [_instanceId], {
@@ -14293,18 +14293,18 @@ var ixInstances = function ixInstances() {
 
     case IX2_INSTANCE_REMOVED:
       {
-        var _instanceId2 = action.payload.instanceId;
+        let _instanceId2 = action.payload.instanceId;
 
         if (!state[_instanceId2]) {
           return state;
         }
 
-        var newState = {};
-        var keys = Object.keys(state);
-        var length = keys.length;
+        let newState = {};
+        let keys = Object.keys(state);
+        let length = keys.length;
 
-        for (var i = 0; i < length; i++) {
-          var key = keys[i];
+        for (let i = 0; i < length; i++) {
+          let key = keys[i];
 
           if (key !== _instanceId2) {
             newState[key] = state[key];
@@ -14316,16 +14316,16 @@ var ixInstances = function ixInstances() {
 
     case IX2_ANIMATION_FRAME_CHANGED:
       {
-        var _newState = state;
+        let _newState = state;
 
-        var _keys = Object.keys(state);
+        let _keys = Object.keys(state);
 
-        var _length3 = _keys.length;
+        let _length3 = _keys.length;
 
-        for (var _i3 = 0; _i3 < _length3; _i3++) {
-          var _key2 = _keys[_i3];
-          var instance = state[_key2];
-          var reducer = instance.continuous ? continuousInstance : timedInstance;
+        for (let _i3 = 0; _i3 < _length3; _i3++) {
+          let _key2 = _keys[_i3];
+          let instance = state[_key2];
+          let reducer = instance.continuous ? continuousInstance : timedInstance;
           _newState = (0, _timm.set)(_newState, _key2, reducer(instance, action));
         }
 
@@ -14353,18 +14353,18 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.ixParameters = void 0;
 
-var _constants = __webpack_require__(2);
+let _constants = __webpack_require__(2);
 
-var _constants$IX2EngineA = _constants.IX2EngineActionTypes,
+let _constants$IX2EngineA = _constants.IX2EngineActionTypes,
     IX2_RAW_DATA_IMPORTED = _constants$IX2EngineA.IX2_RAW_DATA_IMPORTED,
     IX2_SESSION_STOPPED = _constants$IX2EngineA.IX2_SESSION_STOPPED,
     IX2_PARAMETER_CHANGED = _constants$IX2EngineA.IX2_PARAMETER_CHANGED; // prettier-ignore
 
-var ixParameters = function ixParameters() {
-  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {
+let ixParameters = function ixParameters() {
+  let state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {
     /*mutable flat state*/
   };
-  var action = arguments.length > 1 ? arguments[1] : undefined;
+  let action = arguments.length > 1 ? arguments[1] : undefined;
 
   switch (action.type) {
     case IX2_RAW_DATA_IMPORTED:
@@ -14383,7 +14383,7 @@ var ixParameters = function ixParameters() {
 
     case IX2_PARAMETER_CHANGED:
       {
-        var _action$payload = action.payload,
+        let _action$payload = action.payload,
             key = _action$payload.key,
             value = _action$payload.value;
         state[key] = value;
@@ -14405,9 +14405,9 @@ exports.ixParameters = ixParameters;
 
 function _objectWithoutPropertiesLoose(source, excluded) {
   if (source == null) return {};
-  var target = {};
-  var sourceKeys = Object.keys(source);
-  var key, i;
+  let target = {};
+  let sourceKeys = Object.keys(source);
+  let key, i;
 
   for (i = 0; i < sourceKeys.length; i++) {
     key = sourceKeys[i];
@@ -14424,14 +14424,14 @@ module.exports = _objectWithoutPropertiesLoose;
 /* 265 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseKeys = __webpack_require__(53),
+let baseKeys = __webpack_require__(53),
     getTag = __webpack_require__(55),
     isArrayLike = __webpack_require__(12),
     isString = __webpack_require__(266),
     stringSize = __webpack_require__(267);
 
 /** `Object#toString` result references. */
-var mapTag = '[object Map]',
+let mapTag = '[object Map]',
     setTag = '[object Set]';
 
 /**
@@ -14462,7 +14462,7 @@ function size(collection) {
   if (isArrayLike(collection)) {
     return isString(collection) ? stringSize(collection) : collection.length;
   }
-  var tag = getTag(collection);
+  let tag = getTag(collection);
   if (tag == mapTag || tag == setTag) {
     return collection.size;
   }
@@ -14476,12 +14476,12 @@ module.exports = size;
 /* 266 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseGetTag = __webpack_require__(11),
+let baseGetTag = __webpack_require__(11),
     isArray = __webpack_require__(1),
     isObjectLike = __webpack_require__(9);
 
 /** `Object#toString` result references. */
-var stringTag = '[object String]';
+let stringTag = '[object String]';
 
 /**
  * Checks if `value` is classified as a `String` primitive or object.
@@ -14512,7 +14512,7 @@ module.exports = isString;
 /* 267 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var asciiSize = __webpack_require__(268),
+let asciiSize = __webpack_require__(268),
     hasUnicode = __webpack_require__(269),
     unicodeSize = __webpack_require__(270);
 
@@ -14536,7 +14536,7 @@ module.exports = stringSize;
 /* 268 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseProperty = __webpack_require__(103);
+let baseProperty = __webpack_require__(103);
 
 /**
  * Gets the size of an ASCII `string`.
@@ -14545,7 +14545,7 @@ var baseProperty = __webpack_require__(103);
  * @param {string} string The string inspect.
  * @returns {number} Returns the string size.
  */
-var asciiSize = baseProperty('length');
+let asciiSize = baseProperty('length');
 
 module.exports = asciiSize;
 
@@ -14555,7 +14555,7 @@ module.exports = asciiSize;
 /***/ (function(module, exports) {
 
 /** Used to compose unicode character classes. */
-var rsAstralRange = '\\ud800-\\udfff',
+let rsAstralRange = '\\ud800-\\udfff',
     rsComboMarksRange = '\\u0300-\\u036f',
     reComboHalfMarksRange = '\\ufe20-\\ufe2f',
     rsComboSymbolsRange = '\\u20d0-\\u20ff',
@@ -14563,10 +14563,10 @@ var rsAstralRange = '\\ud800-\\udfff',
     rsVarRange = '\\ufe0e\\ufe0f';
 
 /** Used to compose unicode capture groups. */
-var rsZWJ = '\\u200d';
+let rsZWJ = '\\u200d';
 
 /** Used to detect strings with [zero-width joiners or code points from the astral planes](http://eev.ee/blog/2015/09/12/dark-corners-of-unicode/). */
-var reHasUnicode = RegExp('[' + rsZWJ + rsAstralRange  + rsComboRange + rsVarRange + ']');
+let reHasUnicode = RegExp('[' + rsZWJ + rsAstralRange  + rsComboRange + rsVarRange + ']');
 
 /**
  * Checks if `string` contains Unicode symbols.
@@ -14587,7 +14587,7 @@ module.exports = hasUnicode;
 /***/ (function(module, exports) {
 
 /** Used to compose unicode character classes. */
-var rsAstralRange = '\\ud800-\\udfff',
+let rsAstralRange = '\\ud800-\\udfff',
     rsComboMarksRange = '\\u0300-\\u036f',
     reComboHalfMarksRange = '\\ufe20-\\ufe2f',
     rsComboSymbolsRange = '\\u20d0-\\u20ff',
@@ -14595,7 +14595,7 @@ var rsAstralRange = '\\ud800-\\udfff',
     rsVarRange = '\\ufe0e\\ufe0f';
 
 /** Used to compose unicode capture groups. */
-var rsAstral = '[' + rsAstralRange + ']',
+let rsAstral = '[' + rsAstralRange + ']',
     rsCombo = '[' + rsComboRange + ']',
     rsFitz = '\\ud83c[\\udffb-\\udfff]',
     rsModifier = '(?:' + rsCombo + '|' + rsFitz + ')',
@@ -14605,14 +14605,14 @@ var rsAstral = '[' + rsAstralRange + ']',
     rsZWJ = '\\u200d';
 
 /** Used to compose unicode regexes. */
-var reOptMod = rsModifier + '?',
-    rsOptVar = '[' + rsVarRange + ']?',
-    rsOptJoin = '(?:' + rsZWJ + '(?:' + [rsNonAstral, rsRegional, rsSurrPair].join('|') + ')' + rsOptVar + reOptMod + ')*',
-    rsSeq = rsOptVar + reOptMod + rsOptJoin,
+let reOptMod = rsModifier + '?',
+    rsOptlet = '[' + rsVarRange + ']?',
+    rsOptJoin = '(?:' + rsZWJ + '(?:' + [rsNonAstral, rsRegional, rsSurrPair].join('|') + ')' + rsOptlet + reOptMod + ')*',
+    rsSeq = rsOptlet + reOptMod + rsOptJoin,
     rsSymbol = '(?:' + [rsNonAstral + rsCombo + '?', rsCombo, rsRegional, rsSurrPair, rsAstral].join('|') + ')';
 
 /** Used to match [string symbols](https://mathiasbynens.be/notes/javascript-unicode). */
-var reUnicode = RegExp(rsFitz + '(?=' + rsFitz + ')|' + rsSymbol + rsSeq, 'g');
+let reUnicode = RegExp(rsFitz + '(?=' + rsFitz + ')|' + rsSymbol + rsSeq, 'g');
 
 /**
  * Gets the size of a Unicode `string`.
@@ -14622,7 +14622,7 @@ var reUnicode = RegExp(rsFitz + '(?=' + rsFitz + ')|' + rsSymbol + rsSeq, 'g');
  * @returns {number} Returns the string size.
  */
 function unicodeSize(string) {
-  var result = reUnicode.lastIndex = 0;
+  let result = reUnicode.lastIndex = 0;
   while (reUnicode.test(string)) {
     ++result;
   }
@@ -14636,7 +14636,7 @@ module.exports = unicodeSize;
 /* 271 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseIteratee = __webpack_require__(7),
+let baseIteratee = __webpack_require__(7),
     negate = __webpack_require__(272),
     pickBy = __webpack_require__(273);
 
@@ -14655,7 +14655,7 @@ var baseIteratee = __webpack_require__(7),
  * @returns {Object} Returns the new object.
  * @example
  *
- * var object = { 'a': 1, 'b': '2', 'c': 3 };
+ * let object = { 'a': 1, 'b': '2', 'c': 3 };
  *
  * _.omitBy(object, _.isNumber);
  * // => { 'b': '2' }
@@ -14672,7 +14672,7 @@ module.exports = omitBy;
 /***/ (function(module, exports) {
 
 /** Error message constants. */
-var FUNC_ERROR_TEXT = 'Expected a function';
+let FUNC_ERROR_TEXT = 'Expected a function';
 
 /**
  * Creates a function that negates the result of the predicate `func`. The
@@ -14699,7 +14699,7 @@ function negate(predicate) {
     throw new TypeError(FUNC_ERROR_TEXT);
   }
   return function() {
-    var args = arguments;
+    let args = arguments;
     switch (args.length) {
       case 0: return !predicate.call(this);
       case 1: return !predicate.call(this, args[0]);
@@ -14717,7 +14717,7 @@ module.exports = negate;
 /* 273 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var arrayMap = __webpack_require__(102),
+let arrayMap = __webpack_require__(102),
     baseIteratee = __webpack_require__(7),
     basePickBy = __webpack_require__(274),
     getAllKeysIn = __webpack_require__(277);
@@ -14735,7 +14735,7 @@ var arrayMap = __webpack_require__(102),
  * @returns {Object} Returns the new object.
  * @example
  *
- * var object = { 'a': 1, 'b': '2', 'c': 3 };
+ * let object = { 'a': 1, 'b': '2', 'c': 3 };
  *
  * _.pickBy(object, _.isNumber);
  * // => { 'a': 1, 'c': 3 }
@@ -14744,7 +14744,7 @@ function pickBy(object, predicate) {
   if (object == null) {
     return {};
   }
-  var props = arrayMap(getAllKeysIn(object), function(prop) {
+  let props = arrayMap(getAllKeysIn(object), function(prop) {
     return [prop];
   });
   predicate = baseIteratee(predicate);
@@ -14760,7 +14760,7 @@ module.exports = pickBy;
 /* 274 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseGet = __webpack_require__(57),
+let baseGet = __webpack_require__(57),
     baseSet = __webpack_require__(275),
     castPath = __webpack_require__(35);
 
@@ -14774,12 +14774,12 @@ var baseGet = __webpack_require__(57),
  * @returns {Object} Returns the new object.
  */
 function basePickBy(object, paths, predicate) {
-  var index = -1,
+  let index = -1,
       length = paths.length,
       result = {};
 
   while (++index < length) {
-    var path = paths[index],
+    let path = paths[index],
         value = baseGet(object, path);
 
     if (predicate(value, path)) {
@@ -14796,7 +14796,7 @@ module.exports = basePickBy;
 /* 275 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var assignValue = __webpack_require__(276),
+let assignValue = __webpack_require__(276),
     castPath = __webpack_require__(35),
     isIndex = __webpack_require__(50),
     isObject = __webpack_require__(6),
@@ -14818,13 +14818,13 @@ function baseSet(object, path, value, customizer) {
   }
   path = castPath(path, object);
 
-  var index = -1,
+  let index = -1,
       length = path.length,
       lastIndex = length - 1,
       nested = object;
 
   while (nested != null && ++index < length) {
-    var key = toKey(path[index]),
+    let key = toKey(path[index]),
         newValue = value;
 
     if (key === '__proto__' || key === 'constructor' || key === 'prototype') {
@@ -14832,7 +14832,7 @@ function baseSet(object, path, value, customizer) {
     }
 
     if (index != lastIndex) {
-      var objValue = nested[key];
+      let objValue = nested[key];
       newValue = customizer ? customizer(objValue, key, nested) : undefined;
       if (newValue === undefined) {
         newValue = isObject(objValue)
@@ -14853,14 +14853,14 @@ module.exports = baseSet;
 /* 276 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseAssignValue = __webpack_require__(115),
+let baseAssignValue = __webpack_require__(115),
     eq = __webpack_require__(45);
 
 /** Used for built-in method references. */
-var objectProto = Object.prototype;
+let objectProto = Object.prototype;
 
 /** Used to check objects for own properties. */
-var hasOwnProperty = objectProto.hasOwnProperty;
+let hasOwnProperty = objectProto.hasOwnProperty;
 
 /**
  * Assigns `value` to `key` of `object` if the existing value is not equivalent
@@ -14873,7 +14873,7 @@ var hasOwnProperty = objectProto.hasOwnProperty;
  * @param {*} value The value to assign.
  */
 function assignValue(object, key, value) {
-  var objValue = object[key];
+  let objValue = object[key];
   if (!(hasOwnProperty.call(object, key) && eq(objValue, value)) ||
       (value === undefined && !(key in object))) {
     baseAssignValue(object, key, value);
@@ -14887,7 +14887,7 @@ module.exports = assignValue;
 /* 277 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseGetAllKeys = __webpack_require__(93),
+let baseGetAllKeys = __webpack_require__(93),
     getSymbolsIn = __webpack_require__(278),
     keysIn = __webpack_require__(280);
 
@@ -14910,13 +14910,13 @@ module.exports = getAllKeysIn;
 /* 278 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var arrayPush = __webpack_require__(48),
+let arrayPush = __webpack_require__(48),
     getPrototype = __webpack_require__(279),
     getSymbols = __webpack_require__(94),
     stubArray = __webpack_require__(95);
 
 /* Built-in method references for those with the same name as other `lodash` methods. */
-var nativeGetSymbols = Object.getOwnPropertySymbols;
+let nativeGetSymbols = Object.getOwnPropertySymbols;
 
 /**
  * Creates an array of the own and inherited enumerable symbols of `object`.
@@ -14925,8 +14925,8 @@ var nativeGetSymbols = Object.getOwnPropertySymbols;
  * @param {Object} object The object to query.
  * @returns {Array} Returns the array of symbols.
  */
-var getSymbolsIn = !nativeGetSymbols ? stubArray : function(object) {
-  var result = [];
+let getSymbolsIn = !nativeGetSymbols ? stubArray : function(object) {
+  let result = [];
   while (object) {
     arrayPush(result, getSymbols(object));
     object = getPrototype(object);
@@ -14941,10 +14941,10 @@ module.exports = getSymbolsIn;
 /* 279 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var overArg = __webpack_require__(98);
+let overArg = __webpack_require__(98);
 
 /** Built-in value references. */
-var getPrototype = overArg(Object.getPrototypeOf, Object);
+let getPrototype = overArg(Object.getPrototypeOf, Object);
 
 module.exports = getPrototype;
 
@@ -14953,7 +14953,7 @@ module.exports = getPrototype;
 /* 280 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var arrayLikeKeys = __webpack_require__(96),
+let arrayLikeKeys = __webpack_require__(96),
     baseKeysIn = __webpack_require__(281),
     isArrayLike = __webpack_require__(12);
 
@@ -14991,15 +14991,15 @@ module.exports = keysIn;
 /* 281 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var isObject = __webpack_require__(6),
+let isObject = __webpack_require__(6),
     isPrototype = __webpack_require__(54),
     nativeKeysIn = __webpack_require__(282);
 
 /** Used for built-in method references. */
-var objectProto = Object.prototype;
+let objectProto = Object.prototype;
 
 /** Used to check objects for own properties. */
-var hasOwnProperty = objectProto.hasOwnProperty;
+let hasOwnProperty = objectProto.hasOwnProperty;
 
 /**
  * The base implementation of `_.keysIn` which doesn't treat sparse arrays as dense.
@@ -15012,10 +15012,10 @@ function baseKeysIn(object) {
   if (!isObject(object)) {
     return nativeKeysIn(object);
   }
-  var isProto = isPrototype(object),
+  let isProto = isPrototype(object),
       result = [];
 
-  for (var key in object) {
+  for (let key in object) {
     if (!(key == 'constructor' && (isProto || !hasOwnProperty.call(object, key)))) {
       result.push(key);
     }
@@ -15040,9 +15040,9 @@ module.exports = baseKeysIn;
  * @returns {Array} Returns the array of property names.
  */
 function nativeKeysIn(object) {
-  var result = [];
+  let result = [];
   if (object != null) {
-    for (var key in Object(object)) {
+    for (let key in Object(object)) {
       result.push(key);
     }
   }
@@ -15056,7 +15056,7 @@ module.exports = nativeKeysIn;
 /* 283 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseKeys = __webpack_require__(53),
+let baseKeys = __webpack_require__(53),
     getTag = __webpack_require__(55),
     isArguments = __webpack_require__(34),
     isArray = __webpack_require__(1),
@@ -15066,14 +15066,14 @@ var baseKeys = __webpack_require__(53),
     isTypedArray = __webpack_require__(51);
 
 /** `Object#toString` result references. */
-var mapTag = '[object Map]',
+let mapTag = '[object Map]',
     setTag = '[object Set]';
 
 /** Used for built-in method references. */
-var objectProto = Object.prototype;
+let objectProto = Object.prototype;
 
 /** Used to check objects for own properties. */
-var hasOwnProperty = objectProto.hasOwnProperty;
+let hasOwnProperty = objectProto.hasOwnProperty;
 
 /**
  * Checks if `value` is an empty object, collection, map, or set.
@@ -15117,14 +15117,14 @@ function isEmpty(value) {
         isBuffer(value) || isTypedArray(value) || isArguments(value))) {
     return !value.length;
   }
-  var tag = getTag(value);
+  let tag = getTag(value);
   if (tag == mapTag || tag == setTag) {
     return !value.size;
   }
   if (isPrototype(value)) {
     return !baseKeys(value).length;
   }
-  for (var key in value) {
+  for (let key in value) {
     if (hasOwnProperty.call(value, key)) {
       return false;
     }
@@ -15139,7 +15139,7 @@ module.exports = isEmpty;
 /* 284 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseAssignValue = __webpack_require__(115),
+let baseAssignValue = __webpack_require__(115),
     baseForOwn = __webpack_require__(112),
     baseIteratee = __webpack_require__(7);
 
@@ -15159,7 +15159,7 @@ var baseAssignValue = __webpack_require__(115),
  * @see _.mapKeys
  * @example
  *
- * var users = {
+ * let users = {
  *   'fred':    { 'user': 'fred',    'age': 40 },
  *   'pebbles': { 'user': 'pebbles', 'age': 1 }
  * };
@@ -15172,7 +15172,7 @@ var baseAssignValue = __webpack_require__(115),
  * // => { 'fred': 40, 'pebbles': 1 } (iteration order is not guaranteed)
  */
 function mapValues(object, iteratee) {
-  var result = {};
+  let result = {};
   iteratee = baseIteratee(iteratee, 3);
 
   baseForOwn(object, function(value, key, object) {
@@ -15188,7 +15188,7 @@ module.exports = mapValues;
 /* 285 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var arrayEach = __webpack_require__(286),
+let arrayEach = __webpack_require__(286),
     baseEach = __webpack_require__(111),
     castFunction = __webpack_require__(287),
     isArray = __webpack_require__(1);
@@ -15224,7 +15224,7 @@ var arrayEach = __webpack_require__(286),
  * // => Logs 'a' then 'b' (iteration order is not guaranteed).
  */
 function forEach(collection, iteratee) {
-  var func = isArray(collection) ? arrayEach : baseEach;
+  let func = isArray(collection) ? arrayEach : baseEach;
   return func(collection, castFunction(iteratee));
 }
 
@@ -15245,7 +15245,7 @@ module.exports = forEach;
  * @returns {Array} Returns `array`.
  */
 function arrayEach(array, iteratee) {
-  var index = -1,
+  let index = -1,
       length = array == null ? 0 : array.length;
 
   while (++index < length) {
@@ -15263,7 +15263,7 @@ module.exports = arrayEach;
 /* 287 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var identity = __webpack_require__(59);
+let identity = __webpack_require__(59);
 
 /**
  * Casts `value` to `identity` if it's not a function.
@@ -15283,11 +15283,11 @@ module.exports = castFunction;
 /* 288 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var debounce = __webpack_require__(289),
+let debounce = __webpack_require__(289),
     isObject = __webpack_require__(6);
 
 /** Error message constants. */
-var FUNC_ERROR_TEXT = 'Expected a function';
+let FUNC_ERROR_TEXT = 'Expected a function';
 
 /**
  * Creates a throttled function that only invokes `func` at most once per
@@ -15327,14 +15327,14 @@ var FUNC_ERROR_TEXT = 'Expected a function';
  * jQuery(window).on('scroll', _.throttle(updatePosition, 100));
  *
  * // Invoke `renewToken` when the click event is fired, but not more than once every 5 minutes.
- * var throttled = _.throttle(renewToken, 300000, { 'trailing': false });
+ * let throttled = _.throttle(renewToken, 300000, { 'trailing': false });
  * jQuery(element).on('click', throttled);
  *
  * // Cancel the trailing throttled invocation.
  * jQuery(window).on('popstate', throttled.cancel);
  */
 function throttle(func, wait, options) {
-  var leading = true,
+  let leading = true,
       trailing = true;
 
   if (typeof func != 'function') {
@@ -15358,15 +15358,15 @@ module.exports = throttle;
 /* 289 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var isObject = __webpack_require__(6),
+let isObject = __webpack_require__(6),
     now = __webpack_require__(290),
     toNumber = __webpack_require__(60);
 
 /** Error message constants. */
-var FUNC_ERROR_TEXT = 'Expected a function';
+let FUNC_ERROR_TEXT = 'Expected a function';
 
 /* Built-in method references for those with the same name as other `lodash` methods. */
-var nativeMax = Math.max,
+let nativeMax = Math.max,
     nativeMin = Math.min;
 
 /**
@@ -15416,15 +15416,15 @@ var nativeMax = Math.max,
  * }));
  *
  * // Ensure `batchLog` is invoked once after 1 second of debounced calls.
- * var debounced = _.debounce(batchLog, 250, { 'maxWait': 1000 });
- * var source = new EventSource('/stream');
+ * let debounced = _.debounce(batchLog, 250, { 'maxWait': 1000 });
+ * let source = new EventSource('/stream');
  * jQuery(source).on('message', debounced);
  *
  * // Cancel the trailing debounced invocation.
  * jQuery(window).on('popstate', debounced.cancel);
  */
 function debounce(func, wait, options) {
-  var lastArgs,
+  let lastArgs,
       lastThis,
       maxWait,
       result,
@@ -15447,7 +15447,7 @@ function debounce(func, wait, options) {
   }
 
   function invokeFunc(time) {
-    var args = lastArgs,
+    let args = lastArgs,
         thisArg = lastThis;
 
     lastArgs = lastThis = undefined;
@@ -15466,7 +15466,7 @@ function debounce(func, wait, options) {
   }
 
   function remainingWait(time) {
-    var timeSinceLastCall = time - lastCallTime,
+    let timeSinceLastCall = time - lastCallTime,
         timeSinceLastInvoke = time - lastInvokeTime,
         timeWaiting = wait - timeSinceLastCall;
 
@@ -15476,7 +15476,7 @@ function debounce(func, wait, options) {
   }
 
   function shouldInvoke(time) {
-    var timeSinceLastCall = time - lastCallTime,
+    let timeSinceLastCall = time - lastCallTime,
         timeSinceLastInvoke = time - lastInvokeTime;
 
     // Either this is the first call, activity has stopped and we're at the
@@ -15487,7 +15487,7 @@ function debounce(func, wait, options) {
   }
 
   function timerExpired() {
-    var time = now();
+    let time = now();
     if (shouldInvoke(time)) {
       return trailingEdge(time);
     }
@@ -15520,7 +15520,7 @@ function debounce(func, wait, options) {
   }
 
   function debounced() {
-    var time = now(),
+    let time = now(),
         isInvoking = shouldInvoke(time);
 
     lastArgs = arguments;
@@ -15555,7 +15555,7 @@ module.exports = debounce;
 /* 290 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var root = __webpack_require__(4);
+let root = __webpack_require__(4);
 
 /**
  * Gets the timestamp of the number of milliseconds that have elapsed since
@@ -15573,7 +15573,7 @@ var root = __webpack_require__(4);
  * }, _.now());
  * // => Logs the number of milliseconds it took for the deferred invocation.
  */
-var now = function() {
+let now = function() {
   return root.Date.now();
 };
 
@@ -15587,9 +15587,9 @@ module.exports = now;
 "use strict";
 
 
-var _interopRequireDefault = __webpack_require__(0);
+let _interopRequireDefault = __webpack_require__(0);
 
-var _typeof2 = _interopRequireDefault(__webpack_require__(21));
+let _typeof2 = _interopRequireDefault(__webpack_require__(21));
 
 Object.defineProperty(exports, "__esModule", {
   value: true
@@ -15608,14 +15608,14 @@ exports.getSiblingElements = getSiblingElements;
 exports.getRefType = getRefType;
 exports.getClosestElement = void 0;
 
-var _shared = __webpack_require__(10);
+let _shared = __webpack_require__(10);
 
-var _constants = __webpack_require__(2);
+let _constants = __webpack_require__(2);
 /* eslint-env browser */
 
 
-var ELEMENT_MATCHES = _shared.IX2BrowserSupport.ELEMENT_MATCHES;
-var _constants$IX2EngineC = _constants.IX2EngineConstants,
+let ELEMENT_MATCHES = _shared.IX2BrowserSupport.ELEMENT_MATCHES;
+let _constants$IX2EngineC = _constants.IX2EngineConstants,
     IX2_ID_DELIMITER = _constants$IX2EngineC.IX2_ID_DELIMITER,
     HTML_ELEMENT = _constants$IX2EngineC.HTML_ELEMENT,
     PLAIN_OBJECT = _constants$IX2EngineC.PLAIN_OBJECT,
@@ -15644,15 +15644,15 @@ function matchSelector(selector) {
 }
 
 function getQuerySelector(_ref) {
-  var id = _ref.id,
+  let id = _ref.id,
       selector = _ref.selector;
 
   if (id) {
-    var nodeId = id;
+    let nodeId = id;
 
     if (id.indexOf(IX2_ID_DELIMITER) !== -1) {
-      var pair = id.split(IX2_ID_DELIMITER);
-      var pageId = pair[0];
+      let pair = id.split(IX2_ID_DELIMITER);
+      let pageId = pair[0];
       nodeId = pair[1]; // Short circuit query if we're on the wrong page
       // $FlowIgnore — if documentElement is null crash
 
@@ -15689,17 +15689,17 @@ function isSiblingNode(a, b) {
 }
 
 function getChildElements(sourceElements) {
-  var childElements = [];
+  let childElements = [];
 
-  for (var i = 0, _ref2 = sourceElements || [], length = _ref2.length; i < length; i++) {
-    var children = sourceElements[i].children;
-    var childCount = children.length;
+  for (let i = 0, _ref2 = sourceElements || [], length = _ref2.length; i < length; i++) {
+    let children = sourceElements[i].children;
+    let childCount = children.length;
 
     if (!childCount) {
       continue;
     }
 
-    for (var j = 0; j < childCount; j++) {
+    for (let j = 0; j < childCount; j++) {
       childElements.push(children[j]);
     }
   }
@@ -15709,12 +15709,12 @@ function getChildElements(sourceElements) {
 
 
 function getSiblingElements() {
-  var sourceElements = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];
-  var elements = [];
-  var parentCache = [];
+  let sourceElements = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];
+  let elements = [];
+  let parentCache = [];
 
-  for (var i = 0, length = sourceElements.length; i < length; i++) {
-    var parentNode = sourceElements[i].parentNode;
+  for (let i = 0, length = sourceElements.length; i < length; i++) {
+    let parentNode = sourceElements[i].parentNode;
 
     if (!parentNode || !parentNode.children || !parentNode.children.length) {
       continue;
@@ -15725,7 +15725,7 @@ function getSiblingElements() {
     }
 
     parentCache.push(parentNode);
-    var el = parentNode.firstElementChild;
+    let el = parentNode.firstElementChild;
 
     while (el != null) {
       if (sourceElements.indexOf(el) === -1) {
@@ -15739,7 +15739,7 @@ function getSiblingElements() {
   return elements;
 }
 
-var getClosestElement = Element.prototype.closest ? function (element, selector) {
+let getClosestElement = Element.prototype.closest ? function (element, selector) {
   // $FlowIgnore — ELEMENT_MATCHES is the name of the method on the element's prototype depending on browser
   if (!document.documentElement.contains(element)) {
     return null;
@@ -15752,7 +15752,7 @@ var getClosestElement = Element.prototype.closest ? function (element, selector)
     return null;
   }
 
-  var el = element;
+  let el = element;
 
   do {
     // $FlowIgnore — if documentElement is null crash
@@ -15782,40 +15782,40 @@ function getRefType(ref) {
 "use strict";
 
 
-var _interopRequireDefault2 = __webpack_require__(0);
+let _interopRequireDefault2 = __webpack_require__(0);
 
-var _defineProperty2 = _interopRequireDefault2(__webpack_require__(27));
+let _defineProperty2 = _interopRequireDefault2(__webpack_require__(27));
 
-var _typeof2 = _interopRequireDefault2(__webpack_require__(21));
+let _typeof2 = _interopRequireDefault2(__webpack_require__(21));
 
-var _default2;
+let _default2;
 
-var _interopRequireDefault = __webpack_require__(0);
+let _interopRequireDefault = __webpack_require__(0);
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports["default"] = void 0;
 
-var _extends2 = _interopRequireDefault(__webpack_require__(28));
+let _extends2 = _interopRequireDefault(__webpack_require__(28));
 
-var _flow = _interopRequireDefault(__webpack_require__(293));
+let _flow = _interopRequireDefault(__webpack_require__(293));
 
-var _get = _interopRequireDefault(__webpack_require__(56));
+let _get = _interopRequireDefault(__webpack_require__(56));
 
-var _clamp = _interopRequireDefault(__webpack_require__(312));
+let _clamp = _interopRequireDefault(__webpack_require__(312));
 
-var _constants = __webpack_require__(2);
+let _constants = __webpack_require__(2);
 
-var _IX2VanillaEngine = __webpack_require__(114);
+let _IX2VanillaEngine = __webpack_require__(114);
 
-var _IX2EngineActions = __webpack_require__(61);
+let _IX2EngineActions = __webpack_require__(61);
 
-var _shared = __webpack_require__(10);
+let _shared = __webpack_require__(10);
 /* eslint-env browser */
 
 
-var _constants$EventTypeC = _constants.EventTypeConsts,
+let _constants$EventTypeC = _constants.EventTypeConsts,
     MOUSE_CLICK = _constants$EventTypeC.MOUSE_CLICK,
     MOUSE_SECOND_CLICK = _constants$EventTypeC.MOUSE_SECOND_CLICK,
     MOUSE_DOWN = _constants$EventTypeC.MOUSE_DOWN,
@@ -15841,12 +15841,12 @@ var _constants$EventTypeC = _constants.EventTypeConsts,
     ECOMMERCE_CART_OPEN = _constants$EventTypeC.ECOMMERCE_CART_OPEN,
     PAGE_START = _constants$EventTypeC.PAGE_START,
     PAGE_SCROLL = _constants$EventTypeC.PAGE_SCROLL;
-var COMPONENT_ACTIVE = 'COMPONENT_ACTIVE';
-var COMPONENT_INACTIVE = 'COMPONENT_INACTIVE';
-var COLON_DELIMITER = _constants.IX2EngineConstants.COLON_DELIMITER;
-var getNamespacedParameterId = _shared.IX2VanillaUtils.getNamespacedParameterId;
+let COMPONENT_ACTIVE = 'COMPONENT_ACTIVE';
+let COMPONENT_INACTIVE = 'COMPONENT_INACTIVE';
+let COLON_DELIMITER = _constants.IX2EngineConstants.COLON_DELIMITER;
+let getNamespacedParameterId = _shared.IX2VanillaUtils.getNamespacedParameterId;
 
-var composableFilter = function composableFilter(predicate) {
+let composableFilter = function composableFilter(predicate) {
   return function (options) {
     if ((0, _typeof2["default"])(options) === 'object' && predicate(options)) {
       return true;
@@ -15856,25 +15856,25 @@ var composableFilter = function composableFilter(predicate) {
   };
 };
 
-var isElement = composableFilter(function (_ref) {
-  var element = _ref.element,
+let isElement = composableFilter(function (_ref) {
+  let element = _ref.element,
       nativeEvent = _ref.nativeEvent;
   return element === nativeEvent.target;
 });
-var containsElement = composableFilter(function (_ref2) {
-  var element = _ref2.element,
+let containsElement = composableFilter(function (_ref2) {
+  let element = _ref2.element,
       nativeEvent = _ref2.nativeEvent;
   return element.contains(nativeEvent.target);
 });
-var isOrContainsElement = (0, _flow["default"])([isElement, containsElement]);
+let isOrContainsElement = (0, _flow["default"])([isElement, containsElement]);
 
-var getAutoStopEvent = function getAutoStopEvent(store, autoStopEventId) {
+let getAutoStopEvent = function getAutoStopEvent(store, autoStopEventId) {
   if (autoStopEventId) {
-    var _store$getState = store.getState(),
+    let _store$getState = store.getState(),
         ixData = _store$getState.ixData;
 
-    var events = ixData.events;
-    var eventToStop = events[autoStopEventId];
+    let events = ixData.events;
+    let eventToStop = events[autoStopEventId];
 
     if (eventToStop && !AUTO_STOP_DISABLED_EVENTS[eventToStop.eventTypeId]) {
       return eventToStop;
@@ -15884,25 +15884,25 @@ var getAutoStopEvent = function getAutoStopEvent(store, autoStopEventId) {
   return null;
 };
 
-var hasAutoStopEvent = function hasAutoStopEvent(_ref3) {
-  var store = _ref3.store,
+let hasAutoStopEvent = function hasAutoStopEvent(_ref3) {
+  let store = _ref3.store,
       event = _ref3.event;
-  var eventAction = event.action;
-  var autoStopEventId = eventAction.config.autoStopEventId;
+  let eventAction = event.action;
+  let autoStopEventId = eventAction.config.autoStopEventId;
   return Boolean(getAutoStopEvent(store, autoStopEventId));
 };
 
-var actionGroupCreator = function actionGroupCreator(_ref4, state) {
-  var store = _ref4.store,
+let actionGroupCreator = function actionGroupCreator(_ref4, state) {
+  let store = _ref4.store,
       event = _ref4.event,
       element = _ref4.element,
       eventStateKey = _ref4.eventStateKey;
-  var eventAction = event.action,
+  let eventAction = event.action,
       eventId = event.id;
-  var _eventAction$config = eventAction.config,
+  let _eventAction$config = eventAction.config,
       actionListId = _eventAction$config.actionListId,
       autoStopEventId = _eventAction$config.autoStopEventId;
-  var eventToStop = getAutoStopEvent(store, autoStopEventId);
+  let eventToStop = getAutoStopEvent(store, autoStopEventId);
 
   if (eventToStop) {
     (0, _IX2VanillaEngine.stopActionGroup)({
@@ -15932,7 +15932,7 @@ var actionGroupCreator = function actionGroupCreator(_ref4, state) {
 }; // $FlowFixMe
 
 
-var withFilter = function withFilter(filter, handler) {
+let withFilter = function withFilter(filter, handler) {
   return function (options, state) {
     return (// $FlowFixMe
       filter(options, state) === true ? handler(options, state) : state
@@ -15940,13 +15940,13 @@ var withFilter = function withFilter(filter, handler) {
   };
 };
 
-var baseActionGroupOptions = {
+let baseActionGroupOptions = {
   handler: withFilter(isOrContainsElement, actionGroupCreator)
 };
-var baseActivityActionGroupOptions = (0, _extends2["default"])({}, baseActionGroupOptions, {
+let baseActivityActionGroupOptions = (0, _extends2["default"])({}, baseActionGroupOptions, {
   types: [COMPONENT_ACTIVE, COMPONENT_INACTIVE].join(' ')
 });
-var SCROLL_EVENT_TYPES = [{
+let SCROLL_EVENT_TYPES = [{
   target: window,
   types: 'resize orientationchange',
   throttle: true
@@ -15955,19 +15955,19 @@ var SCROLL_EVENT_TYPES = [{
   types: 'scroll wheel readystatechange IX2_PAGE_UPDATE',
   throttle: true
 }];
-var MOUSE_OVER_OUT_TYPES = 'mouseover mouseout';
-var baseScrollActionGroupOptions = {
+let MOUSE_OVER_OUT_TYPES = 'mouseover mouseout';
+let baseScrollActionGroupOptions = {
   types: SCROLL_EVENT_TYPES
 };
-var AUTO_STOP_DISABLED_EVENTS = {
+let AUTO_STOP_DISABLED_EVENTS = {
   PAGE_START: PAGE_START,
   PAGE_FINISH: PAGE_FINISH
 };
 
-var getDocumentState = function () {
-  var supportOffset = window.pageXOffset !== undefined;
-  var isCSS1Compat = document.compatMode === 'CSS1Compat';
-  var rootElement = isCSS1Compat ? document.documentElement : document.body;
+let getDocumentState = function () {
+  let supportOffset = window.pageXOffset !== undefined;
+  let isCSS1Compat = document.compatMode === 'CSS1Compat';
+  let rootElement = isCSS1Compat ? document.documentElement : document.body;
   return function () {
     return {
       // $FlowFixMe
@@ -15992,23 +15992,23 @@ var getDocumentState = function () {
   };
 }();
 
-var areBoxesIntersecting = function areBoxesIntersecting(a, b) {
+let areBoxesIntersecting = function areBoxesIntersecting(a, b) {
   return !(a.left > b.right || a.right < b.left || a.top > b.bottom || a.bottom < b.top);
 };
 
-var isElementHovered = function isElementHovered(_ref5) {
-  var element = _ref5.element,
+let isElementHovered = function isElementHovered(_ref5) {
+  let element = _ref5.element,
       nativeEvent = _ref5.nativeEvent;
-  var type = nativeEvent.type,
+  let type = nativeEvent.type,
       target = nativeEvent.target,
       relatedTarget = nativeEvent.relatedTarget;
-  var containsTarget = element.contains(target);
+  let containsTarget = element.contains(target);
 
   if (type === 'mouseover' && containsTarget) {
     return true;
   }
 
-  var containsRelated = element.contains(relatedTarget);
+  let containsRelated = element.contains(relatedTarget);
 
   if (type === 'mouseout' && containsTarget && containsRelated) {
     return true;
@@ -16017,18 +16017,18 @@ var isElementHovered = function isElementHovered(_ref5) {
   return false;
 };
 
-var isElementVisible = function isElementVisible(options) {
-  var element = options.element,
+let isElementVisible = function isElementVisible(options) {
+  let element = options.element,
       config = options.event.config;
 
-  var _getDocumentState = getDocumentState(),
+  let _getDocumentState = getDocumentState(),
       clientWidth = _getDocumentState.clientWidth,
       clientHeight = _getDocumentState.clientHeight;
 
-  var scrollOffsetValue = config.scrollOffsetValue;
-  var scrollOffsetUnit = config.scrollOffsetUnit;
-  var isPX = scrollOffsetUnit === 'PX';
-  var offsetPadding = isPX ? scrollOffsetValue : clientHeight * (scrollOffsetValue || 0) / 100;
+  let scrollOffsetValue = config.scrollOffsetValue;
+  let scrollOffsetUnit = config.scrollOffsetUnit;
+  let isPX = scrollOffsetUnit === 'PX';
+  let offsetPadding = isPX ? scrollOffsetValue : clientHeight * (scrollOffsetValue || 0) / 100;
   return areBoxesIntersecting(element.getBoundingClientRect(), {
     left: 0,
     top: offsetPadding,
@@ -16037,12 +16037,12 @@ var isElementVisible = function isElementVisible(options) {
   });
 };
 
-var whenComponentActiveChange = function whenComponentActiveChange(handler) {
+let whenComponentActiveChange = function whenComponentActiveChange(handler) {
   return function (options, oldState) {
-    var type = options.nativeEvent.type; // prettier-ignore
+    let type = options.nativeEvent.type; // prettier-ignore
 
-    var isActive = [COMPONENT_ACTIVE, COMPONENT_INACTIVE].indexOf(type) !== -1 ? type === COMPONENT_ACTIVE : oldState.isActive;
-    var newState = (0, _extends2["default"])({}, oldState, {
+    let isActive = [COMPONENT_ACTIVE, COMPONENT_INACTIVE].indexOf(type) !== -1 ? type === COMPONENT_ACTIVE : oldState.isActive;
+    let newState = (0, _extends2["default"])({}, oldState, {
       isActive: isActive
     });
 
@@ -16054,9 +16054,9 @@ var whenComponentActiveChange = function whenComponentActiveChange(handler) {
   };
 };
 
-var whenElementHoverChange = function whenElementHoverChange(handler) {
+let whenElementHoverChange = function whenElementHoverChange(handler) {
   return function (options, oldState) {
-    var newState = {
+    let newState = {
       elementHovered: isElementHovered(options)
     };
 
@@ -16069,9 +16069,9 @@ var whenElementHoverChange = function whenElementHoverChange(handler) {
 }; // $FlowFixMe
 
 
-var whenElementVisibiltyChange = function whenElementVisibiltyChange(handler) {
+let whenElementVisibiltyChange = function whenElementVisibiltyChange(handler) {
   return function (options, oldState) {
-    var newState = (0, _extends2["default"])({}, oldState, {
+    let newState = (0, _extends2["default"])({}, oldState, {
       elementVisible: isElementVisible(options)
     });
 
@@ -16084,33 +16084,33 @@ var whenElementVisibiltyChange = function whenElementVisibiltyChange(handler) {
 }; // $FlowFixMe
 
 
-var whenScrollDirectionChange = function whenScrollDirectionChange(handler) {
+let whenScrollDirectionChange = function whenScrollDirectionChange(handler) {
   return function (options) {
-    var oldState = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+    let oldState = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
 
-    var _getDocumentState2 = getDocumentState(),
+    let _getDocumentState2 = getDocumentState(),
         scrollTop = _getDocumentState2.stiffScrollTop,
         scrollHeight = _getDocumentState2.scrollHeight,
         innerHeight = _getDocumentState2.innerHeight;
 
-    var _options$event = options.event,
+    let _options$event = options.event,
         config = _options$event.config,
         eventTypeId = _options$event.eventTypeId;
-    var scrollOffsetValue = config.scrollOffsetValue,
+    let scrollOffsetValue = config.scrollOffsetValue,
         scrollOffsetUnit = config.scrollOffsetUnit;
-    var isPX = scrollOffsetUnit === 'PX';
-    var scrollHeightBounds = scrollHeight - innerHeight; // percent top since innerHeight may change for mobile devices which also changes the scrollTop value.
+    let isPX = scrollOffsetUnit === 'PX';
+    let scrollHeightBounds = scrollHeight - innerHeight; // percent top since innerHeight may change for mobile devices which also changes the scrollTop value.
 
-    var percentTop = Number((scrollTop / scrollHeightBounds).toFixed(2)); // no state change
+    let percentTop = Number((scrollTop / scrollHeightBounds).toFixed(2)); // no state change
 
     if (oldState && oldState.percentTop === percentTop) {
       return oldState;
     }
 
-    var scrollTopPadding = (isPX ? scrollOffsetValue : innerHeight * (scrollOffsetValue || 0) / 100) / scrollHeightBounds;
-    var scrollingDown;
-    var scrollDirectionChanged;
-    var anchorTop = 0;
+    let scrollTopPadding = (isPX ? scrollOffsetValue : innerHeight * (scrollOffsetValue || 0) / 100) / scrollHeightBounds;
+    let scrollingDown;
+    let scrollDirectionChanged;
+    let anchorTop = 0;
 
     if (oldState) {
       scrollingDown = percentTop > oldState.percentTop;
@@ -16118,8 +16118,8 @@ var whenScrollDirectionChange = function whenScrollDirectionChange(handler) {
       anchorTop = scrollDirectionChanged ? percentTop : oldState.anchorTop;
     }
 
-    var inBounds = eventTypeId === PAGE_SCROLL_DOWN ? percentTop >= anchorTop + scrollTopPadding : percentTop <= anchorTop - scrollTopPadding;
-    var newState = (0, _extends2["default"])({}, oldState, {
+    let inBounds = eventTypeId === PAGE_SCROLL_DOWN ? percentTop >= anchorTop + scrollTopPadding : percentTop <= anchorTop - scrollTopPadding;
+    let newState = (0, _extends2["default"])({}, oldState, {
       percentTop: percentTop,
       inBounds: inBounds,
       anchorTop: anchorTop,
@@ -16134,13 +16134,13 @@ var whenScrollDirectionChange = function whenScrollDirectionChange(handler) {
   };
 };
 
-var pointIntersects = function pointIntersects(point, rect) {
+let pointIntersects = function pointIntersects(point, rect) {
   return point.left > rect.left && point.left < rect.right && point.top > rect.top && point.top < rect.bottom;
 };
 
-var whenPageLoadFinish = function whenPageLoadFinish(handler) {
+let whenPageLoadFinish = function whenPageLoadFinish(handler) {
   return function (options, oldState) {
-    var newState = {
+    let newState = {
       finished: document.readyState === 'complete'
     };
 
@@ -16152,9 +16152,9 @@ var whenPageLoadFinish = function whenPageLoadFinish(handler) {
   };
 };
 
-var whenPageLoadStart = function whenPageLoadStart(handler) {
+let whenPageLoadStart = function whenPageLoadStart(handler) {
   return function (options, oldState) {
-    var newState = {
+    let newState = {
       started: true
     };
 
@@ -16166,12 +16166,12 @@ var whenPageLoadStart = function whenPageLoadStart(handler) {
   };
 };
 
-var whenClickCountChange = function whenClickCountChange(handler) {
+let whenClickCountChange = function whenClickCountChange(handler) {
   return function (options) {
-    var oldState = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {
+    let oldState = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {
       clickCount: 0
     };
-    var newState = {
+    let newState = {
       clickCount: oldState.clickCount % 2 + 1
     };
 
@@ -16183,8 +16183,8 @@ var whenClickCountChange = function whenClickCountChange(handler) {
   };
 };
 
-var getComponentActiveOptions = function getComponentActiveOptions() {
-  var allowNestedChildrenEvents = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : true;
+let getComponentActiveOptions = function getComponentActiveOptions() {
+  let allowNestedChildrenEvents = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : true;
   return (0, _extends2["default"])({}, baseActivityActionGroupOptions, {
     handler: withFilter(allowNestedChildrenEvents ? isOrContainsElement : isElement, whenComponentActiveChange(function (options, state) {
       return state.isActive ? baseActionGroupOptions.handler(options, state) : state;
@@ -16192,8 +16192,8 @@ var getComponentActiveOptions = function getComponentActiveOptions() {
   });
 };
 
-var getComponentInactiveOptions = function getComponentInactiveOptions() {
-  var allowNestedChildrenEvents = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : true;
+let getComponentInactiveOptions = function getComponentInactiveOptions() {
+  let allowNestedChildrenEvents = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : true;
   return (0, _extends2["default"])({}, baseActivityActionGroupOptions, {
     handler: withFilter(allowNestedChildrenEvents ? isOrContainsElement : isElement, whenComponentActiveChange(function (options, state) {
       return !state.isActive ? baseActionGroupOptions.handler(options, state) : state;
@@ -16201,16 +16201,16 @@ var getComponentInactiveOptions = function getComponentInactiveOptions() {
   });
 };
 
-var scrollIntoOutOfViewOptions = (0, _extends2["default"])({}, baseScrollActionGroupOptions, {
+let scrollIntoOutOfViewOptions = (0, _extends2["default"])({}, baseScrollActionGroupOptions, {
   handler: whenElementVisibiltyChange(function (options, state) {
-    var elementVisible = state.elementVisible;
-    var event = options.event,
+    let elementVisible = state.elementVisible;
+    let event = options.event,
         store = options.store;
 
-    var _store$getState2 = store.getState(),
+    let _store$getState2 = store.getState(),
         ixData = _store$getState2.ixData;
 
-    var events = ixData.events; // trigger the handler only once if only one of SCROLL_INTO or SCROLL_OUT_OF event types
+    let events = ixData.events; // trigger the handler only once if only one of SCROLL_INTO or SCROLL_OUT_OF event types
     // are registered.
 
     if (!events[event.action.config.autoStopEventId] && state.triggered) {
@@ -16227,9 +16227,9 @@ var scrollIntoOutOfViewOptions = (0, _extends2["default"])({}, baseScrollActionG
     }
   })
 });
-var MOUSE_OUT_ROUND_THRESHOLD = 0.05;
+let MOUSE_OUT_ROUND_THRESHOLD = 0.05;
 
-var _default = (_default2 = {}, (0, _defineProperty2["default"])(_default2, SLIDER_ACTIVE, getComponentActiveOptions()), (0, _defineProperty2["default"])(_default2, SLIDER_INACTIVE, getComponentInactiveOptions()), (0, _defineProperty2["default"])(_default2, DROPDOWN_OPEN, getComponentActiveOptions()), (0, _defineProperty2["default"])(_default2, DROPDOWN_CLOSE, getComponentInactiveOptions()), (0, _defineProperty2["default"])(_default2, NAVBAR_OPEN, getComponentActiveOptions(false)), (0, _defineProperty2["default"])(_default2, NAVBAR_CLOSE, getComponentInactiveOptions(false)), (0, _defineProperty2["default"])(_default2, TAB_ACTIVE, getComponentActiveOptions()), (0, _defineProperty2["default"])(_default2, TAB_INACTIVE, getComponentInactiveOptions()), (0, _defineProperty2["default"])(_default2, ECOMMERCE_CART_OPEN, {
+let _default = (_default2 = {}, (0, _defineProperty2["default"])(_default2, SLIDER_ACTIVE, getComponentActiveOptions()), (0, _defineProperty2["default"])(_default2, SLIDER_INACTIVE, getComponentInactiveOptions()), (0, _defineProperty2["default"])(_default2, DROPDOWN_OPEN, getComponentActiveOptions()), (0, _defineProperty2["default"])(_default2, DROPDOWN_CLOSE, getComponentInactiveOptions()), (0, _defineProperty2["default"])(_default2, NAVBAR_OPEN, getComponentActiveOptions(false)), (0, _defineProperty2["default"])(_default2, NAVBAR_CLOSE, getComponentInactiveOptions(false)), (0, _defineProperty2["default"])(_default2, TAB_ACTIVE, getComponentActiveOptions()), (0, _defineProperty2["default"])(_default2, TAB_INACTIVE, getComponentInactiveOptions()), (0, _defineProperty2["default"])(_default2, ECOMMERCE_CART_OPEN, {
   types: 'ecommerce-cart-open',
   handler: withFilter(isOrContainsElement, actionGroupCreator)
 }), (0, _defineProperty2["default"])(_default2, ECOMMERCE_CART_CLOSE, {
@@ -16238,7 +16238,7 @@ var _default = (_default2 = {}, (0, _defineProperty2["default"])(_default2, SLID
 }), (0, _defineProperty2["default"])(_default2, MOUSE_CLICK, {
   types: 'click',
   handler: withFilter(isOrContainsElement, whenClickCountChange(function (options, _ref6) {
-    var clickCount = _ref6.clickCount;
+    let clickCount = _ref6.clickCount;
 
     if (hasAutoStopEvent(options)) {
       clickCount === 1 && actionGroupCreator(options);
@@ -16249,7 +16249,7 @@ var _default = (_default2 = {}, (0, _defineProperty2["default"])(_default2, SLID
 }), (0, _defineProperty2["default"])(_default2, MOUSE_SECOND_CLICK, {
   types: 'click',
   handler: withFilter(isOrContainsElement, whenClickCountChange(function (options, _ref7) {
-    var clickCount = _ref7.clickCount;
+    let clickCount = _ref7.clickCount;
 
     if (clickCount === 2) {
       actionGroupCreator(options);
@@ -16277,24 +16277,24 @@ var _default = (_default2 = {}, (0, _defineProperty2["default"])(_default2, SLID
   types: 'mousemove mouseout scroll',
   handler: function handler( // $FlowFixMe
   _ref8) {
-    var store = _ref8.store,
+    let store = _ref8.store,
         element = _ref8.element,
         eventConfig = _ref8.eventConfig,
         nativeEvent = _ref8.nativeEvent,
         eventStateKey = _ref8.eventStateKey;
-    var state = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {
+    let state = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {
       clientX: 0,
       clientY: 0,
       pageX: 0,
       pageY: 0
     };
-    var basedOn = eventConfig.basedOn,
+    let basedOn = eventConfig.basedOn,
         selectedAxis = eventConfig.selectedAxis,
         continuousParameterGroupId = eventConfig.continuousParameterGroupId,
         reverse = eventConfig.reverse,
         _eventConfig$restingS = eventConfig.restingState,
         restingState = _eventConfig$restingS === void 0 ? 0 : _eventConfig$restingS;
-    var _nativeEvent$clientX = nativeEvent.clientX,
+    let _nativeEvent$clientX = nativeEvent.clientX,
         clientX = _nativeEvent$clientX === void 0 ? state.clientX : _nativeEvent$clientX,
         _nativeEvent$clientY = nativeEvent.clientY,
         clientY = _nativeEvent$clientY === void 0 ? state.clientY : _nativeEvent$clientY,
@@ -16302,11 +16302,11 @@ var _default = (_default2 = {}, (0, _defineProperty2["default"])(_default2, SLID
         pageX = _nativeEvent$pageX === void 0 ? state.pageX : _nativeEvent$pageX,
         _nativeEvent$pageY = nativeEvent.pageY,
         pageY = _nativeEvent$pageY === void 0 ? state.pageY : _nativeEvent$pageY;
-    var isXAxis = selectedAxis === 'X_AXIS';
-    var isMouseOut = nativeEvent.type === 'mouseout';
-    var value = restingState / 100;
-    var namespacedParameterId = continuousParameterGroupId;
-    var elementHovered = false;
+    let isXAxis = selectedAxis === 'X_AXIS';
+    let isMouseOut = nativeEvent.type === 'mouseout';
+    let value = restingState / 100;
+    let namespacedParameterId = continuousParameterGroupId;
+    let elementHovered = false;
 
     switch (basedOn) {
       case _constants.EventBasedOn.VIEWPORT:
@@ -16317,7 +16317,7 @@ var _default = (_default2 = {}, (0, _defineProperty2["default"])(_default2, SLID
 
       case _constants.EventBasedOn.PAGE:
         {
-          var _getDocumentState3 = getDocumentState(),
+          let _getDocumentState3 = getDocumentState(),
               scrollLeft = _getDocumentState3.scrollLeft,
               scrollTop = _getDocumentState3.scrollTop,
               scrollWidth = _getDocumentState3.scrollWidth,
@@ -16331,7 +16331,7 @@ var _default = (_default2 = {}, (0, _defineProperty2["default"])(_default2, SLID
       default:
         {
           namespacedParameterId = getNamespacedParameterId(eventStateKey, continuousParameterGroupId);
-          var isMouseEvent = nativeEvent.type.indexOf('mouse') === 0; // Use isOrContainsElement for mouse events since they are fired from the target
+          let isMouseEvent = nativeEvent.type.indexOf('mouse') === 0; // Use isOrContainsElement for mouse events since they are fired from the target
 
           if (isMouseEvent && isOrContainsElement({
             element: element,
@@ -16340,8 +16340,8 @@ var _default = (_default2 = {}, (0, _defineProperty2["default"])(_default2, SLID
             break;
           }
 
-          var rect = element.getBoundingClientRect();
-          var left = rect.left,
+          let rect = element.getBoundingClientRect();
+          let left = rect.left,
               top = rect.top,
               width = rect.width,
               height = rect.height; // Otherwise we'll need to calculate the mouse position from the previous handler state
@@ -16384,17 +16384,17 @@ var _default = (_default2 = {}, (0, _defineProperty2["default"])(_default2, SLID
   types: SCROLL_EVENT_TYPES,
   // $FlowFixMe
   handler: function handler(_ref9) {
-    var store = _ref9.store,
+    let store = _ref9.store,
         eventConfig = _ref9.eventConfig;
-    var continuousParameterGroupId = eventConfig.continuousParameterGroupId,
+    let continuousParameterGroupId = eventConfig.continuousParameterGroupId,
         reverse = eventConfig.reverse;
 
-    var _getDocumentState4 = getDocumentState(),
+    let _getDocumentState4 = getDocumentState(),
         scrollTop = _getDocumentState4.scrollTop,
         scrollHeight = _getDocumentState4.scrollHeight,
         clientHeight = _getDocumentState4.clientHeight;
 
-    var value = scrollTop / (scrollHeight - clientHeight);
+    let value = scrollTop / (scrollHeight - clientHeight);
     value = reverse ? 1 - value : value;
     store.dispatch((0, _IX2EngineActions.parameterChanged)(continuousParameterGroupId, value));
   }
@@ -16402,22 +16402,22 @@ var _default = (_default2 = {}, (0, _defineProperty2["default"])(_default2, SLID
   types: SCROLL_EVENT_TYPES,
   handler: function handler( // $FlowFixMe
   _ref10) {
-    var element = _ref10.element,
+    let element = _ref10.element,
         store = _ref10.store,
         eventConfig = _ref10.eventConfig,
         eventStateKey = _ref10.eventStateKey;
-    var state = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {
+    let state = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {
       scrollPercent: 0
     };
 
-    var _getDocumentState5 = getDocumentState(),
+    let _getDocumentState5 = getDocumentState(),
         scrollLeft = _getDocumentState5.scrollLeft,
         scrollTop = _getDocumentState5.scrollTop,
         scrollWidth = _getDocumentState5.scrollWidth,
         scrollHeight = _getDocumentState5.scrollHeight,
         visibleHeight = _getDocumentState5.clientHeight;
 
-    var basedOn = eventConfig.basedOn,
+    let basedOn = eventConfig.basedOn,
         selectedAxis = eventConfig.selectedAxis,
         continuousParameterGroupId = eventConfig.continuousParameterGroupId,
         startsEntering = eventConfig.startsEntering,
@@ -16428,10 +16428,10 @@ var _default = (_default2 = {}, (0, _defineProperty2["default"])(_default2, SLID
         addOffsetValue = _eventConfig$addOffse === void 0 ? 0 : _eventConfig$addOffse,
         _eventConfig$endOffse = eventConfig.endOffsetValue,
         endOffsetValue = _eventConfig$endOffse === void 0 ? 0 : _eventConfig$endOffse;
-    var isXAxis = selectedAxis === 'X_AXIS';
+    let isXAxis = selectedAxis === 'X_AXIS';
 
     if (basedOn === _constants.EventBasedOn.VIEWPORT) {
-      var value = isXAxis ? scrollLeft / scrollWidth : scrollTop / scrollHeight;
+      let value = isXAxis ? scrollLeft / scrollWidth : scrollTop / scrollHeight;
 
       if (value !== state.scrollPercent) {
         store.dispatch((0, _IX2EngineActions.parameterChanged)(continuousParameterGroupId, value));
@@ -16441,19 +16441,19 @@ var _default = (_default2 = {}, (0, _defineProperty2["default"])(_default2, SLID
         scrollPercent: value
       };
     } else {
-      var namespacedParameterId = getNamespacedParameterId(eventStateKey, continuousParameterGroupId);
-      var elementRect = element.getBoundingClientRect();
-      var offsetStartPerc = (addStartOffset ? addOffsetValue : 0) / 100;
-      var offsetEndPerc = (addEndOffset ? endOffsetValue : 0) / 100; // flip the offset percentages depending on start / exit type
+      let namespacedParameterId = getNamespacedParameterId(eventStateKey, continuousParameterGroupId);
+      let elementRect = element.getBoundingClientRect();
+      let offsetStartPerc = (addStartOffset ? addOffsetValue : 0) / 100;
+      let offsetEndPerc = (addEndOffset ? endOffsetValue : 0) / 100; // flip the offset percentages depending on start / exit type
 
       offsetStartPerc = startsEntering ? offsetStartPerc : 1 - offsetStartPerc;
       offsetEndPerc = startsExiting ? offsetEndPerc : 1 - offsetEndPerc;
-      var offsetElementTop = elementRect.top + Math.min(elementRect.height * offsetStartPerc, visibleHeight);
-      var offsetElementBottom = elementRect.top + elementRect.height * offsetEndPerc;
-      var offsetHeight = offsetElementBottom - offsetElementTop;
-      var fixedScrollHeight = Math.min(visibleHeight + offsetHeight, scrollHeight);
-      var fixedScrollTop = Math.min(Math.max(0, visibleHeight - offsetElementTop), fixedScrollHeight);
-      var fixedScrollPerc = fixedScrollTop / fixedScrollHeight;
+      let offsetElementTop = elementRect.top + Math.min(elementRect.height * offsetStartPerc, visibleHeight);
+      let offsetElementBottom = elementRect.top + elementRect.height * offsetEndPerc;
+      let offsetHeight = offsetElementBottom - offsetElementTop;
+      let fixedScrollHeight = Math.min(visibleHeight + offsetHeight, scrollHeight);
+      let fixedScrollTop = Math.min(Math.max(0, visibleHeight - offsetElementTop), fixedScrollHeight);
+      let fixedScrollPerc = fixedScrollTop / fixedScrollHeight;
 
       if (fixedScrollPerc !== state.scrollPercent) {
         store.dispatch((0, _IX2EngineActions.parameterChanged)(namespacedParameterId, fixedScrollPerc));
@@ -16490,7 +16490,7 @@ exports["default"] = _default;
 /* 293 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var createFlow = __webpack_require__(294);
+let createFlow = __webpack_require__(294);
 
 /**
  * Creates a function that returns the result of invoking the given functions
@@ -16510,11 +16510,11 @@ var createFlow = __webpack_require__(294);
  *   return n * n;
  * }
  *
- * var addSquare = _.flow([_.add, square]);
+ * let addSquare = _.flow([_.add, square]);
  * addSquare(1, 2);
  * // => 9
  */
-var flow = createFlow();
+let flow = createFlow();
 
 module.exports = flow;
 
@@ -16523,7 +16523,7 @@ module.exports = flow;
 /* 294 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var LodashWrapper = __webpack_require__(62),
+let LodashWrapper = __webpack_require__(62),
     flatRest = __webpack_require__(295),
     getData = __webpack_require__(118),
     getFuncName = __webpack_require__(119),
@@ -16531,10 +16531,10 @@ var LodashWrapper = __webpack_require__(62),
     isLaziable = __webpack_require__(308);
 
 /** Error message constants. */
-var FUNC_ERROR_TEXT = 'Expected a function';
+let FUNC_ERROR_TEXT = 'Expected a function';
 
 /** Used to compose bitmasks for function metadata. */
-var WRAP_CURRY_FLAG = 8,
+let WRAP_CURRY_FLAG = 8,
     WRAP_PARTIAL_FLAG = 32,
     WRAP_ARY_FLAG = 128,
     WRAP_REARG_FLAG = 256;
@@ -16548,7 +16548,7 @@ var WRAP_CURRY_FLAG = 8,
  */
 function createFlow(fromRight) {
   return flatRest(function(funcs) {
-    var length = funcs.length,
+    let length = funcs.length,
         index = length,
         prereq = LodashWrapper.prototype.thru;
 
@@ -16556,19 +16556,19 @@ function createFlow(fromRight) {
       funcs.reverse();
     }
     while (index--) {
-      var func = funcs[index];
+      let func = funcs[index];
       if (typeof func != 'function') {
         throw new TypeError(FUNC_ERROR_TEXT);
       }
       if (prereq && !wrapper && getFuncName(func) == 'wrapper') {
-        var wrapper = new LodashWrapper([], true);
+        let wrapper = new LodashWrapper([], true);
       }
     }
     index = wrapper ? index : length;
     while (++index < length) {
       func = funcs[index];
 
-      var funcName = getFuncName(func),
+      let funcName = getFuncName(func),
           data = funcName == 'wrapper' ? getData(func) : undefined;
 
       if (data && isLaziable(data[0]) &&
@@ -16583,13 +16583,13 @@ function createFlow(fromRight) {
       }
     }
     return function() {
-      var args = arguments,
+      let args = arguments,
           value = args[0];
 
       if (wrapper && args.length == 1 && isArray(value)) {
         return wrapper.plant(value).value();
       }
-      var index = 0,
+      let index = 0,
           result = length ? funcs[index].apply(this, args) : value;
 
       while (++index < length) {
@@ -16607,7 +16607,7 @@ module.exports = createFlow;
 /* 295 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var flatten = __webpack_require__(296),
+let flatten = __webpack_require__(296),
     overRest = __webpack_require__(299),
     setToString = __webpack_require__(301);
 
@@ -16629,7 +16629,7 @@ module.exports = flatRest;
 /* 296 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseFlatten = __webpack_require__(297);
+let baseFlatten = __webpack_require__(297);
 
 /**
  * Flattens `array` a single level deep.
@@ -16646,7 +16646,7 @@ var baseFlatten = __webpack_require__(297);
  * // => [1, 2, [3, [4]], 5]
  */
 function flatten(array) {
-  var length = array == null ? 0 : array.length;
+  let length = array == null ? 0 : array.length;
   return length ? baseFlatten(array, 1) : [];
 }
 
@@ -16657,7 +16657,7 @@ module.exports = flatten;
 /* 297 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var arrayPush = __webpack_require__(48),
+let arrayPush = __webpack_require__(48),
     isFlattenable = __webpack_require__(298);
 
 /**
@@ -16672,14 +16672,14 @@ var arrayPush = __webpack_require__(48),
  * @returns {Array} Returns the new flattened array.
  */
 function baseFlatten(array, depth, predicate, isStrict, result) {
-  var index = -1,
+  let index = -1,
       length = array.length;
 
   predicate || (predicate = isFlattenable);
   result || (result = []);
 
   while (++index < length) {
-    var value = array[index];
+    let value = array[index];
     if (depth > 0 && predicate(value)) {
       if (depth > 1) {
         // Recursively flatten arrays (susceptible to call stack limits).
@@ -16701,12 +16701,12 @@ module.exports = baseFlatten;
 /* 298 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var Symbol = __webpack_require__(19),
+let Symbol = __webpack_require__(19),
     isArguments = __webpack_require__(34),
     isArray = __webpack_require__(1);
 
 /** Built-in value references. */
-var spreadableSymbol = Symbol ? Symbol.isConcatSpreadable : undefined;
+let spreadableSymbol = Symbol ? Symbol.isConcatSpreadable : undefined;
 
 /**
  * Checks if `value` is a flattenable `arguments` object or array.
@@ -16727,10 +16727,10 @@ module.exports = isFlattenable;
 /* 299 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var apply = __webpack_require__(300);
+let apply = __webpack_require__(300);
 
 /* Built-in method references for those with the same name as other `lodash` methods. */
-var nativeMax = Math.max;
+let nativeMax = Math.max;
 
 /**
  * A specialized version of `baseRest` which transforms the rest array.
@@ -16744,7 +16744,7 @@ var nativeMax = Math.max;
 function overRest(func, start, transform) {
   start = nativeMax(start === undefined ? (func.length - 1) : start, 0);
   return function() {
-    var args = arguments,
+    let args = arguments,
         index = -1,
         length = nativeMax(args.length - start, 0),
         array = Array(length);
@@ -16753,7 +16753,7 @@ function overRest(func, start, transform) {
       array[index] = args[start + index];
     }
     index = -1;
-    var otherArgs = Array(start + 1);
+    let otherArgs = Array(start + 1);
     while (++index < start) {
       otherArgs[index] = args[index];
     }
@@ -16796,7 +16796,7 @@ module.exports = apply;
 /* 301 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseSetToString = __webpack_require__(302),
+let baseSetToString = __webpack_require__(302),
     shortOut = __webpack_require__(304);
 
 /**
@@ -16807,7 +16807,7 @@ var baseSetToString = __webpack_require__(302),
  * @param {Function} string The `toString` result.
  * @returns {Function} Returns `func`.
  */
-var setToString = shortOut(baseSetToString);
+let setToString = shortOut(baseSetToString);
 
 module.exports = setToString;
 
@@ -16816,7 +16816,7 @@ module.exports = setToString;
 /* 302 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var constant = __webpack_require__(303),
+let constant = __webpack_require__(303),
     defineProperty = __webpack_require__(116),
     identity = __webpack_require__(59);
 
@@ -16828,7 +16828,7 @@ var constant = __webpack_require__(303),
  * @param {Function} string The `toString` result.
  * @returns {Function} Returns `func`.
  */
-var baseSetToString = !defineProperty ? identity : function(func, string) {
+let baseSetToString = !defineProperty ? identity : function(func, string) {
   return defineProperty(func, 'toString', {
     'configurable': true,
     'enumerable': false,
@@ -16855,7 +16855,7 @@ module.exports = baseSetToString;
  * @returns {Function} Returns the new constant function.
  * @example
  *
- * var objects = _.times(2, _.constant({ 'a': 1 }));
+ * let objects = _.times(2, _.constant({ 'a': 1 }));
  *
  * console.log(objects);
  * // => [{ 'a': 1 }, { 'a': 1 }]
@@ -16877,11 +16877,11 @@ module.exports = constant;
 /***/ (function(module, exports) {
 
 /** Used to detect hot functions by number of calls within a span of milliseconds. */
-var HOT_COUNT = 800,
+let HOT_COUNT = 800,
     HOT_SPAN = 16;
 
 /* Built-in method references for those with the same name as other `lodash` methods. */
-var nativeNow = Date.now;
+let nativeNow = Date.now;
 
 /**
  * Creates a function that'll short out and invoke `identity` instead
@@ -16893,11 +16893,11 @@ var nativeNow = Date.now;
  * @returns {Function} Returns the new shortable function.
  */
 function shortOut(func) {
-  var count = 0,
+  let count = 0,
       lastCalled = 0;
 
   return function() {
-    var stamp = nativeNow(),
+    let stamp = nativeNow(),
         remaining = HOT_SPAN - (stamp - lastCalled);
 
     lastCalled = stamp;
@@ -16919,10 +16919,10 @@ module.exports = shortOut;
 /* 305 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var WeakMap = __webpack_require__(99);
+let WeakMap = __webpack_require__(99);
 
 /** Used to store function metadata. */
-var metaMap = WeakMap && new WeakMap;
+let metaMap = WeakMap && new WeakMap;
 
 module.exports = metaMap;
 
@@ -16955,7 +16955,7 @@ module.exports = noop;
 /***/ (function(module, exports) {
 
 /** Used to lookup unminified function names. */
-var realNames = {};
+let realNames = {};
 
 module.exports = realNames;
 
@@ -16964,7 +16964,7 @@ module.exports = realNames;
 /* 308 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var LazyWrapper = __webpack_require__(64),
+let LazyWrapper = __webpack_require__(64),
     getData = __webpack_require__(118),
     getFuncName = __webpack_require__(119),
     lodash = __webpack_require__(309);
@@ -16978,7 +16978,7 @@ var LazyWrapper = __webpack_require__(64),
  *  else `false`.
  */
 function isLaziable(func) {
-  var funcName = getFuncName(func),
+  let funcName = getFuncName(func),
       other = lodash[funcName];
 
   if (typeof other != 'function' || !(funcName in LazyWrapper.prototype)) {
@@ -16987,7 +16987,7 @@ function isLaziable(func) {
   if (func === other) {
     return true;
   }
-  var data = getData(other);
+  let data = getData(other);
   return !!data && func === data[0];
 }
 
@@ -16998,7 +16998,7 @@ module.exports = isLaziable;
 /* 309 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var LazyWrapper = __webpack_require__(64),
+let LazyWrapper = __webpack_require__(64),
     LodashWrapper = __webpack_require__(62),
     baseLodash = __webpack_require__(63),
     isArray = __webpack_require__(1),
@@ -17006,10 +17006,10 @@ var LazyWrapper = __webpack_require__(64),
     wrapperClone = __webpack_require__(310);
 
 /** Used for built-in method references. */
-var objectProto = Object.prototype;
+let objectProto = Object.prototype;
 
 /** Used to check objects for own properties. */
-var hasOwnProperty = objectProto.hasOwnProperty;
+let hasOwnProperty = objectProto.hasOwnProperty;
 
 /**
  * Creates a `lodash` object which wraps `value` to enable implicit method
@@ -17113,14 +17113,14 @@ var hasOwnProperty = objectProto.hasOwnProperty;
  *   return n * n;
  * }
  *
- * var wrapped = _([1, 2, 3]);
+ * let wrapped = _([1, 2, 3]);
  *
  * // Returns an unwrapped value.
  * wrapped.reduce(_.add);
  * // => 6
  *
  * // Returns a wrapped value.
- * var squares = wrapped.map(square);
+ * let squares = wrapped.map(square);
  *
  * _.isArray(squares);
  * // => false
@@ -17151,7 +17151,7 @@ module.exports = lodash;
 /* 310 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var LazyWrapper = __webpack_require__(64),
+let LazyWrapper = __webpack_require__(64),
     LodashWrapper = __webpack_require__(62),
     copyArray = __webpack_require__(311);
 
@@ -17166,7 +17166,7 @@ function wrapperClone(wrapper) {
   if (wrapper instanceof LazyWrapper) {
     return wrapper.clone();
   }
-  var result = new LodashWrapper(wrapper.__wrapped__, wrapper.__chain__);
+  let result = new LodashWrapper(wrapper.__wrapped__, wrapper.__chain__);
   result.__actions__ = copyArray(wrapper.__actions__);
   result.__index__  = wrapper.__index__;
   result.__values__ = wrapper.__values__;
@@ -17189,7 +17189,7 @@ module.exports = wrapperClone;
  * @returns {Array} Returns `array`.
  */
 function copyArray(source, array) {
-  var index = -1,
+  let index = -1,
       length = source.length;
 
   array || (array = Array(length));
@@ -17206,7 +17206,7 @@ module.exports = copyArray;
 /* 312 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseClamp = __webpack_require__(313),
+let baseClamp = __webpack_require__(313),
     toNumber = __webpack_require__(60);
 
 /**
@@ -17284,26 +17284,26 @@ module.exports = baseClamp;
 
 /* globals window, document */
 
-/* eslint-disable no-var */
+/* eslint-disable no-let */
 
 /**
  * Webflow: Auto-select links to current page or section
  */
 
-var Webflow = __webpack_require__(5);
+let Webflow = __webpack_require__(5);
 
 Webflow.define('links', module.exports = function ($, _) {
-  var api = {};
-  var $win = $(window);
-  var designer;
-  var inApp = Webflow.env();
-  var location = window.location;
-  var tempLink = document.createElement('a');
-  var linkCurrent = 'w--current';
-  var indexPage = /index\.(html|php)$/;
-  var dirList = /\/$/;
-  var anchors;
-  var slug; // -----------------------------------
+  let api = {};
+  let $win = $(window);
+  let designer;
+  let inApp = Webflow.env();
+  let location = window.location;
+  let tempLink = document.createElement('a');
+  let linkCurrent = 'w--current';
+  let indexPage = /index\.(html|php)$/;
+  let dirList = /\/$/;
+  let anchors;
+  let slug; // -----------------------------------
   // Module methods
 
   api.ready = api.design = api.preview = init; // -----------------------------------
@@ -17316,9 +17316,9 @@ Webflow.define('links', module.exports = function ($, _) {
     Webflow.scroll.off(scroll);
     anchors = []; // Test all links for a selectable href
 
-    var links = document.links;
+    let links = document.links;
 
-    for (var i = 0; i < links.length; ++i) {
+    for (let i = 0; i < links.length; ++i) {
       select(links[i]);
     } // Listen for scroll if any anchors exist
 
@@ -17330,14 +17330,14 @@ Webflow.define('links', module.exports = function ($, _) {
   }
 
   function select(link) {
-    var href = designer && link.getAttribute('href-disabled') || link.getAttribute('href');
+    let href = designer && link.getAttribute('href-disabled') || link.getAttribute('href');
     tempLink.href = href; // Ignore any hrefs with a colon to safely avoid all uri schemes
 
     if (href.indexOf(':') >= 0) {
       return;
     }
 
-    var $link = $(link); // Check for all links with hash (eg (this-host)(/this-path)#section) to this page
+    let $link = $(link); // Check for all links with hash (eg (this-host)(/this-path)#section) to this page
 
     if (tempLink.hash.length > 1 && tempLink.host + tempLink.pathname === location.host + location.pathname) {
       // Ignore any hrefs with Google Translate type hash
@@ -17347,7 +17347,7 @@ Webflow.define('links', module.exports = function ($, _) {
         return;
       }
 
-      var $section = $(tempLink.hash);
+      let $section = $(tempLink.hash);
       $section.length && anchors.push({
         link: $link,
         sec: $section,
@@ -17362,21 +17362,21 @@ Webflow.define('links', module.exports = function ($, _) {
     } // Determine whether the link should be selected
 
 
-    var match = tempLink.href === location.href || href === slug || indexPage.test(href) && dirList.test(slug);
+    let match = tempLink.href === location.href || href === slug || indexPage.test(href) && dirList.test(slug);
     setClass($link, linkCurrent, match);
   }
 
   function scroll() {
-    var viewTop = $win.scrollTop();
-    var viewHeight = $win.height(); // Check each anchor for a section in view
+    let viewTop = $win.scrollTop();
+    let viewHeight = $win.height(); // Check each anchor for a section in view
 
     _.each(anchors, function (anchor) {
-      var $link = anchor.link;
-      var $section = anchor.sec;
-      var top = $section.offset().top;
-      var height = $section.outerHeight();
-      var offset = viewHeight * 0.5;
-      var active = $section.is(':visible') && top + height - offset >= viewTop && top + offset <= viewTop + viewHeight;
+      let $link = anchor.link;
+      let $section = anchor.sec;
+      let top = $section.offset().top;
+      let height = $section.outerHeight();
+      let offset = viewHeight * 0.5;
+      let active = $section.is(':visible') && top + height - offset >= viewTop && top + offset <= viewTop + viewHeight;
 
       if (anchor.active === active) {
         return;
@@ -17388,7 +17388,7 @@ Webflow.define('links', module.exports = function ($, _) {
   }
 
   function setClass($elem, className, add) {
-    var exists = $elem.hasClass(className);
+    let exists = $elem.hasClass(className);
 
     if (add && exists) {
       return;
@@ -17414,13 +17414,13 @@ Webflow.define('links', module.exports = function ($, _) {
 
 /* globals window, document */
 
-/* eslint-disable no-var */
+/* eslint-disable no-let */
 
 /**
  * Webflow: Smooth scroll
  */
 
-var Webflow = __webpack_require__(5);
+let Webflow = __webpack_require__(5);
 
 Webflow.define('scroll', module.exports = function ($) {
   /**
@@ -17430,23 +17430,23 @@ Webflow.define('scroll', module.exports = function ($) {
    * @see https://api.jquery.com/on/#event-names
    * @typedef {Object.<string>} NamespacedEventsCollection
    */
-  var NS_EVENTS = {
+  let NS_EVENTS = {
     WF_CLICK_EMPTY: 'click.wf-empty-link',
     WF_CLICK_SCROLL: 'click.wf-scroll'
   };
-  var loc = window.location;
-  var history = inIframe() ? null : window.history;
-  var $win = $(window);
-  var $doc = $(document);
-  var $body = $(document.body);
+  let loc = window.location;
+  let history = inIframe() ? null : window.history;
+  let $win = $(window);
+  let $doc = $(document);
+  let $body = $(document.body);
 
-  var animate = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || function (fn) {
+  let animate = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || function (fn) {
     window.setTimeout(fn, 15);
   };
 
-  var rootTag = Webflow.env('editor') ? '.w-editor-body' : 'body';
-  var headerSelector = 'header, ' + rootTag + ' > .header, ' + rootTag + ' > .w-nav:not([data-no-scroll])';
-  var emptyHrefSelector = 'a[href="#"]';
+  let rootTag = Webflow.env('editor') ? '.w-editor-body' : 'body';
+  let headerSelector = 'header, ' + rootTag + ' > .header, ' + rootTag + ' > .w-nav:not([data-no-scroll])';
+  let emptyHrefSelector = 'a[href="#"]';
   /**
    * Select only links whose href:
    * - contains a #
@@ -17454,7 +17454,7 @@ Webflow.define('scroll', module.exports = function ($) {
    * - is not _only_ a #
    */
 
-  var localHrefSelector = 'a[href*="#"]:not(.w-tab-link):not(' + emptyHrefSelector + ')';
+  let localHrefSelector = 'a[href*="#"]:not(.w-tab-link):not(' + emptyHrefSelector + ')';
 
   function inIframe() {
     try {
@@ -17464,7 +17464,7 @@ Webflow.define('scroll', module.exports = function ($) {
     }
   }
 
-  var validHash = /^#[a-zA-Z0-9][\w:.-]*$/;
+  let validHash = /^#[a-zA-Z0-9][\w:.-]*$/;
   /**
    * Determine if link navigates to current page
    * @param {HTMLAnchorElement} link
@@ -17480,7 +17480,7 @@ Webflow.define('scroll', module.exports = function ($) {
    */
 
 
-  var reducedMotionMediaQuery = typeof window.matchMedia === 'function' && window.matchMedia('(prefers-reduced-motion: reduce)');
+  let reducedMotionMediaQuery = typeof window.matchMedia === 'function' && window.matchMedia('(prefers-reduced-motion: reduce)');
 
   function reducedMotionEnabled() {
     return document.body.getAttribute('data-wf-scroll-motion') === 'none' || reducedMotionMediaQuery.matches;
@@ -17491,7 +17491,7 @@ Webflow.define('scroll', module.exports = function ($) {
 
 
   function validateScroll(evt) {
-    var target = evt.currentTarget;
+    let target = evt.currentTarget;
 
     if ( // Bail if in Designer
     Webflow.env('design') || // Ignore links being used by jQuery mobile
@@ -17499,9 +17499,9 @@ Webflow.define('scroll', module.exports = function ($) {
       return;
     }
 
-    var hash = linksToCurrentPage(target) ? target.hash : '';
+    let hash = linksToCurrentPage(target) ? target.hash : '';
     if (hash === '') return;
-    var $el = $(hash);
+    let $el = $(hash);
 
     if (!$el.length) {
       return;
@@ -17522,7 +17522,7 @@ Webflow.define('scroll', module.exports = function ($) {
     // Push new history state
     if (loc.hash !== hash && history && history.pushState && // Navigation breaks Chrome when the protocol is `file:`.
     !(Webflow.env.chrome && loc.protocol === 'file:')) {
-      var oldHash = history.state && history.state.hash;
+      let oldHash = history.state && history.state.hash;
 
       if (oldHash !== hash) {
         history.pushState({
@@ -17533,14 +17533,14 @@ Webflow.define('scroll', module.exports = function ($) {
   }
 
   function scroll($targetEl) {
-    var start = $win.scrollTop();
-    var end = calculateScrollEndPosition($targetEl);
+    let start = $win.scrollTop();
+    let end = calculateScrollEndPosition($targetEl);
     if (start === end) return;
-    var duration = calculateScrollDuration($targetEl, start, end);
-    var clock = Date.now();
+    let duration = calculateScrollDuration($targetEl, start, end);
+    let clock = Date.now();
 
-    var step = function step() {
-      var elapsed = Date.now() - clock;
+    let step = function step() {
+      let elapsed = Date.now() - clock;
       window.scroll(0, getY(start, end, elapsed, duration));
 
       if (elapsed <= duration) {
@@ -17553,13 +17553,13 @@ Webflow.define('scroll', module.exports = function ($) {
 
   function calculateScrollEndPosition($targetEl) {
     // If a fixed header exists, offset for the height
-    var $header = $(headerSelector);
-    var offsetY = $header.css('position') === 'fixed' ? $header.outerHeight() : 0;
-    var end = $targetEl.offset().top - offsetY; // If specified, scroll so that the element ends up in the middle of the viewport
+    let $header = $(headerSelector);
+    let offsetY = $header.css('position') === 'fixed' ? $header.outerHeight() : 0;
+    let end = $targetEl.offset().top - offsetY; // If specified, scroll so that the element ends up in the middle of the viewport
 
     if ($targetEl.data('scroll') === 'mid') {
-      var available = $win.height() - offsetY;
-      var elHeight = $targetEl.outerHeight();
+      let available = $win.height() - offsetY;
+      let elHeight = $targetEl.outerHeight();
 
       if (elHeight < available) {
         end -= Math.round((available - elHeight) / 2);
@@ -17571,10 +17571,10 @@ Webflow.define('scroll', module.exports = function ($) {
 
   function calculateScrollDuration($targetEl, start, end) {
     if (reducedMotionEnabled()) return 0;
-    var mult = 1; // Check for custom time multiplier on the body and the scroll target
+    let mult = 1; // Check for custom time multiplier on the body and the scroll target
 
     $body.add($targetEl).each(function (_, el) {
-      var time = parseFloat(el.getAttribute('data-scroll-time'));
+      let time = parseFloat(el.getAttribute('data-scroll-time'));
 
       if (!isNaN(time) && time >= 0) {
         mult = time;
@@ -17596,7 +17596,7 @@ Webflow.define('scroll', module.exports = function ($) {
   }
 
   function ready() {
-    var WF_CLICK_EMPTY = NS_EVENTS.WF_CLICK_EMPTY,
+    let WF_CLICK_EMPTY = NS_EVENTS.WF_CLICK_EMPTY,
         WF_CLICK_SCROLL = NS_EVENTS.WF_CLICK_SCROLL;
     $doc.on(WF_CLICK_SCROLL, localHrefSelector, validateScroll);
     /**
@@ -17626,7 +17626,7 @@ Webflow.define('scroll', module.exports = function ($) {
 
 /* globals document, window */
 
-/* eslint-disable no-var */
+/* eslint-disable no-let */
 
 /**
  * Webflow: Touch events
@@ -17634,11 +17634,11 @@ Webflow.define('scroll', module.exports = function ($) {
  * Adds a 'swipe' event to desktop and mobile
  */
 
-var Webflow = __webpack_require__(5);
+let Webflow = __webpack_require__(5);
 
 Webflow.define('touch', module.exports = function ($) {
-  var api = {};
-  var getSelection = window.getSelection; // Delegate all legacy 'tap' events to 'click'
+  let api = {};
+  let getSelection = window.getSelection; // Delegate all legacy 'tap' events to 'click'
 
   $.event.special.tap = {
     bindType: 'click',
@@ -17651,11 +17651,11 @@ Webflow.define('touch', module.exports = function ($) {
   };
 
   function Touch(el) {
-    var active = false;
-    var useTouch = false;
-    var thresholdX = Math.min(Math.round(window.innerWidth * 0.04), 40);
-    var startX;
-    var lastX;
+    let active = false;
+    let useTouch = false;
+    let thresholdX = Math.min(Math.round(window.innerWidth * 0.04), 40);
+    let startX;
+    let lastX;
     el.addEventListener('touchstart', start, false);
     el.addEventListener('touchmove', move, false);
     el.addEventListener('touchend', end, false);
@@ -17667,7 +17667,7 @@ Webflow.define('touch', module.exports = function ($) {
 
     function start(evt) {
       // We don’t handle multi-touch events yet.
-      var touches = evt.touches;
+      let touches = evt.touches;
 
       if (touches && touches.length > 1) {
         return;
@@ -17696,9 +17696,9 @@ Webflow.define('touch', module.exports = function ($) {
         return;
       }
 
-      var touches = evt.touches;
-      var x = touches ? touches[0].clientX : evt.clientX;
-      var velocityX = x - lastX;
+      let touches = evt.touches;
+      let x = touches ? touches[0].clientX : evt.clientX;
+      let velocityX = x - lastX;
       lastX = x; // Allow swipes while pointer is down, but prevent them during text selection
 
       if (Math.abs(velocityX) > thresholdX && getSelection && String(getSelection()) === '') {
@@ -17746,7 +17746,7 @@ Webflow.define('touch', module.exports = function ($) {
 
 
   function triggerEvent(type, evt, data) {
-    var newEvent = $.Event(type, {
+    let newEvent = $.Event(type, {
       originalEvent: evt
     });
     $(evt.target).trigger(newEvent, data);
@@ -17773,37 +17773,37 @@ Webflow.define('touch', module.exports = function ($) {
   WEBFLOW_FORM_OLDIE_HOST
 */
 
-/* eslint-disable no-var */
+/* eslint-disable no-let */
 
 /**
  * Webflow: Forms
  */
 
-var _interopRequireDefault = __webpack_require__(0);
+let _interopRequireDefault = __webpack_require__(0);
 
-var _slicedToArray2 = _interopRequireDefault(__webpack_require__(318));
+let _slicedToArray2 = _interopRequireDefault(__webpack_require__(318));
 
-var Webflow = __webpack_require__(5);
+let Webflow = __webpack_require__(5);
 
 Webflow.define('forms', module.exports = function ($, _) {
-  var api = {};
-  var $doc = $(document);
-  var $forms;
-  var loc = window.location;
-  var retro = window.XDomainRequest && !window.atob;
-  var namespace = '.w-form';
-  var siteId;
-  var emailField = /e(-)?mail/i;
-  var emailValue = /^\S+@\S+$/;
-  var alert = window.alert;
-  var inApp = Webflow.env();
-  var listening;
-  var formUrl;
-  var signFileUrl; // MailChimp domains: list-manage.com + mirrors
+  let api = {};
+  let $doc = $(document);
+  let $forms;
+  let loc = window.location;
+  let retro = window.XDomainRequest && !window.atob;
+  let namespace = '.w-form';
+  let siteId;
+  let emailField = /e(-)?mail/i;
+  let emailValue = /^\S+@\S+$/;
+  let alert = window.alert;
+  let inApp = Webflow.env();
+  let listening;
+  let formUrl;
+  let signFileUrl; // MailChimp domains: list-manage.com + mirrors
 
-  var chimpRegex = /list-manage[1-9]?.com/i;
+  let chimpRegex = /list-manage[1-9]?.com/i;
 
-  var disconnected = _.debounce(function () {
+  let disconnected = _.debounce(function () {
     alert('Oops! This page has improperly configured forms. Please contact your website administrator to fix this issue.');
   }, 100);
 
@@ -17836,8 +17836,8 @@ Webflow.define('forms', module.exports = function ($, _) {
 
   function build(i, el) {
     // Store form state using namespace
-    var $el = $(el);
-    var data = $.data(el, namespace);
+    let $el = $(el);
+    let data = $.data(el, namespace);
 
     if (!data) {
       data = $.data(el, namespace, {
@@ -17847,14 +17847,14 @@ Webflow.define('forms', module.exports = function ($, _) {
 
 
     reset(data);
-    var wrap = $el.closest('div.w-form');
+    let wrap = $el.closest('div.w-form');
     data.done = wrap.find('> .w-form-done');
     data.fail = wrap.find('> .w-form-fail');
     data.fileUploads = wrap.find('.w-file-upload');
     data.fileUploads.each(function (j) {
       initFileUpload(j, data);
     });
-    var action = data.action = $el.attr('action');
+    let action = data.action = $el.attr('action');
     data.handler = null;
     data.redirect = $el.attr('data-redirect'); // MailChimp form
 
@@ -17882,7 +17882,7 @@ Webflow.define('forms', module.exports = function ($, _) {
     listening = true; // Handle form submission for Webflow forms
 
     $doc.on('submit', namespace + ' form', function (evt) {
-      var data = $.data(this, namespace);
+      let data = $.data(this, namespace);
 
       if (data.handler) {
         data.evt = evt;
@@ -17890,11 +17890,11 @@ Webflow.define('forms', module.exports = function ($, _) {
       }
     }); // handle checked ui for custom checkbox and radio button
 
-    var CHECKBOX_CLASS_NAME = '.w-checkbox-input';
-    var RADIO_INPUT_CLASS_NAME = '.w-radio-input';
-    var CHECKED_CLASS = 'w--redirected-checked';
-    var FOCUSED_CLASS = 'w--redirected-focus';
-    var CUSTOM_CONTROLS = [['checkbox', CHECKBOX_CLASS_NAME], ['radio', RADIO_INPUT_CLASS_NAME]];
+    let CHECKBOX_CLASS_NAME = '.w-checkbox-input';
+    let RADIO_INPUT_CLASS_NAME = '.w-radio-input';
+    let CHECKED_CLASS = 'w--redirected-checked';
+    let FOCUSED_CLASS = 'w--redirected-focus';
+    let CUSTOM_CONTROLS = [['checkbox', CHECKBOX_CLASS_NAME], ['radio', RADIO_INPUT_CLASS_NAME]];
     $doc.on('change', namespace + " form input[type=\"checkbox\"]:not(" + CHECKBOX_CLASS_NAME + ')', function (evt) {
       $(evt.target).siblings(CHECKBOX_CLASS_NAME).toggleClass(CHECKED_CLASS);
     });
@@ -17902,14 +17902,14 @@ Webflow.define('forms', module.exports = function ($, _) {
       $("input[name=\"".concat(evt.target.name, "\"]:not(").concat(CHECKBOX_CLASS_NAME, ")")).map(function (i, el) {
         return $(el).siblings(RADIO_INPUT_CLASS_NAME).removeClass(CHECKED_CLASS);
       });
-      var $target = $(evt.target);
+      let $target = $(evt.target);
 
       if (!$target.hasClass('w-radio-input')) {
         $target.siblings(RADIO_INPUT_CLASS_NAME).addClass(CHECKED_CLASS);
       }
     });
     CUSTOM_CONTROLS.forEach(function (_ref) {
-      var _ref2 = (0, _slicedToArray2["default"])(_ref, 2),
+      let _ref2 = (0, _slicedToArray2["default"])(_ref, 2),
           controlType = _ref2[0],
           customControlClassName = _ref2[1];
 
@@ -17924,7 +17924,7 @@ Webflow.define('forms', module.exports = function ($, _) {
 
 
   function reset(data) {
-    var btn = data.btn = data.form.find(':input[type="submit"]');
+    let btn = data.btn = data.form.find(':input[type="submit"]');
     data.wait = data.btn.attr('data-wait') || null;
     data.success = false;
     btn.prop('disabled', false);
@@ -17933,8 +17933,8 @@ Webflow.define('forms', module.exports = function ($, _) {
 
 
   function disableBtn(data) {
-    var btn = data.btn;
-    var wait = data.wait;
+    let btn = data.btn;
+    let wait = data.wait;
     btn.prop('disabled', true); // Show wait text and store previous label
 
     if (wait) {
@@ -17945,14 +17945,14 @@ Webflow.define('forms', module.exports = function ($, _) {
 
 
   function findFields(form, result) {
-    var status = null;
+    let status = null;
     result = result || {}; // The ":input" selector is a jQuery shortcut to select all inputs, selects, textareas
 
     form.find(':input:not([type="submit"]):not([type="file"])').each(function (i, el) {
-      var field = $(el);
-      var type = field.attr('type');
-      var name = field.attr('data-name') || field.attr('name') || 'Field ' + (i + 1);
-      var value = field.val();
+      let field = $(el);
+      let type = field.attr('type');
+      let name = field.attr('data-name') || field.attr('name') || 'Field ' + (i + 1);
+      let value = field.val();
 
       if (type === 'checkbox') {
         value = field.is(':checked');
@@ -17976,11 +17976,11 @@ Webflow.define('forms', module.exports = function ($, _) {
   }
 
   function findFileUploads(form) {
-    var result = {};
+    let result = {};
     form.find(':input[type="file"]').each(function (i, el) {
-      var field = $(el);
-      var name = field.attr('data-name') || field.attr('name') || 'File ' + (i + 1);
-      var value = field.attr('data-value');
+      let field = $(el);
+      let name = field.attr('data-name') || field.attr('name') || 'File ' + (i + 1);
+      let value = field.attr('data-value');
 
       if (typeof value === 'string') {
         value = $.trim(value);
@@ -17992,7 +17992,7 @@ Webflow.define('forms', module.exports = function ($, _) {
   }
 
   function getStatus(field, type, name, value) {
-    var status = null;
+    let status = null;
 
     if (type === 'password') {
       status = 'Passwords cannot be submitted.';
@@ -18019,8 +18019,8 @@ Webflow.define('forms', module.exports = function ($, _) {
 
   function submitMailChimp(data) {
     reset(data);
-    var form = data.form;
-    var payload = {}; // Skip Ajax submission if http/s mismatch, fallback to POST instead
+    let form = data.form;
+    let payload = {}; // Skip Ajax submission if http/s mismatch, fallback to POST instead
 
     if (/^https/.test(loc.href) && !/^https/.test(data.action)) {
       form.attr('method', 'post');
@@ -18029,7 +18029,7 @@ Webflow.define('forms', module.exports = function ($, _) {
 
     preventDefault(data); // Find & populate all fields
 
-    var status = findFields(form, payload);
+    let status = findFields(form, payload);
 
     if (status) {
       return alert(status);
@@ -18038,7 +18038,7 @@ Webflow.define('forms', module.exports = function ($, _) {
 
     disableBtn(data); // Use special format for MailChimp params
 
-    var fullName;
+    let fullName;
 
     _.each(payload, function (value, key) {
       if (emailField.test(key)) {
@@ -18065,11 +18065,11 @@ Webflow.define('forms', module.exports = function ($, _) {
     } // Use the (undocumented) MailChimp jsonp api
 
 
-    var url = data.action.replace('/post?', '/post-json?') + '&c=?'; // Add special param to prevent bot signups
+    let url = data.action.replace('/post?', '/post-json?') + '&c=?'; // Add special param to prevent bot signups
 
-    var userId = url.indexOf('u=') + 2;
+    let userId = url.indexOf('u=') + 2;
     userId = url.substring(userId, url.indexOf('&', userId));
-    var listId = url.indexOf('id=') + 3;
+    let listId = url.indexOf('id=') + 3;
     listId = url.substring(listId, url.indexOf('&', listId));
     payload['b_' + userId + '_' + listId] = '';
     $.ajax({
@@ -18091,9 +18091,9 @@ Webflow.define('forms', module.exports = function ($, _) {
 
 
   function afterSubmit(data) {
-    var form = data.form;
-    var redirect = data.redirect;
-    var success = data.success; // Redirect to a success url if defined
+    let form = data.form;
+    let redirect = data.redirect;
+    let success = data.success; // Redirect to a success url if defined
 
     if (success && redirect) {
       Webflow.location(redirect);
@@ -18119,22 +18119,22 @@ Webflow.define('forms', module.exports = function ($, _) {
       return;
     }
 
-    var file;
-    var $el = $(form.fileUploads[i]);
-    var $defaultWrap = $el.find('> .w-file-upload-default');
-    var $uploadingWrap = $el.find('> .w-file-upload-uploading');
-    var $successWrap = $el.find('> .w-file-upload-success');
-    var $errorWrap = $el.find('> .w-file-upload-error');
-    var $input = $defaultWrap.find('.w-file-upload-input');
-    var $label = $defaultWrap.find('.w-file-upload-label');
-    var $labelChildren = $label.children();
-    var $errorMsgEl = $errorWrap.find('.w-file-upload-error-msg');
-    var $fileEl = $successWrap.find('.w-file-upload-file');
-    var $removeEl = $successWrap.find('.w-file-remove-link');
-    var $fileNameEl = $fileEl.find('.w-file-upload-file-name');
-    var sizeErrMsg = $errorMsgEl.attr('data-w-size-error');
-    var typeErrMsg = $errorMsgEl.attr('data-w-type-error');
-    var genericErrMsg = $errorMsgEl.attr('data-w-generic-error');
+    let file;
+    let $el = $(form.fileUploads[i]);
+    let $defaultWrap = $el.find('> .w-file-upload-default');
+    let $uploadingWrap = $el.find('> .w-file-upload-uploading');
+    let $successWrap = $el.find('> .w-file-upload-success');
+    let $errorWrap = $el.find('> .w-file-upload-error');
+    let $input = $defaultWrap.find('.w-file-upload-input');
+    let $label = $defaultWrap.find('.w-file-upload-label');
+    let $labelChildren = $label.children();
+    let $errorMsgEl = $errorWrap.find('.w-file-upload-error-msg');
+    let $fileEl = $successWrap.find('.w-file-upload-file');
+    let $removeEl = $successWrap.find('.w-file-remove-link');
+    let $fileNameEl = $fileEl.find('.w-file-upload-file-name');
+    let sizeErrMsg = $errorMsgEl.attr('data-w-size-error');
+    let typeErrMsg = $errorMsgEl.attr('data-w-type-error');
+    let genericErrMsg = $errorMsgEl.attr('data-w-generic-error');
 
     if (!inApp) {
       $removeEl.on('click', function () {
@@ -18167,7 +18167,7 @@ Webflow.define('forms', module.exports = function ($, _) {
       }); // Setting input width 1px and height equal label
       // This is so the browser required error will show up
 
-      var height = $label.outerHeight();
+      let height = $label.outerHeight();
       $input.height(height);
       $input.width(1);
     } else {
@@ -18183,8 +18183,8 @@ Webflow.define('forms', module.exports = function ($, _) {
     }
 
     function parseError(err) {
-      var errorMsg = err.responseJSON && err.responseJSON.msg;
-      var userError = genericErrMsg;
+      let errorMsg = err.responseJSON && err.responseJSON.msg;
+      let userError = genericErrMsg;
 
       if (typeof errorMsg === 'string' && errorMsg.indexOf('InvalidFileTypeError') === 0) {
         userError = typeErrMsg;
@@ -18210,10 +18210,10 @@ Webflow.define('forms', module.exports = function ($, _) {
         return parseError(err);
       }
 
-      var fileName = data.fileName;
-      var postData = data.postData;
-      var fileId = data.fileId;
-      var s3Url = data.s3Url;
+      let fileName = data.fileName;
+      let postData = data.postData;
+      let fileId = data.fileId;
+      let s3Url = data.s3Url;
       $input.attr('data-value', fileId);
       uploadS3(s3Url, postData, file, fileName, afterUpload);
     }
@@ -18234,7 +18234,7 @@ Webflow.define('forms', module.exports = function ($, _) {
     }
 
     function isUploading() {
-      var uploads = form.fileUploads && form.fileUploads.toArray() || [];
+      let uploads = form.fileUploads && form.fileUploads.toArray() || [];
       return uploads.some(function (value) {
         return value.uploading;
       });
@@ -18242,7 +18242,7 @@ Webflow.define('forms', module.exports = function ($, _) {
   }
 
   function signFile(file, cb) {
-    var payload = {
+    let payload = {
       name: file.name,
       size: file.size
     };
@@ -18260,9 +18260,9 @@ Webflow.define('forms', module.exports = function ($, _) {
   }
 
   function uploadS3(url, data, file, fileName, cb) {
-    var formData = new FormData();
+    let formData = new FormData();
 
-    for (var k in data) {
+    for (let k in data) {
       formData.append(k, data[k]);
     }
 
@@ -18288,11 +18288,11 @@ Webflow.define('forms', module.exports = function ($, _) {
 /* 318 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var arrayWithHoles = __webpack_require__(319);
+let arrayWithHoles = __webpack_require__(319);
 
-var iterableToArrayLimit = __webpack_require__(320);
+let iterableToArrayLimit = __webpack_require__(320);
 
-var nonIterableRest = __webpack_require__(321);
+let nonIterableRest = __webpack_require__(321);
 
 function _slicedToArray(arr, i) {
   return arrayWithHoles(arr) || iterableToArrayLimit(arr, i) || nonIterableRest();
@@ -18315,13 +18315,13 @@ module.exports = _arrayWithHoles;
 /***/ (function(module, exports) {
 
 function _iterableToArrayLimit(arr, i) {
-  var _arr = [];
-  var _n = true;
-  var _d = false;
-  var _e = undefined;
+  let _arr = [];
+  let _n = true;
+  let _d = false;
+  let _e = undefined;
 
   try {
-    for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) {
+    for (let _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) {
       _arr.push(_s.value);
 
       if (i && _arr.length === i) break;
@@ -18361,17 +18361,17 @@ module.exports = _nonIterableRest;
 
 /* globals window, document */
 
-/* eslint-disable no-var */
+/* eslint-disable no-let */
 
 /**
  * Webflow: Navbar component
  */
 
-var Webflow = __webpack_require__(5);
+let Webflow = __webpack_require__(5);
 
-var IXEvents = __webpack_require__(22);
+let IXEvents = __webpack_require__(22);
 
-var KEY_CODES = {
+let KEY_CODES = {
   ARROW_LEFT: 37,
   ARROW_UP: 38,
   ARROW_RIGHT: 39,
@@ -18383,25 +18383,25 @@ var KEY_CODES = {
   END: 35
 };
 Webflow.define('navbar', module.exports = function ($, _) {
-  var api = {};
-  var tram = $.tram;
-  var $win = $(window);
-  var $doc = $(document);
-  var debounce = _.debounce;
-  var $body;
-  var $navbars;
-  var designer;
-  var inEditor;
-  var inApp = Webflow.env();
-  var overlay = '<div class="w-nav-overlay" data-wf-ignore />';
-  var namespace = '.w-nav';
-  var navbarOpenedButton = 'w--open';
-  var navbarOpenedDropdown = 'w--nav-dropdown-open';
-  var navbarOpenedDropdownToggle = 'w--nav-dropdown-toggle-open';
-  var navbarOpenedDropdownList = 'w--nav-dropdown-list-open';
-  var navbarOpenedLink = 'w--nav-link-open';
-  var ix = IXEvents.triggers;
-  var menuSibling = $(); // -----------------------------------
+  let api = {};
+  let tram = $.tram;
+  let $win = $(window);
+  let $doc = $(document);
+  let debounce = _.debounce;
+  let $body;
+  let $navbars;
+  let designer;
+  let inEditor;
+  let inApp = Webflow.env();
+  let overlay = '<div class="w-nav-overlay" data-wf-ignore />';
+  let namespace = '.w-nav';
+  let navbarOpenedButton = 'w--open';
+  let navbarOpenedDropdown = 'w--nav-dropdown-open';
+  let navbarOpenedDropdownToggle = 'w--nav-dropdown-toggle-open';
+  let navbarOpenedDropdownList = 'w--nav-dropdown-list-open';
+  let navbarOpenedLink = 'w--nav-link-open';
+  let ix = IXEvents.triggers;
+  let menuSibling = $(); // -----------------------------------
   // Module methods
 
   api.ready = api.design = api.preview = init;
@@ -18447,9 +18447,9 @@ Webflow.define('navbar', module.exports = function ($, _) {
   }
 
   function build(i, el) {
-    var $el = $(el); // Store state in data
+    let $el = $(el); // Store state in data
 
-    var data = $.data(el, namespace);
+    let data = $.data(el, namespace);
 
     if (!data) {
       data = $.data(el, namespace, {
@@ -18471,7 +18471,7 @@ Webflow.define('navbar', module.exports = function ($, _) {
     data.outside = outside(data); //   If the brand links exists and is set to link to the homepage, the
     // default setting, then add an aria-label
 
-    var navBrandLink = $el.find('.w-nav-brand');
+    let navBrandLink = $el.find('.w-nav-brand');
 
     if (navBrandLink && navBrandLink.attr('href') === '/' && navBrandLink.attr('aria-label') == null) {
       navBrandLink.attr('aria-label', 'home');
@@ -18513,7 +18513,7 @@ Webflow.define('navbar', module.exports = function ($, _) {
   }
 
   function teardown(i, el) {
-    var data = $.data(el, namespace);
+    let data = $.data(el, namespace);
 
     if (data) {
       removeOverlay(data);
@@ -18543,10 +18543,10 @@ Webflow.define('navbar', module.exports = function ($, _) {
   }
 
   function configure(data) {
-    var config = {};
-    var old = data.config || {}; // Set config options from data attributes
+    let config = {};
+    let old = data.config || {}; // Set config options from data attributes
 
-    var animation = config.animation = data.el.attr('data-animation') || 'default';
+    let animation = config.animation = data.el.attr('data-animation') || 'default';
     config.animOver = /^over/.test(animation);
     config.animDirect = /left$/.test(animation) ? -1 : 1; // Re-open menu if the animation type changed
 
@@ -18556,7 +18556,7 @@ Webflow.define('navbar', module.exports = function ($, _) {
 
     config.easing = data.el.attr('data-easing') || 'ease';
     config.easing2 = data.el.attr('data-easing2') || 'ease';
-    var duration = data.el.attr('data-duration');
+    let duration = data.el.attr('data-duration');
     config.duration = duration != null ? Number(duration) : 400;
     config.docHeight = data.el.attr('data-doc-height'); // Store config in data
 
@@ -18566,7 +18566,7 @@ Webflow.define('navbar', module.exports = function ($, _) {
   function handler(data) {
     return function (evt, options) {
       options = options || {};
-      var winWidth = $win.width();
+      let winWidth = $win.width();
       configure(data);
       options.open === true && open(data, true);
       options.open === false && close(data, true); // Reopen if media query changed after setting
@@ -18679,7 +18679,7 @@ Webflow.define('navbar', module.exports = function ($, _) {
 
   function focusSelectedLink(data) {
     if (data.links[data.selectedIdx]) {
-      var selectedElement = data.links[data.selectedIdx];
+      let selectedElement = data.links[data.selectedIdx];
       selectedElement.focus();
       navigate(selectedElement);
     }
@@ -18703,8 +18703,8 @@ Webflow.define('navbar', module.exports = function ($, _) {
 
   function navigate(data) {
     return function (evt) {
-      var link = $(this);
-      var href = link.attr('href'); // Avoid late clicks on touch devices
+      let link = $(this);
+      let href = link.attr('href'); // Avoid late clicks on touch devices
 
       if (!Webflow.validClick(evt.currentTarget)) {
         evt.preventDefault();
@@ -18725,7 +18725,7 @@ Webflow.define('navbar', module.exports = function ($, _) {
     }
 
     return function (evt) {
-      var $target = $(evt.target); // Ignore clicks on Editor overlay UI
+      let $target = $(evt.target); // Ignore clicks on Editor overlay UI
 
       if (inEditor && $target.closest('.w-editor-bem-EditorOverlay').length) {
         return;
@@ -18736,12 +18736,12 @@ Webflow.define('navbar', module.exports = function ($, _) {
     };
   }
 
-  var outsideDebounced = debounce(function (data, $target) {
+  let outsideDebounced = debounce(function (data, $target) {
     if (!data.open) {
       return;
     }
 
-    var menu = $target.closest('.w-nav-menu');
+    let menu = $target.closest('.w-nav-menu');
 
     if (!data.menu.is(menu)) {
       close(data);
@@ -18749,9 +18749,9 @@ Webflow.define('navbar', module.exports = function ($, _) {
   });
 
   function resize(i, el) {
-    var data = $.data(el, namespace); // Check for collapsed state based on button display
+    let data = $.data(el, namespace); // Check for collapsed state based on button display
 
-    var collapsed = data.collapsed = data.button.css('display') !== 'none'; // Close menu if button is no longer visible (and not in designer)
+    let collapsed = data.collapsed = data.button.css('display') !== 'none'; // Close menu if button is no longer visible (and not in designer)
 
     if (data.open && !collapsed && !designer) {
       close(data, true);
@@ -18759,7 +18759,7 @@ Webflow.define('navbar', module.exports = function ($, _) {
 
 
     if (data.container.length) {
-      var updateEachMax = updateMax(data);
+      let updateEachMax = updateMax(data);
       data.links.each(updateEachMax);
       data.dropdowns.each(updateEachMax);
     } // If currently open, update height to match body
@@ -18770,11 +18770,11 @@ Webflow.define('navbar', module.exports = function ($, _) {
     }
   }
 
-  var maxWidth = 'max-width';
+  let maxWidth = 'max-width';
 
   function updateMax(data) {
     // Set max-width of each element to match container
-    var containMax = data.container.css(maxWidth);
+    let containMax = data.container.css(maxWidth);
 
     if (containMax === 'none') {
       containMax = '';
@@ -18810,18 +18810,18 @@ Webflow.define('navbar', module.exports = function ($, _) {
     data.dropdownToggle.addClass(navbarOpenedDropdownToggle);
     data.dropdownList.addClass(navbarOpenedDropdownList);
     data.button.addClass(navbarOpenedButton);
-    var config = data.config;
-    var animation = config.animation;
+    let config = data.config;
+    let animation = config.animation;
 
     if (animation === 'none' || !tram.support.transform || config.duration <= 0) {
       immediate = true;
     }
 
-    var bodyHeight = setOverlayHeight(data);
-    var menuHeight = data.menu.outerHeight(true);
-    var menuWidth = data.menu.outerWidth(true);
-    var navHeight = data.el.height();
-    var navbarEl = data.el[0];
+    let bodyHeight = setOverlayHeight(data);
+    let menuHeight = data.menu.outerHeight(true);
+    let menuWidth = data.menu.outerWidth(true);
+    let navHeight = data.el.height();
+    let navbarEl = data.el[0];
     resize(0, navbarEl);
     ix.intro(0, navbarEl);
     Webflow.redraw.up(); // Listen for click outside events
@@ -18836,7 +18836,7 @@ Webflow.define('navbar', module.exports = function ($, _) {
       return;
     }
 
-    var transConfig = 'transform ' + config.duration + 'ms ' + config.easing; // Add menu to overlay
+    let transConfig = 'transform ' + config.duration + 'ms ' + config.easing; // Add menu to overlay
 
     if (data.overlay) {
       menuSibling = data.menu.prev();
@@ -18856,7 +18856,7 @@ Webflow.define('navbar', module.exports = function ($, _) {
     } // Drop Down
 
 
-    var offsetY = navHeight + menuHeight;
+    let offsetY = navHeight + menuHeight;
     tram(data.menu).add(transConfig).set({
       y: -offsetY
     }).start({
@@ -18869,8 +18869,8 @@ Webflow.define('navbar', module.exports = function ($, _) {
   }
 
   function setOverlayHeight(data) {
-    var config = data.config;
-    var bodyHeight = config.docHeight ? $doc.height() : $body.height();
+    let config = data.config;
+    let bodyHeight = config.docHeight ? $doc.height() : $body.height();
 
     if (config.animOver) {
       data.menu.height(bodyHeight);
@@ -18889,7 +18889,7 @@ Webflow.define('navbar', module.exports = function ($, _) {
 
     data.open = false;
     data.button.removeClass(navbarOpenedButton);
-    var config = data.config;
+    let config = data.config;
 
     if (config.animation === 'none' || !tram.support.transform || config.duration <= 0) {
       immediate = true;
@@ -18905,10 +18905,10 @@ Webflow.define('navbar', module.exports = function ($, _) {
       return;
     }
 
-    var transConfig = 'transform ' + config.duration + 'ms ' + config.easing2;
-    var menuHeight = data.menu.outerHeight(true);
-    var menuWidth = data.menu.outerWidth(true);
-    var navHeight = data.el.height(); // Over left/right
+    let transConfig = 'transform ' + config.duration + 'ms ' + config.easing2;
+    let menuHeight = data.menu.outerHeight(true);
+    let menuWidth = data.menu.outerWidth(true);
+    let navHeight = data.el.height(); // Over left/right
 
     if (config.animOver) {
       tram(data.menu).add(transConfig).start({
@@ -18918,7 +18918,7 @@ Webflow.define('navbar', module.exports = function ($, _) {
     } // Drop Down
 
 
-    var offsetY = navHeight + menuHeight;
+    let offsetY = navHeight + menuHeight;
     tram(data.menu).add(transConfig).start({
       y: -offsetY
     }).then(complete);
@@ -18960,17 +18960,17 @@ Webflow.define('navbar', module.exports = function ($, _) {
 
 /* global window, document */
 
-/* eslint-disable no-var */
+/* eslint-disable no-let */
 
 /**
  * Webflow: Slider component
  */
 
-var Webflow = __webpack_require__(5);
+let Webflow = __webpack_require__(5);
 
-var IXEvents = __webpack_require__(22);
+let IXEvents = __webpack_require__(22);
 
-var KEY_CODES = {
+let KEY_CODES = {
   ARROW_LEFT: 37,
   ARROW_UP: 38,
   ARROW_RIGHT: 39,
@@ -18980,21 +18980,21 @@ var KEY_CODES = {
   HOME: 36,
   END: 35
 };
-var FOCUSABLE_SELECTOR = 'a[href], area[href], [role="button"], input, select, textarea, button, iframe, object, embed, *[tabindex], *[contenteditable]';
+let FOCUSABLE_SELECTOR = 'a[href], area[href], [role="button"], input, select, textarea, button, iframe, object, embed, *[tabindex], *[contenteditable]';
 Webflow.define('slider', module.exports = function ($, _) {
-  var api = {};
-  var tram = $.tram;
-  var $doc = $(document);
-  var $sliders;
-  var designer;
-  var inApp = Webflow.env();
-  var namespace = '.w-slider';
-  var dot = '<div class="w-slider-dot" data-wf-ignore />';
-  var ariaLiveLabelHtml = '<div aria-live="off" aria-atomic="true" class="w-slider-aria-label" data-wf-ignore />';
-  var forceShow = 'w-slider-force-show';
-  var ix = IXEvents.triggers;
-  var fallback;
-  var inRedraw; // -----------------------------------
+  let api = {};
+  let tram = $.tram;
+  let $doc = $(document);
+  let $sliders;
+  let designer;
+  let inApp = Webflow.env();
+  let namespace = '.w-slider';
+  let dot = '<div class="w-slider-dot" data-wf-ignore />';
+  let ariaLiveLabelHtml = '<div aria-live="off" aria-atomic="true" class="w-slider-aria-label" data-wf-ignore />';
+  let forceShow = 'w-slider-force-show';
+  let ix = IXEvents.triggers;
+  let fallback;
+  let inRedraw; // -----------------------------------
   // Module methods
 
   api.ready = function () {
@@ -19054,9 +19054,9 @@ Webflow.define('slider', module.exports = function ($, _) {
   }
 
   function build(i, el) {
-    var $el = $(el); // Store slider state in data
+    let $el = $(el); // Store slider state in data
 
-    var data = $.data(el, namespace);
+    let data = $.data(el, namespace);
 
     if (!data) {
       data = $.data(el, namespace, {
@@ -19091,7 +19091,7 @@ Webflow.define('slider', module.exports = function ($, _) {
     } // Store the ID of the slider slide view mask
 
 
-    var slideViewId = data.mask.attr('id'); // If user did not provide an ID, set it
+    let slideViewId = data.mask.attr('id'); // If user did not provide an ID, set it
 
     if (!slideViewId) {
       slideViewId = 'w-slider-mask-' + i;
@@ -19169,9 +19169,9 @@ Webflow.define('slider', module.exports = function ($, _) {
     } // If slider or any parent is hidden, temporarily show for measurements (https://github.com/webflow/webflow/issues/24921)
 
 
-    var $elHidden = $el.filter(':hidden');
+    let $elHidden = $el.filter(':hidden');
     $elHidden.addClass(forceShow);
-    var $elHiddenParents = $el.parents(':hidden');
+    let $elHiddenParents = $el.parents(':hidden');
     $elHiddenParents.addClass(forceShow); // Run first render
 
     render(i, el); // If slider or any parent is hidden, reset after temporarily showing for measurements
@@ -19181,7 +19181,7 @@ Webflow.define('slider', module.exports = function ($, _) {
   }
 
   function configure(data) {
-    var config = {};
+    let config = {};
     config.crossOver = 0; // Set config options from data attributes
 
     config.animation = data.el.attr('data-animation') || 'slide';
@@ -19192,7 +19192,7 @@ Webflow.define('slider', module.exports = function ($, _) {
     }
 
     config.easing = data.el.attr('data-easing') || 'ease';
-    var duration = data.el.attr('data-duration');
+    let duration = data.el.attr('data-duration');
     config.duration = duration != null ? parseInt(duration, 10) : 500;
 
     if (isAttrTrue(data.el.attr('data-infinite'))) {
@@ -19215,7 +19215,7 @@ Webflow.define('slider', module.exports = function ($, _) {
       config.delay = parseInt(data.el.attr('data-delay'), 10) || 2000;
       config.timerMax = parseInt(data.el.attr('data-autoplay-limit'), 10); // Disable timer on first touch or mouse down
 
-      var touchEvents = 'mousedown' + namespace + ' touchstart' + namespace;
+      let touchEvents = 'mousedown' + namespace + ' touchstart' + namespace;
 
       if (!designer) {
         data.el.off(touchEvents).one(touchEvents, function () {
@@ -19225,7 +19225,7 @@ Webflow.define('slider', module.exports = function ($, _) {
     } // Use edge buffer to help calculate page count
 
 
-    var arrowWidth = data.right.width();
+    let arrowWidth = data.right.width();
     config.edge = arrowWidth ? arrowWidth + 40 : 100; // Store config in data
 
     data.config = config;
@@ -19305,7 +19305,7 @@ Webflow.define('slider', module.exports = function ($, _) {
 
   function select(data, value) {
     // Select page based on slide element index
-    var found = null;
+    let found = null;
 
     if (value === data.slides.length) {
       init();
@@ -19330,8 +19330,8 @@ Webflow.define('slider', module.exports = function ($, _) {
 
   function startTimer(data) {
     stopTimer(data);
-    var config = data.config;
-    var timerMax = config.timerMax;
+    let config = data.config;
+    let timerMax = config.timerMax;
 
     if (timerMax && data.timerCount++ > timerMax) {
       return;
@@ -19355,7 +19355,7 @@ Webflow.define('slider', module.exports = function ($, _) {
   function handler(data) {
     return function (evt, options) {
       options = options || {};
-      var config = data.config; // Designer settings
+      let config = data.config; // Designer settings
 
       if (designer && evt.type === 'setting') {
         if (options.select === 'prev') {
@@ -19400,7 +19400,7 @@ Webflow.define('slider', module.exports = function ($, _) {
 
 
       if (data.nav.has(evt.target).length) {
-        var index = $(evt.target).index();
+        let index = $(evt.target).index();
 
         if (evt.type === 'click') {
           change(data, {
@@ -19462,18 +19462,18 @@ Webflow.define('slider', module.exports = function ($, _) {
 
   function focusDot($nav, index) {
     // Focus nav dot; don't change class to active
-    var $active = $nav.children().eq(index).focus();
+    let $active = $nav.children().eq(index).focus();
     $nav.children().not($active);
   }
 
   function change(data, options) {
     options = options || {};
-    var config = data.config;
-    var anchors = data.anchors; // Set new index
+    let config = data.config;
+    let anchors = data.anchors; // Set new index
 
     data.previous = data.index;
-    var index = options.index;
-    var shift = {};
+    let index = options.index;
+    let shift = {};
 
     if (index < 0) {
       index = anchors.length - 1;
@@ -19497,7 +19497,7 @@ Webflow.define('slider', module.exports = function ($, _) {
 
     data.index = index; // Select nav dot; set class active
 
-    var $active = data.nav.children().eq(index).addClass('w-active').attr('aria-pressed', 'true').attr('tabindex', '0');
+    let $active = data.nav.children().eq(index).addClass('w-active').attr('aria-pressed', 'true').attr('tabindex', '0');
     data.nav.children().not($active).removeClass('w-active').attr('aria-pressed', 'false').attr('tabindex', '-1'); // Hide arrows
 
     if (config.hideArrows) {
@@ -19506,23 +19506,23 @@ Webflow.define('slider', module.exports = function ($, _) {
     } // Get page offset from anchors
 
 
-    var lastOffsetX = data.offsetX || 0;
-    var offsetX = data.offsetX = -anchors[data.index].x;
-    var resetConfig = {
+    let lastOffsetX = data.offsetX || 0;
+    let offsetX = data.offsetX = -anchors[data.index].x;
+    let resetConfig = {
       x: offsetX,
       opacity: 1,
       visibility: ''
     }; // Transition slides
 
-    var targets = $(anchors[data.index].els);
-    var prevTargs = $(anchors[data.previous] && anchors[data.previous].els);
-    var others = data.slides.not(targets);
-    var animation = config.animation;
-    var easing = config.easing;
-    var duration = Math.round(config.duration);
-    var vector = options.vector || (data.index > data.previous ? 1 : -1);
-    var fadeRule = 'opacity ' + duration + 'ms ' + easing;
-    var slideRule = 'transform ' + duration + 'ms ' + easing; // Make active slides' content focusable
+    let targets = $(anchors[data.index].els);
+    let prevTargs = $(anchors[data.previous] && anchors[data.previous].els);
+    let others = data.slides.not(targets);
+    let animation = config.animation;
+    let easing = config.easing;
+    let duration = Math.round(config.duration);
+    let vector = options.vector || (data.index > data.previous ? 1 : -1);
+    let fadeRule = 'opacity ' + duration + 'ms ' + easing;
+    let slideRule = 'transform ' + duration + 'ms ' + easing; // Make active slides' content focusable
 
     targets.find(FOCUSABLE_SELECTOR).removeAttr('tabindex');
     targets.removeAttr('aria-hidden'); // Voiceover bug: Sometimes descendants are still visible, so hide everything...
@@ -19555,8 +19555,8 @@ Webflow.define('slider', module.exports = function ($, _) {
     data.ariaLiveLabel.text("Slide ".concat(index + 1, " of ").concat(anchors.length, ".")); // Cross Fade / Out-In
 
     if (animation === 'cross') {
-      var reduced = Math.round(duration - duration * config.crossOver);
-      var wait = Math.round(duration - reduced);
+      let reduced = Math.round(duration - duration * config.crossOver);
+      let wait = Math.round(duration - reduced);
       fadeRule = 'opacity ' + reduced + 'ms ' + easing;
       tram(prevTargs).set({
         visibility: ''
@@ -19654,7 +19654,7 @@ Webflow.define('slider', module.exports = function ($, _) {
   }
 
   function render(i, el) {
-    var data = $.data(el, namespace);
+    let data = $.data(el, namespace);
 
     if (!data) {
       return;
@@ -19671,12 +19671,12 @@ Webflow.define('slider', module.exports = function ($, _) {
 
   function layout(data) {
     // Determine page count from width of slides
-    var pages = 1;
-    var offset = 0;
-    var anchor = 0;
-    var width = 0;
-    var maskWidth = data.maskWidth;
-    var threshold = maskWidth - data.config.edge;
+    let pages = 1;
+    let offset = 0;
+    let anchor = 0;
+    let width = 0;
+    let maskWidth = data.maskWidth;
+    let threshold = maskWidth - data.config.edge;
 
     if (threshold < 0) {
       threshold = 0;
@@ -19704,7 +19704,7 @@ Webflow.define('slider', module.exports = function ($, _) {
       anchor += width;
       data.anchors[pages - 1].width += width;
       data.anchors[pages - 1].els.push(el);
-      var ariaLabel = i + 1 + ' of ' + data.slides.length;
+      let ariaLabel = i + 1 + ' of ' + data.slides.length;
       $(el).attr('aria-label', ariaLabel);
       $(el).attr('role', 'group');
     });
@@ -19720,7 +19720,7 @@ Webflow.define('slider', module.exports = function ($, _) {
     } // Make sure index is still within range and call change handler
 
 
-    var index = data.index;
+    let index = data.index;
 
     if (index >= pages) {
       index = pages - 1;
@@ -19733,15 +19733,15 @@ Webflow.define('slider', module.exports = function ($, _) {
   }
 
   function buildNav(data) {
-    var dots = [];
-    var $dot;
-    var spacing = data.el.attr('data-nav-spacing');
+    let dots = [];
+    let $dot;
+    let spacing = data.el.attr('data-nav-spacing');
 
     if (spacing) {
       spacing = parseFloat(spacing) + 'px';
     }
 
-    for (var i = 0, len = data.pages; i < len; i++) {
+    for (let i = 0, len = data.pages; i < len; i++) {
       $dot = $(dot);
       $dot.attr('aria-label', 'Show slide ' + (i + 1) + ' of ' + len).attr('aria-pressed', 'false').attr('role', 'button').attr('tabindex', '-1');
 
@@ -19763,7 +19763,7 @@ Webflow.define('slider', module.exports = function ($, _) {
   }
 
   function maskChanged(data) {
-    var maskWidth = data.mask.width();
+    let maskWidth = data.mask.width();
 
     if (data.maskWidth !== maskWidth) {
       data.maskWidth = maskWidth;
@@ -19774,7 +19774,7 @@ Webflow.define('slider', module.exports = function ($, _) {
   }
 
   function slidesChanged(data) {
-    var slidesWidth = 0;
+    let slidesWidth = 0;
     data.slides.each(function (i, el) {
       slidesWidth += $(el).outerWidth(true);
     });
@@ -19800,32 +19800,32 @@ Webflow.define('slider', module.exports = function ($, _) {
 
 /* global document window */
 
-/* eslint-disable no-var */
+/* eslint-disable no-let */
 
 /**
  * Webflow: Tabs component
  */
 
-var Webflow = __webpack_require__(5);
+let Webflow = __webpack_require__(5);
 
-var IXEvents = __webpack_require__(22);
+let IXEvents = __webpack_require__(22);
 
 Webflow.define('tabs', module.exports = function ($) {
-  var api = {};
-  var tram = $.tram;
-  var $doc = $(document);
-  var $tabs;
-  var design;
-  var env = Webflow.env;
-  var safari = env.safari;
-  var inApp = env();
-  var tabAttr = 'data-w-tab';
-  var paneAttr = 'data-w-pane';
-  var namespace = '.w-tabs';
-  var linkCurrent = 'w--current';
-  var tabActive = 'w--tab-active';
-  var ix = IXEvents.triggers;
-  var inRedraw = false; // -----------------------------------
+  let api = {};
+  let tram = $.tram;
+  let $doc = $(document);
+  let $tabs;
+  let design;
+  let env = Webflow.env;
+  let safari = env.safari;
+  let inApp = env();
+  let tabAttr = 'data-w-tab';
+  let paneAttr = 'data-w-pane';
+  let namespace = '.w-tabs';
+  let linkCurrent = 'w--current';
+  let tabActive = 'w--tab-active';
+  let ix = IXEvents.triggers;
+  let inRedraw = false; // -----------------------------------
   // Module methods
 
   api.ready = api.design = api.preview = init;
@@ -19877,7 +19877,7 @@ Webflow.define('tabs', module.exports = function ($) {
   }
 
   function resetIX(i, el) {
-    var data = $.data(el, namespace);
+    let data = $.data(el, namespace);
 
     if (!data) {
       return;
@@ -19888,10 +19888,10 @@ Webflow.define('tabs', module.exports = function ($) {
   }
 
   function build(i, el) {
-    var widgetHash = namespace.substr(1) + '-' + i;
-    var $el = $(el); // Store state in data
+    let widgetHash = namespace.substr(1) + '-' + i;
+    let $el = $(el); // Store state in data
 
-    var data = $.data(el, namespace);
+    let data = $.data(el, namespace);
 
     if (!data) {
       data = $.data(el, namespace, {
@@ -19921,8 +19921,8 @@ Webflow.define('tabs', module.exports = function ($) {
       data.links.on('click' + namespace, linkSelect(data));
       data.links.on('keydown' + namespace, handleLinkKeydown(data)); // Trigger first intro event from current tab
 
-      var $link = data.links.filter('.' + linkCurrent);
-      var tab = $link.attr(tabAttr);
+      let $link = data.links.filter('.' + linkCurrent);
+      let tab = $link.attr(tabAttr);
       tab && changeTab(data, {
         tab: tab,
         immediate: true
@@ -19931,13 +19931,13 @@ Webflow.define('tabs', module.exports = function ($) {
   }
 
   function configure(data) {
-    var config = {}; // Set config options from data attributes
+    let config = {}; // Set config options from data attributes
 
     config.easing = data.el.attr('data-easing') || 'ease';
-    var intro = parseInt(data.el.attr('data-duration-in'), 10); // eslint-disable-next-line no-self-compare
+    let intro = parseInt(data.el.attr('data-duration-in'), 10); // eslint-disable-next-line no-self-compare
 
     intro = config.intro = intro === intro ? intro : 0;
-    var outro = parseInt(data.el.attr('data-duration-out'), 10); // eslint-disable-next-line no-self-compare
+    let outro = parseInt(data.el.attr('data-duration-out'), 10); // eslint-disable-next-line no-self-compare
 
     outro = config.outro = outro === outro ? outro : 0;
     config.immediate = !intro && !outro; // Store config in data
@@ -19946,7 +19946,7 @@ Webflow.define('tabs', module.exports = function ($) {
   }
 
   function getActiveTabIdx(data) {
-    var tab = data.current;
+    let tab = data.current;
     return Array.prototype.findIndex.call(data.links, function (t) {
       return t.getAttribute(tabAttr) === tab;
     }, null);
@@ -19955,7 +19955,7 @@ Webflow.define('tabs', module.exports = function ($) {
   function linkSelect(data) {
     return function (evt) {
       evt.preventDefault();
-      var tab = evt.currentTarget.getAttribute(tabAttr);
+      let tab = evt.currentTarget.getAttribute(tabAttr);
       tab && changeTab(data, {
         tab: tab
       });
@@ -19964,9 +19964,9 @@ Webflow.define('tabs', module.exports = function ($) {
 
   function handleLinkKeydown(data) {
     return function (evt) {
-      var currentIdx = getActiveTabIdx(data);
-      var keyName = evt.key;
-      var keyMap = {
+      let currentIdx = getActiveTabIdx(data);
+      let keyName = evt.key;
+      let keyMap = {
         ArrowLeft: currentIdx - 1,
         ArrowUp: currentIdx - 1,
         ArrowRight: currentIdx + 1,
@@ -19978,7 +19978,7 @@ Webflow.define('tabs', module.exports = function ($) {
 
       if (!(keyName in keyMap)) return;
       evt.preventDefault();
-      var nextIdx = keyMap[keyName]; // go back to end of tabs if we wrap past the start
+      let nextIdx = keyMap[keyName]; // go back to end of tabs if we wrap past the start
 
       if (nextIdx === -1) {
         nextIdx = data.links.length - 1;
@@ -19989,8 +19989,8 @@ Webflow.define('tabs', module.exports = function ($) {
         nextIdx = 0;
       }
 
-      var tabEl = data.links[nextIdx];
-      var tab = tabEl.getAttribute(tabAttr);
+      let tabEl = data.links[nextIdx];
+      let tab = tabEl.getAttribute(tabAttr);
       tab && changeTab(data, {
         tab: tab
       });
@@ -19999,9 +19999,9 @@ Webflow.define('tabs', module.exports = function ($) {
 
   function changeTab(data, options) {
     options = options || {};
-    var config = data.config;
-    var easing = config.easing;
-    var tab = options.tab; // Don't select the same tab twice
+    let config = data.config;
+    let easing = config.easing;
+    let tab = options.tab; // Don't select the same tab twice
 
     if (tab === data.current) {
       return;
@@ -20015,14 +20015,14 @@ Webflow.define('tabs', module.exports = function ($) {
      * @type {HTMLAnchorElement}
      */
 
-    var currentTab; // Select the current link
+    let currentTab; // Select the current link
 
     data.links.each(function (i, el) {
-      var $el = $(el); // Add important attributes at build time.
+      let $el = $(el); // Add important attributes at build time.
 
       if (options.immediate || config.immediate) {
         // Store corresponding pane for reference.
-        var pane = data.panes[i]; // IDs are necessary for ARIA relationships,
+        let pane = data.panes[i]; // IDs are necessary for ARIA relationships,
         // so if the user did not create one, we create one
         // using our generated identifier
 
@@ -20064,10 +20064,10 @@ Webflow.define('tabs', module.exports = function ($) {
       }
     }); // Find the new tab panes and keep track of previous
 
-    var targets = [];
-    var previous = [];
+    let targets = [];
+    let previous = [];
     data.panes.each(function (i, el) {
-      var $el = $(el);
+      let $el = $(el);
 
       if (el.getAttribute(tabAttr) === tab) {
         targets.push(el);
@@ -20075,8 +20075,8 @@ Webflow.define('tabs', module.exports = function ($) {
         previous.push(el);
       }
     });
-    var $targets = $(targets);
-    var $previous = $(previous); // Switch tabs immediately and bypass transitions
+    let $targets = $(targets);
+    let $previous = $(previous); // Switch tabs immediately and bypass transitions
 
     if (options.immediate || config.immediate) {
       $targets.addClass(tabActive).each(ix.intro);
@@ -20091,8 +20091,8 @@ Webflow.define('tabs', module.exports = function ($) {
     } // Focus if this is not the on-page-load call to `changeTab`
     else {
         // Backwards compatible hack to prevent focus from scrolling
-        var x = window.scrollX;
-        var y = window.scrollY;
+        let x = window.scrollX;
+        let y = window.scrollY;
         currentTab.focus();
         window.scrollTo(x, y);
       } // Fade out the currently active tab before intro

@@ -27,7 +27,7 @@
           "screenshotdesc1": "Iris gebruikt een techniek genaamt Schaduw Frustum Culling om de overhead van één van de grootste prestatievarkens van een shader te verminderen - De schaduws. Met Iris&#x27;s schaduw frustum culling, kan je hogere frames halen zonder de de kwaliteit van volumetrische verlichting of schaduwen op te offeren.<br><span class='text-span-2'>Screenshot door FoundationGames</span>",
           "screenshottitle2": "Efficiënte entiteit Rendering",
           "screenshotdesc2": "Iris verbetert hoe Minecraft entiteiten rendert en blok entiteiten zoals chests, pigs, en voorwerplijsten. Deze truc werkt zelfs met shaders uit, en in werelden met veel entiteiten, kan het vanilla prestatie verbeteren tot 60 procent. Schaduw rendering ziet vooral een grote verbetering, met het maken van gebieden die ooit onspeelbaar waren met shaders in plaatsen waar je FPS verrassend soepel is! <br><span class='text-span-2'>Screenshot door kinzuu_music</span>",
-          "stillcurious": "Nog steeds nieuwsgierig? <a href='about.html'>Leer Meer</a><link rel='prefetch' href='/about'>."
+          "stillcurious": "Nog steeds nieuwsgierig? <a href='about.html'>Leer Meer</a><link rel='prefetch' href='/about.html'>."
         },
         {
           "abouttitle": "Over IrisShaders",
