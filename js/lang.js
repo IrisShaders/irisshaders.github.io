@@ -20,7 +20,7 @@ let traductionsNames = [
   "Pусский",
   "Español",
   "简体中文",
-  "繁体中文",
+  "繁體中文",
   "Nederlands",
 ];
 let fallbacklang;
