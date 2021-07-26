@@ -27,7 +27,7 @@
         "screenshotdesc1": "Iris 使用一種叫做陰影截錐剔除的技術來減少陰影對 FPS 的影響，陰影是光影最大的效能消耗。使用 Iris 的陰影截錐剔除，你將能夠達到更高的 FPS，而不犧牲體積光照或陰影的品質。<br><span class='text-span-2'>FoundationGames 提供的擷取畫面</span>",
         "screenshottitle2": "高效的實體渲染技術",
         "screenshotdesc2": "Iris 改進了 Minecraft 渲染實體和方塊實體的方式，如儲物箱、豬和物品展示框。這個技術甚至可以在關閉光影的情況下使用，在有很多實體的世界中，Iris 可以提供高於原版 60% 的效能提升。陰影渲染有了很大的改進，你可以在原本無法使用光影的地方獲得很高的 FPS！<br><span class='text-span-2'>kinzuu_music 提供的擷取畫面</span>",
-        "stillcurious": "還是很好奇嗎？<a href='about.html'>了解更多</a><link rel='prefetch' href='/about.html'>."
+        "stillcurious": "還是很好奇嗎？<a href='about.html'>了解更多</a><link rel='prefetch' href='/about.html'>。"
       }, 
       {
         "abouttitle": "關於 Iris 光影",
