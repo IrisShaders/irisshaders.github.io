@@ -387,11 +387,14 @@
           class="tabs-wrapper w-tabs"
         >
           <div class="tab-menu w-tab-menu">
-            <a data-w-tab="Tab 1" class="button tab w-inline-block w-tab-link">
+            <a 
+              data-w-tab="Tab 1" 
+              class="button tab w-inline-block w-tab-link" 
+              onclick="document.querySelectorAll('.w-tab-pane')[0].classList.add('w--tab-active'); document.querySelectorAll('.w-tab-pane')[1].classList.remove('w--tab-active')"
+            >
               <div
                 langfield="shadows"
                 class="text-block-9"
-                onclick="document.querySelectorAll('.w-tab-pane')[0].classList.add('w--tab-active'); document.querySelectorAll('.w-tab-pane')[1].classList.remove('w--tab-active')"
               >
                 Shadows
               </div>
@@ -399,11 +402,11 @@
             <a
               data-w-tab="Tab 2"
               class="button tab w-inline-block w-tab-link w--current"
+              onclick="document.querySelectorAll('.w-tab-pane')[1].classList.add('w--tab-active'); document.querySelectorAll('.w-tab-pane')[0].classList.remove('w--tab-active');"
             >
               <div
                 langfield="entities"
                 class="text-block-10"
-                onclick="document.querySelectorAll('.w-tab-pane')[1].classList.add('w--tab-active'); document.querySelectorAll('.w-tab-pane')[0].classList.remove('w--tab-active');"
               >
                 entities
               </div>
