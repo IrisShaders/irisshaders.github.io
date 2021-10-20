@@ -390,7 +390,10 @@
             <a 
               data-w-tab="Tab 1" 
               class="button tab w-inline-block w-tab-link w--current" 
-              onclick="document.querySelectorAll('.w-tab-link')[0].classList.add('w--current'); document.querySelectorAll('.w-tab-link')[1].classList.remove('w--current')"
+              onclick="
+              document.querySelectorAll('.w-tab-link')[0].classList.add('w--current'); document.querySelectorAll('.w-tab-link')[1].classList.remove('w--current');
+              document.querySelectorAll('.w-tab-pane')[0].classList.add('w--tab-active'); document.querySelectorAll('.w-tab-pane')[1].classList.remove('w--tab-active'); 
+              "
             >
               <div
                 langfield="shadows"
@@ -402,7 +405,10 @@
             <a
               data-w-tab="Tab 2"
               class="button tab w-inline-block w-tab-link"
-              onclick="document.querySelectorAll('.w-tab-link')[1].classList.add('w--current'); document.querySelectorAll('.w-tab-link')[0].classList.remove('w--current');"
+              onclick="
+              document.querySelectorAll('.w-tab-link')[1].classList.add('w--current'); document.querySelectorAll('.w-tab-link')[0].classList.remove('w--current');
+              document.querySelectorAll('.w-tab-pane')[1].classList.add('w--tab-active'); document.querySelectorAll('.w-tab-pane')[0].classList.remove('w--tab-active'); 
+              "
             >
               <div
                 langfield="entities"
@@ -413,7 +419,7 @@
             </a>
           </div>
           <div class="w-tab-content">
-            <div data-w-tab="Tab 1" class="w-tab-pane">
+            <div data-w-tab="Tab 1" class="w-tab-pane w--tab-active">
               <div>
                 <img
                   src="images/screenshots/godrays.webp"
@@ -441,7 +447,7 @@
                 </p>
               </div>
             </div>
-            <div class="w-tab-pane w--tab-active">
+            <div data-w-tab="Tab 2" class="w-tab-pane">
               <div>
                 <img
                   src="images/screenshots/entities.webp"
