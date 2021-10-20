@@ -389,8 +389,8 @@
           <div class="tab-menu w-tab-menu">
             <a 
               data-w-tab="Tab 1" 
-              class="button tab w-inline-block w-tab-link" 
-              onclick="document.querySelectorAll('.w-tab-pane')[0].classList.add('w--tab-active'); document.querySelectorAll('.w-tab-pane')[1].classList.remove('w--tab-active')"
+              class="button tab w-inline-block w-tab-link w--current" 
+              onclick="document.querySelectorAll('.w-tab-link')[0].classList.add('w--current'); document.querySelectorAll('.w-tab-link')[1].classList.remove('w--current')"
             >
               <div
                 langfield="shadows"
@@ -401,8 +401,8 @@
             </a>
             <a
               data-w-tab="Tab 2"
-              class="button tab w-inline-block w-tab-link w--current"
-              onclick="document.querySelectorAll('.w-tab-pane')[1].classList.add('w--tab-active'); document.querySelectorAll('.w-tab-pane')[0].classList.remove('w--tab-active');"
+              class="button tab w-inline-block w-tab-link"
+              onclick="document.querySelectorAll('.w-tab-link')[1].classList.add('w--current'); document.querySelectorAll('.w-tab-link')[0].classList.remove('w--current');"
             >
               <div
                 langfield="entities"
