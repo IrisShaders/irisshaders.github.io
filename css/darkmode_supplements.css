@@ -507,7 +507,8 @@ h5 {
 }
 
 .hero-subheading {
-  color: #9167ef;
+  color: #3aa9ff;
+  text-shadow: 1px 1px 10px black;
 }
 
 .hollow-button {
