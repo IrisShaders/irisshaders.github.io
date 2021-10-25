@@ -10,6 +10,7 @@ let traductions = [
   "zh_CN",
   "zh_TW",
   "nl",
+  "se",
 ];
 let traductionsNames = [
   "English",
@@ -22,6 +23,7 @@ let traductionsNames = [
   "简体中文",
   "繁體中文",
   "Nederlands",
+  "Svenska",
 ];
 let fallbacklang;
 let lang;
