@@ -13,7 +13,7 @@ let traductions = [
 ];
 let traductionsNames = [
   "English",
-  "American english",
+  "American English",
   "Portugues do Brasil",
   "Français",
   "Deutsch",
