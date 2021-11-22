@@ -1110,6 +1110,10 @@ p {
   color: #30ad64;
 }
 
+.text-span-5 {
+  color: #2e9dff;
+}
+
 .columns-2 {
   margin-top: 24px;
   margin-bottom: 24px;
@@ -1144,8 +1148,6 @@ p {
 }
 
 .image-10 {
-  margin-top: -30px;
-  margin-bottom: -30px;
   float: right;
   box-shadow: -4px 4px 8px 0 #000;
 }
