@@ -1,4 +1,4 @@
-let fileindex = ["index.html", "about.html", "download.html"];
+let fileindex = ["index.html", "about", "download"];
 let traductions = [
   "en",
   "en_US",
