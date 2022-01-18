@@ -1,4 +1,4 @@
-let fileindex = ["index.html", "about.html", "download.html"];
+let fileindex = ["index.html", "about", "download"];
 let traductions = [
   "en",
   "en_US",
@@ -10,6 +10,7 @@ let traductions = [
   "zh_CN",
   "zh_TW",
   "nl",
+  "se",
 ];
 let traductionsNames = [
   "English",
@@ -22,6 +23,7 @@ let traductionsNames = [
   "简体中文",
   "繁體中文",
   "Nederlands",
+  "Svenska",
 ];
 let fallbacklang;
 let lang;

@@ -16,15 +16,15 @@
           "heading2": "Features",
           "subheading2": "What Iris has to offer",
           "image1": "OptiFine Parity",
-          "imagedesc1": "Iris aims to have full support for all past and present OptiFine shaderpacks, and number of packs supported by Iris is constantly and rapidly growing!<span class='text-span-2'><br>Screenshot by Niko</span>",
+          "imagedesc1": "Iris aims to have full support for all past and present OptiFine shaderpacks, and number of packs supported by Iris is constantly and rapidly growing!<span class='text-span-2'><br>Screenshot by Coder</span>",
           "image2": "Works with Sodium",
-          "imagedesc2": "Iris is compatible with CaffeineMC optimization mods such as Sodium and Phosphor, enabling stunning graphics at frames comparable to or even better than vanilla.<br><span class='text-span-2'>Screenshot by Guardian</span>",
+          "imagedesc2": "Iris is compatible with CaffeineMC optimization mods such as Sodium and Phosphor, enabling stunning graphics at frames comparable to or even better than vanilla.<br><span class='text-span-2'>Screenshot by IMS</span>",
           "heading3": "The Iris Advantage",
           "subheading3": "New rendering techniques that put you ahead of the game",
           "shadows": "Shadows",
           "entities": "Entities",
           "screenshottitle1": "Performance-Optimized Shadows",
-          "screenshotdesc1": "Iris uses a technique called Shadow Frustum Culling to decrease the overhead of one of the biggest performance hogs of a shader - the shadows. Using Iris&#x27;s shadow frustum culling, you&#x27;ll be able to reach higher frame rates without sacrificing the quality of volumetric lighting or shadows.<br><span class='text-span-2'>Screenshot by FoundationGames</span>",
+          "screenshotdesc1": "Iris uses a technique called Shadow Frustum Culling to decrease the overhead of one of the biggest performance hogs of a shader - the shadows. Using Iris&#x27;s shadow frustum culling, you&#x27;ll be able to reach higher frame rates without sacrificing the quality of volumetric lighting or shadows.<br><span class='text-span-2'>Screenshot by HiItsDevin_</span>",
           "screenshottitle2": "Efficient Entity Rendering",
           "screenshotdesc2": "Iris improves the way that Minecraft renders entities and block entities like chests, pigs, and item frames. This trick even works with shaders disabled, and in worlds with a lot of entities, it can boost vanilla performance by up to 60 percent. Shadow rendering sees an especially large improvement, making areas that were once unplayable with shaders into places where your FPS is surprisingly smooth!<br><span class='text-span-2'>Screenshot by kinzuu_music</span>",
           "stillcurious": "Still curious? <a href='about.html'>Learn More</a><link rel='prefetch' href='/about.html'>."
@@ -88,6 +88,6 @@
         "github": "GitHub",
         "discord": "Discord",
         "patreon": "Patreon",
-        "copyright": "© Copyright 2021 IrisShaders. All Rights Reserved."
+        "copyright": "© Copyright 2022 IrisShaders. All Rights Reserved."
       }
 }
