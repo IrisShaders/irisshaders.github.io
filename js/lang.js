@@ -14,16 +14,16 @@ let traductions = [
   "zh_Hant",
 ];
 let traductionsNames = [
-  "čeština",
+  "Čeština",
   "Deutsch",
   "English",
   "American English",
-  "español",
-  "français",
+  "Español",
+  "Français",
   "Nederlands",
-  "português do Brasil",
-  "русский",
-  "svenska",
+  "Português do Brasil",
+  "Pусский",
+  "Svenska",
   "简体中文",
   "繁體中文",
 ];
