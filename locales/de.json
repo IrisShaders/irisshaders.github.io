@@ -16,7 +16,7 @@
       "heading2": "Merkmale",
       "subheading2": "Das hat Iris zu bieten",
       "image1": "OptiFine Übereinstimmung",
-      "imagedesc1": "Iris hat sich zum Ziel gesetzt, alle älteren und aktuellen OptiFine Shaderpakete zu unterstützen, und die Anzahl der von Iris unterstützten Pakete wächst schnell!<span class='text-span-2'><br>Screenshot von Coder</span>",
+      "imagedesc1": "Iris hat sich zum Ziel gesetzt, alle älteren und aktuellen OptiFine Shaderpakete zu unterstützen, und die Anzahl der von Iris unterstützten Pakete wächst ständig und schnell!<span class='text-span-2'><br>Screenshot von Coder</span>",
       "image2": "Funktioniert mit Sodium",
       "imagedesc2": "Iris ist mit den Optimierungsmods von CaffeineMC wie Sodium, Lithium und Phosphor kompatibel und ermöglicht so beeindruckende Grafiken mit vergleichbarer oder sogar besserer Performance als Vanilla Minecraft.<br><span class='text-span-2'>Screenshot von IMS</span>",
       "heading3": "Der Vorteil von Iris",
@@ -25,7 +25,7 @@
       "entities": "Entities",
       "screenshottitle1": "Performance-Optimierte Schatten",
       "screenshotdesc1": "Iris uses a technique called Shadow Frustum Culling to decrease the overhead of one of the biggest performance hogs of a shader - the shadows. Using Iris&#x27;s shadow frustum culling, you&#x27;ll be able to reach higher frame rates without sacrificing the quality of volumetric lighting or shadows.<br><span class='text-span-2'>Screenshot von HiItsDevin_</span>",
-      "screenshottitle2": "Effizientes Entity Rendering",
+      "screenshottitle2": "Effizientes Entity-Rendering",
       "screenshotdesc2": "Iris improves the way that Minecraft renders entities and block entities like chests, pigs, and item frames. This trick even works with shaders disabled, and in worlds with a lot of entities, it can boost vanilla performance by up to 60 percent. Shadow rendering sees an especially large improvement, making areas that were once unplayable with shaders into places where your FPS is surprisingly smooth!<br><span class='text-span-2'>Screenshot von kinzuu_music</span>",
       "stillcurious": "Neugierig geworden? <a href='about.html'>Mehr erfahren</a><link rel='prefetch' href='/about.html'>."
     },
@@ -75,19 +75,19 @@
   ],
   "common":{
     "irisshaders": "Iris Shaders",
-    "home": "Home",
+    "home": "Startseite",
     "about": "Learn More",
     "download": "Download Now",
     "dark": " Dark mode",
     "light": " Light mode",
     "footer1": "About the Iris project",
     "footerdesc1": "The Iris Project is a collaborative open-source project created by a team of passionate developers seeking to make the Minecraft shaders experience the best that it can be. Iris is developed by the community, for the community.",
-    "footer2": "Useful links",
-    "curseforge": "Iris on CurseForge",
-    "modrinth": "Iris on Modrinth",
+    "footer2": "Nützliche Links",
+    "curseforge": "Iris auf CurseForge",
+    "modrinth": "Iris auf Modrinth",
     "github": "GitHub",
     "discord": "Discord",
     "patreon": "Patreon",
-    "copyright": "© Copyright 2022 IrisShaders. All Rights Reserved."
+    "copyright": "© Copyright 2022 IrisShaders. Alle Rechte vorbehalten."
   }
 }
