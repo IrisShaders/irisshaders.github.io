@@ -286,6 +286,7 @@ p {
 .hero-heading {
   margin-bottom: 30px;
   color: #fff;
+  text-shadow: 1px 1px 10px black;
   font-size: 60px;
   line-height: 60px;
   font-weight: 400;
