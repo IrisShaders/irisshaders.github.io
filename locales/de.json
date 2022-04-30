@@ -1,5 +1,5 @@
 {
-  "data":[
+  "data": [
     {
       "title": "Das ist Iris",
       "subheading": "Ein Blick in eine neue Ära der Minecraft-Grafik",
@@ -63,7 +63,7 @@
     {
       "downloadiris": "Jetzt herunterladen - IrisShaders",
       "heading": "Der Iris-Installer",
-      "subheading":"entwickelt, um das Iris-Erlebnis zu erleichtern",
+      "subheading": "entwickelt, um das Iris-Erlebnis zu erleichtern",
       "description": "Der Iris-Installer lädt Iris und Sodium automatisch herunter und installiert sie, um großartige Grafiken mit flüssigen FPS zu ermöglichen. Führe einfach den Installer aus, wähle deine Version und klicke auf \"Installieren\". Du glaubst uns nicht? Probiere es selbst aus!",
       "downloadjar": "Universelle JAR herunterladen",
       "alternatedownloads": "Alternative Downloads",
@@ -73,7 +73,7 @@
       "getgithub": "Quellcode auf GitHub erhalten"
     }
   ],
-  "common":{
+  "common": {
     "irisshaders": "Iris Shaders",
     "home": "Startseite",
     "about": "Mehr erfahren",
