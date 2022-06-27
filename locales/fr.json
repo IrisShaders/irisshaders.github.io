@@ -2,7 +2,7 @@
   "data": [
     {
       "title": "Voici Iris",
-      "subheading": "Une ouverture vers une nouvelle ère du graphismes minecraft",
+      "subheading": "Une ouverture vers une nouvelle ère des graphismes minecraft",
       "or": "ou",
       "continue": "Continuer à lire",
       "heading1": "Pourquoi choisir Iris ?",
@@ -39,7 +39,7 @@
       "performance": "Performance",
       "performanceheading": "Regardez les fréquences d'image avec Iris",
       "vanilla": "Vanilla uniquement",
-      "vanillamessage": "La version Vanilla de Minecraft a un très vieux code , et beaucoup disent qu'il a grand besoin d'une réécriture, surtout en ce qui concerne les graphismes. Le rendu Blaze 3D, ajouté dans la version 1.15, était une tentative d'atténuer quelque peu ce problème, mais à bien des égards, il n'a fait qu'aggraver le problème. Dans la version 1.17, Minecraft passe à OpenGL Core 3.2 et Java 16, mais jusqu'à présent, aucun changement significatif n'a été mis en œuvre pour utiliser les améliorations de performances de ces systèmes. Minecraft avant la version 1.17 ne prenait pas non plus en charge nativement les shaders, et même depuis la sortie de la version 1.17, la prise en charge des shaders est très limitée. Cependant, Minecraft est connu pour ses graphismes minimalistes à faible surcharge et fournit une base solide pour des graphismes hautes performances basés sur des shaders.",
+      "vanillamessage": "La version Vanilla de Minecraft a un très vieux code, et beaucoup disent qu'il a grand besoin d'une réécriture, surtout en ce qui concerne les graphismes. Le rendu Blaze 3D, ajouté dans la version 1.15, était une tentative d'atténuer quelque peu ce problème, mais à bien des égards, il n'a fait qu'aggraver le problème. Dans la version 1.17, Minecraft passe à OpenGL Core 3.2 et Java 16, mais jusqu'à présent, aucun changement significatif n'a été mis en œuvre pour utiliser les améliorations de performances de ces systèmes. Minecraft avant la version 1.17 ne prenait pas non plus en charge nativement les shaders, et même depuis la sortie de la version 1.17, la prise en charge des shaders est très limitée. Cependant, Minecraft est connu pour ses graphismes minimalistes à faible surcharge et fournit une base solide pour des graphismes hautes performances basés sur des shaders.",
       "sodium": "Vanilla + <span class='text-span-4'>Sodium</span>",
       "sodiummessage": "Sodium est un mod Fabric qui réécrit des parties du système de rendu vanilla pour optimiser les performances d'une manière qu'aucun autre mod n'a fait auparavant. Sodium est activement maintenu et mis à jour, et vise à être compatible avec la plupart des autres mods Fabric pour un maximum de FPS, même dans les modpacks les plus denses. Ses mods frères, Lithium et Phosphor, peuvent tous être utilisés avec Sodium pour chacun optimiser un aspect différent du jeu, qu'il s'agisse respectivement de ticking, d'éclairage. Ensemble, ces mods peuvent augmenter les FPS de 150% ou plus par rapport des performances vanilla pour n'importe quel joueur, que vous visiez un maximum d'FPS pour vous donner un avantage PvP, ou que Sodium et autres soient les seuls mods qui peuvent faire le jeu jouable sur le matériel dont vous disposez.",
       "sodiumiris": "Vanilla + <span class='text-span-4'>Sodium</span> + <span class='text-span-3'>Iris</span>",
