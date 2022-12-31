@@ -24,7 +24,7 @@
       "shadows": "Shadows",
       "entities": "Entities",
       "screenshottitle1": "Performance-Optimized Shadows",
-      "screenshotdesc1": "Iris uses a technique called Shadow Frustum Culling to decrease the overhead of one of the biggest performance hogs of a shader - the shadows. Using Iris&#x27;s shadow frustum culling, you&#x27;ll be able to reach higher frame rates without sacrificing the quality of volumetric lighting or shadows.<br><span class='text-span-2'>Screenshot by HiItsDevin_</span>",
+      "screenshotdesc1": "Iris uses a technique called Shadow Frustum Culling to decrease the overhead of one of the biggest performance hogs of a shader - the shadows. Using Iris&#x27;s shadow frustum culling, you&#x27;ll be able to reach higher frame rates without sacrificing the quality of volumetric lighting or shadows.<br><span class='text-span-2'>Screenshot by IMS, Kappa v5</span>",
       "screenshottitle2": "Efficient Entity Rendering",
       "screenshotdesc2": "Iris improves the way that Minecraft renders entities and block entities like chests, pigs, and item frames. This trick even works with shaders disabled, and in worlds with a lot of entities, it can boost vanilla performance by up to 60 percent. Shadow rendering sees an especially large improvement, making areas that were once unplayable with shaders into places where your FPS is surprisingly smooth!<br><span class='text-span-2'>Screenshot by kinzuu_music</span>",
       "stillcurious": "Still curious? <a href='about.html'>Learn More</a><link rel='prefetch' href='/about.html'>."

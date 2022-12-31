@@ -24,7 +24,7 @@
       "shadows": "Stíny",
       "entities": "Entinty",
       "screenshottitle1": "Optimalizované stíny",
-      "screenshotdesc1": "Iris používá techniku s názvem Shadow Frustum Culling pro snížení dopadu největšího žrouta výkonu shaderu - stínů. Pomocí této funkce budete moci dosáhnout vyšších snímkových frekvencí bez snížení kvality volumetrického světla nebo stínů.<br><span class='text-span-2'>Vyfotil HiItsDevin_</span>",
+      "screenshotdesc1": "Iris používá techniku s názvem Shadow Frustum Culling pro snížení dopadu největšího žrouta výkonu shaderu - stínů. Pomocí této funkce budete moci dosáhnout vyšších snímkových frekvencí bez snížení kvality volumetrického světla nebo stínů.<br><span class='text-span-2'>Vyfotil IMS, Kappa v5</span>",
       "screenshottitle2": "Efektivní renderování entit",
       "screenshotdesc2": "Iris zlepšuje způsob, jakým Minecraft renderuje entity a blokové entity jako truhly, prasata a rámečky. Tento trik funguje i se zakázanými shadery a ve světech s velkým počtem entit, může zvýšit vanilla výkon až o 60 procent. Velkého zlepšení se dočkalo hlavně vykreslování stínů, díky čemuž jsou oblasti, které byly dříve se shadery nehratelné, nyní plynulé!<br><span class='text-span-2'>Vyfotil kinzuu_music</span>",
       "stillcurious": "Stále jste zvědaví? <a href='about.html'>Zjistěte více</a><link rel='prefetch' href='/about.html'>."
