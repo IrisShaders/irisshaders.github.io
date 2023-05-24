@@ -69,7 +69,6 @@
       "alternatedownloads": "Descargas alternativas",
       "alternatedownloadsubheading": "¿Nuestro práctico instalador no es tu estilo? Descarga el mod por sí mismo",
       "getmodrinth": "Descargar en Modrinth",
-      "getcurseforge": "Descargar en CurseForge",
       "getgithub": "Obtén el código en GitHub"
     }
   ],
@@ -82,7 +81,6 @@
     "footer1": "Acerca del Proyecto Iris",
     "footerdesc1": "El Proyecto Iris Project es un proyecto colaborativo y de código abierto creado por un equipo de desarroladores apasionados intentando hacer la experiencia de shaders en Minecraft la mejor posible. Iris está desarrolado por la comunidad, para la comunidad.",
     "footer2": "Enlaces útiles",
-    "curseforge": "Iris en CurseForge",
     "modrinth": "Iris en Modrinth",
     "copyright": "© Copyright 2023 IrisShaders. Todos los derechos reservados."
   }

@@ -69,7 +69,6 @@
       "alternatedownloads": "Alternative Downloads",
       "alternatedownloadsubheading": "Unser handlicher Installer ist nicht dein Stil? Probiere die Standalone-Version",
       "getmodrinth": "Auf Modrinth herunterladen",
-      "getcurseforge": "Auf CurseForge herunterladen",
       "getgithub": "Quellcode auf GitHub erhalten"
     }
   ],
@@ -83,7 +82,6 @@
     "footer1": "Über das Iris-Projekt",
     "footerdesc1": "Das Iris-Projekt ist ein gemeinschaftliches Open-Source-Projekt, das von einem Team leidenschaftlicher Entwickler/-innen ins Leben gerufen wurde, um für Minecraft das bestmögliche Shader-Erlebnis zu schaffen. Iris wird von der Community, für die Community entwickelt.",
     "footer2": "Nützliche Links",
-    "curseforge": "Iris auf CurseForge",
     "modrinth": "Iris auf Modrinth",
     "github": "GitHub",
     "discord": "Discord",

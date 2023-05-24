@@ -69,7 +69,6 @@
       "alternatedownloads": "下載JAR手動安裝",
       "alternatedownloadsubheading": "不喜歡我們的一鍵安裝程式？沒關係，你也可以手動安裝 Iris。",
       "getmodrinth": "從 Modrinth 下載",
-      "getcurseforge": "從 CurseForge 下載",
       "getgithub": "從 GitHub 獲取原始碼"
     }
   ],
@@ -83,7 +82,6 @@
     "footer1": "關於 Iris 專案",
     "footerdesc1": "Iris Project 是一個協作的開放原始碼專案，由一個充滿激情的開發團隊製作，旨在提升 Minecraft 的光影體驗。Iris 是由社群開發的，也是為社群服務的。",
     "footer2": "相關連結",
-    "curseforge": "Iris 在 CurseForge",
     "modrinth": "Iris 在 Modrinth",
     "github": "GitHub",
     "discord": "Discord",

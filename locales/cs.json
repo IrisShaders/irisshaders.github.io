@@ -69,7 +69,6 @@
       "alternatedownloads": "Alternativní stažení",
       "alternatedownloadsubheading": "Nelíbí se vám náš praktický instalátor? Zkuste samostatnou verzi",
       "getmodrinth": "Stáhnout z Modrinth",
-      "getcurseforge": "Stáhnout z CurseForge",
       "getgithub": "Zdrojový kód na GitHubu"
     }
   ],
@@ -83,7 +82,6 @@
     "footer1": "O projektu Iris",
     "footerdesc1": "Projekt Iris je kolaborativní open-source projekt vytvořený týmem vášnivých vývojářů, kteří chtějí udělat zážitek s Minecraft shadery nejlepší, jaký může být. Iris je vyvíjen komunitou pro komunitu.",
     "footer2": "Užitečné odkazy",
-    "curseforge": "Iris na CurseForge",
     "modrinth": "Iris na Modrinth",
     "github": "GitHub",
     "discord": "Discord",

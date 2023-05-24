@@ -69,7 +69,6 @@
       "alternatedownloads": "Outras alternativas",
       "alternatedownloadsubheading": "Nosso instalador não faz seu estilo? Baixe apenas o mod Iris",
       "getmodrinth": "Baixe do Modrinth",
-      "getcurseforge": "Baixe do CurseForge",
       "getgithub": "Pegue o código fonte pelo GitHub"
     }
   ],
@@ -83,7 +82,6 @@
     "footer1": "Sobre o Projeto Iris",
     "footerdesc1": "O Projeto Iris é um projeto open source criado por um time de desenvolvedores aficionados em trazer a melhor experiência possível de shaders no Minecraft. Iris é desenvolvido pela comunidade para a comunidade.",
     "footer2": "Links úteis",
-    "curseforge": "Iris no CurseForge",
     "modrinth": "Iris no Modrinth",
     "github": "GitHub",
     "discord": "Discord",
