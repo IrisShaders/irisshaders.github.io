@@ -69,7 +69,6 @@
       "alternatedownloads": "Альтернативная загрузка",
       "alternatedownloadsubheading": "Наш удобный установщик не в вашем стиле? Попробуйте автономную версию",
       "getmodrinth": "Загрузить с Modrinth",
-      "getcurseforge": "Загрузить с CurseForge",
       "getgithub": "Получить исходный код на GitHub"
     }
   ],
@@ -83,7 +82,6 @@
     "footer1": "О проекте Iris",
     "footerdesc1": "Проект Iris - это совместный проект с открытым исходным кодом, созданный командой страстных разработчиков, стремящихся сделать использование шейдеров в Minecraft максимально эффективным. Iris разрабатывается сообществом, для сообщества.",
     "footer2": "Полезные ссылки",
-    "curseforge": "Iris на CurseForge",
     "modrinth": "Iris на Modrinth",
     "github": "GitHub",
     "discord": "Discord",

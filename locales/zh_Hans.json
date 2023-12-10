@@ -68,7 +68,6 @@
       "alternatedownloads": "下载 JAR 手动安装",
       "alternatedownloadsubheading": "不喜欢我们的一键安装程序？没关系，你也可以手动安装 Iris。",
       "getmodrinth": "从 Modrinth 下载",
-      "getcurseforge": "从 CurseForge 下载",
       "getgithub": "从 GitHub 获取源代码"
     }
   ],
@@ -82,7 +81,6 @@
     "footer1": "关于 Iris 光影",
     "footerdesc1": "Iris Project 是一个协作开源项目，由一个充满激情的开发团队创建，旨在提升 Minecraft 的光影体验。Iris 是由社区开发的，也是为社区服务的。",
     "footer2": "相关链接",
-    "curseforge": "CurseForge 上的 Iris",
     "modrinth": "Modrinth 上的 Iris",
     "github": "GitHub",
     "discord": "Discord",

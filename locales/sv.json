@@ -69,7 +69,6 @@
       "alternatedownloads": "Alternativa Nerladdningar",
       "alternatedownloadsubheading": "Är vår användbara installerar inte din stil? Testa den fristående versionen",
       "getmodrinth": "Ladda ner från Modrinth",
-      "getcurseforge": "Ladda ner från CurseForge",
       "getgithub": "Få källkoden från GitHub"
     }
   ],
@@ -83,7 +82,6 @@
     "footer1": "Om Irisprojektet",
     "footerdesc1": "Irisprojeket är ett sammarbetsfokuserat öppet projekt skapat av ett team av passionerade utvecklare som försöker göra Minecraft shaders upplevelsen så bra som den kan bli. Iris utvecklas av communityn, för communityn.",
     "footer2": "Användbara länkar",
-    "curseforge": "Iris på CurseForge",
     "modrinth": "Iris på Modrinth",
     "github": "GitHub",
     "discord": "Discord",

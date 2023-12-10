@@ -69,7 +69,6 @@
       "alternatedownloads": "Alternatieve Downloads",
       "alternatedownloadsubheading": "Onze handige Installer is niet jouw stijl? Probeer de standalone versie",
       "getmodrinth": "Download van Modrinth",
-      "getcurseforge": "Download van CurseForge",
       "getgithub": "Source ophalen van GitHub"
     }
   ],
@@ -83,7 +82,6 @@
     "footer1": "Over het Iris project",
     "footerdesc1": "Het Iris Project is een gezamenlijk open-source project gecreëerd door een team van gepassioneerde ontwikkelaars die de Minecraft shaders ervaring het beste willen maken. Iris is ontwikkeld door de gemeenschap, voor de gemeenschap.",
     "footer2": "Handige links",
-    "curseforge": "Iris op CurseForge",
     "modrinth": "Iris op Modrinth",
     "github": "GitHub",
     "discord": "Discord",
