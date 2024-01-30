@@ -4,18 +4,24 @@ function reloadTheme(file) {
     (el) =>
       (el.onclick = function () {
         let currentTheme = localStorage.getItem("darkMode");
+        if (currentTheme == null) currentTheme = sessionStorage.getItem("darkMode");
         let switchToTheme = currentTheme == "true" ? "false" : "true";
         localStorage.setItem("darkMode", switchToTheme.toString());
         reloadTheme(file);
       })
   );
-  themeSwitcher.forEach((el) =>
-    el.setAttribute(
-      "langfield",
-      localStorage.getItem("darkMode") == "true" ? "light" : "dark"
-    )
+  themeSwitcher.forEach((value) => {
+        let value2 = localStorage.getItem("darkMode");
+        if (value2 == null) value2 = sessionStorage.getItem("darkMode");
+        value.setAttribute(
+            "langfield",
+            value2 == "true" ? "light" : "dark"
+        )
+  }
   );
-  if (localStorage.getItem("darkMode") == "true") {
+  let currentTheme = localStorage.getItem("darkMode");
+  if (currentTheme == null) currentTheme = sessionStorage.getItem("darkMode");
+  if (currentTheme == "true") {
     if (!document.getElementById("darkThemeLink")) {
       let link = document.createElement("link");
       link.href = "css/darkmode_supplements.css";

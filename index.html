@@ -46,18 +46,21 @@
     <script defer="" type="text/javascript">
       if (!localStorage.getItem("darkMode")) {
         const userPrefersDark =
-          window.matchMedia &&
-          window.matchMedia("(prefers-color-scheme: dark)").matches;
-        localStorage.setItem("darkMode", userPrefersDark ? "true" : "false");
+                (window.matchMedia &&
+                        window.matchMedia("(prefers-color-scheme: dark)").matches) || (new Date().getHours() >= 18 || new Date().getHours() < 6);
+        sessionStorage.setItem("darkMode", userPrefersDark ? "true" : "false");
       }
       document.addEventListener("DOMContentLoaded", function (event) {
         reloadTheme("index.html");
         initLang(0);
       });
+      document.addEventListener("load", function () {
+        document.getElementById("body").classList.remove("no-transition");
+      });
     </script>
   </head>
-  <body class="body-2">
-    <div
+  <body id="body" class="no-transition">
+  <div
       data-collapse="medium"
       data-animation="default"
       data-duration="400"
@@ -183,7 +186,7 @@
       </div>
     </div>
     <div class="hero-section centered">
-      <div class="w-container fadein">
+      <div class="w-container">
         <h1
           data-ix="fade-in-bottom-page-loads"
           langfield="title"
@@ -587,7 +590,7 @@
     <div class="footer center">
       <div class="w-container">
         <div langfield="copyright" class="footer-text">
-          © Copyright 2023 IrisShaders. All Rights Reserved.
+          © Copyright 2024. Licensed under the LGPLv3.
         </div>
       </div>
     </div>

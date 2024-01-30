@@ -429,13 +429,14 @@ h5 {
 
 .button {
   border-color: #34393b;
-  background-color: #005eb0;
-  color: #e8e6e3;
+  background-color: #003153;
+  color: #F9F6EE;
   text-decoration-color: initial;
+  transition: background-color 2s;
 }
 
 .button:hover {
-  background-color: #005eb0;
+  background-color: #0372d5;
 }
 
 .button:active {
@@ -472,7 +473,7 @@ h5 {
 }
 
 .brand-text {
-  color: #63bbff;
+  color: #F9F6EE;
 }
 
 .section {
@@ -480,7 +481,7 @@ h5 {
 }
 
 .section.accent {
-  background-color: #141a28;
+  background-color: #181818;
 }
 
 .white-box {
@@ -493,22 +494,39 @@ h5 {
 }
 
 .hero-section {
-  background-image: url(../images/backgrounds/about-bkg.webp);
+  padding-top: 128px;
+  padding-bottom: 128px;
+  transition: background 2s;
+  background-image: url("../images/backgrounds/about-bkg-dark.webp");
+  background-position: 50% 50%;
+  background-size: cover;
+  background-attachment: scroll;
 }
 
+.no-transition * {
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -ms-transition: none !important;
+  -o-transition: none !important;
+  transition: none !important;
+}
+
+
 .hero-section.centered {
-  border-bottom-color: #004e93;
+  border-bottom-color: #181a1b;
   background-image: url(../images/backgrounds/iris-bkg-dark.webp);
   box-shadow: #000 1px 1px 12px 0 inset;
+  transition: background 2s;
 }
 
 .hero-heading {
-  color: #e8e6e3;
+  color: #F9F6EE;
+  transition: background 2s;
   text-shadow: 1px 1px 10px black;
 }
 
 .hero-subheading {
-  color: #3aa9ff;
+  color: #F9F6EE;
   text-shadow: 1px 1px 10px black;
 }
 
@@ -540,12 +558,12 @@ h5 {
 }
 
 .footer {
-  background-color: #212325;
+  background-color: #181818;
 }
 
 .footer.center {
   border-top-color: #3a3f41;
-  background-color: #212325;
+  background-color: #181818;
 }
 
 .footer-text {
@@ -555,7 +573,7 @@ h5 {
 .grid-image {
   border-color: #181a1b;
   background-color: #004b8d;
-  box-shadow: #005eb0 0 0 0 1px;
+  box-shadow: #003153 0 0 0 1px;
 }
 
 .footer-link {
@@ -589,7 +607,7 @@ h5 {
 }
 
 .navigation-link-button {
-  background-color: #005eb0;
+  background-color: #003153;
   color: #dedbd7;
 }
 
@@ -603,18 +621,18 @@ h5 {
 }
 
 .navigation-link-button.w--current {
-  background-color: #005eb0;
+  background-color: #003153;
   color: #dedbd7;
 }
 
 .big-button {
-  background-color: #005eb0;
+  background-color: #003153;
   color: #e8e6e3;
   text-decoration-color: initial;
 }
 
 .big-button:hover {
-  background-color: #005eb0;
+  background-color: #003153;
 }
 
 .big-button:active {
@@ -639,13 +657,13 @@ h5 {
 
 .button-right {
   border-color: #34393b;
-  background-color: #005eb0;
+  background-color: #003153;
   color: #e8e6e3;
   text-decoration-color: initial;
 }
 
 .button-right:hover {
-  background-color: #005eb0;
+  background-color: #003153;
 }
 
 .button-right:active {
@@ -702,13 +720,13 @@ h5 {
 
 .right-floatbutton {
   border-color: #34393b;
-  background-color: #005eb0;
+  background-color: #003153;
   color: #e8e6e3;
   text-decoration-color: initial;
 }
 
 .right-floatbutton:hover {
-  background-color: #005eb0;
+  background-color: #003153;
 }
 
 .right-floatbutton:active {
@@ -764,13 +782,13 @@ h5 {
 
 .download-button {
   border-color: #34393b;
-  background-color: #005eb0;
+  background-color: #003153;
   color: #e8e6e3;
   text-decoration-color: initial;
 }
 
 .download-button:hover {
-  background-color: #005eb0;
+  background-color: #003153;
 }
 
 .download-button:active {

@@ -245,7 +245,7 @@ p {
 }
 
 .section.accent {
-  background-color: #192024;
+  background-color: #181818;
 }
 
 .white-box {
@@ -265,7 +265,8 @@ p {
 .hero-section {
   padding-top: 128px;
   padding-bottom: 128px;
-  background-image: url("../images/backgrounds/about-bkg.webp");
+  transition: all 2s;
+  background-image: url("../images/backgrounds/about-bkg-light.webp");
   background-position: 50% 50%;
   background-size: cover;
   background-attachment: scroll;
@@ -274,7 +275,8 @@ p {
 .hero-section.centered {
   padding-top: 195px;
   padding-bottom: 195px;
-  border-bottom: 4px solid #69b9ff;
+  border-bottom: 4px solid #dcebf7;
+  transition: background 2s;
   background-image: url("../images/backgrounds/iris-bkg-light.webp");
   background-position: 50% 50%;
   background-size: cover;
@@ -296,8 +298,8 @@ p {
 
 .hero-subheading {
   margin-bottom: 40px;
-  color: #3aa9ff;
-  text-shadow: 1px 1px 10px black;
+  color: #F9F6EE;
+  text-shadow: 2px 2px 10px black;
   font-size: 25px;
   line-height: 25px;
   font-weight: 400;
@@ -390,7 +392,7 @@ p {
 
 .footer.center {
   border-top: 1px solid #dbdbdb;
-  background-color: #383838;
+  background-color: #181818;
   text-align: center;
 }
 
@@ -1150,7 +1152,6 @@ p {
 
 .image-10 {
   float: right;
-  box-shadow: -4px 4px 8px 0 #000;
 }
 
 .paragraph-10-left {
