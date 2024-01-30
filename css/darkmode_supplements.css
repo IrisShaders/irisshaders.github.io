@@ -459,6 +459,11 @@ h5 {
   background-color: #256692;
 }
 
+* {
+  transition: all 0.8s ease-in-out;
+  will-change: all;
+}
+
 .navigation-link {
   color: #a49c90;
 }
@@ -516,12 +521,12 @@ h5 {
   border-bottom-color: #181a1b;
   background-image: url(../images/backgrounds/iris-bkg-dark.webp);
   box-shadow: #000 1px 1px 12px 0 inset;
-  transition: background 2s;
+  transition: all 2s;
 }
 
 .hero-heading {
   color: #F9F6EE;
-  transition: background 2s;
+  transition: all 2s;
   text-shadow: 1px 1px 10px black;
 }
 
@@ -574,6 +579,7 @@ h5 {
   border-color: #181a1b;
   background-color: #004b8d;
   box-shadow: #003153 0 0 0 1px;
+  transition: all 0.8s;
 }
 
 .footer-link {

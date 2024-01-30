@@ -458,6 +458,12 @@ textarea.w-select {
   border: 1px solid #cccccc;
   background-color: #fafafa;
 }
+
+* {
+  transition: all 0.8s ease-in-out;
+  will-change: all;
+}
+
 .w-file-upload-file-name {
   font-size: 14px;
   font-weight: normal;
@@ -1292,8 +1298,8 @@ textarea.w-select {
   background-repeat: no-repeat;
   background-position: center;
   cursor: pointer;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: all 0.8s;
+  transition: all 0.8s;
 }
 .w-lightbox-left {
   display: none;
