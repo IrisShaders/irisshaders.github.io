@@ -1,35 +1,18 @@
 <!DOCTYPE html>
 <!--  This site was created in Webflow. http://www.webflow.com  -->
 <!--  Last Published: Wed Jun 16 2021 18:54:32 GMT+0000 (Coordinated Universal Time)  -->
-<html
-  data-wf-page="60b6a6f4e6d2902617497fb7"
-  data-wf-site="60b6a6f4e6d29054cd497fb4"
->
-  <head>
+<html data-wf-page="60b6a6f4e6d2902617497fb7" data-wf-site="60b6a6f4e6d29054cd497fb4">
+
+<head>
     <meta charset="utf-8" />
-    <title>This is Iris</title>
-    <meta
-      content="A lens into a new era of Minecraft graphics. Download your copy today."
-      name="description"
-    />
-    <meta content="This is Iris" property="og:title" />
-    <meta
-      content="A lens into a new era of Minecraft graphics. Download your copy today."
-      property="og:description"
-    />
-    <meta
-      content="https://raw.githubusercontent.com/IrisShaders/Iris/trunk/docs/iris-logo-transparent.png"
-      property="og:image"
-    />
-    <meta content="This is Iris" property="twitter:title" />
-    <meta
-      content="A lens into a new era of Minecraft graphics. Download your copy today."
-      property="twitter:description"
-    />
-    <meta
-      content="https://raw.githubusercontent.com/IrisShaders/Iris/trunk/docs/iris-logo-transparent.png"
-      property="twitter:image"
-    />
+    <title>This isIRIS </title>
+    <meta content="A lens into a new era of Minecraft graphics. Download your copy today." name="description" />
+    <meta content="This isIRIS " property="og:title" />
+    <meta content="A lens into a new era of Minecraft graphics. Download your copy today." property="og:description" />
+    <meta content="https://raw.githubusercontent.com/IrisShaders/Iris/trunk/docs/iris-logo-transparent.png" property="og:image" />
+    <meta content="This isIRIS " property="twitter:title" />
+    <meta content="A lens into a new era of Minecraft graphics. Download your copy today." property="twitter:description" />
+    <meta content="https://raw.githubusercontent.com/IrisShaders/Iris/trunk/docs/iris-logo-transparent.png" property="twitter:image" />
     <meta property="og:type" content="website" />
     <meta content="summary_large_image" name="twitter:card" />
     <meta content="width=device-width, initial-scale=1" name="viewport" />
@@ -44,558 +27,298 @@
     <script defer="" src="js/lang.js" type="text/javascript"></script>
     <script defer="" src="js/darkmode.js" type="text/javascript"></script>
     <script defer="" type="text/javascript">
-      if (!localStorage.getItem("darkMode")) {
-        const userPrefersDark =
+        if (!localStorage.getItem("darkMode")) {
+            const userPrefersDark =
                 (window.matchMedia &&
-                        window.matchMedia("(prefers-color-scheme: dark)").matches) || (new Date().getHours() >= 18 || new Date().getHours() < 6);
-        sessionStorage.setItem("darkMode", userPrefersDark ? "true" : "false");
-      }
-      document.addEventListener("DOMContentLoaded", function (event) {
-        reloadTheme("index.html");
-        initLang(0);
+                    window.matchMedia("(prefers-color-scheme: dark)").matches) || (new Date().getHours() >= 18 || new Date().getHours() < 6);
+            sessionStorage.setItem("darkMode", userPrefersDark ? "true" : "false");
+        }
+        document.addEventListener("DOMContentLoaded", function(event) {
+            reloadTheme("index.html");
+            initLang(0);
 
-      });
-      document.addEventListener("click", function () {
-        document.getElementById("body").classList.remove("no-transition");
-      });
+        });
+        document.addEventListener("click", function() {
+            document.getElementById("body").classList.remove("no-transition");
+        });
     </script>
-  </head>
-  <body id="body" class="no-transition">
-  <div
-      data-collapse="medium"
-      data-animation="default"
-      data-duration="400"
-      role="banner"
-      class="navigation-bar w-nav"
-    >
-      <div class="w-container">
-        <img
-          src="images/logos/iristrans.webp"
-          loading="lazy"
-          width="56"
-          sizes="56px"
-          srcset="
+</head>
+
+<body id="body" class="no-transition">
+    <div data-collapse="medium" data-animation="default" data-duration="400" role="banner" class="navigation-bar w-nav">
+        <div class="w-container">
+            <img src="images/logos/iristrans.webp" loading="lazy" width="56" sizes="56px" srcset="
             images/logos/iristrans-p-800.webp   800w,
             images/logos/iristrans-p-1080.webp 1080w,
             images/logos/iristrans.webp        1280w
-          "
-          alt=""
-          class="image"
-        />
-        <a
-          href="/"
-          aria-current="page"
-          class="brand-link w-nav-brand w--current"
-        >
-          <h1 class="brand-text">Iris Shaders</h1>
-        </a>
-        <nav role="navigation" class="navigation-menu w-nav-menu" id="bigNav">
-          <a
-            href="/"
-            langfield="home"
-            aria-current="page"
-            class="navigation-link w-nav-link w--current"
-            >Home</a
-          >
-          <link rel="prefetch" href="/" />
-          <a
-            href="about"
-            langfield="about"
-            class="navigation-link w-nav-link"
-            >Learn More</a
-          >
-          <link rel="prefetch" href="/about" />
-          <a
-            href="download"
-            langfield="download"
-            class="navigation-link-button w-nav-link"
-            >Download Now</a
-          >
-          <link rel="prerender" href="/download" />
-          <img
-            src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg"
-            loading="lazy"
-            width="15"
-            height="15"
-            id="darkThemeIcon"
-            alt=""
-            class="image-6"
-          />
-          <a
-            id="theme-switcher"
-            langfield="dark"
-            href="#"
-            class="style-nav-link w-inline-block"
-            >Dark Mode</a
-          >
-        </nav>
-        <div class="hamburger-button w-nav-button">
-          <div class="w-icon-nav-menu"></div>
+          " alt="" class="image" />
+            <a href="/" aria-current="page" class="brand-link w-nav-brand w--current">
+                <h1 class="brand-text">IRIS Shaders</h1>
+            </a>
+            <nav role="navigation" class="navigation-menu w-nav-menu" id="bigNav">
+                <a href="/" langfield="home" aria-current="page" class="navigation-link w-nav-link w--current">Home</a>
+                <link rel="prefetch" href="/" />
+                <a href="about" langfield="about" class="navigation-link w-nav-link">Learn More</a>
+                <link rel="prefetch" href="/about" />
+                <a href="download" langfield="download" class="navigation-link-button w-nav-link">Download Now</a>
+                <link rel="prerender" href="/download" />
+                <img src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg" loading="lazy" width="15" height="15" id="darkThemeIcon" alt="" class="image-6" />
+                <a id="theme-switcher" langfield="dark" href="#" class="style-nav-link w-inline-block">Dark Mode</a>
+            </nav>
+            <div class="hamburger-button w-nav-button">
+                <div class="w-icon-nav-menu"></div>
+            </div>
         </div>
-      </div>
-      <div class="w-nav-overlay" style="display: inline-block; height: 0px">
-        <nav
-          role="navigation"
-          class="navigation-menu"
-          id="minimenu"
-          style="
+        <div class="w-nav-overlay" style="display: inline-block; height: 0px">
+            <nav role="navigation" class="navigation-menu" id="minimenu" style="
             transform: translateY(-284px) translateX(0);
             transition: transform 400ms ease 0s;
-          "
-        >
-          <a
-            href="/"
-            langfield="home"
-            aria-current="page"
-            class="navigation-link w-nav-link w--current w--nav-link-open"
-            >Home</a
-          >
-          <link rel="prefetch" href="/" />
-          <a
-            href="/"
-            langfield="about"
-            class="navigation-link w-nav-link w--nav-link-open"
-            >Learn More</a
-          >
-          <link rel="prefetch" href="/about" />
-          <a
-            href="download"
-            langfield="download"
-            class="navigation-link-button w-nav-link w--nav-link-open"
-            >Download Now</a
-          >
-          <link rel="prerender" href="/download" /><img
-            src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg"
-            loading="lazy"
-            width="15"
-            height="15"
-            id="darkThemeIcon"
-            alt=""
-            class="image-6"
-            srcset=""
-          />
-          <a
-            id="theme-switcher"
-            langfield="light"
-            href="#"
-            class="style-nav-link w-inline-block"
-            width="100%"
-          >
-            Light mode</a
-          >
-        </nav>
-      </div>
+          ">
+                <a href="/" langfield="home" aria-current="page" class="navigation-link w-nav-link w--current w--nav-link-open">Home</a>
+                <link rel="prefetch" href="/" />
+                <a href="/" langfield="about" class="navigation-link w-nav-link w--nav-link-open">Learn More</a>
+                <link rel="prefetch" href="/about" />
+                <a href="download" langfield="download" class="navigation-link-button w-nav-link w--nav-link-open">Download Now</a>
+                <link rel="prerender" href="/download" /><img src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg" loading="lazy" width="15" height="15" id="darkThemeIcon" alt="" class="image-6" srcset="" />
+                <a id="theme-switcher" langfield="light" href="#" class="style-nav-link w-inline-block" width="100%">
+                    Light mode</a>
+            </nav>
+        </div>
     </div>
     <div class="hero-section centered">
-      <div class="w-container">
-        <h1
-          data-ix="fade-in-bottom-page-loads"
-          langfield="title"
-          data-w-id="61078149-51f9-584c-010b-7f29d6e64d04"
-          class="hero-heading"
-        >
-          This is Iris
-        </h1>
-        <div
-          data-ix="fade-in-bottom-page-loads"
-          langfield="subheading"
-          data-w-id="978c720d-b1d2-3986-e125-b44eac974e48"
-          class="hero-subheading"
-        >
-          A lens into a new era of minecraft graphics
-        </div>
-        <div data-ix="fade-in-bottom-page-loads" class="div-block">
-          <a
-            href="download"
-            langfield="download"
-            data-w-id="6c5fe302-eed3-af1b-d96a-bec7a6fc5033"
-            class="big-button"
-            >Download Now</a
-          >
-          <link rel="prerender" href="/download" />
-          <div class="div-block-3">
-            <div
-              langfield="or"
-              data-w-id="3a8fe08e-1c84-7dbe-b216-cb5ed36c0879"
-              class="text-block-7"
-            >
-              or
+        <div class="w-container">
+            <h1 data-ix="fade-in-bottom-page-loads" langfield="title" data-w-id="61078149-51f9-584c-010b-7f29d6e64d04" class="hero-heading">
+                This isIRIS
+            </h1>
+            <div data-ix="fade-in-bottom-page-loads" langfield="subheading" data-w-id="978c720d-b1d2-3986-e125-b44eac974e48" class="hero-subheading">
+                A lens into a new era of minecraft graphics
             </div>
-            <a
-              href="#why-iris"
-              langfield="continue"
-              data-w-id="3e418830-923a-bdfc-9fc1-ee44a08518d6"
-              class="hollow-button all-caps"
-              >Continue Reading</a
-            >
-          </div>
+            <div data-ix="fade-in-bottom-page-loads" class="div-block">
+                <a href="download" langfield="download" data-w-id="6c5fe302-eed3-af1b-d96a-bec7a6fc5033" class="big-button">Download Now</a>
+                <link rel="prerender" href="/download" />
+                <div class="div-block-3">
+                    <div langfield="or" data-w-id="3a8fe08e-1c84-7dbe-b216-cb5ed36c0879" class="text-block-7">
+                        or
+                    </div>
+                    <a href="#why-iris" langfield="continue" data-w-id="3e418830-923a-bdfc-9fc1-ee44a08518d6" class="hollow-button all-caps">Continue Reading</a>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
     <div id="why-iris" class="section">
-      <div><br />‍</div>
-      <div class="w-container">
-        <div class="section-title-group">
-          <h2 langfield="heading1" class="section-heading centered">
-            Why Iris?
-          </h2>
-          <div langfield="subheading1" class="section-subheading center">
-            This is what makes iris different
-          </div>
+        <div><br />‍</div>
+        <div class="w-container">
+            <div class="section-title-group">
+                <h2 langfield="heading1" class="section-heading centered">
+                    WhyIRIS ?
+                </h2>
+                <div langfield="subheading1" class="section-subheading center">
+                    This is what makes IRIS different
+                </div>
+            </div>
+            <div class="w-row">
+                <div class="w-col w-col-4 fadein">
+                    <div data-w-id="270e8437-efa3-df11-d438-de69b23e41e9" class="white-box">
+                        <img src="images/svg/github.svg" alt="" class="grid-image" />
+                        <h3 langfield="card1" class="heading">Great mod Compatibility</h3>
+                        <p langfield="carddesc1" class="paragraph">
+                            IRIS is committed to ensuring mod compatibility as a first
+                            priority, and is already compatible with many of your favorite
+                            mods!
+                        </p>
+                    </div>
+                </div>
+                <div class="w-col w-col-4 fadein">
+                    <div data-w-id="29c25774-570b-ddb2-69b5-f4ddbb194afd" class="white-box">
+                        <img src="images/svg/link.svg" width="210" alt="" class="grid-image" />
+                        <h3 langfield="card2" class="heading-2">Modern Design</h3>
+                        <p langfield="carddesc2" class="paragraph-2">
+                            IRIS has been built from the ground up to be extensible and easy
+                            to update. Say goodbye to weeks of waiting to use shaders on the
+                            new Minecraft version!
+                        </p>
+                    </div>
+                </div>
+                <div class="w-col w-col-4 fadein">
+                    <div data-w-id="49e69b8a-ef40-4d84-1f92-d2617143b8db" class="white-box">
+                        <img src="images/svg/page.svg" alt="" class="grid-image" />
+                        <h3 langfield="card3" class="heading-3">free and Open Source</h3>
+                        <p langfield="carddesc3" class="paragraph-4">
+                            IRIS is an open source mod that anyone can contribute to. This
+                            allows IRIS to improve by facilitating collaboration.
+                        </p>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="w-row">
-          <div class="w-col w-col-4 fadein">
-            <div
-              data-w-id="270e8437-efa3-df11-d438-de69b23e41e9"
-              class="white-box"
-            >
-              <img src="images/svg/github.svg" alt="" class="grid-image" />
-              <h3 langfield="card1" class="heading">Great mod Compatibility</h3>
-              <p langfield="carddesc1" class="paragraph">
-                Iris is committed to ensuring mod compatibility as a first
-                priority, and is already compatible with many of your favorite
-                mods!
-              </p>
-            </div>
-          </div>
-          <div class="w-col w-col-4 fadein">
-            <div
-              data-w-id="29c25774-570b-ddb2-69b5-f4ddbb194afd"
-              class="white-box"
-            >
-              <img
-                src="images/svg/link.svg"
-                width="210"
-                alt=""
-                class="grid-image"
-              />
-              <h3 langfield="card2" class="heading-2">Modern Design</h3>
-              <p langfield="carddesc2" class="paragraph-2">
-                Iris has been built from the ground up to be extensible and easy
-                to update. Say goodbye to weeks of waiting to use shaders on the
-                new Minecraft version!
-              </p>
-            </div>
-          </div>
-          <div class="w-col w-col-4 fadein">
-            <div
-              data-w-id="49e69b8a-ef40-4d84-1f92-d2617143b8db"
-              class="white-box"
-            >
-              <img src="images/svg/page.svg" alt="" class="grid-image" />
-              <h3 langfield="card3" class="heading-3">free and Open Source</h3>
-              <p langfield="carddesc3" class="paragraph-4">
-                Iris is an open source mod that anyone can contribute to. This
-                allows Iris to improve by facilitating collaboration.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
     <div class="section accent">
-      <div class="w-container">
-        <div class="section-title-group">
-          <h2 langfield="heading2" class="section-heading centered white">
-            Features
-          </h2>
-          <div
-            langfield="subheading2"
-            class="section-subheading center off-white"
-          >
-            what Iris has to offer
-          </div>
-        </div>
-        <div class="w-row">
-          <div
-            data-w-id="34554aca-db3f-37b4-f72b-adf66085c0ce"
-            class="w-col w-col-6 fadein"
-          >
-            <div class="white-box transparent">
-              <img
-                src="images/screenshots/mainscreenshot1.webp"
-                sizes="(max-width: 479px) 85vw, (max-width: 767px) 88vw, (max-width: 1105px) 324px, 430px"
-                alt=""
-                class="fullwidth-image"
-              />
-              <h3 langfield="image1" class="white-text">OptiFine Parity</h3>
-              <p langfield="imagedesc1" class="paragraph-12">
-                Iris aims to have full support for all past and present OptiFine
-                shaderpacks, and number of packs supported by Iris is constantly
-                and rapidly growing!<span class="text-span-2"
-                  ><br />Screenshot by IMS, Kappa v5</span
-                >
-              </p>
+        <div class="w-container">
+            <div class="section-title-group">
+                <h2 langfield="heading2" class="section-heading centered white">
+                    Features
+                </h2>
+                <div langfield="subheading2" class="section-subheading center off-white">
+                    what IRIS has to offer
+                </div>
             </div>
-          </div>
-          <div
-            data-w-id="34554aca-db3f-37b4-f72b-adf66085c0ce"
-            class="w-col w-col-6 fadein"
-          >
-            <div class="white-box transparent">
-              <img
-                src="images/screenshots/mainscreenshot2.webp"
-                sizes="(max-width: 479px) 85vw, (max-width: 767px) 88vw, (max-width: 1105px) 324px, 430px"
-                alt=""
-                class="fullwidth-image"
-              />
-              <h3 langfield="image2" class="white-text">Works with Sodium</h3>
-              <p langfield="imagedesc2" class="paragraph-11">
-                Iris is compatible with CaffeineMC optimization mods such as
-                Sodium and Phosphor, enabling stunning graphics at frames
-                comparable to or even better than vanilla.<br /><span
-                  class="text-span-2"
-                  >Screenshot by IMS, Nostalgia v4</span
-                >
-              </p>
+            <div class="w-row">
+                <div data-w-id="34554aca-db3f-37b4-f72b-adf66085c0ce" class="w-col w-col-6 fadein">
+                    <div class="white-box transparent">
+                        <img src="images/screenshots/mainscreenshot1.webp" sizes="(max-width: 479px) 85vw, (max-width: 767px) 88vw, (max-width: 1105px) 324px, 430px" alt="" class="fullwidth-image" />
+                        <h3 langfield="image1" class="white-text">OptiFine Parity</h3>
+                        <p langfield="imagedesc1" class="paragraph-12">
+                            IRIS aims to have full support for all past and present OptiFine
+                            shaderpacks, and number of packs supported by IRIS is constantly
+                            and rapidly growing!<span class="text-span-2"><br />Screenshot by IMS, Kappa v5</span>
+                        </p>
+                    </div>
+                </div>
+                <div data-w-id="34554aca-db3f-37b4-f72b-adf66085c0ce" class="w-col w-col-6 fadein">
+                    <div class="white-box transparent">
+                        <img src="images/screenshots/mainscreenshot2.webp" sizes="(max-width: 479px) 85vw, (max-width: 767px) 88vw, (max-width: 1105px) 324px, 430px" alt="" class="fullwidth-image" />
+                        <h3 langfield="image2" class="white-text">Works with Sodium</h3>
+                        <p langfield="imagedesc2" class="paragraph-11">
+                            IRIS is compatible with CaffeineMC optimization mods such as
+                            Sodium and Phosphor, enabling stunning graphics at frames
+                            comparable to or even better than vanilla.<br /><span class="text-span-2">Screenshot by IMS, Nostalgia v4</span>
+                        </p>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
-      <a
-        href="about"
-        langfield="about"
-        data-w-id="8f4c0691-e692-c061-7fbc-f7242a5caacb"
-        class="hollow-button"
-        >Learn More</a
-      >
-      <link rel="prefetch" href="/about" />
+        <a href="about" langfield="about" data-w-id="8f4c0691-e692-c061-7fbc-f7242a5caacb" class="hollow-button">Learn More</a>
+        <link rel="prefetch" href="/about" />
     </div>
     <div class="section">
-      <div class="w-container fadein">
-        <div class="section-title-group">
-          <h2 langfield="heading3" class="section-heading centered">
-            The Iris Advantage
-          </h2>
-          <div langfield="subheading3" class="section-subheading center">
-            New rendering techniques that put you ahead of the game
-          </div>
-        </div>
-        <div
-          data-duration-in="300"
-          data-duration-out="100"
-          class="tabs-wrapper w-tabs"
-        >
-          <div class="tab-menu w-tab-menu">
-            <a 
-              data-w-tab="Tab 1" 
-              class="button tab w-inline-block w-tab-link w--current" 
-              onclick="
+        <div class="w-container fadein">
+            <div class="section-title-group">
+                <h2 langfield="heading3" class="section-heading centered">
+                    The IRIS Advantage
+                </h2>
+                <div langfield="subheading3" class="section-subheading center">
+                    New rendering techniques that put you ahead of the game
+                </div>
+            </div>
+            <div data-duration-in="300" data-duration-out="100" class="tabs-wrapper w-tabs">
+                <div class="tab-menu w-tab-menu">
+                    <a data-w-tab="Tab 1" class="button tab w-inline-block w-tab-link w--current" onclick="
               document.querySelectorAll('.w-tab-link')[0].classList.add('w--current'); document.querySelectorAll('.w-tab-link')[1].classList.remove('w--current');
               document.querySelectorAll('.w-tab-pane')[0].classList.add('w--tab-active'); document.querySelectorAll('.w-tab-pane')[1].classList.remove('w--tab-active'); 
-              "
-            >
-              <div
-                langfield="shadows"
-                class="text-block-9"
-              >
-                Shadows
-              </div>
-            </a>
-            <a
-              data-w-tab="Tab 2"
-              class="button tab w-inline-block w-tab-link"
-              onclick="
+              ">
+                        <div langfield="shadows" class="text-block-9">
+                            Shadows
+                        </div>
+                    </a>
+                    <a data-w-tab="Tab 2" class="button tab w-inline-block w-tab-link" onclick="
               document.querySelectorAll('.w-tab-link')[1].classList.add('w--current'); document.querySelectorAll('.w-tab-link')[0].classList.remove('w--current');
               document.querySelectorAll('.w-tab-pane')[1].classList.add('w--tab-active'); document.querySelectorAll('.w-tab-pane')[0].classList.remove('w--tab-active'); 
-              "
-            >
-              <div
-                langfield="entities"
-                class="text-block-10"
-              >
-                entities
-              </div>
-            </a>
-          </div>
-          <div class="w-tab-content">
-            <div data-w-tab="Tab 1" class="w-tab-pane w--tab-active">
-              <div>
-                <img
-                  src="images/screenshots/godrays.webp"
-                  sizes="(max-width: 767px) 96vw, (max-width: 1105px) 728px, 854px"
-                  alt=""
-                  class="fullwidth-image-tabs"
-                />
-                <h2 langfield="screenshottitle1" class="heading-8">
-                  Performance-Optimized Shadows
-                </h2>
-                <p langfield="screenshotdesc1" class="paragraph-5">
-                  Iris uses a technique called Shadow Frustum Culling to
-                  decrease the overhead of one of the biggest performance hogs
-                  of a shader - the shadows. Using Iris&#x27;s shadow frustum
-                  culling, you&#x27;ll be able to reach higher frame rates
-                  without sacrificing the quality of volumetric lighting or
-                  shadows.<br /><span class="text-span-2"
-                    >Screenshot by IMS, Kappa v5</span
-                  >
-                </p>
-              </div>
+              ">
+                        <div langfield="entities" class="text-block-10">
+                            entities
+                        </div>
+                    </a>
+                </div>
+                <div class="w-tab-content">
+                    <div data-w-tab="Tab 1" class="w-tab-pane w--tab-active">
+                        <div>
+                            <img src="images/screenshots/godrays.webp" sizes="(max-width: 767px) 96vw, (max-width: 1105px) 728px, 854px" alt="" class="fullwidth-image-tabs" />
+                            <h2 langfield="screenshottitle1" class="heading-8">
+                                Performance-Optimized Shadows
+                            </h2>
+                            <p langfield="screenshotdesc1" class="paragraph-5">
+                                IRIS uses a technique called Shadow Frustum Culling to
+                                decrease the overhead of one of the biggest performance hogs
+                                of a shader - the shadows. UsingIRIS &#x27;s shadow frustum
+                                culling, you&#x27;ll be able to reach higher frame rates
+                                without sacrificing the quality of volumetric lighting or
+                                shadows.<br /><span class="text-span-2">Screenshot by IMS, Kappa v5</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div data-w-tab="Tab 2" class="w-tab-pane">
+                        <div>
+                            <img src="images/screenshots/entities.webp" sizes="(max-width: 767px) 96vw, (max-width: 1105px) 728px, 854px" alt="" class="fullwidth-image-tabs" />
+                            <h2 langfield="screenshottitle2" class="heading-8">
+                                Efficient Entity Rendering
+                            </h2>
+                            <p langfield="screenshotdesc2" class="paragraph-5">
+                                IRIS improves the way that Minecraft renders entities and
+                                block entities like chests, pigs, and item frames. This trick
+                                even works with shaders disabled, and in worlds with a lot of
+                                entities, it can boost vanilla performance by up to 60
+                                percent. Shadow rendering sees an especially large
+                                improvement, making areas that were once unplayable with
+                                shaders into places where your FPS is surprisingly smooth!<br /><span class="text-span-2">Screenshot by kinzuu_music</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div data-w-tab="Tab 2" class="w-tab-pane">
-              <div>
-                <img
-                  src="images/screenshots/entities.webp"
-                  sizes="(max-width: 767px) 96vw, (max-width: 1105px) 728px, 854px"
-                  alt=""
-                  class="fullwidth-image-tabs"
-                />
-                <h2 langfield="screenshottitle2" class="heading-8">
-                  Efficient Entity Rendering
-                </h2>
-                <p langfield="screenshotdesc2" class="paragraph-5">
-                  Iris improves the way that Minecraft renders entities and
-                  block entities like chests, pigs, and item frames. This trick
-                  even works with shaders disabled, and in worlds with a lot of
-                  entities, it can boost vanilla performance by up to 60
-                  percent. Shadow rendering sees an especially large
-                  improvement, making areas that were once unplayable with
-                  shaders into places where your FPS is surprisingly smooth!<br /><span
-                    class="text-span-2"
-                    >Screenshot by kinzuu_music</span
-                  >
-                </p>
-              </div>
-            </div>
-          </div>
         </div>
-      </div>
-      <a
-        langfield="download"
-        data-w-id="51fa3c6f-33b6-143c-bfdc-b80a72851377"
-        href="download"
-        class="big-button w-button"
-        >Download Now</a
-      >
-      <link rel="prerender" href="/download" />
-      <div
-        langfield="stillcurious"
-        data-w-id="53538a8e-e85e-5660-91a1-27f2591b1aee"
-        class="text-block"
-      >
-        Still curious? <a href="about">Learn More</a>
-        <link rel="prefetch" href="/about" />.
-      </div>
+        <a langfield="download" data-w-id="51fa3c6f-33b6-143c-bfdc-b80a72851377" href="download" class="big-button w-button">Download Now</a>
+        <link rel="prerender" href="/download" />
+        <div langfield="stillcurious" data-w-id="53538a8e-e85e-5660-91a1-27f2591b1aee" class="text-block">
+            Still curious? <a href="about">Learn More</a>
+            <link rel="prefetch" href="/about" />.
+        </div>
     </div>
     <div class="footer">
-      <div class="w-container">
-        <div class="w-row">
-          <div class="spc w-col w-col-4">
-            <h5 langfield="footer1" class="heading-11">
-              about the Iris project
-            </h5>
-            <p langfield="footerdesc1" class="paragraph-14">
-              The Iris Project is a collaborative open-source project created by
-              a team of passionate developers seeking to make the Minecraft
-              shaders experience the best that it can be. Iris is developed by
-              the community, for the community.
-            </p>
-          </div>
-          <div class="spc w-col w-col-4">
-            <h5 langfield="footer2" class="heading-9">useful links</h5>
-            <a href="about" langfield="about" class="footer-link"
-              >Learn More</a
-            >
-            <a href="download" langfield="download" class="footer-link"
-              >Download Now</a
-            >
-            <a
-              href="https://modrinth.com/mod/iris"
-              langfield="modrinth"
-              class="footer-link"
-              >Iris on Modrinth</a
-            >
-          </div>
-          <div class="w-col w-col-4">
-            <h5 langfield="social" class="heading-10">social</h5>
-            <div class="footer-link-wrapper w-clearfix">
-              <img
-                src="images/footer/github-logo.webp"
-                width="20"
-                alt=""
-                class="info-icon"
-              />
-              <a
-                href="https://github.com/IrisShaders/Iris"
-                target="_blank"
-                class="footer-link with-icon"
-                >GitHub</a
-              >
+        <div class="w-container">
+            <div class="w-row">
+                <div class="spc w-col w-col-4">
+                    <h5 langfield="footer1" class="heading-11">
+                        about the IRIS project
+                    </h5>
+                    <p langfield="footerdesc1" class="paragraph-14">
+                        The IRIS Project is a collaborative open-source project created by
+                        a team of passionate developers seeking to make the Minecraft
+                        shaders experience the best that it can be. IRIS is developed by
+                        the community, for the community.
+                    </p>
+                </div>
+                <div class="spc w-col w-col-4">
+                    <h5 langfield="footer2" class="heading-9">useful links</h5>
+                    <a href="about" langfield="about" class="footer-link">Learn More</a>
+                    <a href="download" langfield="download" class="footer-link">Download Now</a>
+                    <a href="https://modrinth.com/mod/iris" langfield="modrinth" class="footer-link">IRIS on Modrinth</a>
+                </div>
+                <div class="w-col w-col-4">
+                    <h5 langfield="social" class="heading-10">social</h5>
+                    <div class="footer-link-wrapper w-clearfix">
+                        <img src="images/footer/github-logo.webp" width="20" alt="" class="info-icon" />
+                        <a href="https://github.com/IrisShaders/Iris" target="_blank" class="footer-link with-icon">GitHub</a>
+                    </div>
+                    <div class="footer-link-wrapper w-clearfix">
+                        <img src="images/footer/discord-logo.webp" width="20" alt="" class="info-icon" />
+                        <a href="https://discord.gg/jQJnav2jPu" target="_blank" class="footer-link with-icon">Discord</a>
+                    </div>
+                    <div class="footer-link-wrapper w-clearfix">
+                        <img src="images/footer/twitter-logo.webp" width="20" alt="" class="info-icon" />
+                        <a href="https://twitter.com/IrisShaders" target="_blank" class="footer-link with-icon">Twitter</a>
+                    </div>
+                    <div class="footer-link-wrapper w-clearfix">
+                        <img src="images/footer/mastodon-logo.webp" width="20" alt="" class="info-icon" />
+                        <a rel="me" href="https://tech.lgbt/@iris" target="_blank" class="footer-link with-icon">Mastodon</a>
+                    </div>
+                    <div class="footer-link-wrapper w-clearfix">
+                        <img src="images/footer/patreon-logo.webp" width="20" alt="" class="info-icon" />
+                        <a href="https://www.patreon.com/coderbot" target="_blank" class="footer-link with-icon">Patreon</a>
+                    </div>
+                    <select class="langselect" id="langselect" onchange="setSelectLang(0)"></select>
+                </div>
             </div>
-            <div class="footer-link-wrapper w-clearfix">
-              <img
-                src="images/footer/discord-logo.webp"
-                width="20"
-                alt=""
-                class="info-icon"
-              />
-              <a
-                href="https://discord.gg/jQJnav2jPu"
-                target="_blank"
-                class="footer-link with-icon"
-                >Discord</a
-              >
-            </div>
-            <div class="footer-link-wrapper w-clearfix">
-              <img
-                      src="images/footer/twitter-logo.webp"
-                      width="20"
-                      alt=""
-                      class="info-icon"
-              />
-              <a
-                      href="https://twitter.com/IrisShaders"
-                      target="_blank"
-                      class="footer-link with-icon"
-              >Twitter</a
-              >
-            </div>
-            <div class="footer-link-wrapper w-clearfix">
-              <img
-                      src="images/footer/mastodon-logo.webp"
-                      width="20"
-                      alt=""
-                      class="info-icon"
-              />
-              <a
-                      rel="me"
-                      href="https://tech.lgbt/@iris"
-                      target="_blank"
-                      class="footer-link with-icon"
-              >Mastodon</a
-              >
-            </div>
-            <div class="footer-link-wrapper w-clearfix">
-              <img
-                src="images/footer/patreon-logo.webp"
-                width="20"
-                alt=""
-                class="info-icon"
-              />
-              <a
-                href="https://www.patreon.com/coderbot"
-                target="_blank"
-                class="footer-link with-icon"
-                >Patreon</a
-              >
-            </div>
-            <select
-              class="langselect"
-              id="langselect"
-              onchange="setSelectLang(0)"
-            ></select>
-          </div>
         </div>
-      </div>
     </div>
     <div class="footer center">
-      <div class="w-container">
-        <div langfield="copyright" class="footer-text">
-          © Copyright 2024. Licensed under the LGPLv3.
+        <div class="w-container">
+            <div langfield="copyright" class="footer-text">
+                © Copyright 2024. Licensed under the LGPLv3.
+            </div>
         </div>
-      </div>
     </div>
     <script src="js/index.js" type="text/javascript"></script>
     <!-- [if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif] -->
-  </body>
+</body>
+
 </html>
