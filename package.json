@@ -1,0 +1,27 @@
+{
+  "name": "astro-setup",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro check && astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/check": "^0.9.4",
+    "@astrojs/tailwind": "^5.1.3",
+    "@tailwindcss/typography": "^0.5.10",
+    "astro": "^5.0.3",
+    "astro-heroicons": "2.1.5-1",
+    "astro-imagetools": "^0.9.0",
+    "prettier": "^3.4.2",
+    "prettier-plugin-astro": "^0.14.1",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5.4.3"
+  },
+  "devDependencies": {
+    "daisyui": "^4.7.3"
+  }
+}

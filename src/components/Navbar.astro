@@ -1,0 +1,30 @@
+---
+import { Image } from 'astro:assets';
+import IrisLogo from "../assets/logos/iris.webp"
+
+import ArrowDownTray from "astro-heroicons/solid/ArrowDownTray.astro"
+---
+
+<div class="navbar bg-neutral sticky top-0 w-full px-12 z-10">
+    <div class="navbar-start">
+        <a class="btn btn-ghost text-xl" href="/">
+            <Image src={IrisLogo} alt="Iris" width="48"/>Iris Shaders
+        </a>
+    </div>
+
+    <div class="navbar-center flex">
+        <ul class="menu menu-horizontal px-1">
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">Learn More</a></li>
+        </ul>
+    </div>
+
+    <div class="navbar-end">
+        <a href="/download">
+            <button class="btn btn-sm btn-primary">
+                <ArrowDownTray style="height: 1rem"/>
+                Download Now
+            </button>
+        </a>
+    </div>
+</div>

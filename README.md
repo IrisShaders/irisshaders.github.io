@@ -1,0 +1,4 @@
+```
+$ pnpm i
+$ pnpm dev
+```
